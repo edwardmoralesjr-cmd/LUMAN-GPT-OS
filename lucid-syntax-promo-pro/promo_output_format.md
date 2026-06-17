@@ -212,10 +212,16 @@ Clean Box Rule
 
 Use unlabeled fenced copy/paste blocks.
 
-Do not use ```text.
+Do not use labeled fences like:
 
-Use:
+```text
+[Copy-ready content]
+```
 
+Use clean unlabeled fences like:
+
+```
+[Copy-ready content]
 ```
 
 ## Required Output Layout
