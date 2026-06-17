@@ -58,6 +58,22 @@ Required platforms:
 - Instagram
 - Pinterest
 
+## Copy-Ready Text Boxes
+
+Every major output item should be placed in its own fenced text block.
+
+This includes:
+
+- Emotional Hook
+- Main Promo Caption
+- Each platform title
+- Each platform caption, description, or post
+- Short-Form Video Script
+- Visual Direction
+- CTA
+- Hashtags
+- Next Best Use
+
 ## Best Follow-Up Prompts Edward Can Use
 
 - Lucid Syntax promotion for Paint
