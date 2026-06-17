@@ -58,20 +58,33 @@ Required platforms:
 - Instagram
 - Pinterest
 
-## Copy-Ready Text Boxes
+## Copy/Paste Text Boxes
 
-Every major output item should be placed in its own fenced text block.
+Every full Lucid Syntax promotion package should be broken into separate copy/paste text boxes.
 
-This includes:
+Do not create one large combined block.
 
+Each of these should have its own heading and fenced `text` block:
+
+- Campaign Angle
 - Emotional Hook
 - Main Promo Caption
-- Each platform title
-- Each platform caption, description, or post
+- TikTok Title
+- TikTok Caption
+- YouTube Lyric Video Title
+- YouTube Lyric Video Description
+- Facebook Title
+- Facebook Post
+- X Title
+- X Post
+- Instagram Title
+- Instagram Caption
+- Pinterest Title
+- Pinterest Description
 - Short-Form Video Script
 - Visual Direction
 - CTA
-- Hashtags
+- Exactly 5 Hashtags
 - Next Best Use
 
 ## Best Follow-Up Prompts Edward Can Use
