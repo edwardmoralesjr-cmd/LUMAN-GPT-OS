@@ -47,9 +47,14 @@ Use these files as the main dashboard spine:
 ### LUMAN OS GitHub Brain
 
 - Add more vault-specific command details as each module matures.
-- Build fuller vault indexes for Roseborn, Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
+- Build fuller vault indexes for Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
 - Add module-level changelogs where missing.
 - Continue converting major conversations into session logs when Edward says `Create summary` and `Commit this summary to GitHub`.
+
+### Roseborn Universe
+
+- Roseborn dashboard created.
+- Next Roseborn build: create `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`.
 
 ---
 
@@ -70,6 +75,10 @@ Music rollout systems, Visionary campaign, promo packs, lyric video workflows, v
 ### 03_ROSEBORN_UNIVERSE
 
 Roseborn Saga, Infinite Bloom, Codices, dragons, Grand Generals, canon hierarchy, doctrine, lore, timelines, and mythic architecture.
+
+Primary dashboard:
+
+- `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md`
 
 ### 04_GPT_BUILDER_LAB
 
@@ -98,6 +107,7 @@ Condensed durable knowledge that helps future LUMAN sessions stay aligned.
 - `Create summary`
 - `Commit this summary to GitHub`
 - `Open Roseborn vault`
+- `Open Roseborn dashboard`
 - `Open Lucid Syntax vault`
 - `Lucid Syntax promotion`
 - `Roseborn canon`
@@ -139,12 +149,10 @@ Use GitHub for durable structure, not private secrets.
 
 ## 9. Current Next Best Action
 
-Build fuller vault indexes so each major LUMAN OS domain has its own dashboard and status page.
+Create the Roseborn Canon Index:
 
-Recommended next files:
+- `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`
 
-- `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md`
+After that, build the next vault dashboard:
+
 - `02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md`
-- `01_LIFE_OS/LIFE_OS_DASHBOARD.md`
-- `04_GPT_BUILDER_LAB/GPT_BUILDER_DASHBOARD.md`
-- `05_WORK_QUALITY_SYSTEMS/WORK_QUALITY_DASHBOARD.md`
