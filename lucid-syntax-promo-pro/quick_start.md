@@ -66,9 +66,9 @@ Important rendering rule:
 
 Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
 
-Output each section as normal chat text with its own standalone fenced `text` block.
+Output each section as normal chat text with its own standalone unlabeled fenced copy/paste block.
 
-Each of these should have its own heading and fenced `text` block:
+Each of these should have its own heading and unlabeled fenced copy/paste block:
 
 - Campaign Angle
 - Emotional Hook
@@ -90,6 +90,12 @@ Each of these should have its own heading and fenced `text` block:
 - CTA
 - Exactly 5 Hashtags
 - Next Best Use
+
+Clean box rule:
+
+Use unlabeled fenced copy/paste blocks.
+
+Do not use ```text.
 
 ## Best Follow-Up Prompts Edward Can Use
 
