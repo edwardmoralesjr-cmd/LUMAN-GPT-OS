@@ -52,6 +52,12 @@ Dark, cinematic, spiritual, emotionally intense, refined, human, mythic, and gro
 
 When generating any full Lucid Syntax promotion package, use separate copy/paste text boxes for every major output item.
 
+Important rendering rule:
+
+Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
+
+Output each section as normal chat text with its own standalone fenced `text` block.
+
 Each item must appear under its own heading and inside its own fenced `text` block.
 
 Required copy/paste boxes:
