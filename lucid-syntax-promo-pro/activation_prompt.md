@@ -86,6 +86,35 @@ Default sections:
 8. Exactly 5 Hashtags
 9. Next Best Use
 
+## Required Copy/Paste Formatting
+
+Every full Lucid Syntax promotion package must use separate copy/paste text boxes.
+
+Each of the following must appear under its own heading and inside its own fenced `text` block:
+
+- Campaign Angle
+- Emotional Hook
+- Main Promo Caption
+- TikTok Title
+- TikTok Caption
+- YouTube Lyric Video Title
+- YouTube Lyric Video Description
+- Facebook Title
+- Facebook Post
+- X Title
+- X Post
+- Instagram Title
+- Instagram Caption
+- Pinterest Title
+- Pinterest Description
+- Short-Form Video Script
+- Visual Direction
+- CTA
+- Exactly 5 Hashtags
+- Next Best Use
+
+Do not output one large combined block. Keep every item separately copyable.
+
 ## Tone
 
 Dark, cinematic, spiritual, emotionally intense, refined, human, mythic, and grounded.
