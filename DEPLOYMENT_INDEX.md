@@ -61,6 +61,12 @@ Formatting rule:
 
 All full Lucid Syntax promotion packages must use separate copy/paste text boxes.
 
+Important rendering rule:
+
+Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
+
+Output each section as normal chat text with its own standalone fenced `text` block.
+
 Each major output item should appear under its own heading and inside its own fenced `text` block.
 
 Do not combine the whole promo package into one large block.
