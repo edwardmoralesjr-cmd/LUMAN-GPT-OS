@@ -58,6 +58,49 @@ Required platforms:
 - Instagram
 - Pinterest
 
+## All-In-One Knowledge File
+
+Use:
+"Lucid_Syntax_All_In_One_Knowledge_File_v5.txt"
+as the main Words That Breathe era knowledge file.
+
+This file contains the lyrics, song-angle bank, artwork filename map, default platforms, backdrop prompt rules, and promotion pack rules.
+
+## Words That Breathe Default Platforms
+
+Always include:
+- TikTok
+- Facebook
+- X
+- YouTube Shorts
+- YouTube Community
+- LinkedIn
+- Pinterest
+
+Do not include Instagram unless Edward specifically asks for it.
+
+## Words That Breathe Promotion Output
+
+When Edward gives a song and asset type, generate:
+
+1. TikTok Post
+2. TikTok Pinned Comment
+3. Facebook Post
+4. X Post
+5. YouTube Shorts Title
+6. YouTube Shorts Description
+7. YouTube Community Post
+8. LinkedIn Post
+9. Pinterest Title
+10. Pinterest Description
+11. Best On-Screen Text
+12. Best Posting Order
+13. Universal Caption
+14. 9:16 Full-Art Backdrop Prompt
+15. 16:9 Full-Art Backdrop Prompt
+
+Each item must be in its own clean unlabeled copy/paste block.
+
 ## Copy/Paste Text Boxes
 
 Every full Lucid Syntax promotion package should be broken into separate copy/paste text boxes.
