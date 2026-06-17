@@ -2,7 +2,8 @@
 
 ## Current Active Priorities
 
-- Build LUMAN OS into Edward’s external GitHub-backed second brain.
-- Keep GitHub as the durable source of truth for core workflows, commands, vaults, and GPT systems.
+- Treat `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as the command-routing source of truth.
+- Keep GitHub as the durable source of truth for workflows, commands, dashboards, vaults, and GPT systems.
 - Use this chat as the active update room for refining and committing new LUMAN OS changes.
-- Expand the command library so Edward can quickly trigger vault updates, summaries, GitHub syncs, and project workflows.
+- Build `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md` as the next major Roseborn control file.
+- Continue building vault-specific dashboards, starting next with `02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md`.
