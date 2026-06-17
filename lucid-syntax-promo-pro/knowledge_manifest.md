@@ -4,6 +4,26 @@ This file lists the files that should be treated as source material for the Luci
 
 ## Required Files
 
+### Lucid_Syntax_All_In_One_Knowledge_File_v5.txt
+
+Purpose:
+Main all-in-one Lucid Syntax knowledge file for promotion workflows when Custom GPT upload limits prevent uploading every lyric file individually.
+
+Use for:
+- Words That Breathe album lyrics
+- Song-angle bank
+- Artwork filename map
+- Upload-limit strategy
+- Default platforms
+- “Let’s create something” trigger behavior
+- Brand voice
+- Platform tone rules
+- Hashtag rules
+- Backdrop prompt rules
+- Required promotion pack output
+
+When this all-in-one file is present, it should be treated as the primary source of truth for Words That Breathe era song-specific promotions.
+
 ### deployment_instructions.md
 
 Purpose:
