@@ -59,7 +59,11 @@ Required output sections:
 
 Formatting rule:
 
-Each major promo output should be placed in its own fenced text block for easy copy/paste.
+All full Lucid Syntax promotion packages must use separate copy/paste text boxes.
+
+Each major output item should appear under its own heading and inside its own fenced `text` block.
+
+Do not combine the whole promo package into one large block.
 
 ## How To Use
 
