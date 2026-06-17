@@ -2,6 +2,7 @@
 
 ## Core LUMAN OS Protocols
 
+- `00_CORE/LUMAN_DASHBOARD.md`
 - `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
 - `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md`
 - `00_CORE/ACTIVE_PRIORITIES.md`
@@ -21,6 +22,23 @@
 ## Activation Commands
 
 Edward can use short command phrases to activate a GPT workflow.
+
+### Open LUMAN dashboards
+
+Activates the LUMAN OS dashboard layer.
+
+Use this file:
+
+- `00_CORE/LUMAN_DASHBOARD.md`
+
+Default behavior:
+
+1. Show the current system status.
+2. Summarize active priorities.
+3. Summarize open loops.
+4. Show vault status.
+5. List the most useful available commands.
+6. Give one next best action.
 
 ### Use GitHub
 
