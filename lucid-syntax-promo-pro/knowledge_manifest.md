@@ -59,6 +59,7 @@ Use for:
 - CTA
 - Exactly 5 hashtags
 - Next best use
+- Copy-ready fenced text boxes for each output item
 
 ### album_metadata.md
 
