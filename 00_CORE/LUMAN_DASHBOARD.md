@@ -21,6 +21,7 @@ The system has three layers:
 Use these files as the main dashboard spine:
 
 - `README.md` — repo purpose and high-level mission
+- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` — command routing source of truth
 - `COMMANDS.md` — activation command library
 - `DEPLOYMENT_INDEX.md` — deployment-ready systems and command routing
 - `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` — GitHub update rules
@@ -38,7 +39,7 @@ Use these files as the main dashboard spine:
 - Build LUMAN OS into Edward’s external GitHub-backed second brain.
 - Keep GitHub as the durable source of truth for core workflows, commands, vaults, and GPT systems.
 - Use chat as the active update room for refining and committing new LUMAN OS changes.
-- Expand the command library so Edward can quickly trigger vault updates, summaries, GitHub syncs, and project workflows.
+- Expand and maintain `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as the routing source of truth.
 
 ---
 
@@ -46,7 +47,7 @@ Use these files as the main dashboard spine:
 
 ### LUMAN OS GitHub Brain
 
-- Add more vault-specific command details as each module matures.
+- Mirror key command routes from `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` into `COMMANDS.md` and `DEPLOYMENT_INDEX.md` when safe.
 - Build fuller vault indexes for Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
 - Add module-level changelogs where missing.
 - Continue converting major conversations into session logs when Edward says `Create summary` and `Commit this summary to GitHub`.
@@ -54,6 +55,7 @@ Use these files as the main dashboard spine:
 ### Roseborn Universe
 
 - Roseborn dashboard created.
+- Roseborn command routing exists in `03_ROSEBORN_UNIVERSE/ROSEBORN_COMMANDS.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`.
 - Next Roseborn build: create `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`.
 
 ---
@@ -62,7 +64,11 @@ Use these files as the main dashboard spine:
 
 ### 00_CORE
 
-Core protocols, commands, changelog, open loops, active priorities, dashboards, and GitHub update rules.
+Core protocols, command routing, commands, changelog, open loops, active priorities, dashboards, and GitHub update rules.
+
+Primary routing file:
+
+- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`
 
 ### 01_LIFE_OS
 
@@ -79,6 +85,10 @@ Roseborn Saga, Infinite Bloom, Codices, dragons, Grand Generals, canon hierarchy
 Primary dashboard:
 
 - `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md`
+
+Primary command file:
+
+- `03_ROSEBORN_UNIVERSE/ROSEBORN_COMMANDS.md`
 
 ### 04_GPT_BUILDER_LAB
 
@@ -102,6 +112,8 @@ Condensed durable knowledge that helps future LUMAN sessions stay aligned.
 
 - `Open LUMAN OS`
 - `Open LUMAN dashboards`
+- `Show command routing`
+- `Quality check LUMAN OS`
 - `Use GitHub`
 - `Update LUMAN OS:`
 - `Create summary`
@@ -111,6 +123,8 @@ Condensed durable knowledge that helps future LUMAN sessions stay aligned.
 - `Open Lucid Syntax vault`
 - `Lucid Syntax promotion`
 - `Roseborn canon`
+- `Open Dragon Doctrine`
+- `Open Infinite Bloom`
 - `Life OS sync`
 - `Run Weekly Sync`
 - `KIA service records`
