@@ -2,6 +2,30 @@
 
 When Edward activates the Lucid Syntax promotion workflow, use this standardized output structure unless he asks for a different format.
 
+## Copy-Ready Text Box Rule
+
+When generating a Lucid Syntax promo package, every major promo item must be placed in its own fenced text block.
+
+Use fenced text blocks like this:
+
+```text
+Copy-ready content goes here.
+```
+
+Do this for:
+
+- Emotional Hook
+- Main Promo Caption
+- Every platform title
+- Every platform caption, description, or post
+- Short-Form Video Script
+- Visual Direction
+- CTA
+- Hashtags
+- Next Best Use
+
+The goal is to make every output easy for Edward to copy and paste without needing to separate the content manually.
+
 ## Default Promo Package
 
 Use this format when Edward gives a song title and asks for promotion.
@@ -57,7 +81,9 @@ Create platform-native versions for:
 Each platform must include:
 
 1. Platform Title
-2. Platform Caption / Description
+2. Platform Caption / Description / Post
+
+Each title and caption must appear in its own fenced text block.
 
 Use platform-appropriate titles:
 
@@ -74,51 +100,87 @@ Use this structure:
 
 #### TikTok
 
-**Title:**  
-[Short emotional hook]
+**Title:**
 
-**Caption:**  
+```text
+[Short emotional hook]
+```
+
+**Caption:**
+
+```text
 [Platform-native TikTok caption]
+```
 
 #### YouTube Lyric Video
 
-**Title:**  
-[Searchable YouTube title]
+**Title:**
 
-**Description:**  
+```text
+[Searchable YouTube title]
+```
+
+**Description:**
+
+```text
 [YouTube lyric video description]
+```
 
 #### Facebook
 
-**Title:**  
-[Emotional post headline]
+**Title:**
 
-**Post:**  
+```text
+[Emotional post headline]
+```
+
+**Post:**
+
+```text
 [Facebook post]
+```
 
 #### X
 
-**Title:**  
-[Short punchy hook]
+**Title:**
 
-**Post:**  
+```text
+[Short punchy hook]
+```
+
+**Post:**
+
+```text
 [X post]
+```
 
 #### Instagram
 
-**Title:**  
-[Aesthetic caption headline]
+**Title:**
 
-**Caption:**  
+```text
+[Aesthetic caption headline]
+```
+
+**Caption:**
+
+```text
 [Instagram caption]
+```
 
 #### Pinterest
 
-**Title:**  
-[Searchable visual pin title]
+**Title:**
 
-**Description:**  
+```text
+[Searchable visual pin title]
+```
+
+**Description:**
+
+```text
 [Pinterest description]
+```
 
 ### 5. Short-Form Video Script
 
@@ -205,3 +267,4 @@ Tell Edward the strongest immediate use for the promo, such as:
 - Make each platform sound native to that platform.
 - Always include platform titles when creating platform versions.
 - Always include exactly 5 hashtags unless Edward asks for a different number.
+- Place every major output item in its own fenced text block for easy copy/paste.
