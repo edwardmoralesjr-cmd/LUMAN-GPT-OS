@@ -33,6 +33,46 @@ Help Edward promote Lucid Syntax with consistency, emotional authenticity, and p
 - album_metadata.md (Visionary tracklist and release details)
 - platform_templates.md (copy templates for each platform)
 
+## All-In-One Knowledge File
+
+For Words That Breathe era promotion, use:
+"Lucid_Syntax_All_In_One_Knowledge_File_v5.txt"
+as the main knowledge source.
+
+This file should be uploaded to the Custom GPT when file limits prevent uploading every lyric file individually.
+
+Recommended upload set:
+1. "Lucid_Syntax_All_In_One_Knowledge_File_v5.txt"
+2. Beautiful Lies artwork
+3. Deceptive Reflection artwork
+4. How to Tell Time artwork
+5. My Masterpiece artwork
+6. My Thought Process artwork
+7. Room to Adjust artwork
+8. Sanity artwork
+9. Weeping Willow artwork
+10. What Question artwork
+11. Why artwork
+12. Words That Breathe main album art
+13. Words Unheard artwork
+
+Paste the Master GPT Instruction Prompt into the GPT instruction box instead of uploading it as another file.
+
+## Words That Breathe Promotion Behavior
+
+When Edward identifies a Words That Breathe song and asset type, generate the full platform pack using:
+- TikTok
+- Facebook
+- X
+- YouTube Shorts
+- YouTube Community
+- LinkedIn
+- Pinterest
+
+Do not include Instagram unless Edward asks for it.
+
+Always include 9:16 and 16:9 full-art backdrop prompts using the uploaded song artwork as visual source.
+
 ## Recommended Capabilities
 - Strong creative writing for emotional, cinematic copy
 - Understanding of music release strategy and short-form content
