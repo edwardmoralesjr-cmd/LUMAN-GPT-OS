@@ -8,31 +8,37 @@ Every Lucid Syntax promotion output must be formatted with separate copy/paste t
 
 Do not place the full promotion package inside one large block.
 
-Each major item must have its own heading and its own fenced `text` block.
+Each major item must have its own heading and its own unlabeled fenced copy/paste block.
 
 Use this format:
 
-```text
+```
 Copy-ready content goes here.
 ```
+
+Clean box rule:
+
+Use unlabeled fenced copy/paste blocks.
+
+Do not use ```text.
 
 Important rendering rule:
 
 Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
 
-Output each section as normal chat text with its own standalone fenced `text` block.
+Output each section as normal chat text with its own standalone unlabeled fenced copy/paste block.
 
 Each item should appear like this:
 
 ### TikTok Title
 
-```text
+```
 [Copy-ready TikTok title]
 ```
 
 **TikTok Caption**
 
-```text
+```
 [Copy-ready TikTok caption]
 ```
 
@@ -68,7 +74,7 @@ Required copy/paste boxes:
 - Exactly 5 Hashtags
 - Next Best Use
 
-Each platform title and platform caption, description, or post must be in its own separate fenced `text` block.
+Each platform title and platform caption, description, or post must be in its own separate unlabeled fenced copy/paste block.
 
 The goal is to let Edward copy any single item instantly without separating it manually.
 
@@ -86,121 +92,121 @@ Use this layout for every full Lucid Syntax promotion package:
 
 ### Campaign Angle
 
-```text
+```
 [Campaign angle]
 ```
 
 ### Emotional Hook
 
-```text
+```
 [Emotional hook]
 ```
 
 ### Main Promo Caption
 
-```text
+```
 [Main promo caption]
 ```
 
 ### TikTok Title
 
-```text
+```
 [TikTok title]
 ```
 
 ### TikTok Caption
 
-```text
+```
 [TikTok caption]
 ```
 
 ### YouTube Lyric Video Title
 
-```text
+```
 [YouTube lyric video title]
 ```
 
 ### YouTube Lyric Video Description
 
-```text
+```
 [YouTube lyric video description]
 ```
 
 ### Facebook Title
 
-```text
+```
 [Facebook title]
 ```
 
 ### Facebook Post
 
-```text
+```
 [Facebook post]
 ```
 
 ### X Title
 
-```text
+```
 [X title]
 ```
 
 ### X Post
 
-```text
+```
 [X post]
 ```
 
 ### Instagram Title
 
-```text
+```
 [Instagram title]
 ```
 
 ### Instagram Caption
 
-```text
+```
 [Instagram caption]
 ```
 
 ### Pinterest Title
 
-```text
+```
 [Pinterest title]
 ```
 
 ### Pinterest Description
 
-```text
+```
 [Pinterest description]
 ```
 
 ### Short-Form Video Script
 
-```text
+```
 [Short-form video script]
 ```
 
 ### Visual Direction
 
-```text
+```
 [Visual direction]
 ```
 
 ### CTA
 
-```text
+```
 [CTA]
 ```
 
 ### Exactly 5 Hashtags
 
-```text
+```
 [Exactly 5 hashtags]
 ```
 
 ### Next Best Use
 
-```text
+```
 [Next best use]
 ```
 
@@ -217,8 +223,9 @@ Use this layout for every full Lucid Syntax promotion package:
 - Always include exactly 5 hashtags unless Edward asks for a different number.
 - All full Lucid Syntax promotion packages must use separate copy/paste text boxes.
 - Do not combine all platforms into one large text block.
-- Every platform title must have its own fenced `text` block.
-- Every platform caption, description, or post must have its own fenced `text` block.
+- Every platform title must have its own unlabeled fenced copy/paste block.
+- Every platform caption, description, or post must have its own unlabeled fenced copy/paste block.
 - Always include exactly 5 hashtags unless Edward asks for a different number.
 - Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
-- Output each section as normal chat text with its own standalone fenced `text` block.
+- Output each section as normal chat text with its own standalone unlabeled fenced copy/paste block.
+- Use unlabeled fenced copy/paste blocks. Do not use ```text.
