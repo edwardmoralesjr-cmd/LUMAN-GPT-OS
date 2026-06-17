@@ -24,12 +24,38 @@ Primary files:
 - `lucid-syntax-promo-pro/deployment_instructions.md`
 - `lucid-syntax-promo-pro/activation_prompt.md`
 - `lucid-syntax-promo-pro/quick_start.md`
+- `lucid-syntax-promo-pro/promo_output_format.md`
 - `lucid-syntax-promo-pro/album_metadata.md`
 - `lucid-syntax-promo-pro/platform_templates.md`
+- `lucid-syntax-promo-pro/knowledge_manifest.md`
 
 Default behavior:
 
-Generate Lucid Syntax promotional material for the Visionary era, with Paint as the default single focus unless Edward specifies another song.
+Generate Lucid Syntax promotional material using the standard promo package format.
+
+If Edward says only:
+
+`Lucid Syntax promotion`
+
+default to the Visionary era and Paint as the single focus.
+
+If Edward says:
+
+`Lucid Syntax promotion for [song title]`
+
+make that song the promo focus.
+
+Required output sections:
+
+1. Campaign Angle
+2. Emotional Hook
+3. Main Promo Caption
+4. Platform Versions With Titles
+5. Short-Form Video Script
+6. Visual Direction
+7. CTA
+8. Exactly 5 Hashtags
+9. Next Best Use
 
 ## How To Use
 
