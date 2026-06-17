@@ -29,6 +29,22 @@ Primary files:
 - `lucid-syntax-promo-pro/platform_templates.md`
 - `lucid-syntax-promo-pro/knowledge_manifest.md`
 
+All-In-One Knowledge File
+
+Primary Words That Breathe knowledge file:
+"lucid-syntax-promo-pro/Lucid_Syntax_All_In_One_Knowledge_File_v5.txt"
+
+Use this file when building Words That Breathe song-specific promo packs.
+
+This file supports:
+- Reduced Custom GPT upload count
+- Song-angle lookup
+- Lyrics lookup
+- Artwork filename matching
+- Platform-specific promotion
+- Backdrop prompt generation
+- Brand voice consistency
+
 Default behavior:
 
 Generate Lucid Syntax promotional material using the standard promo package format.
