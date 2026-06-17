@@ -4,6 +4,27 @@ This file defines activation phrases Edward can use when asking ChatGPT/LUMAN to
 
 ## Core Repository Commands
 
+### Open LUMAN dashboards
+
+When Edward says:
+
+`Open LUMAN dashboards`
+
+ChatGPT should activate the LUMAN OS dashboard layer.
+
+Use this file:
+
+- `00_CORE/LUMAN_DASHBOARD.md`
+
+Default behavior:
+
+1. Show system status.
+2. Show active priorities.
+3. Show open loops.
+4. Show vault status.
+5. Show useful available commands.
+6. Give one next best action.
+
 ### Use GitHub
 
 When Edward says:
@@ -99,6 +120,7 @@ ChatGPT should treat the repo as the active operating system and orient the sess
 - `README.md`
 - `COMMANDS.md`
 - `DEPLOYMENT_INDEX.md`
+- `00_CORE/LUMAN_DASHBOARD.md`
 - `00_CORE/ACTIVE_PRIORITIES.md`
 - `00_CORE/OPEN_LOOPS.md`
 - `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md`
@@ -309,6 +331,7 @@ Default behavior:
 
 ## Command Shortcut List
 
+- `Open LUMAN dashboards`
 - `Open LUMAN OS`
 - `Use GitHub`
 - `Update LUMAN OS:`
