@@ -1,5 +1,14 @@
 # LUMAN GPT OS Deployment Index
 
+## Core LUMAN OS Protocols
+
+- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
+- `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `00_CORE/CHANGELOG.md`
+- `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md`
+
 ## Deployment-Ready GPTs
 
 - Roseborn Canon Guardian
@@ -12,6 +21,68 @@
 ## Activation Commands
 
 Edward can use short command phrases to activate a GPT workflow.
+
+### Use GitHub
+
+Activates the LUMAN GitHub update workflow.
+
+Use this file:
+
+- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
+
+Default behavior:
+
+1. Treat the repository as the source of truth for LUMAN GPT OS instructions and reusable systems.
+2. Read the current target file before updating it when possible.
+3. Keep updates clean, specific, and version-aware.
+4. Avoid storing secrets, private financial details, employer-confidential data, or sensitive family records.
+5. Use platform-neutral language unless Edward names a specific tool for the task.
+
+### Update LUMAN OS
+
+Activates a direct memory/update workflow.
+
+Use these files when relevant:
+
+- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md`
+- `06_SESSION_LOGS/`
+
+Default behavior:
+
+1. Determine which vault or module the update belongs to.
+2. Preserve durable facts in the correct knowledge pack or module file.
+3. Add active work to `00_CORE/ACTIVE_PRIORITIES.md` when it affects current focus.
+4. Add unresolved work to `00_CORE/OPEN_LOOPS.md` when it needs follow-up.
+5. Create a session log when the update represents a meaningful conversation or system change.
+
+### Create summary
+
+Activates the LUMAN session-summary workflow.
+
+Use this file:
+
+- `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md`
+
+Default behavior:
+
+1. Generate a LUMAN GitHub Update Packet.
+2. Identify the main vault, secondary vaults, permanent updates, active updates, tasks, open loops, and files to update.
+3. Provide exact Markdown for session logs, changelogs, active priorities, open loops, and knowledge packs when relevant.
+4. Keep the packet usable for direct GitHub updates.
+
+### Commit this summary to GitHub
+
+Activates the summary-commit workflow.
+
+Default behavior:
+
+1. Convert the latest LUMAN GitHub Update Packet into real repository changes.
+2. Create or update the session log, changelog, open loops, active priorities, and knowledge pack files.
+3. Confirm changed files and commit SHAs back to Edward.
+4. Do not add sensitive information to public repository files.
 
 ### Lucid Syntax promotion
 
@@ -91,13 +162,11 @@ Clean box rule:
 
 Use unlabeled fenced copy/paste blocks.
 
-Do not use ```text.
-
 ## How To Use
 
 1. Open the desired GPT folder in this repository.
 2. Copy the full content of `deployment_instructions.md` into the Custom GPT instruction field in ChatGPT.
-3. Upload or reference the supporting knowledge files from that same GPT folder (e.g., `locked_canon.md`, `album_metadata.md`, `security_rules.md`, etc.).
+3. Upload or reference the supporting knowledge files from that same GPT folder, such as `locked_canon.md`, `album_metadata.md`, or `security_rules.md`.
 4. Run the test prompts included in the deployment file to verify behavior.
 5. Record any changes, improvements, or issues in the GPT folder’s `changelog.md`.
 
