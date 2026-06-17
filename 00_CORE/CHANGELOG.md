@@ -1,5 +1,24 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-17 - LUMAN OS GitHub update room established
+
+Updated:
+- Confirmed GitHub can be used as the LUMAN OS external brain.
+- Established this chat as the active LUMAN OS update room.
+- Replaced Grok-specific updater language with neutral LUMAN/ChatGPT GitHub update language.
+- Updated the summary workflow to generate LUMAN GitHub Update Packets.
+- Added platform-neutral video and animation workflow language.
+- Added the first session log, open loops file, active priorities file, and LUMAN knowledge pack entry.
+
+Files changed:
+- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
+- `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md`
+- `00_CORE/CHANGELOG.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `06_SESSION_LOGS/2026-06/2026-06-17-luman-github-updater-cleanup.md`
+- `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md`
+
 ## 2026-06-17 - Platform-neutral updater cleanup
 
 Updated:
