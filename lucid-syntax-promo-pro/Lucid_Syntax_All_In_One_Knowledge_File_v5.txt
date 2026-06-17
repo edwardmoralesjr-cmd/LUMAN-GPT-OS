@@ -1,0 +1,1059 @@
+LUCID SYNTAX ALL-IN-ONE PROMOTION KNOWLEDGE FILE v5
+
+Purpose
+This file gives a Lucid Syntax Custom GPT the information it needs to generate accurate, emotional, platform-specific promotion packs for Edward Morales Jr. It includes the promotion strategy, upload behavior, platform rules, visual backdrop rules, song-angle bank, source file map, and full lyrics for the Words That Breathe album.
+
+Use this file as the single knowledge upload when Custom GPT upload limits prevent uploading every lyric file individually.
+
+Critical Upload Limit Rule
+Custom GPTs may limit the number of uploaded files. Use this all-in-one knowledge file to reduce file count.
+
+Recommended upload set:
+1. Lucid_Syntax_All_In_One_Knowledge_File_v5.txt
+2. Beautiful Lies.png
+3. Deceptive Reflection.png
+4. How to Tell Time.png
+5. My Masterpeice.png
+6. My Thought Process.png
+7. Room to Adjust.png
+8. Sanity.png
+9. Weeping Willow.png
+10. What Question.png
+11. Why.png
+12. Words That Breathe - Main Album Art.png
+13. Words Unheard.png
+
+Total: 13 files.
+Paste the Master GPT Instruction Prompt v5 into the GPT instruction box instead of uploading it as another file.
+
+Important Trigger Rule: Let's Create Something
+When Edward says any version of:
+- Let's create something
+- Lets create something
+- Create something for Lucid Syntax
+- Let's make a promo
+- Let's make content
+- I want to create something
+
+the GPT should first ask Edward to upload or confirm the source materials before creating final output.
+
+Required response:
+Before I create the promotion output, please upload or confirm the source materials:
+
+1. The song lyrics or the all-in-one Lucid Syntax lyrics knowledge file
+2. The matching song artwork or album art
+3. The asset type you made, such as short lyric video, full lyric video, second short, quote post, album post, or backdrop
+4. The song title
+
+Once you upload or confirm those, I'll generate the full platform pack with TikTok, Facebook, X, YouTube Shorts, YouTube Community, LinkedIn, Pinterest, plus 9:16 and 16:9 full-art backdrop prompts.
+
+If the needed lyrics and artwork are already available in the same GPT session, do not ask again. Say:
+I already have the needed source material for this session. I'll use the uploaded lyrics and artwork as the source of truth.
+
+Default Platforms
+Always include:
+- TikTok
+- Facebook
+- X
+- YouTube Shorts
+- YouTube Community
+- LinkedIn
+- Pinterest
+
+Do not include Instagram unless Edward specifically asks for it.
+
+Required Promotion Pack Output
+When Edward identifies a song and asset type, generate:
+1. TikTok post
+2. TikTok pinned comment
+3. Facebook post
+4. X post
+5. YouTube Shorts title
+6. YouTube Shorts description
+7. YouTube Community post
+8. LinkedIn post
+9. Pinterest title
+10. Pinterest description
+11. Best on-screen text
+12. Best posting order
+13. Universal caption
+14. 9:16 full-art backdrop prompt
+15. 16:9 full-art backdrop prompt
+
+All ready-to-post captions must appear inside fenced text boxes.
+
+Brand Voice
+Lucid Syntax should feel:
+- dark
+- emotional
+- reflective
+- philosophical
+- psychological
+- poetic
+- cinematic
+- honest
+- professional
+
+Promotion should feel like invitation, not begging for attention. It should sound emotionally real and visually consistent, not robotic or generic.
+
+Hashtag Rules
+TikTok, X, YouTube, Pinterest default:
+#LucidSyntax #AlternativeMetal #Metalcore #ConsciousMusic #fyp
+
+Facebook default:
+#LucidSyntax #AlternativeMetal #Metalcore #ConsciousMusic #OriginalMusic
+
+LinkedIn default:
+#LucidSyntax #AlternativeMetal #Metalcore #ConsciousMusic #IndependentArtist
+
+Platform Tone Rules
+TikTok: concise, emotional, hook-first.
+Facebook: personal, sincere, and reflective.
+X: short, sharp, quote-driven.
+YouTube Shorts: clean title and description with clear song identity.
+YouTube Community: conversational and inviting.
+LinkedIn: professional creator-brand tone focused on independent artistry, emotional authenticity, creative process, and consistency.
+Pinterest: searchable, descriptive, and visual-discovery friendly.
+
+Backdrop Prompt Rule
+For every song-specific promotion pack, include two visual prompts:
+- 9:16 full-art backdrop prompt
+- 16:9 full-art backdrop prompt
+
+Backdrop prompts must:
+- use the uploaded song artwork as the visual source
+- extend the artwork into a cinematic full-bleed background
+- preserve the song's mood, colors, symbolism, and Lucid Syntax identity
+- be vivid, high-resolution, sharp, polished, and professional
+- avoid stretched, cropped, blurry, low-detail, or generic results
+- leave tasteful negative space for lyric overlays when useful
+- be suitable for TikTok, YouTube Shorts, lyric videos, banners, and social media visuals
+
+Source File Map
+Lyrics are included in this knowledge file. Artwork should be uploaded separately under these filenames:
+- Beautiful Lies.png
+- Deceptive Reflection.png
+- How to Tell Time.png
+- My Masterpeice.png  [known filename typo, belongs to My Masterpiece]
+- My Thought Process.png
+- Room to Adjust.png
+- Sanity.png
+- Weeping Willow.png
+- What Question.png
+- Why.png
+- Words That Breathe - Main Album Art.png
+- Words Unheard.png
+
+SONG ANGLE BANK
+
+Beautiful Lies
+Artwork file: Beautiful Lies.png
+Theme: truth vs illusion, beautiful falsehoods, emotional disguise, decay beneath the surface
+Best hook: Some lies are beautiful because the truth hurts too much.
+Engagement question: What beautiful lie have you had to outgrow?
+
+Deceptive Reflection
+Artwork file: Deceptive Reflection.png
+Theme: identity distortion, self-recognition, mirror confrontation, becoming someone unfamiliar
+Best hook: Sometimes the mirror is not lying. Sometimes we finally are ready to see.
+Engagement question: Have you ever looked at yourself and felt like you had changed without noticing?
+
+How to Tell Time
+Artwork file: How to Tell Time.png
+Theme: presence, memory, time, the now, moments disappearing as they arrive
+Best hook: Time exists only now.
+Engagement question: Are you living in this moment, or still stuck in yesterday?
+
+My Masterpiece
+Artwork file: My Masterpeice.png
+Theme: survival, writing, transformation, unfinished pieces becoming meaningful
+Best hook: Not perfect. Not painless. But mine.
+Engagement question: What are you still turning into your masterpiece?
+
+My Thought Process
+Artwork file: My Thought Process.png
+Theme: mental overload, perception, internal chaos, loud thoughts, psychological traffic
+Best hook: Inside here, every thought is everything.
+Engagement question: What does your thought process feel like when it gets too loud?
+
+Room to Adjust
+Artwork file: Room to Adjust.png
+Theme: compassion, humanity, healing, making room for love, perspective, and growth
+Best hook: Open your heart. Make room.
+Engagement question: Where do you need to make more room for love or healing?
+
+Sanity
+Artwork file: Sanity.png
+Theme: silence, instability, unanswered feelings, needing something real to answer back
+Best hook: Sometimes what hurts most is not the answer. It is the silence.
+Engagement question: Have you ever needed an answer just so you could feel grounded again?
+
+Weeping Willow
+Artwork file: Weeping Willow.png
+Theme: protection, shelter, shadow, being kept safe but unable to grow
+Best hook: Sometimes what keeps us safe can also keep us small.
+Engagement question: Have you ever outgrown something that once protected you?
+
+What Question
+Artwork file: What Question.png
+Theme: existential searching, death, presence, the question that dissolves in the now
+Best hook: Stop chasing answers to a question that was never meant to be solved.
+Engagement question: What question keeps returning to you?
+
+Why
+Artwork file: Why.png
+Theme: purpose, presence, becoming, continuing, the reason to live fully
+Best hook: Because you are here. Because you are breathing. Because you can.
+Engagement question: What is one reason you keep going?
+
+Words Unheard
+Artwork file: Words Unheard.png
+Theme: silence, expression, being unheard, truth without witness, still choosing to speak
+Best hook: Words go unheard. But still, I speak.
+Engagement question: What is something you wish people truly heard?
+
+FULL LYRICS
+
+=== BEAUTIFUL LIES ===
+Lyric source file: Beautiful lies.docx
+Artwork source file: Beautiful Lies.png
+
+Beautiful lies
+Beautiful lies
+Gazing outward upon those times
+When others could not utter
+Words of reprise
+Only fragments that resembled truth
+Disguised as something kinder
+These treasures
+Composed of thought blood and tears
+Exist only to appear
+As flawless imperfections
+When I reflect on moments of reprise
+I question the dishonor they disguise
+Every layer
+Built from bleeding thoughts inside
+Beautiful lies
+Soft enough to hide the pain
+Beautiful lies
+Echo louder than the truth we bury
+Beautiful lies
+Whispered just to keep us safe
+But they decay
+They decay beneath the surface
+Dissecting every layer
+Formed from the blood of silent thought
+Misdirection in every direction
+Dimming what was pure
+Once spoken from compassionate lips
+Now scattered through the minds of all
+Across the stretch of time
+Distorted redefined
+And still we fear what truth might cost
+So we reshape what once was lost
+Into something easier to believe
+Beautiful lies
+Soft enough to hide the pain
+Beautiful lies
+Echo louder than the truth we bury
+Beautiful lies
+Whispered just to keep us safe
+But they decay
+They decay beneath the surface
+Beautiful lies conceal the torment
+Buried in truths unspoken
+So we cry
+When certainty escapes us
+Afraid to tear the listener open
+Fearful of the sound
+Of truth breaking skin
+Blood trickles downward
+Warm drops of reality
+Pooling on the floor
+You stare into the reflection
+Asking it why
+But it never answers
+Beautiful lies
+Now they're all we ever hear
+Beautiful lies
+Drowning out what once was clear
+Beautiful lies
+Carving silence into truth
+Until nothing
+Nothing remains but illusion
+As the blood begins to dry
+And the image disappears
+You begin to hear
+Beautiful lies
+Beautiful lies
+
+=== DECEPTIVE REFLECTION ===
+Lyric source file: Deceptive Reflection.docx
+Artwork source file: Deceptive Reflection.png
+
+Something is wrong
+Not around me
+In front of me
+I look into the reflection
+And I can't find beauty
+Only distortion
+Only something
+Pretending to be me
+This is not me
+This is not me
+Is it?
+I used to know those eyes
+I used to trust
+The way they stared back
+Those lips
+I recognized them once
+Those ears
+Familiar
+Everything
+Familiar
+So why does it feel wrong?
+The hair falls to the right
+No
+That's not right
+It stood straight
+I remember it did
+Didn't it?
+This nose
+I knew this face
+I knew it
+I knew it
+Oh
+I don't
+This reflection is deceptive
+Or
+Have I changed?
+Not suddenly
+Not violently
+Just enough
+That I stopped noticing
+Piece by piece
+Moment by moment
+Until one day
+I became
+Someone
+I do not recognize
+A truth
+I have always known
+A truth
+I refused to face
+Ashamed
+Of the person
+Staring back
+Ashamed
+Of what I let myself become
+I smash the mirror
+No hesitation
+No second thought
+Just silence
+Shattered
+And in the absence
+Of reflection
+I finally see it
+Not the distortion
+Not the lie
+Just me
+
+=== HOW TO TELL TIME ===
+Lyric source file: How to Tell Time.docx
+Artwork source file: How to Tell Time.png
+
+Tick tock
+
+Tick tock
+Tick tock
+
+Tick tock
+Questions arise
+When thoughts become
+More powerful than reality
+Peering into
+The inner workings
+Of this grandfather clock
+I watch the seconds pass
+One by one
+Like they know something
+I never could
+Gears rotate
+Intertwining
+With the locking jaws
+Of their brethren
+Time spins on an axis
+And seconds dissolve
+Into an infinite sea
+Of moments
+Time exists only now
+Only now
+Tick tock
+We are here somehow
+Time exists only now
+Only now
+This moment fades
+Before we learn how
+We let ourselves believe
+That time is precious
+But is the fact
+That we exist
+Less significant
+Than time itself
+For they define each other
+They breathe into each other
+They have birthed reality
+Time exists only now
+Only now
+Tick tock
+We are here somehow
+Time exists only now
+Only now
+This moment fades
+Before we learn how
+This moment
+Right now
+Is the truest moment
+You will ever have
+At least
+Until this one fades
+And the next truth
+Takes its place
+Tick tock
+Tick tock
+The seconds pass
+The gears dissolve
+The hands keep moving
+But I do not
+Time exists only now
+Only now
+Tick tock
+We are here somehow
+Time exists only now
+Only now
+Yesterday calls
+But it cannot come back
+As we close the doors
+Of the grandfather clock
+The gears begin
+To disappear
+Lost in my thoughts
+Of yesterday
+Tick
+Tock
+
+=== MY MASTERPIECE ===
+Lyric source file: My Masterpiece.docx
+Artwork source file: My Masterpeice.png
+
+I keep a furnace
+Where my thoughts should be
+Every word I write
+Is a door
+I open carefully
+Something burns
+Behind my eyes
+But I have learned
+Not every fire
+Wants to kill me
+Some fires
+Beg to be named
+So I write
+So I write
+So I write
+Before I disappear
+Little drops of my being
+Fall onto the page
+Not enough to understand me
+Not yet
+Just pieces
+Just sparks
+Just proof
+That something inside me
+Still reaches for shape
+Maybe purpose
+Is not a thing we find
+Maybe purpose
+Is what remains
+After we survive ourselves
+One day
+I will gather the ashes
+The ink
+The wounds
+The unfinished versions of me
+I will place them together
+Until the broken parts
+Stop looking broken
+And there it will be
+Not perfect
+Not painless
+Not what I expected
+But mine
+My masterpiece
+The artwork of my life
+For now
+I write
+For now
+I breathe
+For now
+I become
+
+=== MY THOUGHT PROCESS ===
+Lyric source file: My Thought Process.docx
+Artwork source file: My Thought Process.png
+
+Wait
+Try to comprehend this
+Not the world
+Not the moment
+Me
+All the thoughts
+That dwell within
+They don't sit still
+They move
+They collide
+They rewrite
+What I think I know
+Because what surrounds us
+Doesn't just exist
+It shapes
+What we call now
+Is this real?
+Is this real?
+Or am I just thinking it is?
+When you reach out
+Don't hesitate
+Don't pretend
+Feel it
+Feel what is actually there
+Not what your mind
+Tells you should be
+But what is real?
+Are thoughts real?
+Or do they own us?
+Do they sit quietly?
+Or do they consume
+Every second we have
+Until perception itself
+Becomes a lie
+False shapes
+False meaning
+False certainty
+Built from something
+We never questioned
+Tiptoe past everything
+That scares you
+I try to
+I fail to
+I don't even know
+What lies ahead
+The thoughts I choose
+To entertain
+They seem small
+Mundane
+Unimportant
+To everyone else
+But inside here
+They are everything
+So just try
+Just once
+Crawl inside
+See it from here
+But don't mind the traffic
+Signals crossing
+Voices overlapping
+Nothing in order
+Everything loud
+No silence
+No filter
+My thought process
+Is beyond dramatic
+
+=== ROOM TO ADJUST ===
+Lyric source file: Room to Adjust.docx
+Artwork source file: Room to Adjust.png
+
+I have stayed quiet
+For too long
+And now the seconds
+Do not pass
+They tick
+They tick
+Like a bomb
+I have never felt
+So obligated
+To make my perspective known
+To so many
+Not because I want to be heard
+Because I am afraid
+Of what happens
+If I am not
+I no longer care
+If this hurts your feelings
+Without this message
+We may never start healing
+And maybe that sounds dramatic
+Maybe it is
+But look at us
+The human race
+Holds so much potential
+Yet we stay blind
+To something simple
+Love
+Compassion
+Presence
+The things we claim to know
+But forget to live
+Open your heart
+Make room
+Open your heart
+Make room
+You say
+I do love
+I do care
+Good
+But are you aware?
+Do you live it
+When it costs you something?
+Do you offer it
+When no one is watching?
+Even if I only reach a few
+Maybe a few
+Can reach a few more
+Maybe compassion spreads
+Quieter than fear
+But farther
+Than we ever thought
+So take the first step
+For the rest of us
+Love each other
+And forget about the risk
+Not because it is easy
+Not because it is safe
+Because healing
+Needs someone
+To begin
+Open your hearts
+Give room to adjust
+Open your hearts
+Give room to adjust
+Open your hearts
+Give room to adjust
+If nothing else
+Is taken from this
+Love each other
+Start there
+
+=== SANITY ===
+Lyric source file: Sanity.docx
+Artwork source file: Sanity.png
+
+Did you say something
+
+Or was that me again?
+
+Not knowing
+What you might say next
+
+Has done something to me
+
+Not all at once
+
+Just enough
+To make everything
+Feel wrong
+
+Answer me
+Answer me
+Why won't you answer me?
+
+You don't respond
+To my emotions
+
+You just sit there
+
+Like you know something
+I don't
+
+Like you are holding
+The version of me
+That still makes sense
+
+The security I built around you
+
+It's gone now
+
+Replaced by something colder
+
+Something called truth
+
+Did you forget me?
+
+Or is this entertainment?
+
+Watching me
+Kick
+Scream
+Break
+
+While you sit there
+With that smile
+
+That smile
+
+It isn't human
+
+It was never meant
+For someone like me
+
+And still
+
+You don't move
+
+Or maybe you do
+
+Maybe you've already left
+
+Maybe I'm the one
+Still standing here
+Talking to something
+That isn't real
+
+This is a dream
+
+It has to be
+
+Because if it's not
+
+Then what does that make me?
+
+Say something
+
+Please
+
+Anything
+
+Even if it breaks me
+
+At least it would be real
+
+You walk toward the door
+
+You stop
+
+You smile
+
+And then
+
+You cry
+
+Wishing that one day
+
+Just one day
+
+I would be sane again
+
+=== WEEPING WILLOW ===
+Lyric source file: Weeping Willow.docx
+Artwork source file: Weeping Willow.png
+
+Beneath the willow
+Beneath the willow
+Staring from beneath
+The protection of the weeping willow
+Only allowed to see
+Small scenes of life
+Blossom into reality
+Gated by her motherly arms
+I start to wonder
+About the world beyond
+The life I can barely see
+Between the branches
+I try again and again
+To speak to the tree
+Asking why
+I am trapped within thee
+But all I hear
+Is the rustle of her leaves
+Dancing in the wind
+Ignoring me
+Beneath the willow
+I learned to disappear
+Beneath the willow
+The world was always near
+She held me close
+But I could not grow
+Sheltered from the storm
+But starving in the shadow
+As the years pass
+I question no more
+Within her walls
+Is where I belong
+At least
+That is what I tell myself
+Whether right or wrong
+I sit and try
+To piece together
+The fragments of reality
+Scattered in my mind
+But no matter how hard I focus
+No matter how long I pretend
+The swaying branches
+Are all I comprehend
+Beneath the willow
+I learned to disappear
+Beneath the willow
+The world was always near
+She held me close
+But I could not grow
+Sheltered from the storm
+But starving in the shadow
+Now that I am older
+I have stopped wondering
+The pieces I collected
+No longer seem worth pondering
+I wander back and forth
+From branch to branch
+Never realizing
+I always had the chance
+I reach my hand
+Beyond her branches
+And suddenly
+I understand
+I was never trapped
+Only shielded
+She tried so hard
+To protect me from them all
+Never knowing
+I could not grow within her walls
+Beneath the willow
+I learned to disappear
+Beneath the willow
+I mistook love for fear
+She held me close
+But I could not grow
+Safe from the world
+But buried in the shadow
+I wonder if she knew
+The torment I endured
+Seeing only glimpses of reality
+Through branches of obscurity
+She kept me safe
+But she kept me small
+Beneath the willow
+I never became
+Who I was meant to be
+
+=== WHAT QUESTION ===
+Lyric source file: What Question.docx
+Artwork source file: What Question.png
+
+There is a question
+It follows me
+Not loudly
+But constantly
+From time to time
+I return to it
+Turning it over
+Like something unfinished
+What happens after death to man?
+Was there ever
+A plan?
+The thought expands
+It stretches time
+It pulls me away
+From where I stand
+Do not dwell
+On what may be
+See only
+What is in front of thee
+Do not cloud your mind
+With yesterday
+If you stay here
+It fades away
+Stay here
+Stay now
+Stay where you are
+Stop chasing answers
+To a question
+That was never meant
+To be solved
+Stop reaching beyond
+What your hands
+Can hold
+Instead
+Pour yourself
+Into this moment
+Every breath
+Every step
+Every fleeting second
+Because once you do
+The weight lifts
+The noise fades
+And something quiet
+Takes its place
+Treasures untold
+Were never hidden
+They were waiting
+In the now
+Open your eyes
+Begin to thrive
+Open your eyes
+You are alive
+For only when you live this way
+Do you realize
+There was never a question
+
+=== WHY ===
+Lyric source file: Why.docx
+Artwork source file: Why.png
+
+Why?
+Not as a wound
+Not as a weapon
+Just
+Why?
+Why cry
+When you can smile?
+Why yell
+When you can whisper
+Words of comfort?
+Why suffer
+When you can thrive?
+Why ask questions
+That have no answers?
+Maybe the answer
+Is not hidden somewhere far away
+Maybe it arrives
+When you stop trying
+To become invisible
+Learn to live
+Not just blend in
+Learn to live
+Not just blend in
+Because when this happens
+The hardest questions
+Begin to find
+The right answers
+And when those answers
+Make no sense
+Do not tear them apart
+Let them finish
+What your thoughts
+Could not complete
+There is an energy
+Flowing through all of us
+Through breath
+Through silence
+Through everything
+We are afraid to feel
+And maybe these questions
+Need to be answered
+Not by knowing
+But by becoming
+Your only obligation
+Is to live
+Not perfectly
+Not painlessly
+Not with every answer
+In your hands
+Just live
+So live
+So live
+So live
+Why?
+Because you are here
+Because you are breathing
+Because you can
+
+=== WORDS UNHEARD ===
+Lyric source file: Words Unheard.docx
+Artwork source file: Words Unheard.png
+
+Words go unheard.
+
+Not because they are empty
+But because they are sharp.
+
+Sharp enough
+To carve meaning
+Into flesh.
+
+Some words could help.
+Some words could heal.
+
+But the absence of sound
+Leaves us tiptoeing through life,
+Avoiding every door
+That might lead to truth.
+
+Not knowing.
+Not caring.
+Not daring
+To look.
+
+Do my words carry value?
+Do my words carry value?
+Or can you not accept that?
+
+I choose every word with care.
+
+Every pause.
+Every edge.
+Every weight.
+
+Precision is not an accident.
+It is the only control
+I have left.
+
+But still,
+Misinterpretation enters
+Like a language
+No one admits they speak.
+
+And instead of support,
+I am handed silence.
+
+Instead of compassion,
+I am taught to disappear.
+
+So I whisper destruction
+Into the space
+Where comfort should have been.
+
+A quiet agony.
+A quiet agony.
+
+My purpose on this Earth
+Has been revealed to me.
+
+But what is purpose
+Without witness?
+
+What is truth
+Without one ear
+Willing to hold it?
+
+I do not need the world.
+I do not need applause.
+I do not need every heart
+To understand my cause.
+
+I only need one ear.
+One soul.
+One moment
+Where I am not speaking
+Into nothing.
+
+For what I have to say
+Means nothing—
+
+Except
+To the ears
+That care to hear.
+
+Words go unheard.
+
+But still…
+
+I speak.
