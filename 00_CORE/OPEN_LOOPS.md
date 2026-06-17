@@ -2,7 +2,7 @@
 
 ## LUMAN OS GitHub Brain
 
-Current status: initial GitHub brain foundation is active.
+Current status: initial GitHub brain foundation is active and command routing has been tightened.
 
 Completed on 2026-06-17:
 
@@ -13,10 +13,13 @@ Completed on 2026-06-17:
 - Created `00_CORE/LUMAN_DASHBOARD.md` as the main LUMAN OS dashboard.
 - Created `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md` as the first vault-specific dashboard.
 - Created `03_ROSEBORN_UNIVERSE/CHANGELOG.md` as the first module-level changelog in the Roseborn vault.
+- Created `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as the command routing source of truth.
+- Updated `00_CORE/LUMAN_DASHBOARD.md` to point to the routing index.
 
 Next open loops:
 
 - Build `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`.
+- Mirror key routes from `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` into `COMMANDS.md` and `DEPLOYMENT_INDEX.md` when safe.
 - Build fuller vault indexes for Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
 - Add module-level changelogs where missing.
 - Continue converting major conversations into session logs when Edward says `Create summary` and `Commit this summary to GitHub`.
