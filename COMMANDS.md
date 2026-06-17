@@ -48,9 +48,15 @@ Important rendering rule:
 
 Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
 
-Output each section as normal chat text with its own standalone fenced `text` block.
+Output each section as normal chat text with its own standalone unlabeled fenced copy/paste block.
 
 This includes platform titles, platform captions, video scripts, visual prompts, CTA, hashtags, and next best use.
+
+Clean box rule:
+
+Use unlabeled fenced copy/paste blocks.
+
+Do not use ```text.
 
 Default output:
 
