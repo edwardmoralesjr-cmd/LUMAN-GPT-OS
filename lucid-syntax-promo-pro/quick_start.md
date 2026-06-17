@@ -62,7 +62,11 @@ Required platforms:
 
 Every full Lucid Syntax promotion package should be broken into separate copy/paste text boxes.
 
-Do not create one large combined block.
+Important rendering rule:
+
+Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
+
+Output each section as normal chat text with its own standalone fenced `text` block.
 
 Each of these should have its own heading and fenced `text` block:
 
