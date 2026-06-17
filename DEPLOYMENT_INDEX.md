@@ -57,6 +57,10 @@ Required output sections:
 8. Exactly 5 Hashtags
 9. Next Best Use
 
+Formatting rule:
+
+Each major promo output should be placed in its own fenced text block for easy copy/paste.
+
 ## How To Use
 
 1. Open the desired GPT folder in this repository.
