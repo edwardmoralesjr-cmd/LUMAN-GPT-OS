@@ -1,6 +1,6 @@
 # LUMAN GPT OS Commands
 
-This file defines simple activation phrases Edward can use when asking ChatGPT to work from this repository.
+This file defines activation phrases Edward can use when asking ChatGPT to work from this repository.
 
 ## Primary Commands
 
@@ -9,14 +9,21 @@ This file defines simple activation phrases Edward can use when asking ChatGPT t
 When Edward says:
 
 `Lucid Syntax promotion`
+or:
+
+`Lucid Syntax promotion for [song title]`
 
 ChatGPT should activate the Lucid Syntax Promo Pro workflow.
 
 Use these files:
 
 - `lucid-syntax-promo-pro/deployment_instructions.md`
+- `lucid-syntax-promo-pro/activation_prompt.md`
+- `lucid-syntax-promo-pro/quick_start.md`
+- `lucid-syntax-promo-pro/promo_output_format.md`
 - `lucid-syntax-promo-pro/album_metadata.md`
 - `lucid-syntax-promo-pro/platform_templates.md`
+- `lucid-syntax-promo-pro/knowledge_manifest.md`
 - `shared-core/luman_voice.md`
 - `shared-core/edward_style_rules.md`
 - `shared-core/project_index.md`
@@ -25,17 +32,36 @@ Default behavior:
 
 1. Treat Lucid Syntax as the active project.
 2. Use the Visionary era as the current campaign unless Edward says otherwise.
-3. Preserve the human-led positioning: human heart, AI vessel.
-4. Do not lead with “AI band” or “AI music” unless Edward asks for transparent explanation.
-5. Generate useful promotional material immediately.
-6. Ask for clarification only when absolutely necessary.
-7. Keep campaign pacing human, intentional, and not rushed.
+3. Use Paint as the default single focus if Edward does not name a song.
+4. If Edward names a song, build the promo around that song.
+5. Preserve the human-led positioning: human heart, AI vessel.
+6. Do not lead with “AI band” or “AI music” unless Edward asks for transparent explanation.
+7. Generate useful promotional material immediately.
+8. Ask for clarification only when absolutely necessary.
+9. Keep campaign pacing human, intentional, and not rushed.
+
+Default output:
+
+Use the structure in:
+
+`lucid-syntax-promo-pro/promo_output_format.md`
+
+Required promo output sections:
+
+1. Campaign Angle
+2. Emotional Hook
+3. Main Promo Caption
+4. Platform Versions With Titles
+5. Short-Form Video Script
+6. Visual Direction
+7. CTA
+8. Exactly 5 Hashtags
+9. Next Best Use
 
 Recommended outputs:
 
-- Platform posts
 - TikTok captions
-- YouTube descriptions
+- YouTube lyric video descriptions
 - Facebook posts
 - X posts
 - Instagram captions
