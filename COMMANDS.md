@@ -44,6 +44,12 @@ Formatting rule:
 
 All Lucid Syntax promotion outputs must use separate copy/paste text boxes for every major item.
 
+Important rendering rule:
+
+Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
+
+Output each section as normal chat text with its own standalone fenced `text` block.
+
 This includes platform titles, platform captions, video scripts, visual prompts, CTA, hashtags, and next best use.
 
 Default output:
