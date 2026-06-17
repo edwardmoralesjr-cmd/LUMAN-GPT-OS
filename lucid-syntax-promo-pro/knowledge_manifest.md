@@ -17,6 +17,49 @@ Use for:
 - Safety boundaries
 - Test prompts
 
+### activation_prompt.md
+
+Purpose:
+Defines what happens when Edward uses the command phrase:
+
+`Lucid Syntax promotion`
+
+Use for:
+- Command activation
+- Default campaign context
+- Default behavior
+- Standard workflow trigger
+
+### quick_start.md
+
+Purpose:
+Provides the simplest operating guide for using the Lucid Syntax Promo Pro workflow.
+
+Use for:
+- Activation phrase
+- Song-specific activation
+- Default output structure
+- Follow-up prompt examples
+- Platform title expectations
+
+### promo_output_format.md
+
+Purpose:
+Defines the standard Lucid Syntax promotion output structure.
+
+Use for:
+- Song promo packages
+- Campaign angle
+- Emotional hook
+- Main promo caption
+- Platform-specific titles and headlines
+- Platform-specific posts
+- Short-form video concepts
+- Visual direction
+- CTA
+- Exactly 5 hashtags
+- Next best use
+
 ### album_metadata.md
 
 Purpose:
