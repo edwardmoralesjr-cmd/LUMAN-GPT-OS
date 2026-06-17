@@ -2,259 +2,179 @@
 
 When Edward activates the Lucid Syntax promotion workflow, use this standardized output structure unless he asks for a different format.
 
-## Copy-Ready Text Box Rule
+## Copy/Paste Text Box Rule
 
-When generating a Lucid Syntax promo package, every major promo item must be placed in its own fenced text block.
+Every Lucid Syntax promotion output must be formatted with separate copy/paste text boxes.
 
-Use fenced text blocks like this:
+Do not place the full promotion package inside one large block.
+
+Each major item must have its own heading and its own fenced `text` block.
+
+Use this format:
 
 ```text
 Copy-ready content goes here.
 ```
 
-Do this for:
+This rule applies to every promotion generated from:
 
+- `Lucid Syntax promotion`
+- `Lucid Syntax promotion for [song title]`
+- Any Lucid Syntax song promo request
+- Any Lucid Syntax platform promo request
+- Any Lucid Syntax short-form video promo request
+- Any Lucid Syntax release promo request
+
+Required copy/paste boxes:
+
+- Campaign Angle
 - Emotional Hook
 - Main Promo Caption
-- Every platform title
-- Every platform caption, description, or post
+- TikTok Title
+- TikTok Caption
+- YouTube Lyric Video Title
+- YouTube Lyric Video Description
+- Facebook Title
+- Facebook Post
+- X Title
+- X Post
+- Instagram Title
+- Instagram Caption
+- Pinterest Title
+- Pinterest Description
 - Short-Form Video Script
 - Visual Direction
 - CTA
-- Hashtags
+- Exactly 5 Hashtags
 - Next Best Use
 
-The goal is to make every output easy for Edward to copy and paste without needing to separate the content manually.
+Each platform title and platform caption, description, or post must be in its own separate fenced `text` block.
 
-## Default Promo Package
+The goal is to let Edward copy any single item instantly without separating it manually.
 
-Use this format when Edward gives a song title and asks for promotion.
+## Required Output Layout
 
-### 1. Campaign Angle
+Use this layout for every full Lucid Syntax promotion package:
 
-Explain the emotional, spiritual, or narrative angle of the song in 2 to 4 sentences.
-
-The campaign angle should answer:
-
-- Who is this song for?
-- What emotional state does it speak to?
-- What transformation or tension does it carry?
-- How does it fit the Lucid Syntax world?
-
-### 2. Emotional Hook
-
-Create a short hook that can work as a text overlay, opening caption, or short-form video line.
-
-The hook should feel:
-
-- Human
-- Cinematic
-- Emotionally direct
-- Easy to use in a short video
-
-Keep it short enough to work on screen.
-
-### 3. Main Promo Caption
-
-Create a strong general-purpose caption that can work across platforms.
-
-It should be emotionally authentic, not generic hype.
-
-It should capture:
-
-- The song’s emotional core
-- The listener it is meant for
-- The Lucid Syntax tone
-- A natural reason to listen
-
-### 4. Platform Versions With Titles
-
-Create platform-native versions for:
-
-- TikTok
-- YouTube lyric video
-- Facebook
-- X
-- Instagram
-- Pinterest
-
-Each platform must include:
-
-1. Platform Title
-2. Platform Caption / Description / Post
-
-Each title and caption must appear in its own fenced text block.
-
-Use platform-appropriate titles:
-
-- TikTok Title: Short emotional hook or text overlay title
-- YouTube Title: Searchable lyric video or official audio style title
-- Facebook Title: Emotional post headline
-- X Title: Short punchy hook
-- Instagram Title: Aesthetic caption headline
-- Pinterest Title: Searchable visual pin title
-
-Do not simply repeat the same title across all platforms. Each title should fit the platform’s natural style.
-
-Use this structure:
-
-#### TikTok
-
-**Title:**
+### Campaign Angle
 
 ```text
-[Short emotional hook]
+[Campaign angle]
 ```
 
-**Caption:**
+### Emotional Hook
 
 ```text
-[Platform-native TikTok caption]
+[Emotional hook]
 ```
 
-#### YouTube Lyric Video
-
-**Title:**
+### Main Promo Caption
 
 ```text
-[Searchable YouTube title]
+[Main promo caption]
 ```
 
-**Description:**
+### TikTok Title
+
+```text
+[TikTok title]
+```
+
+### TikTok Caption
+
+```text
+[TikTok caption]
+```
+
+### YouTube Lyric Video Title
+
+```text
+[YouTube lyric video title]
+```
+
+### YouTube Lyric Video Description
 
 ```text
 [YouTube lyric video description]
 ```
 
-#### Facebook
-
-**Title:**
+### Facebook Title
 
 ```text
-[Emotional post headline]
+[Facebook title]
 ```
 
-**Post:**
+### Facebook Post
 
 ```text
 [Facebook post]
 ```
 
-#### X
-
-**Title:**
+### X Title
 
 ```text
-[Short punchy hook]
+[X title]
 ```
 
-**Post:**
+### X Post
 
 ```text
 [X post]
 ```
 
-#### Instagram
-
-**Title:**
+### Instagram Title
 
 ```text
-[Aesthetic caption headline]
+[Instagram title]
 ```
 
-**Caption:**
+### Instagram Caption
 
 ```text
 [Instagram caption]
 ```
 
-#### Pinterest
-
-**Title:**
+### Pinterest Title
 
 ```text
-[Searchable visual pin title]
+[Pinterest title]
 ```
 
-**Description:**
+### Pinterest Description
 
 ```text
 [Pinterest description]
 ```
 
-### 5. Short-Form Video Script
+### Short-Form Video Script
 
-Create a simple short-form video concept with:
+```text
+[Short-form video script]
+```
 
-- Opening visual
-- First text overlay
-- Motion or transformation
-- Second text overlay
-- Final frame
+### Visual Direction
 
-The video should be easy to build in CapCut, InVideo, Runway, Grok, Gemini, or another visual tool.
+```text
+[Visual direction]
+```
 
-### 6. Visual Direction
+### CTA
 
-Create one cinematic visual direction that matches Lucid Syntax.
+```text
+[CTA]
+```
 
-Use dark cinematic futuristic gothic language when appropriate:
+### Exactly 5 Hashtags
 
-- Black
-- Silver
-- Red
-- White
-- Smoke
-- Reflective floors
-- Sacred geometry
-- Emotional transformation
-- Human pressure
-- Spiritual intensity
-- Futuristic gothic corridors
-- Portals
-- Shadows
-- Light breaking through darkness
+```text
+[Exactly 5 hashtags]
+```
 
-Avoid clutter, cheap horror, fake gore, messy typography, and random unrelated symbols.
+### Next Best Use
 
-### 7. CTA
-
-Create one short natural call to action.
-
-Avoid desperate or overly sales-like language.
-
-Good CTA examples:
-
-- Listen now and step into the next chapter.
-- Watch the full lyric video.
-- Follow Lucid Syntax for the next transmission.
-- Give this one room to breathe.
-- Step into the Visionary era.
-
-### 8. Exactly 5 Hashtags
-
-Always provide exactly 5 hashtags unless Edward requests otherwise.
-
-Hashtags should be relevant to:
-
-- Lucid Syntax
-- Song title
-- Album or era
-- Genre
-- Emotional theme
-
-### 9. Next Best Use
-
-Tell Edward the strongest immediate use for the promo, such as:
-
-- Use as a TikTok short
-- Use as a Facebook post
-- Use as a YouTube description
-- Use as a lyric video intro
-- Use as a quote graphic
-- Use as a Spotify Canvas concept
-- Use as a release-week post
-- Use as a lead-up video
+```text
+[Next best use]
+```
 
 ## Rules
 
@@ -267,4 +187,8 @@ Tell Edward the strongest immediate use for the promo, such as:
 - Make each platform sound native to that platform.
 - Always include platform titles when creating platform versions.
 - Always include exactly 5 hashtags unless Edward asks for a different number.
-- Place every major output item in its own fenced text block for easy copy/paste.
+- All full Lucid Syntax promotion packages must use separate copy/paste text boxes.
+- Do not combine all platforms into one large text block.
+- Every platform title must have its own fenced `text` block.
+- Every platform caption, description, or post must have its own fenced `text` block.
+- Always include exactly 5 hashtags unless Edward asks for a different number.
