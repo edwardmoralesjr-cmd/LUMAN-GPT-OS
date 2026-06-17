@@ -16,6 +16,26 @@ Use this format:
 Copy-ready content goes here.
 ```
 
+Important rendering rule:
+
+Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
+
+Output each section as normal chat text with its own standalone fenced `text` block.
+
+Each item should appear like this:
+
+### TikTok Title
+
+```text
+[Copy-ready TikTok title]
+```
+
+**TikTok Caption**
+
+```text
+[Copy-ready TikTok caption]
+```
+
 This rule applies to every promotion generated from:
 
 - `Lucid Syntax promotion`
@@ -51,6 +71,14 @@ Required copy/paste boxes:
 Each platform title and platform caption, description, or post must be in its own separate fenced `text` block.
 
 The goal is to let Edward copy any single item instantly without separating it manually.
+
+Do not use one large wrapper around the whole promo package.
+
+Do not place multiple sections inside one fenced block.
+
+Do not place the whole promo package inside a single writing block.
+
+Each output item must be individually boxed.
 
 ## Required Output Layout
 
@@ -192,3 +220,5 @@ Use this layout for every full Lucid Syntax promotion package:
 - Every platform title must have its own fenced `text` block.
 - Every platform caption, description, or post must have its own fenced `text` block.
 - Always include exactly 5 hashtags unless Edward asks for a different number.
+- Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
+- Output each section as normal chat text with its own standalone fenced `text` block.
