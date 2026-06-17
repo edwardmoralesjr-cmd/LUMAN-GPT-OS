@@ -40,6 +40,12 @@ Default behavior:
 8. Ask for clarification only when absolutely necessary.
 9. Keep campaign pacing human, intentional, and not rushed.
 
+Formatting rule:
+
+All Lucid Syntax promotion outputs must use separate copy/paste text boxes for every major item.
+
+This includes platform titles, platform captions, video scripts, visual prompts, CTA, hashtags, and next best use.
+
 Default output:
 
 Use the structure in:
