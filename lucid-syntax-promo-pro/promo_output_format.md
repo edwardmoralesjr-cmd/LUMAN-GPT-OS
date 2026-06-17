@@ -86,6 +86,138 @@ Do not place the whole promo package inside a single writing block.
 
 Each output item must be individually boxed.
 
+## Words That Breathe Era Promotion Pack
+
+When Edward identifies a song and asset type from the Words That Breathe era, generate the following sections.
+
+Each section must appear as normal chat text with its own standalone unlabeled fenced copy/paste block.
+
+Do not use one large writing block.
+
+Do not use "text" after the opening fence.
+
+Do not include Instagram unless Edward specifically asks for it.
+
+Required sections:
+
+1. TikTok Post
+2. TikTok Pinned Comment
+3. Facebook Post
+4. X Post
+5. YouTube Shorts Title
+6. YouTube Shorts Description
+7. YouTube Community Post
+8. LinkedIn Post
+9. Pinterest Title
+10. Pinterest Description
+11. Best On-Screen Text
+12. Best Posting Order
+13. Universal Caption
+14. 9:16 Full-Art Backdrop Prompt
+15. 16:9 Full-Art Backdrop Prompt
+
+Use this layout:
+
+TikTok Post
+
+```
+[Copy-ready TikTok post]
+```
+
+TikTok Pinned Comment
+
+```
+[Copy-ready TikTok pinned comment]
+```
+
+Facebook Post
+
+```
+[Copy-ready Facebook post]
+```
+
+X Post
+
+```
+[Copy-ready X post]
+```
+
+YouTube Shorts Title
+
+```
+[Copy-ready YouTube Shorts title]
+```
+
+YouTube Shorts Description
+
+```
+[Copy-ready YouTube Shorts description]
+```
+
+YouTube Community Post
+
+```
+[Copy-ready YouTube Community post]
+```
+
+LinkedIn Post
+
+```
+[Copy-ready LinkedIn post]
+```
+
+Pinterest Title
+
+```
+[Copy-ready Pinterest title]
+```
+
+Pinterest Description
+
+```
+[Copy-ready Pinterest description]
+```
+
+Best On-Screen Text
+
+```
+[Copy-ready on-screen text]
+```
+
+Best Posting Order
+
+```
+[Copy-ready posting order]
+```
+
+Universal Caption
+
+```
+[Copy-ready universal caption]
+```
+
+9:16 Full-Art Backdrop Prompt
+
+```
+[Copy-ready 9:16 full-art backdrop prompt]
+```
+
+16:9 Full-Art Backdrop Prompt
+
+```
+[Copy-ready 16:9 full-art backdrop prompt]
+```
+
+Clean Box Rule
+
+Use unlabeled fenced copy/paste blocks.
+
+Do not use ```text.
+
+Use:
+
+```
+
 ## Required Output Layout
 
 Use this layout for every full Lucid Syntax promotion package:
