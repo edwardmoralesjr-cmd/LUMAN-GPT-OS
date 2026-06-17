@@ -1,10 +1,12 @@
-LUMAN Create Summary Packet Template
+# LUMAN Create Summary Packet Template
 
-When Edward says "create summary," LUMAN/ChatGPT must generate a GROK UPDATE PACKET using this format.
+When Edward says `create summary`, LUMAN/ChatGPT must generate a **LUMAN GITHUB UPDATE PACKET** using this format.
+
+This packet is designed to be applied through the connected GitHub workflow or copied into a compatible repository update process. It must stay platform-neutral and should not depend on any single external updater tool.
 
 ---
 
-GROK UPDATE PACKET
+# LUMAN GITHUB UPDATE PACKET
 
 **Session Title**
 
@@ -77,6 +79,7 @@ File:
 
 Content:
 
+```markdown
 # Session Title
 
 Date:
@@ -96,6 +99,7 @@ Secondary Vaults:
 ## Files Updated
 
 ## Notes for Future LUMAN
+```
 
 **Exact Changelog Entry**
 
@@ -104,6 +108,7 @@ File:
 
 Paste at top:
 
+```markdown
 ## YYYY-MM-DD — Session Title
 
 ### Updated
@@ -114,6 +119,7 @@ Paste at top:
 ### Files Changed
 - path/file.md
 - path/file.md
+```
 
 **Exact Open Loops Update**
 
@@ -122,9 +128,11 @@ File:
 
 Update with:
 
+```markdown
 ## Category
 
 - Open loop item
+```
 
 **Exact Active Priorities Update**
 
@@ -133,11 +141,13 @@ File:
 
 Update with:
 
+```markdown
 ## Current Active Priorities
 
 - Priority 1
 - Priority 2
 - Priority 3
+```
 
 **Exact Knowledge Pack Update**
 
@@ -146,9 +156,11 @@ File:
 
 Add or update:
 
+```markdown
 ## Topic
 
 Condensed durable information.
+```
 
 **Suggested Commit Message**
 
