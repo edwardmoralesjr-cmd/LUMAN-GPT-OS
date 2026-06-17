@@ -9,6 +9,28 @@
 - KIA Service Records GPT
 - Work Quality Dashboard GPT
 
+## Activation Commands
+
+Edward can use short command phrases to activate a GPT workflow.
+
+### Lucid Syntax promotion
+
+Activates:
+
+`lucid-syntax-promo-pro/`
+
+Primary files:
+
+- `lucid-syntax-promo-pro/deployment_instructions.md`
+- `lucid-syntax-promo-pro/activation_prompt.md`
+- `lucid-syntax-promo-pro/quick_start.md`
+- `lucid-syntax-promo-pro/album_metadata.md`
+- `lucid-syntax-promo-pro/platform_templates.md`
+
+Default behavior:
+
+Generate Lucid Syntax promotional material for the Visionary era, with Paint as the default single focus unless Edward specifies another song.
+
 ## How To Use
 
 1. Open the desired GPT folder in this repository.
