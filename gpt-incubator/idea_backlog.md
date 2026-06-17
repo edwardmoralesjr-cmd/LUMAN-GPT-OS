@@ -34,11 +34,11 @@ Required files:
 Tools needed:
 Why it matters:
 Priority:
+```
 
-Priority Levels
+## Priority Levels
 
 - Priority 1: Build soon
 - Priority 2: Useful but not urgent
 - Priority 3: Good idea for later
 - Archive: Not needed right now
-```
