@@ -1,11 +1,23 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-17 - Deployment index updated for loop engineering
+
+Updated:
+- Added loop engineering files to the core protocol list in `DEPLOYMENT_INDEX.md`.
+- Added a Loop Engineering Commands section to `DEPLOYMENT_INDEX.md`.
+- Added the core loop formula: `LOAD -> CHOOSE -> ACT -> CHECK -> LOG -> NEXT`.
+- Updated `00_CORE/OPEN_LOOPS.md` to mark the deployment-index mirror complete.
+
+Files changed:
+- `DEPLOYMENT_INDEX.md`
+- `00_CORE/OPEN_LOOPS.md`
+
 ## 2026-06-17 - Root command shortcuts updated for loop engineering
 
 Updated:
 - Added a Loop Engineering Commands section to root `COMMANDS.md`.
 - Mirrored `/start daily next move loop`, `/start daily next move loop: [project]`, `/start loop: [loop name]`, `/run quality loop on this`, `/run decision loop`, and `/upgrade luman os` into the root command shortcut list.
-- Updated `00_CORE/OPEN_LOOPS.md` to mark the root command mirror complete and keep `DEPLOYMENT_INDEX.md` as the remaining mirror target.
+- Updated `00_CORE/OPEN_LOOPS.md` to mark the root command mirror complete.
 
 Files changed:
 - `COMMANDS.md`
@@ -48,7 +60,7 @@ Updated:
 - Added GitHub update commands to `DEPLOYMENT_INDEX.md`.
 - Expanded `COMMANDS.md` into a broader LUMAN OS command library.
 - Added `06_SESSION_LOGS/README.md` to define the session log folder structure and standard template.
-- Updated `00_CORE/OPEN_LOOPS.md` to mark the first GitHub brain setup loops as completed and define next module-building loops.
+- Updated `00_CORE/OPEN_LOOPS.md` to mark the first setup loops as completed and define next module-building loops.
 
 Files changed:
 - `DEPLOYMENT_INDEX.md`
@@ -56,10 +68,10 @@ Files changed:
 - `06_SESSION_LOGS/README.md`
 - `00_CORE/OPEN_LOOPS.md`
 
-## 2026-06-17 - LUMAN OS GitHub update room established
+## 2026-06-17 - LUMAN OS update room established
 
 Updated:
-- Confirmed GitHub can be used as the LUMAN OS external brain.
+- Confirmed GitHub can be used as the durable LUMAN OS repository.
 - Established this chat as the active LUMAN OS update room.
 - Updated the summary workflow to generate LUMAN GitHub Update Packets.
 - Added platform-neutral video and animation workflow language.
