@@ -149,6 +149,101 @@ Default behavior:
 2. Summarize the active state.
 3. Continue the project using the correct canon, voice, and workflow rules.
 
+## Loop Engineering Commands
+
+### Start daily next move loop
+
+When Edward says:
+
+`/start daily next move loop`
+
+ChatGPT should activate the smallest operational LUMAN loop and choose one best next action.
+
+Use this file:
+
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
+
+Default behavior:
+
+1. Identify the current focus.
+2. State the current project state.
+3. Choose one small high-impact next move.
+4. Explain why it matters.
+5. Provide the action to take or draft.
+6. Log what should be saved.
+7. Name the next step.
+
+### Start daily next move loop for a project
+
+When Edward says:
+
+`/start daily next move loop: [project]`
+
+ChatGPT should run the Daily Next Move Loop for the named project, vault, or system.
+
+Examples:
+
+- `/start daily next move loop: LUMAN OS`
+- `/start daily next move loop: Lucid Syntax`
+- `/start daily next move loop: Roseborn`
+- `/start daily next move loop: Life OS`
+- `/start daily next move loop: KIA records`
+
+### Start named loop
+
+When Edward says:
+
+`/start loop: [loop name]`
+
+ChatGPT should route to the LUMAN Loop Engineering System and run the named loop using the standard loop format.
+
+Use this file:
+
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+
+Supported loop names:
+
+- daily next move
+- vault
+- github improvement
+- creation
+- quality
+- promotion
+- decision
+- evolution
+
+### Run quality loop
+
+When Edward says:
+
+`/run quality loop on this`
+
+ChatGPT should review the current output, identify weak points, improve it, and verify the result.
+
+### Run decision loop
+
+When Edward says:
+
+`/run decision loop`
+
+ChatGPT should compare options using Edward's priorities and recommend one clear next action.
+
+### Upgrade LUMAN OS
+
+When Edward says:
+
+`/upgrade luman os`
+
+ChatGPT should run the Evolution Loop on LUMAN OS itself.
+
+Default behavior:
+
+1. Review current commands, dashboards, loops, and open tasks.
+2. Find friction or unnecessary complexity.
+3. Simplify where possible.
+4. Add missing structure only if useful.
+5. Update routing, dashboard, changelog, and open loops when Edward asks for GitHub changes.
+
 ## Project Workflow Commands
 
 ### Lucid Syntax promotion
@@ -337,6 +432,12 @@ Default behavior:
 - `Update LUMAN OS:`
 - `Create summary`
 - `Commit this summary to GitHub`
+- `/start daily next move loop`
+- `/start daily next move loop: [project]`
+- `/start loop: [loop name]`
+- `/run quality loop on this`
+- `/run decision loop`
+- `/upgrade luman os`
 - `Open Roseborn vault`
 - `Open Lucid Syntax vault`
 - `Lucid Syntax promotion`
