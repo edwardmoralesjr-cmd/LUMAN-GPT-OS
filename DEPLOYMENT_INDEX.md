@@ -5,6 +5,9 @@
 - `00_CORE/LUMAN_DASHBOARD.md`
 - `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
 - `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md`
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+- `00_CORE/LUMAN_LOOP_COMMANDS.md`
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
 - `00_CORE/ACTIVE_PRIORITIES.md`
 - `00_CORE/OPEN_LOOPS.md`
 - `00_CORE/CHANGELOG.md`
@@ -101,6 +104,40 @@ Default behavior:
 2. Create or update the session log, changelog, open loops, active priorities, and knowledge pack files.
 3. Confirm changed files and commit SHAs back to Edward.
 4. Do not add sensitive information to public repository files.
+
+### Loop Engineering Commands
+
+Activates the LUMAN loop engineering layer.
+
+Use these files:
+
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+- `00_CORE/LUMAN_LOOP_COMMANDS.md`
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
+
+Available commands:
+
+- `/start daily next move loop`
+- `/start daily next move loop: [project]`
+- `/start loop: [loop name]`
+- `/run quality loop on this`
+- `/run decision loop`
+- `/upgrade luman os`
+
+Default behavior:
+
+1. Load the relevant LUMAN context or vault.
+2. Choose the smallest useful next action.
+3. Execute or draft the action when possible.
+4. Check the result for clarity, usefulness, safety, and project fit.
+5. Log what changed.
+6. Name the next step.
+
+Core loop formula:
+
+```text
+LOAD -> CHOOSE -> ACT -> CHECK -> LOG -> NEXT
+```
 
 ### Lucid Syntax promotion
 
