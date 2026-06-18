@@ -1,5 +1,23 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-17 - Loop engineering foundation added
+
+Updated:
+- Added `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` as the core doctrine for repeatable AI work cycles.
+- Added `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` as the first small loop command for choosing one best action.
+- Added `00_CORE/LUMAN_LOOP_COMMANDS.md` as the simplified loop command surface.
+- Updated `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with loop engineering routes.
+- Updated `00_CORE/ACTIVE_PRIORITIES.md` to prioritize small loop-engineered workflows.
+- Updated `00_CORE/OPEN_LOOPS.md` with completed loop foundation work and next loop-testing items.
+
+Files changed:
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
+- `00_CORE/LUMAN_LOOP_COMMANDS.md`
+- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/OPEN_LOOPS.md`
+
 ## 2026-06-17 - LUMAN dashboard created
 
 Updated:
