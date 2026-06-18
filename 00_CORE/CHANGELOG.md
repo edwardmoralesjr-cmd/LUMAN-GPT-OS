@@ -1,5 +1,16 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-17 - Root command shortcuts updated for loop engineering
+
+Updated:
+- Added a Loop Engineering Commands section to root `COMMANDS.md`.
+- Mirrored `/start daily next move loop`, `/start daily next move loop: [project]`, `/start loop: [loop name]`, `/run quality loop on this`, `/run decision loop`, and `/upgrade luman os` into the root command shortcut list.
+- Updated `00_CORE/OPEN_LOOPS.md` to mark the root command mirror complete and keep `DEPLOYMENT_INDEX.md` as the remaining mirror target.
+
+Files changed:
+- `COMMANDS.md`
+- `00_CORE/OPEN_LOOPS.md`
+
 ## 2026-06-17 - Loop engineering foundation added
 
 Updated:
