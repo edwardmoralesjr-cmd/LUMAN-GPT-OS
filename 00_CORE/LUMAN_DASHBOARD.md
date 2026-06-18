@@ -11,8 +11,10 @@ Build LUMAN OS into Edward’s external GitHub-backed second brain.
 The system has three layers:
 
 1. **Chat layer:** active reasoning, refinement, planning, creative work, and decision support.
-2. **GitHub layer:** durable source of truth for commands, vaults, GPT systems, session logs, and reusable protocols.
+2. **GitHub layer:** durable source of truth for commands, vaults, GPT systems, session logs, reusable protocols, and loop-engineered workflows.
 3. **Vault layer:** organized project memory across life, creative work, music, Roseborn, vehicle/home, quality systems, and GPT development.
+
+The current build direction is small-loop engineering: create repeatable loops that reduce overwhelm and turn each session into a clear next action.
 
 ---
 
@@ -26,6 +28,9 @@ Use these files as the main dashboard spine:
 - `DEPLOYMENT_INDEX.md` — deployment-ready systems and command routing
 - `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` — GitHub update rules
 - `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md` — summary packet structure
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` — loop engineering doctrine
+- `00_CORE/LUMAN_LOOP_COMMANDS.md` — loop command surface
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` — first small operational loop
 - `00_CORE/ACTIVE_PRIORITIES.md` — current priorities
 - `00_CORE/OPEN_LOOPS.md` — unresolved tasks and next build items
 - `00_CORE/CHANGELOG.md` — system history
@@ -40,6 +45,8 @@ Use these files as the main dashboard spine:
 - Keep GitHub as the durable source of truth for core workflows, commands, vaults, and GPT systems.
 - Use chat as the active update room for refining and committing new LUMAN OS changes.
 - Expand and maintain `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as the routing source of truth.
+- Build LUMAN OS through small loop-engineered workflows instead of overwhelming one-shot systems.
+- Use `/start daily next move loop` as the default small-start command when Edward wants one best action.
 
 ---
 
@@ -47,7 +54,8 @@ Use these files as the main dashboard spine:
 
 ### LUMAN OS GitHub Brain
 
-- Mirror key command routes from `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` into `COMMANDS.md` and `DEPLOYMENT_INDEX.md` when safe.
+- Test `/start daily next move loop` across LUMAN OS, Lucid Syntax, Roseborn, and Life OS.
+- Mirror key loop commands into root `COMMANDS.md` and `DEPLOYMENT_INDEX.md` when safe.
 - Build fuller vault indexes for Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
 - Add module-level changelogs where missing.
 - Continue converting major conversations into session logs when Edward says `Create summary` and `Commit this summary to GitHub`.
@@ -64,11 +72,17 @@ Use these files as the main dashboard spine:
 
 ### 00_CORE
 
-Core protocols, command routing, commands, changelog, open loops, active priorities, dashboards, and GitHub update rules.
+Core protocols, command routing, commands, loop engineering, changelog, open loops, active priorities, dashboards, and GitHub update rules.
 
 Primary routing file:
 
 - `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`
+
+Primary loop files:
+
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+- `00_CORE/LUMAN_LOOP_COMMANDS.md`
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
 
 ### 01_LIFE_OS
 
@@ -118,6 +132,12 @@ Condensed durable knowledge that helps future LUMAN sessions stay aligned.
 - `Update LUMAN OS:`
 - `Create summary`
 - `Commit this summary to GitHub`
+- `/start daily next move loop`
+- `/start daily next move loop: [project]`
+- `/start loop: [loop name]`
+- `/run quality loop on this`
+- `/run decision loop`
+- `/upgrade luman os`
 - `Open Roseborn vault`
 - `Open Roseborn dashboard`
 - `Open Lucid Syntax vault`
@@ -144,6 +164,8 @@ When Edward says `Open LUMAN dashboards`, respond with:
 5. **Available Commands** — most useful commands for the moment.
 6. **Next Best Action** — one recommended action, not a long list.
 
+When Edward uses `/start daily next move loop`, respond with the smaller loop format from `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`.
+
 ---
 
 ## 8. Safety Rules
@@ -163,10 +185,11 @@ Use GitHub for durable structure, not private secrets.
 
 ## 9. Current Next Best Action
 
-Create the Roseborn Canon Index:
+Test the first operational loop in real use:
+
+- `/start daily next move loop: LUMAN OS`
+
+After the loop has proven useful, continue with:
 
 - `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`
-
-After that, build the next vault dashboard:
-
 - `02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md`
