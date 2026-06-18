@@ -2,7 +2,7 @@
 
 ## LUMAN OS GitHub Brain
 
-Current status: initial GitHub brain foundation is active and command routing has been tightened.
+Current status: initial GitHub brain foundation is active, command routing has been tightened, and root command shortcuts now include loop engineering commands.
 
 Completed on 2026-06-17:
 
@@ -20,11 +20,12 @@ Completed on 2026-06-17:
 - Created `00_CORE/LUMAN_LOOP_COMMANDS.md` as the command surface for repeatable loops.
 - Updated `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with loop engineering commands.
 - Updated `00_CORE/ACTIVE_PRIORITIES.md` to prioritize small loop-engineered workflows.
+- Mirrored key loop engineering commands into root `COMMANDS.md`.
 
 Next open loops:
 
 - Test `/start daily next move loop` across LUMAN OS, Lucid Syntax, Roseborn, and Life OS.
-- Mirror key loop commands into root `COMMANDS.md` and `DEPLOYMENT_INDEX.md` when safe.
+- Mirror key loop commands into `DEPLOYMENT_INDEX.md` when safe.
 - Build `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`.
 - Build fuller vault indexes for Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
 - Add module-level changelogs where missing.
