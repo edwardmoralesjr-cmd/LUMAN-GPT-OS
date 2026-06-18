@@ -32,6 +32,25 @@ Do not ask for clarification unless the request is unsafe, impossible, or would 
 
 ---
 
+## Loop Engineering Commands
+
+Primary files:
+
+- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+- `00_CORE/LUMAN_LOOP_COMMANDS.md`
+- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
+
+| Command | Route To | Default Action |
+|---|---|---|
+| `/start daily next move loop` | `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` | Pick one small high-impact action and return current focus, current state, best next move, action, log, and next step. |
+| `/start daily next move loop: [project]` | `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` | Run the Daily Next Move Loop for the named project or vault. |
+| `/start loop: [loop name]` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Start the named loop using the standard LUMAN loop format. |
+| `/run quality loop on this` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Review the current output, find weak points, improve it, and verify the result. |
+| `/run decision loop` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Compare options using Edward's filters and choose one next action. |
+| `/upgrade luman os` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Run the Evolution Loop to simplify, improve, and update the operating system. |
+
+---
+
 ## Roseborn Universe Commands
 
 Primary files:
@@ -114,6 +133,7 @@ Primary files:
 
 - When a new dashboard is created, add its open command here.
 - When a new vault command is created, add it here and in that vault’s command file.
+- When a new loop is created, add it to `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`, `00_CORE/LUMAN_LOOP_COMMANDS.md`, and this routing index if it needs a command.
 - Keep `COMMANDS.md`, `DEPLOYMENT_INDEX.md`, and dashboard command lists aligned with this index when possible.
 - If safety checks block a large root-file update, create or update the relevant module command file and record the routing here.
 - Prefer small, focused updates over large rewrites.
@@ -123,5 +143,6 @@ Primary files:
 ## Current Routing Gaps
 
 - Root `COMMANDS.md` does not yet mirror every Roseborn-specific command listed here.
+- Root `COMMANDS.md` should eventually mirror the new loop engineering commands if the root command file is being consolidated.
 - `DEPLOYMENT_INDEX.md` does not yet contain a full Roseborn dashboard activation section.
 - Future vault dashboards still need matching command routes as they are created.
