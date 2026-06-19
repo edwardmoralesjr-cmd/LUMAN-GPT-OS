@@ -2,7 +2,7 @@
 
 ## LUMAN OS Core System
 
-Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, Harmonic Time System, Harmonic Time archive index, Edward’s exact chart-basis file, and Edward’s saved sample Harmonic Time Map are now in place.
+Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, Harmonic Time System, Harmonic Time archive index, Edward’s exact chart-basis file, Edward’s saved sample Harmonic Time Map, and the `00_CORE/` ↔ `LUMAN_OS/` master bridge index are now in place.
 
 ## Completed on 2026-06-17
 
@@ -43,15 +43,16 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 - Created `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md`.
 - Created `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md`.
 - Updated `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md` with archive file references and completed Harmonic Time loop status.
+- Created `LUMAN_OS/MASTER_BRIDGE_INDEX.md` to bridge the older `00_CORE/` vault architecture with the newer `LUMAN_OS/` interface architecture.
 
 ## Current Open Loops
 
 ### Highest-Priority Integrity Loops
 
-1. Create a master index that bridges the older `00_CORE/` vault architecture with the newer `LUMAN_OS/` interface architecture.
-2. Update root `COMMANDS.md` with the newer slash commands from `LUMAN_OS/ROOT_MENU.md`, especially `/open luman`, `/open harmonic time system`, and `/open harmonic time analyst`.
-3. Update `DEPLOYMENT_INDEX.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
-4. Update both changelog layers after major LUMAN OS structural changes.
+1. Update root `COMMANDS.md` with the newer slash commands from `LUMAN_OS/ROOT_MENU.md`, especially `/open luman`, `/open harmonic time system`, and `/open harmonic time analyst`.
+2. Update `DEPLOYMENT_INDEX.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
+3. Update both changelog layers after major LUMAN OS structural changes.
+4. Create a modern `LUMAN_OS/system_settings/` section when command routing has been reconciled.
 
 ### Harmonic Time System Loops
 
@@ -65,6 +66,7 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 2. Run `/clearance Chapter 5, A Crack in Sequence`.
 3. Create `CHAPTER_5_CLEARANCE.md` after clearance is approved.
 4. Build `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md` or bridge it to the newer `LUMAN_OS/book_section/roseborn_universe/` structure.
+5. Create `LUMAN_OS/book_section/roseborn_universe/ROSEBORN_BRIDGE_INDEX.md` to connect the modern Roseborn Canon Guardian tool layer with the older `03_ROSEBORN_UNIVERSE/` vault.
 
 ### LUMAN OS Expansion Loops
 
@@ -77,5 +79,5 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 ## Recommended Next Move
 
 ```text
-Create the master bridge index between 00_CORE and LUMAN_OS.
+Update root COMMANDS.md, DEPLOYMENT_INDEX.md, and 00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md so they recognize the newer LUMAN_OS interface layer and slash commands.
 ```
