@@ -58,6 +58,12 @@ LUMAN_OS / gpt_builder_lab / modules / harmonic_time_system_analyst
 
 GPT Builder Lab
 
+### Dedicated LUMAN OS Section
+
+```text
+LUMAN_OS / harmonic_time_system / HARMONIC_TIME_SYSTEM_MENU.md
+```
+
 ### Secondary Section Links
 
 - Creative Vault
@@ -94,6 +100,10 @@ It creates spiritually resonant, clearly structured readings based on birth data
 - `SOURCE_KNOWLEDGE.md`
 - `READING_TEMPLATE.md`
 
+### Section Files
+
+- `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`
+
 ### Key Accuracy Rule
 
 This GPT must never claim to calculate an exact natal chart without enough information or reliable chart-calculation support.
@@ -103,16 +113,18 @@ When exact astrology is unavailable, it must clearly offer symbolic, numerology-
 ### Current Open Issues
 
 1. Exact astrology calculation requires reliable chart support or user-provided placements.
-2. Harmonic Time System does not yet have a full dedicated LUMAN OS section.
-3. A future HARMONIC_TIME_SYSTEM_MENU.md file may be useful if this grows into a full section.
+2. Harmonic Time System is now an active expansion section, but it is not yet added to the LUMAN OS root menu.
+3. A future Harmonic Time System archive folder may be useful for completed readings and templates.
+4. A future Harmonic Time System book/framework file may be useful for Edward’s larger system development.
 
 ### Recently Completed
 
 - `READING_TEMPLATE.md` was created for the full Harmonic Time Map output structure.
+- `HARMONIC_TIME_SYSTEM_MENU.md` was created as a dedicated LUMAN OS section menu.
 
 ### Recommended Next Move
 
-Create `HARMONIC_TIME_SYSTEM_MENU.md` if this GPT grows into a full LUMAN OS section.
+Update `ROOT_MENU.md` to include Harmonic Time System as a dedicated section or auxiliary system.
 
 ---
 
