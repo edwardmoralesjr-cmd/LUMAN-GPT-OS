@@ -1,5 +1,62 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-19 - LUMAN_OS interface, bridge, Harmonic Time, and command routing reconciled
+
+Updated:
+- Completed the first major reconciliation between the older `00_CORE/` architecture and the newer `LUMAN_OS/` interface layer.
+- Created and activated `LUMAN_OS/MASTER_BRIDGE_INDEX.md` as the source-of-truth bridge between the modern interface layer and the core protocol layer.
+- Created Edward’s exact chart-basis/provenance file for Harmonic Time System readings.
+- Created the Harmonic Time System archive index.
+- Created Edward’s saved full sample Harmonic Time Map report.
+- Updated `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md` so it points to the archive index, chart-basis file, and sample report.
+- Updated root `COMMANDS.md` so it recognizes the newer `LUMAN_OS/` slash-command interface.
+- Updated `DEPLOYMENT_INDEX.md` so deployments recognize the modern interface layer and the core protocol layer.
+- Updated `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` so slash commands, Harmonic Time System commands, and bridge-routing rules are now reflected in the core routing surface.
+- Updated `LUMAN_OS/MASTER_BRIDGE_INDEX.md` to mark command-routing reconciliation as complete and move changelog reconciliation to the next migration priority.
+- Updated `00_CORE/OPEN_LOOPS.md` and `00_CORE/ACTIVE_PRIORITIES.md` to stop listing completed bridge/routing work as unresolved.
+
+Files changed:
+- `LUMAN_OS/MASTER_BRIDGE_INDEX.md`
+- `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md`
+- `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md`
+- `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md`
+- `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`
+- `COMMANDS.md`
+- `DEPLOYMENT_INDEX.md`
+- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/CHANGELOG.md`
+- `LUMAN_OS/CHANGELOG.md`
+
+Command-routing result:
+```text
+/open luman                  -> LUMAN_OS/ROOT_MENU.md
+/dashboard                   -> LUMAN_OS/ROOT_MENU.md + 00_CORE/LUMAN_DASHBOARD.md
+/open books                  -> LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+/open harmonic time system   -> LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
+/open harmonic time analyst  -> LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
+Use GitHub / Update LUMAN OS -> 00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md + LUMAN_OS/MASTER_BRIDGE_INDEX.md
+```
+
+Closed integrity loops:
+- Create Edward’s exact chart basis/provenance file.
+- Create a master bridge index between `00_CORE/` and `LUMAN_OS/`.
+- Update root `COMMANDS.md` with the newer slash commands from `LUMAN_OS/ROOT_MENU.md`.
+- Update `DEPLOYMENT_INDEX.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
+- Sync both changelog layers with the newer LUMAN OS interface, bridge, Harmonic Time, and command-routing work.
+
+Remaining integrity loops:
+- Create a modern `LUMAN_OS/system_settings/` section.
+- Create modern section indexes for Music, Life OS, Money System, Work / Quality Tools, Creative Vault, and Vehicle / Home Records when needed.
+- Continue Harmonic Time System buildout with a book/framework file and reusable PDF/report formatting standards.
+- Continue Roseborn work by reconciling the 20-book vs. 23-book architecture conflict and running Chapter 5 clearance.
+
+Recommended next move:
+```text
+Create a modern LUMAN_OS/system_settings/ section.
+```
+
 ## 2026-06-18 - LUMAN OS integrity scan completed
 
 Updated:
