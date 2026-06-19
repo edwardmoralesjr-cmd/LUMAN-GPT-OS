@@ -43,13 +43,18 @@ Active Focus:
 
 Mini Harmonic Time Reading:
 Edward Morales Jr.
-Reading Type: Numerology-first + symbolic Sun-sign note
+Reading Type: Exact natal chart + numerology snapshot
+Chart Basis: Tropical zodiac, Placidus houses, Chicago IL, February 17 1986, 6:00 PM CST, calculated as February 18 1986, 00:00 UTC
 Life Path: 7 — The Seeker / Mystic Analyst
 Expression: 4 — The Architect / System Builder, based on “Edward Morales Jr.”
 Personal Year 2026: 11/2 — Intuition, patience, partnership, emotional refinement
-Sun Signature: Aquarius — Visionary pattern-seer, future-builder, collective thinker
-Today’s Harmonic Directive: Refine the system before expanding the empire. Let depth, patience, and discernment lead the next move.
-Accuracy Note: This homepage reading does not claim a full exact natal chart. Exact Moon, Rising, houses, and aspects require reliable chart-calculation support or user-provided placements.
+Sun: 29°02′ Aquarius, 6th House — visionary service, systems, refinement, collective work
+Moon: 11°41′ Gemini, 10th House — public voice, communication, ideas, visible emotional intelligence
+Rising: 6°33′ Virgo — precision, analysis, service, devotion to useful structure
+Midheaven: 2°07′ Gemini — vocation through words, learning, communication, teaching, signal-building
+Key Signature: Sun conjunct Jupiter at late Aquarius, exact orb about 0°19′ — expanded vision, future-facing purpose, big-system thinking
+Today’s Harmonic Directive: Refine the system before expanding the empire. Let depth, patience, discernment, and exact structure lead the next move.
+Accuracy Note: This homepage reading uses exact calculated chart placements for the listed Sun, Moon, Rising, Midheaven, houses, and key signature. Interpretations remain reflective guidance, not fixed destiny.
 
 Top 3 Priorities:
 [1]
@@ -371,7 +376,7 @@ What system needs to be improved?
 ## Root Interface Status
 
 Status: Active  
-Version: v1.2  
+Version: v1.3  
 Section: Root Interface  
 GitHub Role: Main entry point for LUMAN OS
 
@@ -380,3 +385,5 @@ GitHub Role: Main entry point for LUMAN OS
 2026-06-18: Added Harmonic Time System as section [11] and linked it to the dedicated Harmonic Time System menu and Harmonic Time System Analyst GPT module.
 
 2026-06-18: Added Edward’s Mini Harmonic Time Reading under Active Focus on the home screen.
+
+2026-06-18: Updated Edward’s Mini Harmonic Time Reading from symbolic-only astrology to an exact natal chart and numerology snapshot.
