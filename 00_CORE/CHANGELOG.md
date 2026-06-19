@@ -1,5 +1,31 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-18 - LUMAN OS integrity scan completed
+
+Updated:
+- Created `00_CORE/SYSTEM_SCAN_2026-06-18.md` as a full integrity and absorption scan for LUMAN OS.
+- Confirmed the system now has two active architecture layers: `00_CORE/` as the legacy/core vault architecture and `LUMAN_OS/` as the newer clean interface architecture.
+- Synced `LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md` with the Harmonic Time System root integration.
+- Synced `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md` with root menu placement and exact chart mode.
+- Updated `00_CORE/OPEN_LOOPS.md` with the current highest-priority integrity loops.
+- Updated `00_CORE/ACTIVE_PRIORITIES.md` with the current Top 3 LUMAN OS priorities.
+- Confirmed the active Grok removal rule remains intact: Grok may remain in historical logs as a removed prior tool but should not be an active required workflow.
+
+Files changed:
+- `00_CORE/SYSTEM_SCAN_2026-06-18.md`
+- `LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md`
+- `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/CHANGELOG.md`
+
+Remaining integrity loops:
+- Create Edward’s exact chart basis/provenance file.
+- Create a master bridge index between `00_CORE/` and `LUMAN_OS/`.
+- Update root `COMMANDS.md` with newer slash commands.
+- Update `DEPLOYMENT_INDEX.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` for the newer `LUMAN_OS/` interface layer.
+- Sync `LUMAN_OS/CHANGELOG.md` with the newest Harmonic Time System and integrity scan updates.
+
 ## 2026-06-17 - Deployment index updated for loop engineering
 
 Updated:
