@@ -92,6 +92,7 @@ It creates spiritually resonant, clearly structured readings based on birth data
 - `MODULE_MANIFEST.md`
 - `COMMANDS.md`
 - `SOURCE_KNOWLEDGE.md`
+- `READING_TEMPLATE.md`
 
 ### Key Accuracy Rule
 
@@ -103,12 +104,15 @@ When exact astrology is unavailable, it must clearly offer symbolic, numerology-
 
 1. Exact astrology calculation requires reliable chart support or user-provided placements.
 2. Harmonic Time System does not yet have a full dedicated LUMAN OS section.
-3. A future READING_TEMPLATE.md file should be created.
-4. A future HARMONIC_TIME_SYSTEM_MENU.md file may be useful if this grows into a full section.
+3. A future HARMONIC_TIME_SYSTEM_MENU.md file may be useful if this grows into a full section.
+
+### Recently Completed
+
+- `READING_TEMPLATE.md` was created for the full Harmonic Time Map output structure.
 
 ### Recommended Next Move
 
-Create `READING_TEMPLATE.md` for the full Harmonic Time Map output structure.
+Create `HARMONIC_TIME_SYSTEM_MENU.md` if this GPT grows into a full LUMAN OS section.
 
 ---
 
