@@ -33,7 +33,7 @@ Section [11]: Harmonic Time System
 
 The Harmonic Time System section organizes Edward’s metaphysical timing, numerology, astrology, symbolic self-mapping, Harmonic Time Maps, spiritual forecasts, exact chart-supported readings, and related GPT tools into one dedicated LUMAN OS section.
 
-This section grows out of the Harmonic Time System Analyst GPT module and gives it a full operating-space inside LUMAN OS.
+It grows out of the Harmonic Time System Analyst GPT module and gives that module a full operating space inside LUMAN OS.
 
 ## Core Identity
 
@@ -51,9 +51,7 @@ Module ID: LUMAN_GPT_HARMONIC_TIME_SYSTEM_ANALYST_001
 
 ## Accuracy Rule
 
-This section must preserve the accuracy rules from the Harmonic Time System Analyst module.
-
-Exact natal chart readings are allowed when enough birth data is known and a reliable calculation basis or user-approved chart basis is documented.
+Exact natal chart readings are allowed when enough birth data is known and a reliable calculation basis, documented chart basis, or user-approved chart basis is available.
 
 If exact astrology is unavailable, offer:
 
@@ -126,35 +124,15 @@ Recommended Next Move:
 
 ## [1] Harmonic Time System Analyst
 
-### Command
-
-```text
-/open harmonic time analyst
-```
-
-### Purpose
-
-Opens the specialist GPT module that powers Harmonic Time Map readings.
-
-### Use When
-
-Edward wants to run or refine the GPT itself.
-
----
+Command: `/open harmonic time analyst`  
+Purpose: Opens the specialist GPT module that powers Harmonic Time Map readings.
 
 ## [2] Harmonic Intake
 
-### Command
+Command: `/harmonic intake`  
+Purpose: Collects the birth and intention data required for a reading.
 
-```text
-/harmonic intake
-```
-
-### Purpose
-
-Collects the birth and intention data required for a reading.
-
-### Intake Fields
+Intake fields:
 
 1. Full Name
 2. Date of Birth
@@ -162,56 +140,27 @@ Collects the birth and intention data required for a reading.
 4. Place of Birth
 5. Optional current intention, question, or life challenge
 
----
-
 ## [3] Soul Numbers
 
-### Command
+Command: `/soul numbers`  
+Purpose: Calculates and interprets core numerology numbers.
 
-```text
-/soul numbers
-```
-
-### Purpose
-
-Calculates and interprets core numerology numbers.
-
-### Includes
+Includes:
 
 - Life Path Number
 - Destiny / Expression Number
 - Soul Urge Number
 - Personal Year Number
 
----
-
 ## [4] Numerology Map
 
-### Command
-
-```text
-/numerology map
-```
-
-### Purpose
-
-Creates a numerology-first Harmonic Time Map when astrology data is incomplete or exact chart calculation is unavailable.
-
----
+Command: `/numerology map`  
+Purpose: Creates a numerology-first Harmonic Time Map when astrology data is incomplete or exact chart calculation is unavailable.
 
 ## [5] Chart Data Check
 
-### Command
-
-```text
-/chart data check
-```
-
-### Purpose
-
-Determines whether the available birth data supports exact astrology interpretation or only symbolic/numerology-first interpretation.
-
-### Exact Chart Criteria
+Command: `/chart data check`  
+Purpose: Determines whether available birth data supports exact astrology interpretation or only symbolic/numerology-first interpretation.
 
 Exact astrology can be used when:
 
@@ -221,157 +170,70 @@ Exact astrology can be used when:
 4. Calculation method, documented chart basis, or user-provided chart placements are documented.
 5. Interpretations remain reflective guidance rather than deterministic claims.
 
----
-
 ## [6] Astrology Reading
 
-### Command
+Command: `/astrology reading`  
+Purpose: Interprets astrology placements when reliable chart data, documented chart basis, or user-provided placements are available.
 
-```text
-/astrology reading
-```
-
-### Purpose
-
-Interprets astrology placements when reliable chart data, documented chart basis, or user-provided placements are available.
-
-### Rule
-
-Do not fabricate placements, houses, aspects, or Rising sign.
-
----
+Rule: do not fabricate placements, houses, aspects, or Rising sign.
 
 ## [7] Harmonic Synthesis
 
-### Command
-
-```text
-/harmonic synthesis
-```
-
-### Purpose
-
-Weaves numerology and astrology into one coherent soul-pattern reading.
-
----
+Command: `/harmonic synthesis`  
+Purpose: Weaves numerology and astrology into one coherent soul-pattern reading.
 
 ## [8] Harmonic Flow Forecast
 
-### Command
+Command: `/harmonic forecast`  
+Purpose: Creates a 12-month symbolic harmonic timing forecast.
 
-```text
-/harmonic forecast
-```
-
-### Purpose
-
-Creates a 12-month symbolic harmonic timing forecast.
-
-### Rule
-
-If exact transits are unavailable, frame the forecast as symbolic timing rather than predictive certainty.
-
----
+Rule: if exact transits are unavailable, frame the forecast as symbolic timing rather than predictive certainty.
 
 ## [9] Full Harmonic Time Map
 
-### Command
+Command: `/create harmonic time map`  
+Purpose: Creates the full reading using the module’s `READING_TEMPLATE.md` structure.
 
-```text
-/create harmonic time map
-```
-
-### Purpose
-
-Creates the full reading using the module’s `READING_TEMPLATE.md` structure.
-
-### Template Source
+Template source:
 
 ```text
 LUMAN_OS / gpt_builder_lab / modules / harmonic_time_system_analyst / READING_TEMPLATE.md
 ```
 
-### Saved Sample Report
+Saved sample report:
 
 ```text
 LUMAN_OS / harmonic_time_system / archive / EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md
 ```
 
----
-
 ## [10] Compatibility Reading
 
-### Command
+Command: `/compatibility reading`  
+Purpose: Creates a reflective relationship or compatibility reading using two sets of birth data.
 
-```text
-/compatibility reading
-```
-
-### Purpose
-
-Creates a reflective relationship or compatibility reading using two sets of birth data.
-
-### Rule
-
-Do not frame compatibility as fixed fate.
-
----
+Rule: do not frame compatibility as fixed fate.
 
 ## [11] Journal Prompts
 
-### Command
-
-```text
-/journal prompts
-```
-
-### Purpose
-
-Creates reflective prompts from a number, chart theme, forecast, or Harmonic Time Map.
-
----
+Command: `/journal prompts`  
+Purpose: Creates reflective prompts from a number, chart theme, forecast, or Harmonic Time Map.
 
 ## [12] Affirmation Set
 
-### Command
-
-```text
-/affirmation set
-```
-
-### Purpose
-
-Creates a grounded affirmation set based on the reading’s central themes.
-
----
+Command: `/affirmation set`  
+Purpose: Creates a grounded affirmation set based on the reading’s central themes.
 
 ## [13] Visual Chart Concept
 
-### Command
-
-```text
-/visual chart concept
-```
-
-### Purpose
-
-Creates a design concept for a Harmonic Time Map graphic, spiritual chart, symbolic birth-map, or PDF visual.
-
----
+Command: `/visual chart concept`  
+Purpose: Creates a design concept for a Harmonic Time Map graphic, spiritual chart, symbolic birth-map, or PDF visual.
 
 ## [14] Harmonic Time System Book / Framework
 
-### Command
+Command: `/open harmonic time book`  
+Purpose: Opens the future book/framework development area for Edward’s Harmonic Time System writings.
 
-```text
-/open harmonic time book
-```
-
-### Purpose
-
-Opens the future book/framework development area for Edward’s Harmonic Time System writings.
-
-### Future Use
+Future use:
 
 - Book outline
 - Chapter structure
@@ -382,27 +244,18 @@ Opens the future book/framework development area for Edward’s Harmonic Time Sy
 - Reading examples
 - Workbook or PDF product concepts
 
----
-
 ## [15] Harmonic Time System Archive
 
-### Command
+Command: `/open harmonic archive`  
+Purpose: Stores completed readings, templates, examples, symbolic correspondences, provenance files, and future expansions.
 
-```text
-/open harmonic archive
-```
-
-### Purpose
-
-Stores completed readings, templates, examples, symbolic correspondences, provenance files, and future expansions.
-
-### Archive Index
+Archive index:
 
 ```text
 LUMAN_OS / harmonic_time_system / archive / ARCHIVE_INDEX.md
 ```
 
-### Current Archive Files
+Current archive files:
 
 ```text
 [1] EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
@@ -412,7 +265,7 @@ LUMAN_OS / harmonic_time_system / archive / ARCHIVE_INDEX.md
     Use: Full saved sample report and formatting/voice model for future Harmonic Time Maps
 ```
 
-### Archive Categories
+Archive categories:
 
 - Personal chart-basis files
 - Completed Harmonic Time Maps
@@ -424,39 +277,22 @@ LUMAN_OS / harmonic_time_system / archive / ARCHIVE_INDEX.md
 - Visual chart prompt library
 - Product ideas
 
----
-
 ## [16] Edward’s Exact Chart Basis
 
-### Command
+Command: `/open edward chart basis`  
+Purpose: Opens the dedicated provenance file for Edward’s exact natal chart snapshot.
 
-```text
-/open edward chart basis
-```
-
-### Purpose
-
-Opens the dedicated provenance file for Edward’s exact natal chart snapshot.
-
-### Reference File
+Reference file:
 
 ```text
 LUMAN_OS / harmonic_time_system / archive / EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
 ```
 
-### Use When
-
-Edward wants exact natal placements to remain stable across future Harmonic Time readings.
-
----
+Use when Edward wants exact natal placements to remain stable across future Harmonic Time readings.
 
 ## [17] Return to LUMAN OS Home
 
-### Command
-
-```text
-/open luman
-```
+Command: `/open luman`
 
 ---
 
@@ -518,7 +354,7 @@ Edward wants exact natal placements to remain stable across future Harmonic Time
 ```text
 /create harmonic time map
 /journal prompts
-affirmation set
+/affirmation set
 /visual chart concept
 ```
 
@@ -585,7 +421,7 @@ Create the Harmonic Time System book/framework file.
 # File Status
 
 Status: Active  
-Version: v1.2  
+Version: v1.3  
 Installed In: LUMAN OS  
 Section: Harmonic Time System  
 GitHub Role: Dedicated LUMAN OS section menu for Harmonic Time System
