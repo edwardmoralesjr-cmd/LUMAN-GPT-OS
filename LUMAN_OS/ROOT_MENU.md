@@ -15,11 +15,11 @@ This file is the root interface for LUMAN OS.
 
 It functions as the home screen, main menu, and starting point for Edward’s personal operating system.
 
-LUMAN OS organizes life, books, music, money, work, creative projects, GPT tools, memory systems, records, and next-best-action planning into one clean command system.
+LUMAN OS organizes life, books, music, money, work, creative projects, GPT tools, memory systems, records, Harmonic Time System work, and next-best-action planning into one clean command system.
 
 ## Core Identity
 
-LUMAN OS is a living command system for life, books, music, money, memory, creativity, and personal evolution.
+LUMAN OS is a living command system for life, books, music, money, memory, creativity, spiritual timing, and personal evolution.
 
 ## Home Command
 
@@ -66,6 +66,7 @@ MAIN MENU
 [8] Creative Vault
 [9] Vehicle / Home Records
 [10] System Settings
+[11] Harmonic Time System
 
 Type a number, section name, or command.
 ```
@@ -269,6 +270,54 @@ Includes:
 - Memory rules
 - System updates
 
+### 11. Harmonic Time System
+
+Command:
+
+/open harmonic time system
+
+Purpose:
+
+Opens Edward’s spiritual timing, numerology, astrology, symbolic self-mapping, Harmonic Time Map, and soul-rhythm command center.
+
+This section is powered by the Harmonic Time System Analyst GPT module and uses the dedicated Harmonic Time System menu.
+
+Section Menu:
+
+```text
+LUMAN_OS / harmonic_time_system / HARMONIC_TIME_SYSTEM_MENU.md
+```
+
+Primary GPT Module:
+
+```text
+LUMAN_OS / gpt_builder_lab / modules / harmonic_time_system_analyst
+```
+
+Includes:
+
+- Harmonic Time System Analyst
+- Harmonic Intake
+- Soul Numbers
+- Numerology Map
+- Chart Data Check
+- Astrology Reading
+- Harmonic Synthesis
+- Harmonic Flow Forecast
+- Full Harmonic Time Map
+- Compatibility Reading
+- Journal Prompts
+- Affirmation Sets
+- Visual Chart Concepts
+- Harmonic Time System Book / Framework
+- Harmonic Time System Archive
+
+Accuracy Rule:
+
+Do not claim exact astrology calculation unless reliable chart-calculation support or user-provided placements are available.
+
+If exact astrology is unavailable, use symbolic, numerology-first, or user-provided-placement readings and label them clearly.
+
 ## Universal Commands
 
 ```text
@@ -282,6 +331,8 @@ Includes:
 /open creative vault
 /open records
 /system settings
+/open harmonic time system
+/open harmonic time analyst
 /next move
 /open loops
 /system update
@@ -310,6 +361,10 @@ What system needs to be improved?
 ## Root Interface Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Section: Root Interface  
 GitHub Role: Main entry point for LUMAN OS
+
+## Latest Root Menu Update
+
+2026-06-18: Added Harmonic Time System as section [11] and linked it to the dedicated Harmonic Time System menu and Harmonic Time System Analyst GPT module.
