@@ -30,8 +30,9 @@ The GPT Registry helps Edward know:
 # Registry Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Created: 2026-06-18  
+Last Integrity Scan: 2026-06-18  
 Primary Section: GPT Builder Lab  
 
 ---
@@ -64,6 +65,14 @@ GPT Builder Lab
 LUMAN_OS / harmonic_time_system / HARMONIC_TIME_SYSTEM_MENU.md
 ```
 
+### Root Menu Integration
+
+```text
+LUMAN_OS / ROOT_MENU.md
+Section [11]: Harmonic Time System
+Command: /open harmonic time system
+```
+
 ### Secondary Section Links
 
 - Creative Vault
@@ -85,7 +94,7 @@ It creates spiritually resonant, clearly structured readings based on birth data
 - Soul Urge calculation
 - Personal Year calculation
 - Numerology-first Harmonic Time Maps
-- Astrology interpretation when reliable chart data is available
+- Exact natal chart interpretation when reliable calculation support, user-approved chart data, or documented chart basis is available
 - Symbolic archetypal readings when exact charting is unavailable
 - 12-month harmonic flow forecasts
 - Journal prompts
@@ -104,27 +113,61 @@ It creates spiritually resonant, clearly structured readings based on birth data
 
 - `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`
 
+### Current User-Specific Integration
+
+Edward’s LUMAN OS homepage now includes a Mini Harmonic Time Reading under Active Focus.
+
+Current homepage reading type:
+
+```text
+Exact natal chart + numerology snapshot
+```
+
+Known user birth data used by the system:
+
+```text
+Edward Morales Jr.
+February 17, 1986
+6:00 PM
+Chicago, Illinois
+```
+
+Current homepage chart basis:
+
+```text
+Tropical zodiac
+Placidus houses
+Chicago IL
+February 17 1986, 6:00 PM CST
+Calculated as February 18 1986, 00:00 UTC
+```
+
 ### Key Accuracy Rule
 
-This GPT must never claim to calculate an exact natal chart without enough information or reliable chart-calculation support.
+This GPT must never claim to calculate an exact natal chart without enough information and a reliable calculation basis.
 
 When exact astrology is unavailable, it must clearly offer symbolic, numerology-first, or user-provided-placement alternatives.
 
+When exact chart data is used, the reading must identify the calculation basis and keep interpretation framed as reflective guidance, not fixed destiny.
+
 ### Current Open Issues
 
-1. Exact astrology calculation requires reliable chart support or user-provided placements.
-2. Harmonic Time System is now an active expansion section, but it is not yet added to the LUMAN OS root menu.
-3. A future Harmonic Time System archive folder may be useful for completed readings and templates.
-4. A future Harmonic Time System book/framework file may be useful for Edward’s larger system development.
+1. Create a dedicated chart-basis/provenance file for Edward’s exact natal chart snapshot so future readings can reuse the same placements consistently.
+2. Create a Harmonic Time System archive folder for completed readings and templates.
+3. Create a Harmonic Time System book/framework file for Edward’s larger system development.
+4. Decide whether Harmonic Time System should remain both a GPT Builder Lab module and a permanent root-level LUMAN OS section.
 
 ### Recently Completed
 
 - `READING_TEMPLATE.md` was created for the full Harmonic Time Map output structure.
 - `HARMONIC_TIME_SYSTEM_MENU.md` was created as a dedicated LUMAN OS section menu.
+- `ROOT_MENU.md` was updated to add Harmonic Time System as section [11].
+- `ROOT_MENU.md` was updated with Edward’s Mini Harmonic Time Reading.
+- The homepage Mini Harmonic Time Reading was upgraded from symbolic-only astrology to an exact natal chart + numerology snapshot.
 
 ### Recommended Next Move
 
-Update `ROOT_MENU.md` to include Harmonic Time System as a dedicated section or auxiliary system.
+Create a dedicated chart-basis/provenance file for Edward’s exact natal chart snapshot.
 
 ---
 
@@ -159,11 +202,12 @@ A future registry update may add a full cross-reference entry.
 5. GPTs should be classified by primary LUMAN OS placement and secondary use.
 6. GPTs should not be dumped into LUMAN OS without structure.
 7. Every GPT should have a clear next upgrade path.
+8. Exact astrology must have a documented data and calculation basis before it is treated as reusable system data.
 
 ---
 
 # File Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 GitHub Role: Master registry for GPT modules inside LUMAN OS
