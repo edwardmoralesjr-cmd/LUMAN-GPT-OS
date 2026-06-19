@@ -9,6 +9,7 @@
 - Maintain `LUMAN_OS/MASTER_BRIDGE_INDEX.md` as the bridge between the older `00_CORE/` vault architecture and the newer `LUMAN_OS/` interface architecture.
 - Maintain `COMMANDS.md`, `DEPLOYMENT_INDEX.md`, and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as reconciled command-routing surfaces that recognize the newer `LUMAN_OS/` interface layer.
 - Maintain `00_CORE/ACTIVE_PRIORITIES.md` and `00_CORE/OPEN_LOOPS.md` as the live master status files until a modern `LUMAN_OS/system_settings/` section is created.
+- Maintain both changelog layers, `00_CORE/CHANGELOG.md` and `LUMAN_OS/CHANGELOG.md`, after major structural changes.
 - Build LUMAN OS through small loop-engineered workflows instead of overwhelming one-shot systems.
 - Use `/start daily next move loop` as the default small-start command when Edward wants one best action.
 - Advance the Harmonic Time System now that it has an archive index, Edward’s exact chart-basis file, and a saved full sample Harmonic Time Map report.
@@ -18,7 +19,7 @@
 ## Current Top 3
 
 ```text
-[1] Update 00_CORE/CHANGELOG.md and LUMAN_OS/CHANGELOG.md after the LUMAN_OS interface and command-routing reconciliation
-[2] Create a modern LUMAN_OS/system_settings/ section
-[3] Create the Harmonic Time System book/framework file
+[1] Create a modern LUMAN_OS/system_settings/ section
+[2] Create the Harmonic Time System book/framework file
+[3] Create reusable PDF/report formatting standards for Harmonic Time Maps
 ```
