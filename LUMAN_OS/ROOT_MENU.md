@@ -41,6 +41,16 @@ Current Mode:
 Active Focus:
 [What Edward is currently working on]
 
+Mini Harmonic Time Reading:
+Edward Morales Jr.
+Reading Type: Numerology-first + symbolic Sun-sign note
+Life Path: 7 — The Seeker / Mystic Analyst
+Expression: 4 — The Architect / System Builder, based on “Edward Morales Jr.”
+Personal Year 2026: 11/2 — Intuition, patience, partnership, emotional refinement
+Sun Signature: Aquarius — Visionary pattern-seer, future-builder, collective thinker
+Today’s Harmonic Directive: Refine the system before expanding the empire. Let depth, patience, and discernment lead the next move.
+Accuracy Note: This homepage reading does not claim a full exact natal chart. Exact Moon, Rising, houses, and aspects require reliable chart-calculation support or user-provided placements.
+
 Top 3 Priorities:
 [1]
 [2]
@@ -361,10 +371,12 @@ What system needs to be improved?
 ## Root Interface Status
 
 Status: Active  
-Version: v1.1  
+Version: v1.2  
 Section: Root Interface  
 GitHub Role: Main entry point for LUMAN OS
 
-## Latest Root Menu Update
+## Latest Root Menu Updates
 
 2026-06-18: Added Harmonic Time System as section [11] and linked it to the dedicated Harmonic Time System menu and Harmonic Time System Analyst GPT module.
+
+2026-06-18: Added Edward’s Mini Harmonic Time Reading under Active Focus on the home screen.
