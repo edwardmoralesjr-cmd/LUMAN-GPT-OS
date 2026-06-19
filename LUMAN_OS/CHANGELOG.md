@@ -26,6 +26,161 @@ It records changes to root interface files, section menus, modules, tools, conti
 
 ---
 
+# 2026-06-19
+
+## Update Title
+
+LUMAN OS Interface Bridge, Harmonic Time Archive, and Command Routing Reconciliation
+
+## Update Type
+
+System Architecture Reconciliation  
+Command Routing Update  
+Harmonic Time System Expansion  
+GitHub Source-of-Truth Bridge  
+Changelog Sync
+
+## Status
+
+Completed
+
+## Summary
+
+This update completed the first major reconciliation between the older `00_CORE/` architecture and the newer `LUMAN_OS/` interface layer.
+
+LUMAN OS now has a dedicated bridge file that explains when to use the modern interface layer, when to use the core protocol layer, and how slash commands should route through the system.
+
+The Harmonic Time System was also advanced from a root-menu integration into a structured archive system with Edward’s saved exact chart-basis/provenance file, an archive index, and a full sample Harmonic Time Map report.
+
+The root command library, deployment index, and core command routing index were updated to recognize the modern `LUMAN_OS/` interface layer and the newer slash-command system.
+
+## Files Created
+
+### LUMAN OS Bridge
+
+- `LUMAN_OS/MASTER_BRIDGE_INDEX.md`
+  - Purpose: Defines how `LUMAN_OS/` and `00_CORE/` cooperate.
+  - Status: Active bridge index.
+
+### Harmonic Time Archive
+
+- `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md`
+  - Purpose: Preserves Edward’s saved exact chart-basis/provenance snapshot for Harmonic Time readings.
+  - Status: Active reference file.
+
+- `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md`
+  - Purpose: Indexes saved Harmonic Time System archive materials.
+  - Status: Active archive index.
+
+- `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md`
+  - Purpose: Full saved sample Harmonic Time Map report for Edward.
+  - Status: Saved sample report.
+
+## Files Updated
+
+### Command and Deployment Routing
+
+- `COMMANDS.md`
+  - Updated to recognize the modern `LUMAN_OS/` slash-command interface.
+  - Added routes for `/open luman`, `/dashboard`, `/open books`, `/open harmonic time system`, `/open harmonic time analyst`, `/open edward chart basis`, and related modern commands.
+
+- `DEPLOYMENT_INDEX.md`
+  - Updated to recognize the two-layer deployment architecture.
+  - Defines `LUMAN_OS/` as the modern user-facing layer and `00_CORE/` as the core protocol layer.
+
+- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`
+  - Updated to include modern root interface commands, modern section commands, Harmonic Time System commands, and routing priority rules.
+
+### Harmonic Time System
+
+- `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`
+  - Updated to include the archive index, exact chart-basis file, saved sample report, completed-loop status, and archive commands.
+
+### Bridge and Status Files
+
+- `LUMAN_OS/MASTER_BRIDGE_INDEX.md`
+  - Updated after command-routing reconciliation to mark the three routing files as completed.
+
+- `00_CORE/OPEN_LOOPS.md`
+  - Updated so the bridge, Harmonic Time archive, and routing reconciliation work are no longer listed as unfinished.
+
+- `00_CORE/ACTIVE_PRIORITIES.md`
+  - Updated so the current Top 3 begins with changelog reconciliation, system settings, and Harmonic Time book/framework work.
+
+- `00_CORE/CHANGELOG.md`
+  - Updated with matching core changelog entry.
+
+- `LUMAN_OS/CHANGELOG.md`
+  - Updated with this master changelog entry.
+
+## Command Routing Result
+
+```text
+/open luman                  -> LUMAN_OS/ROOT_MENU.md
+/dashboard                   -> LUMAN_OS/ROOT_MENU.md + 00_CORE/LUMAN_DASHBOARD.md
+/open books                  -> LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+/open roseborn vault          -> LUMAN_OS/book_section/roseborn_universe/ + 03_ROSEBORN_UNIVERSE/
+/open harmonic time system   -> LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
+/open harmonic time analyst  -> LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
+/open gpt lab                -> LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
+Use GitHub / Update LUMAN OS -> 00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md + LUMAN_OS/MASTER_BRIDGE_INDEX.md
+```
+
+## Source-of-Truth Rules Added
+
+```text
+[1] Modern slash-command screens open through LUMAN_OS/.
+[2] Core protocols, GitHub updates, open loops, active priorities, and loop engineering still route through 00_CORE/ until migrated.
+[3] Project vaults preserve history and should not be deleted or ignored.
+[4] Bridge before duplicating source-of-truth files.
+[5] Open loops and active priorities remain in 00_CORE/ until modern system settings files exist.
+```
+
+## Harmonic Time System Result
+
+The Harmonic Time System now includes:
+
+```text
+[✓] Root-menu placement as section [11]
+[✓] Harmonic Time System menu
+[✓] Harmonic Time System Analyst GPT module
+[✓] Edward exact chart-basis/provenance file
+[✓] Harmonic Time archive index
+[✓] Saved sample Harmonic Time Map report
+[✓] Archive command routes
+```
+
+## Closed Open Loops
+
+```text
+[✓] Create Edward’s exact chart basis/provenance file
+[✓] Create a master bridge index between 00_CORE and LUMAN_OS
+[✓] Update root COMMANDS.md with newer LUMAN_OS slash commands
+[✓] Update DEPLOYMENT_INDEX.md to recognize the newer LUMAN_OS interface layer
+[✓] Update 00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md to recognize the newer LUMAN_OS interface layer
+[✓] Update 00_CORE/CHANGELOG.md and LUMAN_OS/CHANGELOG.md with completed interface, bridge, Harmonic Time, and command-routing work
+```
+
+## Remaining Recommended Next Moves
+
+```text
+[1] Create a modern LUMAN_OS/system_settings/ section
+[2] Create the Harmonic Time System book/framework file
+[3] Create reusable PDF/report formatting standards for Harmonic Time Maps
+[4] Create LUMAN_OS/book_section/roseborn_universe/ROSEBORN_BRIDGE_INDEX.md
+[5] Continue Roseborn Chapter 5 clearance and series architecture reconciliation
+```
+
+## Recommended Next Move
+
+Run:
+
+```text
+Create a modern LUMAN_OS/system_settings/ section.
+```
+
+---
+
 # 2026-06-18
 
 ## Update Title
@@ -285,5 +440,5 @@ This will close the highest-priority unresolved Roseborn canon conflict.
 # File Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 GitHub Role: Master system changelog for LUMAN OS
