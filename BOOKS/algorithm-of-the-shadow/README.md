@@ -47,5 +47,5 @@ Five stages — each with narrative, framework concept, and diagnostic questions
 | Stage One | Complete |
 | Stage Two | Complete |
 | Stage Three | Complete |
-| Stage Four | Not started |
+| Stage Four | Complete |
 | Stage Five | Not started |
