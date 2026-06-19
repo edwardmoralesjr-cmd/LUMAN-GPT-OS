@@ -2,19 +2,333 @@
 
 This file defines activation phrases Edward can use when asking ChatGPT/LUMAN to work from this repository.
 
+## Current Architecture Rule
+
+LUMAN OS now has two cooperating architecture layers:
+
+```text
+[1] LUMAN_OS/  = modern user interface layer
+[2] 00_CORE/   = legacy/core protocol, routing, loop, and status layer
+```
+
+Use this bridge file when deciding which layer owns a command:
+
+```text
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+```
+
+Default rule:
+
+```text
+Modern slash-command screens open through LUMAN_OS/.
+Core protocols, GitHub updates, open loops, active priorities, and loop engineering still route through 00_CORE/ until migrated.
+```
+
+---
+
+## Modern LUMAN OS Interface Commands
+
+### /open luman
+
+When Edward says:
+
+```text
+/open luman
+```
+
+or:
+
+```text
+Open LUMAN OS
+```
+
+ChatGPT should treat the repo as the active operating system and open the modern root interface.
+
+Primary file:
+
+```text
+LUMAN_OS/ROOT_MENU.md
+```
+
+Supporting files:
+
+```text
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+```
+
+Default behavior:
+
+1. Show the LUMAN OS home screen or a concise root-interface view.
+2. Pull current top priorities from `00_CORE/ACTIVE_PRIORITIES.md`.
+3. Pull current open loops from `00_CORE/OPEN_LOOPS.md`.
+4. Use `LUMAN_OS/MASTER_BRIDGE_INDEX.md` if routing between modern and legacy files is unclear.
+5. End with one Recommended Next Move.
+
+### /dashboard
+
+Primary file:
+
+```text
+LUMAN_OS/ROOT_MENU.md
+```
+
+Secondary file:
+
+```text
+00_CORE/LUMAN_DASHBOARD.md
+```
+
+Default behavior:
+
+Show current focus, project status, open loops, weekly priorities, active systems, and the next best action.
+
+### /open books
+
+Primary file:
+
+```text
+LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+```
+
+Default behavior:
+
+Open the writing, publishing, canon, Codex, manuscript, and story-development command center.
+
+Includes:
+
+- Roseborn Universe
+- Grand Generals
+- The Infinite Bloom
+- The Rose Codices
+- The Algorithm of the Shadow
+- Publishing tools
+- Manuscript tools
+- Canon tools
+
+### /open music
+
+Primary modern target:
+
+```text
+LUMAN_OS/music_section/
+```
+
+Current legacy/project source:
+
+```text
+02_LUCID_SYNTAX/
+lucid-syntax-promo-pro/
+```
+
+Default behavior:
+
+Open Lucid Syntax, album rollout planning, lyrics, visuals, promo packs, release schedules, and music strategy.
+
+### /weekly sync
+
+Route to:
+
+```text
+Life OS
+```
+
+Default behavior:
+
+Run Edward’s Life OS weekly sync structure, including status snapshot, top priorities, automation check, trip fund progress, and decision support.
+
+### /money check
+
+Route to:
+
+```text
+Life OS / Money System
+```
+
+Default behavior:
+
+Review financial peace-system structure, weekly budget, bills, savings buckets, vacation fund, and next financial action without storing live private financial balances in GitHub.
+
+### /open work tools
+
+Primary modern target:
+
+```text
+LUMAN_OS/work_quality_tools/
+```
+
+Current legacy/project source:
+
+```text
+05_WORK_QUALITY_SYSTEMS/
+```
+
+Default behavior:
+
+Open work systems, quality analysis, SPC, measurement tools, improvement ideas, and career-support workflows while avoiding employer-confidential data.
+
+### /open gpt lab
+
+Primary file:
+
+```text
+LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
+```
+
+Default behavior:
+
+Open Edward’s custom GPT registry, modules, knowledge files, prompt systems, audits, and upgrades.
+
+### /open creative vault
+
+Primary modern target:
+
+```text
+LUMAN_OS/creative_vault/
+```
+
+Default behavior:
+
+Route poems, spiritual reflections, lyrics, art prompts, book seeds, invention ideas, and future concepts into the correct creative structure when Edward asks to save or systematize them.
+
+### /open records
+
+Primary modern target:
+
+```text
+LUMAN_OS/records/
+```
+
+Default behavior:
+
+Open vehicle maintenance, home records, service logs, inspections, and preventive-planning structures.
+
+### /system settings
+
+Primary modern target:
+
+```text
+LUMAN_OS/system_settings/
+```
+
+Bridge file:
+
+```text
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+```
+
+Default behavior:
+
+Open structure, rules, commands, modules, GitHub update logic, versioning, and memory logic. If the modern system-settings section has not been created yet, use `00_CORE/` files and the bridge index.
+
+---
+
+## Harmonic Time System Commands
+
+### /open harmonic time system
+
+Primary file:
+
+```text
+LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
+```
+
+Supporting files:
+
+```text
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/MODULE_MANIFEST.md
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/COMMANDS.md
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/SOURCE_KNOWLEDGE.md
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/READING_TEMPLATE.md
+LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md
+```
+
+Default behavior:
+
+Open Edward’s spiritual timing, numerology, astrology, symbolic self-mapping, Harmonic Time Map, and soul-rhythm command center.
+
+### /open harmonic time analyst
+
+Primary module:
+
+```text
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
+```
+
+Default behavior:
+
+Open the specialist GPT module that powers Harmonic Time Map readings.
+
+### /open edward chart basis
+
+Primary file:
+
+```text
+LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
+```
+
+Default behavior:
+
+Open Edward’s saved exact-chart basis/provenance file and use it as the stable internal reference for Edward’s personal Harmonic Time readings.
+
+### /create harmonic time map Edward Morales Jr.
+
+Primary files:
+
+```text
+LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/READING_TEMPLATE.md
+```
+
+Default behavior:
+
+Create or continue a Harmonic Time Map using the saved chart-basis file and the official reading template. Do not claim newly recalculated astrology unless a calculation source is documented.
+
+Additional Harmonic commands:
+
+```text
+/harmonic intake
+/soul numbers
+/numerology map
+/chart data check
+/astrology reading
+/harmonic synthesis
+/harmonic forecast
+/create harmonic time map
+/compatibility reading
+/journal prompts
+/affirmation set
+/visual chart concept
+/open harmonic time book
+/open harmonic archive
+```
+
+---
+
 ## Core Repository Commands
 
 ### Open LUMAN dashboards
 
 When Edward says:
 
-`Open LUMAN dashboards`
+```text
+Open LUMAN dashboards
+```
 
 ChatGPT should activate the LUMAN OS dashboard layer.
 
-Use this file:
+Primary modern file:
 
-- `00_CORE/LUMAN_DASHBOARD.md`
+```text
+LUMAN_OS/ROOT_MENU.md
+```
+
+Core dashboard file:
+
+```text
+00_CORE/LUMAN_DASHBOARD.md
+```
 
 Default behavior:
 
@@ -29,17 +343,23 @@ Default behavior:
 
 When Edward says:
 
-`Use GitHub`
+```text
+Use GitHub
+```
 
 or:
 
-`Use GitHub. Update [file/path] with [content]`
+```text
+Use GitHub. Update [file/path] with [content]
+```
 
 ChatGPT should activate the LUMAN GitHub update workflow.
 
 Use this file:
 
-- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
+```text
+00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
+```
 
 Default behavior:
 
@@ -54,17 +374,22 @@ Default behavior:
 
 When Edward says:
 
-`Update LUMAN OS:`
+```text
+Update LUMAN OS:
+```
 
 followed by new information, ChatGPT should decide where the update belongs and prepare or commit the appropriate GitHub changes.
 
 Use these files when relevant:
 
-- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md`
-- `00_CORE/ACTIVE_PRIORITIES.md`
-- `00_CORE/OPEN_LOOPS.md`
-- `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md`
-- `06_SESSION_LOGS/`
+```text
+00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md
+06_SESSION_LOGS/
+```
 
 Default behavior:
 
@@ -77,13 +402,17 @@ Default behavior:
 
 When Edward says:
 
-`Create summary`
+```text
+Create summary
+```
 
 ChatGPT should generate a LUMAN GitHub Update Packet.
 
 Use this file:
 
-- `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md`
+```text
+00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md
+```
 
 Default behavior:
 
@@ -96,7 +425,9 @@ Default behavior:
 
 When Edward says:
 
-`Commit this summary to GitHub`
+```text
+Commit this summary to GitHub
+```
 
 ChatGPT should convert the latest LUMAN GitHub Update Packet into repository changes.
 
@@ -109,59 +440,21 @@ Default behavior:
 5. Update the relevant knowledge pack or module file.
 6. Confirm changed files and commit SHAs.
 
-### Open LUMAN OS
-
-When Edward says:
-
-`Open LUMAN OS`
-
-ChatGPT should treat the repo as the active operating system and orient the session around the current state of:
-
-- `README.md`
-- `COMMANDS.md`
-- `DEPLOYMENT_INDEX.md`
-- `00_CORE/LUMAN_DASHBOARD.md`
-- `00_CORE/ACTIVE_PRIORITIES.md`
-- `00_CORE/OPEN_LOOPS.md`
-- `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md`
-
-Default behavior:
-
-1. Give Edward a concise status snapshot.
-2. Show active priorities and open loops.
-3. Suggest one next best action only when useful.
-
-### Open [vault name]
-
-When Edward says:
-
-`Open Roseborn vault`
-
-or:
-
-`Open Lucid Syntax vault`
-
-or another named vault, ChatGPT should locate the relevant module or vault folder and operate from that context.
-
-Default behavior:
-
-1. Search or open the most relevant folder/files.
-2. Summarize the active state.
-3. Continue the project using the correct canon, voice, and workflow rules.
+---
 
 ## Loop Engineering Commands
 
-### Start daily next move loop
+Primary files:
 
-When Edward says:
+```text
+00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md
+00_CORE/LUMAN_LOOP_COMMANDS.md
+00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md
+```
 
-`/start daily next move loop`
+### /start daily next move loop
 
-ChatGPT should activate the smallest operational LUMAN loop and choose one best next action.
-
-Use this file:
-
-- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
+Activates the smallest operational LUMAN loop and chooses one best next action.
 
 Default behavior:
 
@@ -173,68 +466,48 @@ Default behavior:
 6. Log what should be saved.
 7. Name the next step.
 
-### Start daily next move loop for a project
+### /start daily next move loop: [project]
 
-When Edward says:
-
-`/start daily next move loop: [project]`
-
-ChatGPT should run the Daily Next Move Loop for the named project, vault, or system.
+Runs the Daily Next Move Loop for the named project, vault, or system.
 
 Examples:
 
-- `/start daily next move loop: LUMAN OS`
-- `/start daily next move loop: Lucid Syntax`
-- `/start daily next move loop: Roseborn`
-- `/start daily next move loop: Life OS`
-- `/start daily next move loop: KIA records`
+```text
+/start daily next move loop: LUMAN OS
+/start daily next move loop: Lucid Syntax
+/start daily next move loop: Roseborn
+/start daily next move loop: Life OS
+/start daily next move loop: KIA records
+```
 
-### Start named loop
+### /start loop: [loop name]
 
-When Edward says:
-
-`/start loop: [loop name]`
-
-ChatGPT should route to the LUMAN Loop Engineering System and run the named loop using the standard loop format.
-
-Use this file:
-
-- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
+Routes to the LUMAN Loop Engineering System and runs the named loop using the standard loop format.
 
 Supported loop names:
 
-- daily next move
-- vault
-- github improvement
-- creation
-- quality
-- promotion
-- decision
-- evolution
+```text
+daily next move
+vault
+github improvement
+creation
+quality
+promotion
+decision
+evolution
+```
 
-### Run quality loop
+### /run quality loop on this
 
-When Edward says:
+Reviews the current output, identifies weak points, improves it, and verifies the result.
 
-`/run quality loop on this`
+### /run decision loop
 
-ChatGPT should review the current output, identify weak points, improve it, and verify the result.
+Compares options using Edward’s priorities and recommends one clear next action.
 
-### Run decision loop
+### /upgrade luman os
 
-When Edward says:
-
-`/run decision loop`
-
-ChatGPT should compare options using Edward's priorities and recommend one clear next action.
-
-### Upgrade LUMAN OS
-
-When Edward says:
-
-`/upgrade luman os`
-
-ChatGPT should run the Evolution Loop on LUMAN OS itself.
+Runs the Evolution Loop on LUMAN OS itself.
 
 Default behavior:
 
@@ -244,32 +517,82 @@ Default behavior:
 4. Add missing structure only if useful.
 5. Update routing, dashboard, changelog, and open loops when Edward asks for GitHub changes.
 
+---
+
 ## Project Workflow Commands
+
+### Open [vault name]
+
+When Edward says:
+
+```text
+Open Roseborn vault
+Open Lucid Syntax vault
+```
+
+or another named vault, ChatGPT should locate the relevant module or vault folder and operate from that context.
+
+Default behavior:
+
+1. Search or open the most relevant folder/files.
+2. Summarize the active state.
+3. Continue the project using the correct canon, voice, and workflow rules.
+
+### Roseborn canon
+
+When Edward says:
+
+```text
+Roseborn canon
+Update Roseborn canon:
+```
+
+ChatGPT should activate the Roseborn Canon Guardian workflow and preserve continuity between locked canon and working canon.
+
+Modern primary path:
+
+```text
+LUMAN_OS/book_section/roseborn_universe/
+```
+
+Legacy/project path:
+
+```text
+03_ROSEBORN_UNIVERSE/
+```
+
+Default behavior:
+
+1. Identify whether Edward is locking canon or drafting working canon.
+2. Keep new lore consistent with existing Roseborn architecture.
+3. Preserve contradictions as open questions instead of silently overwriting canon.
+4. Update the correct Roseborn vault files when Edward asks for GitHub commits.
 
 ### Lucid Syntax promotion
 
 When Edward says:
 
-`Lucid Syntax promotion`
-
-or:
-
-`Lucid Syntax promotion for [song title]`
+```text
+Lucid Syntax promotion
+Lucid Syntax promotion for [song title]
+```
 
 ChatGPT should activate the Lucid Syntax Promo Pro workflow.
 
 Use these files:
 
-- `lucid-syntax-promo-pro/deployment_instructions.md`
-- `lucid-syntax-promo-pro/activation_prompt.md`
-- `lucid-syntax-promo-pro/quick_start.md`
-- `lucid-syntax-promo-pro/promo_output_format.md`
-- `lucid-syntax-promo-pro/album_metadata.md`
-- `lucid-syntax-promo-pro/platform_templates.md`
-- `lucid-syntax-promo-pro/knowledge_manifest.md`
-- `shared-core/luman_voice.md`
-- `shared-core/edward_style_rules.md`
-- `shared-core/project_index.md`
+```text
+lucid-syntax-promo-pro/deployment_instructions.md
+lucid-syntax-promo-pro/activation_prompt.md
+lucid-syntax-promo-pro/quick_start.md
+lucid-syntax-promo-pro/promo_output_format.md
+lucid-syntax-promo-pro/album_metadata.md
+lucid-syntax-promo-pro/platform_templates.md
+lucid-syntax-promo-pro/knowledge_manifest.md
+shared-core/luman_voice.md
+shared-core/edward_style_rules.md
+shared-core/project_index.md
+```
 
 Default behavior:
 
@@ -283,82 +606,18 @@ Default behavior:
 8. Ask for clarification only when absolutely necessary.
 9. Keep campaign pacing human, intentional, and not rushed.
 
-Words That Breathe All-In-One Knowledge File:
-
-Use:
-
-`lucid-syntax-promo-pro/Lucid_Syntax_All_In_One_Knowledge_File_v5.txt`
-
-as the main source for Words That Breathe era song promotions.
-
-When Edward says:
-
-`Lucid Syntax promotion for [Words That Breathe song title]`
-
-use the all-in-one knowledge file for:
-
-- Lyrics
-- Song angle
-- Best hook
-- Engagement question
-- Artwork filename
-- Platform rules
-- Backdrop prompt rules
-- Hashtag defaults
-
 Formatting rule:
 
-All Lucid Syntax promotion outputs must use separate copy/paste text boxes for every major item.
-
-Important rendering rule:
-
-Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
-
-Output each section as normal chat text with its own standalone unlabeled fenced copy/paste block.
-
-Recommended outputs:
-
-- TikTok captions
-- YouTube lyric video descriptions
-- Facebook posts
-- X posts
-- Instagram captions
-- Pinterest captions
-- DistroKid-style promo copy
-- Lyric quote graphic prompts
-- Spotify Canvas ideas
-- Lyric video concepts
-- Rollout calendars
-- Campaign checklists
-
-### Roseborn canon
-
-When Edward says:
-
-`Roseborn canon`
-
-or:
-
-`Update Roseborn canon:`
-
-ChatGPT should activate the Roseborn Canon Guardian workflow and preserve continuity between locked canon and working canon.
-
-Default behavior:
-
-1. Identify whether Edward is locking canon or drafting working canon.
-2. Keep new lore consistent with existing Roseborn architecture.
-3. Preserve contradictions as open questions instead of silently overwriting canon.
-4. Update the correct Roseborn vault files when Edward asks for GitHub commits.
+All Lucid Syntax promotion outputs must use separate copy/paste text boxes for every major item. Do not wrap the full promotion package inside one large writing block, document block, canvas block, or single combined editable container.
 
 ### Life OS sync
 
 When Edward says:
 
-`Life OS sync`
-
-or:
-
-`Run Weekly Sync`
+```text
+Life OS sync
+Run Weekly Sync
+```
 
 ChatGPT should activate Edward’s Life Operating System workflow.
 
@@ -373,11 +632,10 @@ Default behavior:
 
 When Edward says:
 
-`KIA service records`
-
-or:
-
-`Update KIA records:`
+```text
+KIA service records
+Update KIA records:
+```
 
 ChatGPT should activate the KIA Service Records workflow.
 
@@ -392,11 +650,10 @@ Default behavior:
 
 When Edward says:
 
-`Work quality dashboard`
-
-or:
-
-`Quality analysis:`
+```text
+Work quality dashboard
+Quality analysis:
+```
 
 ChatGPT should activate Edward’s work-quality/data-analysis workflow.
 
@@ -410,11 +667,10 @@ Default behavior:
 
 When Edward says:
 
-`OMNI-Vault template`
-
-or:
-
-`Update OMNI-Vault:`
+```text
+OMNI-Vault template
+Update OMNI-Vault:
+```
 
 ChatGPT should activate the OMNI-Vault / Second Brain workflow.
 
@@ -424,31 +680,58 @@ Default behavior:
 2. Distinguish permanent, active, draft, temporary, task, and open-loop items.
 3. Use GitHub as the durable source of truth when Edward asks to commit updates.
 
+---
+
 ## Command Shortcut List
 
-- `Open LUMAN dashboards`
-- `Open LUMAN OS`
-- `Use GitHub`
-- `Update LUMAN OS:`
-- `Create summary`
-- `Commit this summary to GitHub`
-- `/start daily next move loop`
-- `/start daily next move loop: [project]`
-- `/start loop: [loop name]`
-- `/run quality loop on this`
-- `/run decision loop`
-- `/upgrade luman os`
-- `Open Roseborn vault`
-- `Open Lucid Syntax vault`
-- `Lucid Syntax promotion`
-- `Lucid Syntax promotion for [song title]`
-- `Roseborn canon`
-- `Update Roseborn canon:`
-- `Life OS sync`
-- `Run Weekly Sync`
-- `KIA service records`
-- `Update KIA records:`
-- `Work quality dashboard`
-- `Quality analysis:`
-- `OMNI-Vault template`
-- `Update OMNI-Vault:`
+```text
+/open luman
+/dashboard
+/open books
+/open music
+/weekly sync
+/money check
+/open work tools
+/open gpt lab
+/open creative vault
+/open records
+/system settings
+/open harmonic time system
+/open harmonic time analyst
+/open harmonic archive
+/open edward chart basis
+/create harmonic time map Edward Morales Jr.
+/next move
+/open loops
+/system update
+/create github update
+/help
+/back
+/main menu
+Open LUMAN dashboards
+Open LUMAN OS
+Use GitHub
+Update LUMAN OS:
+Create summary
+Commit this summary to GitHub
+/start daily next move loop
+/start daily next move loop: [project]
+/start loop: [loop name]
+/run quality loop on this
+/run decision loop
+/upgrade luman os
+Open Roseborn vault
+Open Lucid Syntax vault
+Lucid Syntax promotion
+Lucid Syntax promotion for [song title]
+Roseborn canon
+Update Roseborn canon:
+Life OS sync
+Run Weekly Sync
+KIA service records
+Update KIA records:
+Work quality dashboard
+Quality analysis:
+OMNI-Vault template
+Update OMNI-Vault:
+```
