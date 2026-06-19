@@ -2,7 +2,7 @@
 
 ## LUMAN OS Core System
 
-Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, and Harmonic Time System are now in place.
+Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, Harmonic Time System, Harmonic Time archive index, Edward’s exact chart-basis file, and Edward’s saved sample Harmonic Time Map are now in place.
 
 ## Completed on 2026-06-17
 
@@ -39,24 +39,25 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 - Upgraded the homepage reading to exact natal chart + numerology snapshot.
 - Synced `GPT_REGISTRY.md` with Harmonic Time System root integration.
 - Synced `HARMONIC_TIME_SYSTEM_MENU.md` with root integration and exact chart mode.
+- Created `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md`.
+- Created `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md`.
+- Created `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md`.
+- Updated `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md` with archive file references and completed Harmonic Time loop status.
 
 ## Current Open Loops
 
 ### Highest-Priority Integrity Loops
 
-1. Create a dedicated chart-basis/provenance file for Edward’s exact natal chart snapshot.
-2. Create a master index that bridges the older `00_CORE/` vault architecture with the newer `LUMAN_OS/` interface architecture.
-3. Update root `COMMANDS.md` with the newer slash commands from `LUMAN_OS/ROOT_MENU.md`, especially `/open luman`, `/open harmonic time system`, and `/open harmonic time analyst`.
-4. Update `DEPLOYMENT_INDEX.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
-5. Update both changelog layers after major LUMAN OS structural changes.
+1. Create a master index that bridges the older `00_CORE/` vault architecture with the newer `LUMAN_OS/` interface architecture.
+2. Update root `COMMANDS.md` with the newer slash commands from `LUMAN_OS/ROOT_MENU.md`, especially `/open luman`, `/open harmonic time system`, and `/open harmonic time analyst`.
+3. Update `DEPLOYMENT_INDEX.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
+4. Update both changelog layers after major LUMAN OS structural changes.
 
 ### Harmonic Time System Loops
 
-1. Create `LUMAN_OS/harmonic_time_system/archive/`.
-2. Create `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md`.
-3. Create a saved full sample Harmonic Time Map report for Edward.
-4. Create a Harmonic Time System book/framework file.
-5. Create reusable PDF/report formatting standards for Harmonic Time Maps.
+1. Create a Harmonic Time System book/framework file.
+2. Create reusable PDF/report formatting standards for Harmonic Time Maps.
+3. Add future completed readings to `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md` as they are created.
 
 ### Roseborn Universe Loops
 
@@ -76,5 +77,5 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 ## Recommended Next Move
 
 ```text
-Create Edward’s exact chart basis/provenance file.
+Create the master bridge index between 00_CORE and LUMAN_OS.
 ```
