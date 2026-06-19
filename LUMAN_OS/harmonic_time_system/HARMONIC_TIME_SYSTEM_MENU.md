@@ -218,7 +218,7 @@ Exact astrology can be used when:
 1. Birth date is known.
 2. Birth time is known or explicitly approximated.
 3. Birth place is known.
-4. Calculation method or user-provided chart placements are documented.
+4. Calculation method, documented chart basis, or user-provided chart placements are documented.
 5. Interpretations remain reflective guidance rather than deterministic claims.
 
 ---
@@ -289,6 +289,12 @@ Creates the full reading using the module’s `READING_TEMPLATE.md` structure.
 
 ```text
 LUMAN_OS / gpt_builder_lab / modules / harmonic_time_system_analyst / READING_TEMPLATE.md
+```
+
+### Saved Sample Report
+
+```text
+LUMAN_OS / harmonic_time_system / archive / EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md
 ```
 
 ---
@@ -388,10 +394,27 @@ Opens the future book/framework development area for Edward’s Harmonic Time Sy
 
 ### Purpose
 
-Stores completed readings, templates, examples, symbolic correspondences, and future expansions.
+Stores completed readings, templates, examples, symbolic correspondences, provenance files, and future expansions.
 
-### Future Archive Categories
+### Archive Index
 
+```text
+LUMAN_OS / harmonic_time_system / archive / ARCHIVE_INDEX.md
+```
+
+### Current Archive Files
+
+```text
+[1] EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
+    Use: Stable internal chart-basis snapshot for Edward’s personal Harmonic Time readings
+
+[2] EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md
+    Use: Full saved sample report and formatting/voice model for future Harmonic Time Maps
+```
+
+### Archive Categories
+
+- Personal chart-basis files
 - Completed Harmonic Time Maps
 - Reading examples
 - Numerology correspondences
@@ -413,9 +436,9 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 
 ### Purpose
 
-Opens or creates the dedicated provenance file for Edward’s exact natal chart snapshot.
+Opens the dedicated provenance file for Edward’s exact natal chart snapshot.
 
-### Recommended File
+### Reference File
 
 ```text
 LUMAN_OS / harmonic_time_system / archive / EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
@@ -495,7 +518,7 @@ Edward wants exact natal placements to remain stable across future Harmonic Time
 ```text
 /create harmonic time map
 /journal prompts
-/affirmation set
+affirmation set
 /visual chart concept
 ```
 
@@ -522,18 +545,17 @@ Edward wants exact natal placements to remain stable across future Harmonic Time
 8. Use `READING_TEMPLATE.md` for full reports.
 9. Use this menu when Harmonic Time System is being treated as its own LUMAN OS section.
 10. Every screen ends with a Recommended Next Move.
-11. For Edward’s personal readings, reuse the exact chart basis once it is created.
+11. For Edward’s personal readings, reuse the exact chart basis file.
+12. Use `ARCHIVE_INDEX.md` to locate saved Harmonic Time archive files.
 
 ---
 
 # Current Open Loops
 
 ```text
-[1] Create Edward’s exact chart basis/provenance file
-[2] Create a Harmonic Time System archive folder
-[3] Create a Harmonic Time System book/framework file
-[4] Create a saved full sample Harmonic Time Map report
-[5] Create reusable PDF/report formatting standards
+[1] Create a Harmonic Time System book/framework file
+[2] Create reusable PDF/report formatting standards
+[3] Add future completed readings to ARCHIVE_INDEX.md as they are created
 ```
 
 ---
@@ -545,6 +567,9 @@ Edward wants exact natal placements to remain stable across future Harmonic Time
 [✓] Mini Harmonic Time Reading added to LUMAN OS homepage
 [✓] Homepage Mini Harmonic Reading upgraded to exact natal chart + numerology snapshot
 [✓] GPT_REGISTRY.md synced with Harmonic Time System root integration
+[✓] Edward’s exact chart basis/provenance file created
+[✓] Harmonic Time System archive index created
+[✓] Edward’s saved sample Harmonic Time Map report created
 ```
 
 ---
@@ -552,7 +577,7 @@ Edward wants exact natal placements to remain stable across future Harmonic Time
 # Recommended Next Move
 
 ```text
-Create Edward’s exact chart basis/provenance file.
+Create the Harmonic Time System book/framework file.
 ```
 
 ---
@@ -560,7 +585,7 @@ Create Edward’s exact chart basis/provenance file.
 # File Status
 
 Status: Active  
-Version: v1.1  
+Version: v1.2  
 Installed In: LUMAN OS  
 Section: Harmonic Time System  
 GitHub Role: Dedicated LUMAN OS section menu for Harmonic Time System
