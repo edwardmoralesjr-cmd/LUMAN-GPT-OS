@@ -14,7 +14,7 @@ Harmonic Time System
 
 ## Section Status
 
-Active Expansion Section
+Active Root-Level Section
 
 ## Primary Command
 
@@ -22,9 +22,16 @@ Active Expansion Section
 /open harmonic time system
 ```
 
+## Root Menu Placement
+
+```text
+LUMAN_OS / ROOT_MENU.md
+Section [11]: Harmonic Time System
+```
+
 ## Purpose
 
-The Harmonic Time System section organizes Edward’s metaphysical timing, numerology, astrology, symbolic self-mapping, Harmonic Time Maps, spiritual forecasts, and related GPT tools into one dedicated LUMAN OS section.
+The Harmonic Time System section organizes Edward’s metaphysical timing, numerology, astrology, symbolic self-mapping, Harmonic Time Maps, spiritual forecasts, exact chart-supported readings, and related GPT tools into one dedicated LUMAN OS section.
 
 This section grows out of the Harmonic Time System Analyst GPT module and gives it a full operating-space inside LUMAN OS.
 
@@ -46,7 +53,7 @@ Module ID: LUMAN_GPT_HARMONIC_TIME_SYSTEM_ANALYST_001
 
 This section must preserve the accuracy rules from the Harmonic Time System Analyst module.
 
-Do not claim exact natal chart calculation unless reliable chart-calculation support or user-provided placements are available.
+Exact natal chart readings are allowed when enough birth data is known and a reliable calculation basis or user-approved chart basis is documented.
 
 If exact astrology is unavailable, offer:
 
@@ -55,6 +62,8 @@ If exact astrology is unavailable, offer:
 - Interpretation using user-provided natal placements
 
 Always distinguish exact chart-derived insights from symbolic or spiritual interpretation.
+
+When exact chart placements are used, include the chart basis and keep all interpretations as reflective guidance rather than fixed destiny.
 
 ---
 
@@ -67,16 +76,24 @@ Always distinguish exact chart-derived insights from symbolic or spiritual inter
 ╚════════════════════════════════════════╝
 
 Current Mode:
+[Exact Chart / Numerology / Forecast / Book Framework / Archive]
 
 Active Focus:
+[Current reading, system file, or spiritual timing question]
 
 Available Data:
+[Name / DOB / Time / Place / Chart Basis / Intention]
 
 Recommended Reading Type:
+[Exact natal chart + numerology / Numerology-first / Symbolic / Compatibility]
 
 Open Loops:
+[1]
+[2]
+[3]
 
 Recommended Next Move:
+[One clear action]
 ```
 
 ---
@@ -99,7 +116,8 @@ Recommended Next Move:
 [13] Visual Chart Concept
 [14] Harmonic Time System Book / Framework
 [15] Harmonic Time System Archive
-[16] Return to LUMAN OS Home
+[16] Edward’s Exact Chart Basis
+[17] Return to LUMAN OS Home
 ```
 
 ---
@@ -193,6 +211,16 @@ Creates a numerology-first Harmonic Time Map when astrology data is incomplete o
 
 Determines whether the available birth data supports exact astrology interpretation or only symbolic/numerology-first interpretation.
 
+### Exact Chart Criteria
+
+Exact astrology can be used when:
+
+1. Birth date is known.
+2. Birth time is known or explicitly approximated.
+3. Birth place is known.
+4. Calculation method or user-provided chart placements are documented.
+5. Interpretations remain reflective guidance rather than deterministic claims.
+
 ---
 
 ## [6] Astrology Reading
@@ -205,7 +233,7 @@ Determines whether the available birth data supports exact astrology interpretat
 
 ### Purpose
 
-Interprets astrology placements when reliable chart data or user-provided placements are available.
+Interprets astrology placements when reliable chart data, documented chart basis, or user-provided placements are available.
 
 ### Rule
 
@@ -375,7 +403,31 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 
 ---
 
-## [16] Return to LUMAN OS Home
+## [16] Edward’s Exact Chart Basis
+
+### Command
+
+```text
+/open edward chart basis
+```
+
+### Purpose
+
+Opens or creates the dedicated provenance file for Edward’s exact natal chart snapshot.
+
+### Recommended File
+
+```text
+LUMAN_OS / harmonic_time_system / archive / EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
+```
+
+### Use When
+
+Edward wants exact natal placements to remain stable across future Harmonic Time readings.
+
+---
+
+## [17] Return to LUMAN OS Home
 
 ### Command
 
@@ -404,6 +456,7 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 /visual chart concept
 /open harmonic time book
 /open harmonic archive
+/open edward chart basis
 /open luman
 ```
 
@@ -418,6 +471,14 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 /harmonic intake
 /chart data check
 /create harmonic time map
+```
+
+## Exact Personal Reading Workflow
+
+```text
+/open harmonic time system
+/open edward chart basis
+/create harmonic time map Edward Morales Jr.
 ```
 
 ## Numerology-First Workflow
@@ -453,7 +514,7 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 
 1. Keep readings sacred, personal, elegant, useful, and emotionally clarifying.
 2. Preserve accuracy boundaries.
-3. Do not claim exact astrology without reliable support.
+3. Do not claim exact astrology without reliable support, user-provided placements, or documented chart basis.
 4. Never encourage fatalism.
 5. Empower user agency.
 6. Keep symbolic interpretation clearly labeled.
@@ -461,17 +522,29 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 8. Use `READING_TEMPLATE.md` for full reports.
 9. Use this menu when Harmonic Time System is being treated as its own LUMAN OS section.
 10. Every screen ends with a Recommended Next Move.
+11. For Edward’s personal readings, reuse the exact chart basis once it is created.
 
 ---
 
 # Current Open Loops
 
 ```text
-[1] Decide whether Harmonic Time System should be added to the LUMAN OS root menu as a permanent section
+[1] Create Edward’s exact chart basis/provenance file
 [2] Create a Harmonic Time System archive folder
 [3] Create a Harmonic Time System book/framework file
-[4] Create a sample Harmonic Time Map report
+[4] Create a saved full sample Harmonic Time Map report
 [5] Create reusable PDF/report formatting standards
+```
+
+---
+
+# Recently Completed
+
+```text
+[✓] Harmonic Time System added to ROOT_MENU.md as section [11]
+[✓] Mini Harmonic Time Reading added to LUMAN OS homepage
+[✓] Homepage Mini Harmonic Reading upgraded to exact natal chart + numerology snapshot
+[✓] GPT_REGISTRY.md synced with Harmonic Time System root integration
 ```
 
 ---
@@ -479,7 +552,7 @@ Stores completed readings, templates, examples, symbolic correspondences, and fu
 # Recommended Next Move
 
 ```text
-Update ROOT_MENU.md to include Harmonic Time System as a dedicated section or auxiliary system.
+Create Edward’s exact chart basis/provenance file.
 ```
 
 ---
@@ -487,7 +560,7 @@ Update ROOT_MENU.md to include Harmonic Time System as a dedicated section or au
 # File Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Installed In: LUMAN OS  
 Section: Harmonic Time System  
 GitHub Role: Dedicated LUMAN OS section menu for Harmonic Time System
