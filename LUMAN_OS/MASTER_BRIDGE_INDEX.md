@@ -14,7 +14,7 @@ Which layer owns the source-of-truth for this action right now?
 
 Status: Active bridge index  
 Created: 2026-06-18  
-Last Updated: 2026-06-18  
+Last Updated: 2026-06-19  
 System: LUMAN OS  
 Bridge Scope: `00_CORE/` ↔ `LUMAN_OS/`  
 Primary Role: Architecture reconciliation and command-routing clarity
@@ -65,6 +65,7 @@ Key files:
 ```text
 LUMAN_OS/ROOT_MENU.md
 LUMAN_OS/MASTER_BRIDGE_INDEX.md
+LUMAN_OS/CHANGELOG.md
 LUMAN_OS/book_section/BOOK_SECTION_MENU.md
 LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/MODULE_MANIFEST.md
 LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/COMMANDS.md
@@ -429,16 +430,7 @@ LUMAN_OS/system_settings/ACTIVE_PRIORITIES.md
 
 # Migration Priorities
 
-## Priority 1: Changelog reconciliation
-
-Update both changelog layers after the major LUMAN OS structural changes:
-
-```text
-00_CORE/CHANGELOG.md
-LUMAN_OS/CHANGELOG.md
-```
-
-## Priority 2: System settings section
+## Priority 1: System settings section
 
 Create a modern system settings section:
 
@@ -456,7 +448,7 @@ LUMAN_OS/system_settings/ACTIVE_PRIORITIES.md
 LUMAN_OS/system_settings/CHANGELOG.md
 ```
 
-## Priority 3: Vault modernization
+## Priority 2: Vault modernization
 
 Create or reconcile these modern sections as needed:
 
@@ -469,7 +461,7 @@ LUMAN_OS/creative_vault/
 LUMAN_OS/records/
 ```
 
-## Priority 4: Roseborn bridge
+## Priority 3: Roseborn bridge
 
 Create a dedicated Roseborn bridge file:
 
@@ -519,7 +511,7 @@ START
 [✓] Root COMMANDS.md recognizes the newer LUMAN_OS slash-command interface
 [✓] DEPLOYMENT_INDEX.md recognizes the newer LUMAN_OS interface layer
 [✓] 00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md recognizes the newer LUMAN_OS interface layer
-[ ] Changelog layers need update after structural changes
+[✓] 00_CORE/CHANGELOG.md and LUMAN_OS/CHANGELOG.md have been updated after structural reconciliation
 [ ] Modern System Settings section does not yet exist
 [ ] Several vaults still need modern LUMAN_OS section indexes
 ```
@@ -529,5 +521,5 @@ START
 # Recommended Next Move
 
 ```text
-Update 00_CORE/CHANGELOG.md and LUMAN_OS/CHANGELOG.md with the completed LUMAN_OS interface, bridge, Harmonic Time, and command-routing reconciliation work.
+Create a modern LUMAN_OS/system_settings/ section.
 ```
