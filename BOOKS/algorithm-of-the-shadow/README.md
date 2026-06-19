@@ -43,9 +43,9 @@ Five stages — each with narrative, framework concept, and diagnostic questions
 
 | Section | Status |
 |---------|--------|
-| Opening | Draft complete — needs paste |
-| Stage One | Draft complete — needs paste |
-| Stage Two | Not started |
+| Opening | Complete |
+| Stage One | Complete |
+| Stage Two | In progress |
 | Stage Three | Not started |
 | Stage Four | Not started |
 | Stage Five | Not started |
