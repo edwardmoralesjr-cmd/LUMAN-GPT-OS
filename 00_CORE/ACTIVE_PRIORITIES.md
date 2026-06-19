@@ -9,8 +9,7 @@
 - Maintain `LUMAN_OS/ROOT_MENU.md` as the clean modern root interface for `/open luman`.
 - Build LUMAN OS through small loop-engineered workflows instead of overwhelming one-shot systems.
 - Use `/start daily next move loop` as the default small-start command when Edward wants one best action.
-- Advance the Harmonic Time System now that it is installed as root section [11].
-- Create Edward’s exact chart basis/provenance file so future Harmonic Time readings remain consistent.
+- Advance the Harmonic Time System now that it has an archive index, Edward’s exact chart-basis file, and a saved full sample Harmonic Time Map report.
 - Bridge the older `00_CORE/` vault structure with the newer `LUMAN_OS/` interface structure through a master index.
 - Update root `COMMANDS.md`, `DEPLOYMENT_INDEX.md`, and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with the newer Harmonic Time System commands.
 - Continue Roseborn development by resolving the 20-book vs 23-book architecture conflict and running Chapter 5 clearance.
@@ -19,7 +18,7 @@
 ## Current Top 3
 
 ```text
-[1] Create Edward’s exact chart basis/provenance file
-[2] Create a master bridge index between 00_CORE and LUMAN_OS
-[3] Update command routing to include Harmonic Time System and the newer /open luman interface
+[1] Create a master bridge index between 00_CORE and LUMAN_OS
+[2] Update command routing to include Harmonic Time System and the newer /open luman interface
+[3] Create the Harmonic Time System book/framework file
 ```
