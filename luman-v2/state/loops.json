@@ -1,0 +1,32 @@
+{
+  "open_loops": [
+    {
+      "id": "L1",
+      "title": "Prove the v2 manifest-driven architecture with a working skeleton",
+      "section": "gpt_lab",
+      "priority": 1,
+      "status": "in_progress"
+    },
+    {
+      "id": "L2",
+      "title": "Decide long-term runtime: ChatGPT GPT, local app, or agent-backed",
+      "section": "gpt_lab",
+      "priority": 2,
+      "status": "open"
+    },
+    {
+      "id": "L3",
+      "title": "Migrate Harmonic Time chart-basis into a structured data file",
+      "section": "harmonic",
+      "priority": 3,
+      "status": "open"
+    },
+    {
+      "id": "L4",
+      "title": "Resolve Roseborn 20-book vs 23-book architecture conflict",
+      "section": "books",
+      "priority": 4,
+      "status": "open"
+    }
+  ]
+}

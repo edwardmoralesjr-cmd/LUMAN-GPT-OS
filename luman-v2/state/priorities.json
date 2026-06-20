@@ -1,0 +1,9 @@
+{
+  "active_focus": "Designing LUMAN OS v2 with a clean three-layer architecture.",
+  "mode": "System Update",
+  "top_three": [
+    "Prove the manifest-driven skeleton runs and validates itself",
+    "Choose the long-term runtime",
+    "Port one real section (Harmonic Time) end-to-end as the reference implementation"
+  ]
+}
