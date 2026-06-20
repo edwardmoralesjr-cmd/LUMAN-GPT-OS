@@ -22,7 +22,9 @@ from the manifest every run.
 Use the `./luman` launcher (or `python3 luman.py`):
 
 ```
-./luman home                 # render the live home screen
+./luman                      # interactive home screen — pick a number to open a section
+./luman menu                 # same, explicitly
+./luman home                 # render the home screen once (no prompt)
 ./luman loops                # list open loops
 ./luman next                 # the single highest-leverage next move
 ./luman open <id>            # open a section (dashboard, books, harmonic, gpt_lab...)

@@ -232,13 +232,71 @@ def render_harmonic(m, person_id, for_year=None):
     return engine.render(load(p), for_year)
 
 
+# ---------- interactive menu ----------
+
+def _pause():
+    try:
+        input("\n[enter to return to menu] ")
+    except EOFError:
+        pass
+
+
+def interactive_menu(m):
+    """Loop the home screen and let the user pick a numbered section or a command."""
+    n = len(m["sections"])
+    while True:
+        print("\n" + render_home(m))
+        prompt = f"\nSelect [1-{n}], a command (loops/next/doctor/help), or q to quit > "
+        try:
+            choice = input(prompt).strip()
+        except EOFError:
+            break
+        if not choice:
+            continue
+        low = choice.lower()
+
+        if low in ("q", "quit", "exit"):
+            print("Goodbye.")
+            break
+        if low in ("home", "menu", "back"):
+            continue
+        if low.isdigit():
+            idx = int(low)
+            if 1 <= idx <= n:
+                print("\n" + render_open(m, m["sections"][idx - 1]["id"]))
+            else:
+                print(f"No menu item {idx}.")
+            _pause()
+            continue
+        if low == "loops":
+            print("\n" + render_loops(m)); _pause(); continue
+        if low == "next":
+            print(f"\nRecommended Next Move:\n  {recommend_next(m)}"); _pause(); continue
+        if low == "doctor":
+            text, _ = render_doctor(m); print("\n" + text); _pause(); continue
+        if low == "help":
+            print("\nType a section number, a section name, or: loops, next, doctor, q")
+            _pause(); continue
+
+        sec = next(
+            (s for s in m["sections"] if s["id"] == low or s["name"].lower() == low),
+            None,
+        )
+        if sec:
+            print("\n" + render_open(m, sec["id"]))
+        else:
+            print(f"Unknown choice: {choice}")
+        _pause()
+
+
 # ---------- cli ----------
 
 def build_parser():
     p = argparse.ArgumentParser(prog="luman", description="LUMAN OS v2")
     sub = p.add_subparsers(dest="cmd")
 
-    sub.add_parser("home", help="render the home screen")
+    sub.add_parser("home", help="render the home screen once")
+    sub.add_parser("menu", help="interactive home screen (pick a number)")
     sub.add_parser("loops", help="list open loops")
     sub.add_parser("next", help="recommend the next move")
     sub.add_parser("doctor", help="validate system integrity")
@@ -269,9 +327,12 @@ def main(argv):
     m = manifest()
     parser = build_parser()
     args = parser.parse_args(argv)
-    cmd = args.cmd or "home"
+    # Bare `luman` opens the interactive menu in a terminal, static home otherwise.
+    cmd = args.cmd or ("menu" if sys.stdin.isatty() else "home")
 
-    if cmd == "home":
+    if cmd == "menu":
+        interactive_menu(m)
+    elif cmd == "home":
         print(render_home(m))
     elif cmd == "loops":
         print(render_loops(m))
