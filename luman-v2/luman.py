@@ -77,6 +77,19 @@ def recommend_next(m):
     return f"({top['id']}) {top['title']}"
 
 
+def local_today(timezone=None):
+    """Today's date in the configured timezone, falling back to the system date."""
+    if timezone:
+        try:
+            from datetime import datetime
+            from zoneinfo import ZoneInfo
+            return datetime.now(ZoneInfo(timezone)).date()
+        except Exception:
+            pass
+    from datetime import date
+    return date.today()
+
+
 def daily_reading_block(m):
     """Compute today's mini Harmonic reading for the home screen, if configured."""
     cfg = m["system"].get("daily_reading")
@@ -89,7 +102,8 @@ def daily_reading_block(m):
     if not person.exists():
         return None
     try:
-        return load_engine(mod["engine"]).mini(load(person))
+        on = local_today(cfg.get("timezone"))
+        return load_engine(mod["engine"]).mini(load(person), on)
     except Exception:
         return None
 
