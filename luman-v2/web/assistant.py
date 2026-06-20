@@ -81,6 +81,34 @@ Open loops:
 """
 
 
+def complete(system, user, max_tokens=3000):
+    """Single-turn completion with a caller-supplied system prompt."""
+    st = status()
+    if not st["package"]:
+        return {"error": "setup",
+                "message": "The Claude library isn't installed yet. In a terminal run:  pip install anthropic"}
+    if not st["key"]:
+        return {"error": "setup",
+                "message": "No Anthropic API key found. Set ANTHROPIC_API_KEY, then restart LUMAN."}
+    try:
+        import anthropic
+        client = anthropic.Anthropic()
+        resp = client.messages.create(
+            model=MODEL, max_tokens=max_tokens, system=system,
+            thinking={"type": "adaptive"},
+            messages=[{"role": "user", "content": user}],
+        )
+        text = "".join(b.text for b in resp.content if b.type == "text").strip()
+        return {"reply": text or "(no response)"}
+    except Exception as e:
+        name = type(e).__name__
+        if "Authentication" in name:
+            return {"error": "auth", "message": "Your API key was rejected. Double-check ANTHROPIC_API_KEY."}
+        if "RateLimit" in name:
+            return {"error": "rate", "message": "Rate limited — wait a moment and try again."}
+        return {"error": "api", "message": f"{name}: {e}"}
+
+
 def chat(home, history):
     """Send the conversation to Claude and return LUMAN's reply text."""
     st = status()

@@ -74,6 +74,45 @@ def _harmonic(m, person_id):
     return {"text": luman.render_harmonic(m, person_id)}
 
 
+def _lucid_data():
+    p = ROOT / "state" / "lucid_syntax.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+
+
+def _lucid_menu():
+    d = _lucid_data() or {}
+    return {"albums": d.get("albums", []), "formats": d.get("formats", [])}
+
+
+def _lucid_promo(payload):
+    d = _lucid_data()
+    if not d:
+        return {"error": "Lucid Syntax data not found."}
+    album = next((a for a in d["albums"] if a["id"] == payload.get("album")), None)
+    fmt = next((f for f in d["formats"] if f["id"] == payload.get("format")), None)
+    song = (payload.get("song") or "").strip()
+    if not (album and fmt and song):
+        return {"error": "Choose an album, a song, and a format."}
+    command = f"{fmt['command']} {song}"
+    result = {"command": command, "song": song, "album": album["name"], "format": fmt["name"]}
+
+    if not assistant.status()["ready"]:
+        result["ready"] = False
+        return result
+
+    kf = _resolve(d.get("knowledge_file", ""))
+    knowledge = kf.read_text(encoding="utf-8") if kf and kf.exists() else ""
+    system = (knowledge + "\n\n---\n\nYou are Lucid Syntax Promo Pro. Generate the "
+              "complete promotion pack exactly as specified in this knowledge file, with all "
+              "ready-to-post captions inside fenced text boxes. Output only the pack.")
+    user = (f'Generate a {fmt["engine"]} promotion pack for the song "{song}" from the album '
+            f'"{album["name"]}". Use the locked Visionary release facts where relevant.')
+    out = assistant.complete(system, user)
+    result["ready"] = True
+    result.update(out)  # reply or error/message
+    return result
+
+
 def _git(*args):
     """Run a git command in the repo; return (ok, combined output)."""
     try:
@@ -141,6 +180,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(_harmonic(m, path.rsplit("/", 1)[-1]))
         if path == "/api/assistant/status":
             return self._json(assistant.status())
+        if path == "/api/lucid":
+            return self._json(_lucid_menu())
         return self._json({"error": "not found"}, 404)
 
     def do_POST(self):
@@ -168,6 +209,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(assistant.chat(home, history))
         if path == "/api/save":
             return self._json(_save(payload.get("message")))
+        if path == "/api/lucid/promo":
+            return self._json(_lucid_promo(payload))
         return self._json({"error": "not found"}, 404)
 
 

@@ -42,13 +42,13 @@
       "id": "music",
       "name": "Music Section",
       "command": "open music",
-      "status": "planned",
+      "status": "active",
       "purpose": "Lucid Syntax album rollout, promo packs, release planning.",
       "content": "sections/music.md",
       "items": [
-        { "id": "lucid", "name": "Lucid Syntax", "desc": "Your music project & identity." },
-        { "id": "visionary", "name": "Visionary Rollout", "desc": "Album era strategy." },
-        { "id": "promo", "name": "Promo Packs", "desc": "Per-song promotional assets." }
+        { "id": "promo_studio", "name": "🎬 Promo Studio", "desc": "Pick an album, song, and format to build a promo pack.", "action": "lucid" },
+        { "id": "visionary", "name": "Visionary Rollout", "desc": "Lead single Paint (Jul 3, 2026) · Album Fall 2026." },
+        { "id": "lucid", "name": "Lucid Syntax", "desc": "Project identity and brand voice." }
       ]
     },
     {

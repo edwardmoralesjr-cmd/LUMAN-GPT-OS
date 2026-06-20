@@ -1,0 +1,32 @@
+{
+  "knowledge_file": "repo:lucid-syntax-promo-pro/Lucid_Syntax_Promo_Pro_Knowledge_File_v2.txt",
+  "albums": [
+    {
+      "id": "words-that-breathe",
+      "name": "Words That Breathe",
+      "songs": ["Beautiful Lies", "Deceptive Reflection", "How to Tell Time",
+        "My Masterpiece", "My Thought Process", "Room to Adjust", "Sanity",
+        "Weeping Willow", "What Question", "Why", "Words Unheard"]
+    },
+    {
+      "id": "visionary",
+      "name": "Visionary",
+      "songs": ["Empty Canvas", "Paint", "Spiritual Art", "The Facts", "In-Between",
+        "Three Colors", "I Am", "Choose", "Lightworker", "Visionary", "Smile"]
+    }
+  ],
+  "formats": [
+    { "id": "short", "name": "Short Lyric Video", "command": "/promo",
+      "engine": "Short Lyric Video" },
+    { "id": "full", "name": "Full Lyric Video", "command": "/full lyric video",
+      "engine": "Full Lyric Video Release" },
+    { "id": "promo", "name": "Promo Video (Cinematic)", "command": "/cinematic promo",
+      "engine": "Cinematic Short" }
+  ],
+  "release_facts": {
+    "lead_single": "Paint",
+    "paint_release": "July 3, 2026",
+    "album_launch": "September 25, 2026",
+    "availability": "coming in the fall"
+  }
+}

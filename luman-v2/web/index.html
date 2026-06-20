@@ -78,14 +78,19 @@
   .card h2::before { content: "// "; color: var(--accent2); }
   .row { display: flex; gap: 8px; flex-wrap: wrap; }
   .focus { display:flex; gap:8px; align-items:center; }
-  .focus input, input {
+  .focus input, input, select {
     flex:1; background: var(--panel2); border:1px solid var(--line); color: var(--text);
     border-radius:8px; padding:9px 11px; font-size:14px; outline: none;
     transition: border-color .15s, box-shadow .15s;
   }
-  .focus input:focus, input:focus {
+  select { width: 100%; }
+  select option { background: #0a1018; color: var(--text); }
+  .focus input:focus, input:focus, select:focus {
     border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 14px rgba(54,211,255,0.25);
   }
+  .field { margin-bottom: 12px; }
+  .field label { display:block; font-family: var(--mono); font-size:11px; letter-spacing:1.5px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 5px; }
   input:disabled { opacity: .5; }
   button {
     background: rgba(54,211,255,0.06); color: var(--text);
@@ -301,6 +306,7 @@ async function openSection(id) {
 
 async function openItem(sectionId, itemId, action) {
   if (action === 'harmonic') { return fullReading(); }
+  if (action === 'lucid') { return openLucidStudio(sectionId); }
   const it = await api('/api/item/' + sectionId + '/' + itemId);
   $('panelExtra').innerHTML =
     `<a class="link" onclick="openSection('${sectionId}')">← back to section</a>`;
@@ -316,6 +322,59 @@ async function fullReading() {
     r.text.replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</pre>';
 }
 function showHome(){ $('panel').style.display='none'; $('home').style.display='block'; }
+
+// ---- Lucid Syntax Promo Studio ----
+let lucidData = null;
+async function openLucidStudio(sectionId){
+  lucidData = await api('/api/lucid');
+  $('panelTitle').textContent = 'Music Section — Promo Studio';
+  $('panelPurpose').textContent = 'Pick an album, a song, and a format, then generate a promo pack.';
+  $('panelExtra').innerHTML = `<a class="link" onclick="openSection('${sectionId}')">← back to section</a>`;
+  const albumOpts = lucidData.albums.map(a => `<option value="${a.id}">${esc(a.name)}</option>`).join('');
+  const fmtOpts = lucidData.formats.map(f => `<option value="${f.id}">${esc(f.name)}</option>`).join('');
+  $('panelContent').innerHTML =
+    `<div class="field"><label>Album</label>
+       <select id="lucidAlbum" onchange="lucidFillSongs()">${albumOpts}</select></div>
+     <div class="field"><label>Song</label><select id="lucidSong"></select></div>
+     <div class="field"><label>Format</label><select id="lucidFormat">${fmtOpts}</select></div>
+     <button class="primary" onclick="lucidGenerate()">Generate Promo Pack</button>
+     <div id="lucidOut" style="margin-top:16px"></div>`;
+  lucidFillSongs();
+  $('home').style.display = 'none'; $('panel').style.display = 'block';
+  window.scrollTo(0,0);
+}
+function lucidFillSongs(){
+  const a = lucidData.albums.find(x => x.id === $('lucidAlbum').value);
+  $('lucidSong').innerHTML = (a ? a.songs : []).map(s => `<option>${esc(s)}</option>`).join('');
+}
+async function lucidGenerate(){
+  const out = $('lucidOut');
+  out.innerHTML = '<span class="muted">Working…</span>';
+  const r = await post('/api/lucid/promo', {
+    album: $('lucidAlbum').value, song: $('lucidSong').value, format: $('lucidFormat').value });
+  if (r.error && !r.command){ out.innerHTML = `<div class="msg err">${esc(r.error)}</div>`; return; }
+  let html = `<div class="field"><label>Command for your ChatGPT GPT</label>`
+    + `<div style="display:flex; gap:8px; align-items:center">`
+    + `<code id="lucidCmd" style="flex:1; font-family:var(--mono); color:var(--accent); `
+    + `background:var(--panel2); border:1px solid var(--line); border-radius:8px; padding:9px 11px">${esc(r.command)}</code>`
+    + `<button onclick="copyEl('lucidCmd')">Copy</button></div></div>`;
+  if (r.reply){
+    html += `<div class="field"><label>Generated pack</label>`
+      + `<pre class="reading">${esc(r.reply)}</pre>`
+      + `<button onclick="copyEl('lucidPack')">Copy pack</button>`
+      + `<div id="lucidPack" style="display:none">${esc(r.reply)}</div></div>`;
+  } else if (r.message){
+    html += `<div class="msg err" style="margin-top:8px">${esc(r.message)}</div>`;
+  } else {
+    html += `<p class="muted" style="margin-top:8px">Paste that command into your Lucid Syntax Promo Pro GPT to generate the pack. `
+      + `Turn on Ask LUMAN (add a Claude API key) to generate it right here instead.</p>`;
+  }
+  out.innerHTML = html;
+}
+function copyEl(id){
+  const t = $(id).textContent;
+  navigator.clipboard && navigator.clipboard.writeText(t);
+}
 
 async function doneLoop(id){ await post('/api/loop/done', {id}); load(); }
 async function addLoop(){ const t=$('newLoop').value.trim(); if(!t) return; await post('/api/loop/add',{title:t}); $('newLoop').value=''; load(); }
