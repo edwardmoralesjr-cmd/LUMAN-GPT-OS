@@ -17,9 +17,27 @@ require constant manual syncing. v2 separates them.
 The menus can't drift because they're never written by hand — they're rendered
 from the manifest every run.
 
+## Run it on Windows (no terminal expertise needed)
+
+1. Install **Python** once — open the Microsoft Store, search "Python 3.12",
+   click Get. (Or download from python.org and check "Add Python to PATH".)
+2. Get the files — on the GitHub repo click the green **Code** button →
+   **Download ZIP**, then extract it.
+3. Open the `luman-v2` folder and **double-click `luman.bat`**. A window opens
+   with your LUMAN home screen and a `Select [1-6]...` prompt. Type a number,
+   press Enter, and `q` to quit.
+
+From Command Prompt or PowerShell you can also run specific commands:
+
+```
+luman home
+luman harmonic edward
+luman doctor
+```
+
 ## Commands
 
-Use the `./luman` launcher (or `python3 luman.py`):
+On Windows use `luman ...`; on Mac/Linux use `./luman ...` (or `python3 luman.py ...`):
 
 ```
 ./luman                      # interactive home screen — pick a number to open a section
