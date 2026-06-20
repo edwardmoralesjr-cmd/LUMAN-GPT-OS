@@ -127,7 +127,7 @@
       <div class="focus" style="margin-top:10px">
         <input id="chatInput" placeholder="Talk to LUMAN…"
                onkeydown="if(event.key==='Enter')sendChat()">
-        <button class="primary" onclick="sendChat()">Send</button>
+        <button id="chatSend" class="primary" onclick="sendChat()">Send</button>
       </div>
     </div>
   </div>
@@ -236,12 +236,18 @@ function renderChat(){
 }
 async function loadChatStatus(){
   const s = await api('/api/assistant/status');
-  if (!s.ready){
-    const need = !s.package ? 'the Claude library (pip install anthropic)' : 'an Anthropic API key';
+  const ready = s.ready;
+  $('chatInput').disabled = !ready;
+  $('chatSend').disabled = !ready;
+  if (!ready){
+    $('chatInput').placeholder = 'Coming soon — turn on with your Claude API key';
     $('chatSetup').style.display = 'block';
-    $('chatSetup').textContent = `Ask LUMAN is off until you add ${need}. The chat will turn on once it's set.`;
+    $('chatSetup').textContent =
+      "This is where you'll talk to LUMAN. It comes alive once you add a Claude API key — " +
+      "we'll set that up when you're ready. For now, it's reserved and waiting here on your screen.";
   } else {
     $('chatSetup').style.display = 'none';
+    $('chatInput').placeholder = 'Talk to LUMAN…';
   }
 }
 async function sendChat(){
