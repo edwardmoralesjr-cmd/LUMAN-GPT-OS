@@ -42,7 +42,32 @@ def _section(m, sid):
         "purpose": sec.get("purpose", ""),
         "content": content,
         "module": sec.get("module"),
+        "items": [
+            {"id": i["id"], "name": i["name"], "desc": i.get("desc", ""), "action": i.get("action")}
+            for i in sec.get("items", [])
+        ],
     }
+
+
+def _resolve(path):
+    """Resolve an item content path: 'repo:...' is repo-root, else luman-v2-root."""
+    return (REPO / path[5:]) if path.startswith("repo:") else (ROOT / path)
+
+
+def _item(m, sid, iid):
+    sec = next((s for s in m["sections"] if s["id"] == sid), None)
+    if not sec:
+        return None
+    it = next((i for i in sec.get("items", []) if i["id"] == iid), None)
+    if not it:
+        return None
+    content = ""
+    if it.get("content"):
+        p = _resolve(it["content"])
+        if p.exists():
+            content = p.read_text(encoding="utf-8")
+    return {"id": it["id"], "name": it["name"], "desc": it.get("desc", ""),
+            "action": it.get("action"), "content": content}
 
 
 def _harmonic(m, person_id):
@@ -108,6 +133,10 @@ class Handler(BaseHTTPRequestHandler):
         if path.startswith("/api/section/"):
             sec = _section(m, path.rsplit("/", 1)[-1])
             return self._json(sec) if sec else self._json({"error": "not found"}, 404)
+        if path.startswith("/api/item/"):
+            parts = path[len("/api/item/"):].split("/")
+            it = _item(m, parts[0], parts[1]) if len(parts) == 2 else None
+            return self._json(it) if it else self._json({"error": "not found"}, 404)
         if path.startswith("/api/harmonic/"):
             return self._json(_harmonic(m, path.rsplit("/", 1)[-1]))
         if path == "/api/assistant/status":

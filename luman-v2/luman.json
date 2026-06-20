@@ -31,7 +31,12 @@
       "status": "active",
       "purpose": "Writing, publishing, canon, and manuscript tools (Roseborn, Algorithm of the Shadow).",
       "content": "sections/books.md",
-      "module": "roseborn_canon_guardian"
+      "module": "roseborn_canon_guardian",
+      "items": [
+        { "id": "roseborn", "name": "Roseborn Universe", "desc": "Canon, Grand Generals, the Infinite Bloom.", "content": "repo:03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md" },
+        { "id": "algorithm", "name": "Algorithm of the Shadow", "desc": "Your nonfiction book — 18 chapters drafted.", "content": "repo:BOOKS/algorithm-of-the-shadow/README.md" },
+        { "id": "canon_guardian", "name": "Canon Guardian", "desc": "Protects locked vs working canon.", "content": "repo:LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/COMMANDS.md" }
+      ]
     },
     {
       "id": "music",
@@ -39,7 +44,12 @@
       "command": "open music",
       "status": "planned",
       "purpose": "Lucid Syntax album rollout, promo packs, release planning.",
-      "content": "sections/music.md"
+      "content": "sections/music.md",
+      "items": [
+        { "id": "lucid", "name": "Lucid Syntax", "desc": "Your music project & identity." },
+        { "id": "visionary", "name": "Visionary Rollout", "desc": "Album era strategy." },
+        { "id": "promo", "name": "Promo Packs", "desc": "Per-song promotional assets." }
+      ]
     },
     {
       "id": "life",
@@ -47,7 +57,13 @@
       "command": "open life",
       "status": "planned",
       "purpose": "Weekly sync, daily reset, family plan, health, decisions.",
-      "content": "sections/life.md"
+      "content": "sections/life.md",
+      "items": [
+        { "id": "weekly", "name": "Weekly Sync", "desc": "Your weekly rhythm and direction." },
+        { "id": "reset", "name": "Daily Reset", "desc": "Morning and evening reset." },
+        { "id": "family", "name": "Family Plan", "desc": "Goals and stability." },
+        { "id": "money", "name": "Money System", "desc": "Financial peace structure." }
+      ]
     },
     {
       "id": "harmonic",
@@ -56,7 +72,13 @@
       "status": "active",
       "purpose": "Numerology, astrology, and integrated Harmonic Time Maps.",
       "content": "sections/harmonic.md",
-      "module": "harmonic_time_analyst"
+      "module": "harmonic_time_analyst",
+      "items": [
+        { "id": "today", "name": "Today's Reading", "desc": "Your live numerology reading.", "action": "harmonic" },
+        { "id": "map", "name": "Full Harmonic Time Map", "desc": "Complete reading structure.", "content": "repo:LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/READING_TEMPLATE.md" },
+        { "id": "chart", "name": "Your Chart Basis", "desc": "Edward's documented placements.", "content": "repo:LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md" },
+        { "id": "archive", "name": "Archive", "desc": "Saved readings and reports.", "content": "repo:LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md" }
+      ]
     },
     {
       "id": "gpt_lab",
@@ -64,7 +86,12 @@
       "command": "open gpt-lab",
       "status": "active",
       "purpose": "Registry and development of LUMAN's specialist modules.",
-      "content": "sections/gpt_lab.md"
+      "content": "sections/gpt_lab.md",
+      "items": [
+        { "id": "registry", "name": "GPT Registry", "desc": "All your custom GPT modules.", "content": "repo:LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md" },
+        { "id": "harmonic_mod", "name": "Harmonic Time Analyst", "desc": "Reading engine module.", "content": "modules/harmonic_time_analyst.md" },
+        { "id": "roseborn_mod", "name": "Roseborn Canon Guardian", "desc": "Canon protection module.", "content": "modules/roseborn_canon_guardian.md" }
+      ]
     }
   ],
   "modules": [

@@ -285,12 +285,29 @@ async function openSection(id) {
   const s = await api('/api/section/' + id);
   $('panelTitle').textContent = s.name + '  (' + s.status + ')';
   $('panelPurpose').textContent = s.purpose;
-  $('panelContent').innerHTML = s.content ? miniMarkdown(s.content) : '<p class="muted">No content yet.</p>';
-  $('panelExtra').innerHTML = '';
-  if (s.module === 'harmonic_time_analyst') {
-    $('panelExtra').innerHTML = '<button class="primary" onclick="fullReading()">Full numerology reading</button>';
+  let ex = '';
+  if (s.items && s.items.length) {
+    ex += '<div class="grid">' + s.items.map(it =>
+      `<button class="tile" onclick="openItem('${id}','${it.id}','${it.action||''}')">`
+      + `<div class="name">${esc(it.name)}</div>`
+      + (it.desc ? `<div class="muted" style="font-size:12px;margin-top:4px">${esc(it.desc)}</div>` : '')
+      + `</button>`).join('') + '</div>';
   }
+  $('panelExtra').innerHTML = ex;
+  $('panelContent').innerHTML = s.content ? miniMarkdown(s.content) : '<p class="muted">No content yet.</p>';
   $('home').style.display = 'none'; $('panel').style.display = 'block';
+  window.scrollTo(0,0);
+}
+
+async function openItem(sectionId, itemId, action) {
+  if (action === 'harmonic') { return fullReading(); }
+  const it = await api('/api/item/' + sectionId + '/' + itemId);
+  $('panelExtra').innerHTML =
+    `<a class="link" onclick="openSection('${sectionId}')">← back to section</a>`;
+  $('panelContent').innerHTML =
+    `<h3 style="margin-top:12px">${esc(it.name)}</h3>`
+    + (it.desc ? `<p class="muted">${esc(it.desc)}</p>` : '')
+    + (it.content ? miniMarkdown(it.content) : '<p class="muted">Coming soon — this area is reserved.</p>');
   window.scrollTo(0,0);
 }
 async function fullReading() {
