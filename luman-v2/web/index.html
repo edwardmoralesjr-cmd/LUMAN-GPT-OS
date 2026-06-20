@@ -64,6 +64,11 @@
     border-radius:8px; border:1px solid var(--line); font: 13px/1.5 ui-monospace, Menlo, Consolas, monospace; }
   .muted { color: var(--dim); font-size: 13px; }
   a.link { color: var(--accent); cursor:pointer; }
+  #chatLog { display:flex; flex-direction:column; gap:8px; max-height:340px; overflow-y:auto; }
+  .msg { padding:8px 12px; border-radius:10px; max-width:90%; white-space:pre-wrap; line-height:1.5; }
+  .msg.user { align-self:flex-end; background:#1f6feb22; border:1px solid var(--accent); }
+  .msg.luman { align-self:flex-start; background:var(--panel2); border:1px solid var(--line); }
+  .msg.err { align-self:flex-start; background:#9e6a0322; border:1px solid var(--warn); color:var(--warn); }
 </style>
 </head>
 <body>
@@ -79,6 +84,10 @@
       <div class="focus" style="margin-top:8px">
         <input id="focusInput" placeholder="Active focus…">
         <button onclick="saveFocus()">Save</button>
+      </div>
+      <div style="margin-top:10px; display:flex; gap:8px; align-items:center; flex-wrap:wrap">
+        <button class="primary" onclick="saveAll()">💾 Save to GitHub</button>
+        <span class="muted" id="saveStatus"></span>
       </div>
     </div>
 
@@ -109,6 +118,17 @@
     <div class="card">
       <h2>System</h2>
       <div id="doctor"></div>
+    </div>
+
+    <div class="card">
+      <h2>Ask LUMAN</h2>
+      <div id="chatSetup" class="muted" style="display:none; margin-bottom:8px"></div>
+      <div id="chatLog"></div>
+      <div class="focus" style="margin-top:10px">
+        <input id="chatInput" placeholder="Talk to LUMAN…"
+               onkeydown="if(event.key==='Enter')sendChat()">
+        <button class="primary" onclick="sendChat()">Send</button>
+      </div>
     </div>
   </div>
 
@@ -200,7 +220,47 @@ async function doneLoop(id){ await post('/api/loop/done', {id}); load(); }
 async function addLoop(){ const t=$('newLoop').value.trim(); if(!t) return; await post('/api/loop/add',{title:t}); $('newLoop').value=''; load(); }
 async function saveFocus(){ await post('/api/focus', {text: $('focusInput').value}); load(); }
 
+async function saveAll(){
+  $('saveStatus').textContent = 'Saving…';
+  const r = await post('/api/save', {});
+  $('saveStatus').textContent = r.message || (r.ok ? 'Saved.' : 'Save failed.');
+}
+
+// ---- Ask LUMAN (chat) ----
+const chatHistory = [];
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+function renderChat(){
+  $('chatLog').innerHTML = chatHistory.map(m =>
+    `<div class="msg ${m.cls||m.role}">${esc(m.content)}</div>`).join('');
+  $('chatLog').scrollTop = $('chatLog').scrollHeight;
+}
+async function loadChatStatus(){
+  const s = await api('/api/assistant/status');
+  if (!s.ready){
+    const need = !s.package ? 'the Claude library (pip install anthropic)' : 'an Anthropic API key';
+    $('chatSetup').style.display = 'block';
+    $('chatSetup').textContent = `Ask LUMAN is off until you add ${need}. The chat will turn on once it's set.`;
+  } else {
+    $('chatSetup').style.display = 'none';
+  }
+}
+async function sendChat(){
+  const t = $('chatInput').value.trim();
+  if(!t) return;
+  $('chatInput').value = '';
+  chatHistory.push({role:'user', content:t});
+  chatHistory.push({role:'luman', content:'…', _pending:true});
+  renderChat();
+  const r = await post('/api/chat', {messages: chatHistory
+    .filter(m=>!m._pending).map(m=>({role: m.role==='user'?'user':'assistant', content:m.content}))});
+  chatHistory.pop(); // remove pending
+  if (r.reply) chatHistory.push({role:'luman', content:r.reply});
+  else chatHistory.push({role:'luman', cls:'err', content:r.message || 'Something went wrong.'});
+  renderChat();
+}
+
 load();
+loadChatStatus();
 </script>
 </body>
 </html>
