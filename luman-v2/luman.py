@@ -77,12 +77,33 @@ def recommend_next(m):
     return f"({top['id']}) {top['title']}"
 
 
+def daily_reading_block(m):
+    """Compute today's mini Harmonic reading for the home screen, if configured."""
+    cfg = m["system"].get("daily_reading")
+    if not cfg:
+        return None
+    mod = next((md for md in m.get("modules", []) if md["id"] == cfg.get("module")), None)
+    if not mod or not mod.get("engine"):
+        return None
+    person = ROOT / "state" / "people" / f"{cfg.get('person')}.json"
+    if not person.exists():
+        return None
+    try:
+        return load_engine(mod["engine"]).mini(load(person))
+    except Exception:
+        return None
+
+
 def render_home(m):
     pri = state("priorities")
     loops = [l for l in state("loops").get("open_loops", []) if l.get("status") != "done"]
     out = [banner(m), ""]
     out.append(f"Mode:          {pri.get('mode', '—')}")
     out.append(f"Active Focus:  {pri.get('active_focus', '—')}")
+    daily = daily_reading_block(m)
+    if daily:
+        out.append("")
+        out.append(daily)
     out.append("")
     out.append("Top Priorities:")
     for i, p in enumerate(pri.get("top_three", []), 1):

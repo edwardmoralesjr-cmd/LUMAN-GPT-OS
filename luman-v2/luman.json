@@ -5,6 +5,7 @@
     "version": "2.0.0-skeleton",
     "owner": "Edward Morales Jr.",
     "home_command": "luman home",
+    "daily_reading": { "person": "edward", "module": "harmonic_time_analyst" },
     "principle": "Serve clarity, peace, creativity, discipline, family stability, spiritual depth, and practical execution.",
     "operating_questions": [
       "Where am I?",

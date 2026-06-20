@@ -66,6 +66,40 @@ def personal_year(birth_iso, for_year=None):
     return reduce_number(total)
 
 
+def personal_month(birth_iso, on=None):
+    on = on or date.today()
+    py = reduce_number(personal_year(birth_iso, on.year), keep_masters=False)
+    return reduce_number(py + reduce_number(on.month))
+
+
+def personal_day(birth_iso, on=None):
+    on = on or date.today()
+    pm = reduce_number(personal_month(birth_iso, on), keep_masters=False)
+    return reduce_number(pm + reduce_number(on.day))
+
+
+# Short, grounded directives in LUMAN's voice (clarity, discipline, depth).
+DAILY_DIRECTIVE = {
+    1: "New beginnings — initiate one clear action and lead, don't wait.",
+    2: "Patience and partnership — refine, cooperate, and listen before deciding.",
+    3: "Expression — create, write, and communicate; let ideas flow outward.",
+    4: "Structure — build the system, handle the details, do the disciplined work.",
+    5: "Change — stay adaptable; welcome movement but keep your center.",
+    6: "Responsibility — tend family, home, and what you love; nurture and balance.",
+    7: "Reflection — go inward; study, analyze, and seek depth and insight.",
+    8: "Power — focus on results and execution; act with authority and clarity.",
+    9: "Completion — finish, release, and clear space for the next cycle.",
+    11: "Intuition — trust the inner signal; spiritual insight is heightened today.",
+    22: "Master builder — think big and lay foundations for something lasting.",
+}
+
+
+def directive(n):
+    return DAILY_DIRECTIVE.get(n) or DAILY_DIRECTIVE.get(
+        reduce_number(n, keep_masters=False), ""
+    )
+
+
 def _label(n):
     """Show master numbers as e.g. '11/2'."""
     if n in _MASTERS:
@@ -97,6 +131,21 @@ def reading(person, for_year=None):
             "documented_placements": person.get("documented_placements", {}),
         },
     }
+
+
+def mini(person, on=None):
+    """Compact daily reading for the home screen."""
+    on = on or date.today()
+    birth = person["birth_date"]
+    pd = personal_day(birth, on)
+    lines = [f"Daily Harmonic Reading — {on.isoformat()} ({person['name']})"]
+    lines.append(
+        f"  Personal Year {_label(personal_year(birth, on.year))} · "
+        f"Personal Month {_label(personal_month(birth, on))} · "
+        f"Personal Day {_label(pd)}"
+    )
+    lines.append(f"  Directive: {directive(pd)}")
+    return "\n".join(lines)
 
 
 def render(person, for_year=None):

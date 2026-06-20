@@ -42,6 +42,12 @@ def main():
     check("life_path", e.life_path("1986-02-17"), 7)
     check("expression", e.expression(edward["name"]), 4)
     check("personal_year 2026 (master 11)", e.personal_year("1986-02-17", 2026), 11)
+
+    from datetime import date as _date
+    on = _date(2026, 6, 20)
+    check("personal_month 2026-06-20", e.personal_month("1986-02-17", on), 8)
+    check("personal_day 2026-06-20", e.personal_day("1986-02-17", on), 1)
+    check("directive exists for personal day", bool(e.directive(1)), True)
     check("master number preserved", e.reduce_number(11), 11)
     check("non-master reduces", e.reduce_number(28), 1)
 

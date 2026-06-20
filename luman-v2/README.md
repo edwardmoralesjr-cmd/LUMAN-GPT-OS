@@ -43,6 +43,13 @@ Use the `./luman` launcher (or `python3 luman.py`):
 
 Run the tests with `python3 tests/run_tests.py` (zero dependencies).
 
+## Daily Harmonic reading on the home screen
+
+The home screen shows a mini Harmonic reading computed for *today* — Personal
+Year, Personal Month, Personal Day, and a directive. It recalculates each day
+from the person and module named in `luman.json` under `system.daily_reading`,
+so it is never hand-typed and never stale.
+
 ## Modules compute, they don't guess
 
 `modules/harmonic_time_analyst.py` is a real engine: numerology is deterministic
