@@ -17,6 +17,19 @@ require constant manual syncing. v2 separates them.
 The menus can't drift because they're never written by hand — they're rendered
 from the manifest every run.
 
+## Open LUMAN in your browser (recommended for daily use)
+
+LUMAN ships with a local web version — same engine, a clean page that also
+works well on a phone.
+
+- **Windows:** double-click **`luman-web.bat`**. It starts a local server and
+  opens LUMAN in your browser at `http://127.0.0.1:8765`.
+- **Mac/Linux:** run `./luman-web`.
+
+From there you can read your daily Harmonic reading, open sections, run a full
+numerology reading, close/add loops, and edit your focus — all by clicking. The
+web UI and the CLI read and write the same files, so they stay in sync.
+
 ## Run it on Windows (no terminal expertise needed)
 
 1. Install **Python** once — open the Microsoft Store, search "Python 3.12",

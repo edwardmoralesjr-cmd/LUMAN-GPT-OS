@@ -108,6 +108,46 @@ def daily_reading_block(m):
         return None
 
 
+def daily_data(m):
+    """Structured daily reading dict for the configured person, or None."""
+    cfg = m["system"].get("daily_reading")
+    if not cfg:
+        return None
+    mod = next((md for md in m.get("modules", []) if md["id"] == cfg.get("module")), None)
+    if not mod or not mod.get("engine"):
+        return None
+    person = ROOT / "state" / "people" / f"{cfg.get('person')}.json"
+    if not person.exists():
+        return None
+    try:
+        on = local_today(cfg.get("timezone"))
+        return load_engine(mod["engine"]).daily(load(person), on)
+    except Exception:
+        return None
+
+
+def home_data(m):
+    """Everything the home screen needs, as plain data — shared by CLI and web."""
+    pri = state("priorities")
+    loops = state("loops").get("open_loops", [])
+    problems, warnings, _ = validate(m)
+    return {
+        "system": {"name": m["system"]["name"], "subtitle": m["system"]["subtitle"]},
+        "mode": pri.get("mode", "—"),
+        "active_focus": pri.get("active_focus", "—"),
+        "top_three": pri.get("top_three", []),
+        "open_loops": [l for l in loops if l.get("status") != "done"],
+        "all_loops": loops,
+        "next": recommend_next(m),
+        "sections": [
+            {k: s.get(k) for k in ("id", "name", "command", "status", "purpose")}
+            for s in m["sections"]
+        ],
+        "daily": daily_data(m),
+        "doctor": {"problems": len(problems), "warnings": len(warnings)},
+    }
+
+
 def render_home(m):
     pri = state("priorities")
     loops = [l for l in state("loops").get("open_loops", []) if l.get("status") != "done"]

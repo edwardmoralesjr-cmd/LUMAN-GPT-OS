@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# LUMAN OS v2 web launcher. Starts the local server and opens your browser.
+exec python3 "$(dirname "$0")/web/server.py" "$@"

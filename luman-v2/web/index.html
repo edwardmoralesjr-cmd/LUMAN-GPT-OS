@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMAN OS</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --panel2: #1c2230; --line: #2a3240;
+    --text: #e6edf3; --dim: #8b949e; --accent: #6ea8ff; --good: #3fb950;
+    --warn: #d29922; --gold: #e3b341;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 18px 16px 64px; }
+  header.banner {
+    text-align: center; padding: 22px 12px; border: 1px solid var(--line);
+    border-radius: 14px; background: linear-gradient(180deg, #161b22, #10141b);
+    margin-bottom: 18px;
+  }
+  header.banner h1 { margin: 0; font-size: 26px; letter-spacing: 3px; }
+  header.banner .sub { color: var(--dim); letter-spacing: 2px; font-size: 12px; margin-top: 4px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px; margin-bottom: 14px;
+  }
+  .card h2 { margin: 0 0 10px; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--dim); }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .focus { display:flex; gap:8px; align-items:center; }
+  .focus input { flex:1; background: var(--panel2); border:1px solid var(--line);
+    color: var(--text); border-radius:8px; padding:8px 10px; }
+  button {
+    background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+    border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 14px;
+  }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: #1f6feb22; border-color: var(--accent); color: var(--accent); }
+  .daily .nums { font-size: 17px; margin: 4px 0 8px; }
+  .daily .nums b { color: var(--gold); }
+  .daily .directive { color: var(--text); }
+  ol.pri { margin: 0; padding-left: 22px; } ol.pri li { margin: 4px 0; }
+  .loop { display:flex; align-items:flex-start; gap:10px; padding:8px 0;
+    border-bottom:1px dashed var(--line); }
+  .loop:last-child { border-bottom:0; }
+  .loop .meta { flex:1; }
+  .loop .tag { color: var(--dim); font-size: 12px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap:10px; }
+  .tile { text-align:left; padding:14px; }
+  .tile .n { color: var(--dim); font-size:12px; }
+  .tile .name { font-size:15px; margin-top:2px; }
+  .tile .planned { color: var(--warn); font-size:11px; }
+  .badge { display:inline-block; padding:2px 8px; border-radius:20px; font-size:12px; }
+  .badge.ok { background:#23863622; color:var(--good); border:1px solid #238636; }
+  .badge.warn { background:#9e6a0322; color:var(--warn); border:1px solid #9e6a03; }
+  #panel { display:none; }
+  #panel .content h3 { margin:14px 0 4px; font-size:16px; }
+  #panel .content h4 { margin:12px 0 4px; font-size:14px; color:var(--dim); }
+  #panel .content li { margin:2px 0; }
+  pre.reading { white-space: pre-wrap; background: var(--panel2); padding:12px;
+    border-radius:8px; border:1px solid var(--line); font: 13px/1.5 ui-monospace, Menlo, Consolas, monospace; }
+  .muted { color: var(--dim); font-size: 13px; }
+  a.link { color: var(--accent); cursor:pointer; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="banner">
+    <h1 id="sysname">LUMAN OS</h1>
+    <div class="sub" id="syssub">Living User Matrix Interface</div>
+  </header>
+
+  <div id="home">
+    <div class="card">
+      <div class="muted" id="mode"></div>
+      <div class="focus" style="margin-top:8px">
+        <input id="focusInput" placeholder="Active focus…">
+        <button onclick="saveFocus()">Save</button>
+      </div>
+    </div>
+
+    <div class="card daily" id="dailyCard">
+      <h2>Daily Harmonic Reading</h2>
+      <div id="dailyBody" class="muted">—</div>
+    </div>
+
+    <div class="card">
+      <h2>Top Priorities</h2>
+      <ol class="pri" id="pri"></ol>
+    </div>
+
+    <div class="card">
+      <h2>Open Loops · <span id="loopCount"></span></h2>
+      <div id="loops"></div>
+      <div class="focus" style="margin-top:10px">
+        <input id="newLoop" placeholder="Add a loop…">
+        <button onclick="addLoop()">Add</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Main Menu</h2>
+      <div class="grid" id="sections"></div>
+    </div>
+
+    <div class="card">
+      <h2>System</h2>
+      <div id="doctor"></div>
+    </div>
+  </div>
+
+  <div id="panel" class="card">
+    <a class="link" onclick="showHome()">← back to menu</a>
+    <h2 id="panelTitle" style="margin-top:10px"></h2>
+    <div class="muted" id="panelPurpose"></div>
+    <div id="panelExtra" style="margin-top:10px"></div>
+    <div class="content" id="panelContent" style="margin-top:8px"></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+async function api(path, opts) { const r = await fetch(path, opts); return r.json(); }
+async function post(path, body) {
+  return api(path, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+}
+
+function miniMarkdown(md) {
+  const out = []; let inList = false;
+  for (const raw of md.split('\n')) {
+    const line = raw.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    if (line.startsWith('## ')) { if(inList){out.push('</ul>');inList=false;} out.push('<h4>'+line.slice(3)+'</h4>'); }
+    else if (line.startsWith('# ')) { if(inList){out.push('</ul>');inList=false;} out.push('<h3>'+line.slice(2)+'</h3>'); }
+    else if (line.startsWith('- ')) { if(!inList){out.push('<ul>');inList=true;} out.push('<li>'+line.slice(2)+'</li>'); }
+    else if (line.trim()==='') { if(inList){out.push('</ul>');inList=false;} }
+    else { if(inList){out.push('</ul>');inList=false;} out.push('<p>'+line+'</p>'); }
+  }
+  if(inList) out.push('</ul>');
+  return out.join('');
+}
+
+async function load() {
+  const h = await api('/api/home');
+  $('sysname').textContent = h.system.name;
+  $('syssub').textContent = h.system.subtitle;
+  $('mode').textContent = 'Mode: ' + h.mode;
+  $('focusInput').value = h.active_focus;
+
+  if (h.daily) {
+    $('dailyBody').innerHTML =
+      `<div class="nums">${h.daily.date} — Personal Year <b>${h.daily.personal_year}</b> · `
+      + `Personal Month <b>${h.daily.personal_month}</b> · Personal Day <b>${h.daily.personal_day}</b></div>`
+      + `<div class="directive">${h.daily.directive}</div>`;
+  } else { $('dailyBody').textContent = 'No daily reading configured.'; }
+
+  $('pri').innerHTML = h.top_three.map(p => `<li>${p}</li>`).join('');
+
+  $('loopCount').textContent = h.open_loops.length;
+  $('loops').innerHTML = h.open_loops.sort((a,b)=>(a.priority||99)-(b.priority||99)).map(l =>
+    `<div class="loop"><div class="meta"><div>${l.title}</div>`
+    + `<div class="tag">(${l.id}) ${l.section||'-'} · ${l.status}</div></div>`
+    + `<button onclick="doneLoop('${l.id}')">Done</button></div>`).join('') || '<div class="muted">No open loops.</div>';
+
+  $('sections').innerHTML = h.sections.map((s,i) =>
+    `<button class="tile" onclick="openSection('${s.id}')">`
+    + `<div class="n">[${i+1}]</div><div class="name">${s.name}</div>`
+    + (s.status!=='active' ? `<div class="planned">${s.status}</div>` : '') + `</button>`).join('');
+
+  const d = h.doctor;
+  $('doctor').innerHTML = d.problems
+    ? `<span class="badge warn">${d.problems} problem(s)</span>`
+    : `<span class="badge ok">consistent</span>`
+    + (d.warnings ? ` <span class="muted">· ${d.warnings} planned section(s) not built</span>` : '')
+    + ` <span class="muted">· Next: ${h.next}</span>`;
+}
+
+async function openSection(id) {
+  const s = await api('/api/section/' + id);
+  $('panelTitle').textContent = s.name + '  (' + s.status + ')';
+  $('panelPurpose').textContent = s.purpose;
+  $('panelContent').innerHTML = s.content ? miniMarkdown(s.content) : '<p class="muted">No content yet.</p>';
+  $('panelExtra').innerHTML = '';
+  if (s.module === 'harmonic_time_analyst') {
+    $('panelExtra').innerHTML = '<button class="primary" onclick="fullReading()">Full numerology reading</button>';
+  }
+  $('home').style.display = 'none'; $('panel').style.display = 'block';
+  window.scrollTo(0,0);
+}
+async function fullReading() {
+  const r = await api('/api/harmonic/edward');
+  $('panelContent').innerHTML = '<pre class="reading">' +
+    r.text.replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</pre>';
+}
+function showHome(){ $('panel').style.display='none'; $('home').style.display='block'; }
+
+async function doneLoop(id){ await post('/api/loop/done', {id}); load(); }
+async function addLoop(){ const t=$('newLoop').value.trim(); if(!t) return; await post('/api/loop/add',{title:t}); $('newLoop').value=''; load(); }
+async function saveFocus(){ await post('/api/focus', {text: $('focusInput').value}); load(); }
+
+load();
+</script>
+</body>
+</html>

@@ -133,19 +133,30 @@ def reading(person, for_year=None):
     }
 
 
-def mini(person, on=None):
-    """Compact daily reading for the home screen."""
+def daily(person, on=None):
+    """Structured daily reading (used by both the CLI and the web UI)."""
     on = on or date.today()
     birth = person["birth_date"]
     pd = personal_day(birth, on)
-    lines = [f"Daily Harmonic Reading — {on.isoformat()} ({person['name']})"]
-    lines.append(
-        f"  Personal Year {_label(personal_year(birth, on.year))} · "
-        f"Personal Month {_label(personal_month(birth, on))} · "
-        f"Personal Day {_label(pd)}"
-    )
-    lines.append(f"  Directive: {directive(pd)}")
-    return "\n".join(lines)
+    return {
+        "date": on.isoformat(),
+        "name": person["name"],
+        "personal_year": _label(personal_year(birth, on.year)),
+        "personal_month": _label(personal_month(birth, on)),
+        "personal_day": _label(pd),
+        "directive": directive(pd),
+    }
+
+
+def mini(person, on=None):
+    """Compact daily reading for the home screen."""
+    d = daily(person, on)
+    return "\n".join([
+        f"Daily Harmonic Reading — {d['date']} ({d['name']})",
+        f"  Personal Year {d['personal_year']} · "
+        f"Personal Month {d['personal_month']} · Personal Day {d['personal_day']}",
+        f"  Directive: {d['directive']}",
+    ])
 
 
 def render(person, for_year=None):
