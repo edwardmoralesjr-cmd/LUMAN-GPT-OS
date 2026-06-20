@@ -17,6 +17,22 @@ require constant manual syncing. v2 separates them.
 The menus can't drift because they're never written by hand — they're rendered
 from the manifest every run.
 
+## Talk to LUMAN, and the Save button
+
+The web app has two extra powers:
+
+- **Save to GitHub** — one button commits all your changes and pushes them to
+  the cloud. No terminal needed. (If git isn't available it tells you to use
+  GitHub Desktop instead.)
+- **Ask LUMAN** — a chat that speaks in LUMAN's voice and knows your live focus,
+  priorities, loops, and daily reading. It runs on the Claude API, so it needs
+  two one-time things:
+  1. `pip install anthropic`
+  2. an `ANTHROPIC_API_KEY` environment variable (get a key at
+     console.anthropic.com — pay-as-you-go, a few cents per message)
+
+  Until both are set, the chat shows setup instructions instead of failing.
+
 ## Open LUMAN in your browser (recommended for daily use)
 
 LUMAN ships with a local web version — same engine, a clean page that also
