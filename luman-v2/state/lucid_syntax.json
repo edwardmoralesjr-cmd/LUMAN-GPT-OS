@@ -18,10 +18,16 @@
   "formats": [
     { "id": "short", "name": "Short Lyric Video", "command": "/promo",
       "engine": "Short Lyric Video" },
+    { "id": "followup", "name": "Follow-Up Short (new angle)", "command": "I made another short for",
+      "engine": "Additional or Follow-Up Short" },
+    { "id": "promo", "name": "Promo Video (Cinematic Short)", "command": "/cinematic promo",
+      "engine": "Cinematic Short" },
     { "id": "full", "name": "Full Lyric Video", "command": "/full lyric video",
       "engine": "Full Lyric Video Release" },
-    { "id": "promo", "name": "Promo Video (Cinematic)", "command": "/cinematic promo",
-      "engine": "Cinematic Short" }
+    { "id": "full_cinematic", "name": "Full Cinematic Lyric Video", "command": "/full cinematic lyric video",
+      "engine": "Full Cinematic Lyric Video Release" },
+    { "id": "era", "name": "Era / Single Announcement", "command": "/era announcement",
+      "engine": "Era, Single, or Album Announcement" }
   ],
   "release_facts": {
     "lead_single": "Paint",
