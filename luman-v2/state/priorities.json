@@ -1,9 +1,9 @@
 {
-  "active_focus": "Harmonic Time section ported; choosing next section to build",
+  "active_focus": "Runtime settled (CLI/app). Choosing the next section to port.",
   "mode": "System Update",
   "top_three": [
-    "Prove the manifest-driven skeleton runs and validates itself",
-    "Choose the long-term runtime",
-    "Port one real section (Harmonic Time) end-to-end as the reference implementation"
+    "Port Roseborn Canon Guardian as the second reference module",
+    "Build out a planned section (Music or Life) so doctor goes fully green",
+    "Add a GitHub Action that runs doctor + tests on every push"
   ]
 }
