@@ -107,6 +107,13 @@ def _lucid_promo(payload):
               "ready-to-post captions inside fenced text boxes. Output only the pack.")
     user = (f'Generate a {fmt["engine"]} promotion pack for the song "{song}" from the album '
             f'"{album["name"]}". Use the locked Visionary release facts where relevant.')
+
+    slug = song.lower().replace(" ", "-")
+    lyr = REPO / "lucid-syntax-promo-pro" / "lyrics" / album["id"] / (slug + ".md")
+    if lyr.exists():
+        user += ('\n\nExact lyrics for this song (preserve lines verbatim when quoting; '
+                 'do not over-quote):\n\n' + lyr.read_text(encoding="utf-8"))
+    result["has_lyrics"] = lyr.exists()
     out = assistant.complete(system, user)
     result["ready"] = True
     result.update(out)  # reply or error/message
