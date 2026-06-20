@@ -5,7 +5,7 @@
       "title": "Prove the v2 manifest-driven architecture with a working skeleton",
       "section": "gpt_lab",
       "priority": 1,
-      "status": "in_progress"
+      "status": "done"
     },
     {
       "id": "L2",
@@ -26,6 +26,13 @@
       "title": "Resolve Roseborn 20-book vs 23-book architecture conflict",
       "section": "books",
       "priority": 4,
+      "status": "open"
+    },
+    {
+      "id": "L5",
+      "title": "Port Music section end-to-end",
+      "section": "music",
+      "priority": 5,
       "status": "open"
     }
   ]

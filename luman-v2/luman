@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# LUMAN OS v2 launcher. Lets you run `./luman home` instead of `python3 luman.py home`.
+exec python3 "$(dirname "$0")/luman.py" "$@"

@@ -19,14 +19,36 @@ from the manifest every run.
 
 ## Commands
 
+Use the `./luman` launcher (or `python3 luman.py`):
+
 ```
-python3 luman.py home      # render the live home screen
-python3 luman.py loops     # list open loops
-python3 luman.py next      # the single highest-leverage next move
-python3 luman.py open <id> # open a section (dashboard, books, harmonic, gpt-lab...)
-python3 luman.py doctor    # validate: dangling routes, missing files, orphan modules
-python3 luman.py help      # all commands
+./luman home                 # render the live home screen
+./luman loops                # list open loops
+./luman next                 # the single highest-leverage next move
+./luman open <id>            # open a section (dashboard, books, harmonic, gpt_lab...)
+./luman doctor               # validate: dangling routes, missing files, orphan modules
+
+# state mutation (writes back to state/*.json)
+./luman focus "<text>"       # set the active focus
+./luman loop add "<title>" [--section S] [--priority N]
+./luman loop done <id>       # close a loop
+
+# module computation
+./luman harmonic <person> [--year N]   # compute a Harmonic Time reading
+
+./luman help
 ```
+
+Run the tests with `python3 tests/run_tests.py` (zero dependencies).
+
+## Modules compute, they don't guess
+
+`modules/harmonic_time_analyst.py` is a real engine: numerology is deterministic
+arithmetic, so Life Path, Expression, Soul Urge, and Personal Year are
+*calculated* and verified against Edward's documented numbers in the test suite.
+Exact astrology can't be recalculated from prose, so documented placements are
+passed through labeled — the accuracy guardrail is enforced in code, not just
+described.
 
 ## Why `doctor` matters
 

@@ -73,6 +73,7 @@
       "status": "active",
       "purpose": "Creates numerology-first and chart-based Harmonic Time Map readings.",
       "manifest": "modules/harmonic_time_analyst.md",
+      "engine": "modules/harmonic_time_analyst.py",
       "accuracy_rule": "Never claim an exact natal chart calculation without a documented chart basis. Otherwise label readings as symbolic or numerology-first."
     },
     {

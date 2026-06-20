@@ -1,0 +1,14 @@
+{
+  "id": "edward",
+  "name": "Edward Morales Jr.",
+  "birth_date": "1986-02-17",
+  "birth_time": "18:00",
+  "birth_place": "Chicago, IL",
+  "chart_basis": "Tropical zodiac, Placidus houses, Chicago IL, 1986-02-17 6:00 PM CST, calculated as 1986-02-18 00:00 UTC",
+  "documented_placements": {
+    "sun": "29°02′ Aquarius, 6th House",
+    "moon": "11°41′ Gemini, 10th House",
+    "rising": "6°33′ Virgo",
+    "midheaven": "2°07′ Gemini"
+  }
+}
