@@ -1,5 +1,40 @@
 # LUMAN OS Core Changelog
 
+## 2026-06-28 - Life OS lifespan action doctrine and Order of the Rose Shadow added
+
+Updated:
+- Created the modern Life OS interface file.
+- Added the Lifespan Maximization Doctrine as the source-of-truth bridge between cosmic understanding and practical action inside one finite human lifespan.
+- Added the Law of Embodied Meaning: a truth is not complete until it becomes livable.
+- Added the Physical Reality Filter: it is not what Edward chooses to believe; it is what makes his physical reality better.
+- Added the Order of the Rose Shadow cove file as Edward’s embodied practice, nervous-system regulation chamber, and living martial arts container.
+- Added the core Order of the Rose Shadow law: move through chaos without becoming chaos.
+- Created a session log capturing the doctrine, Life OS module, and next build recommendations.
+- Updated active priorities and open loops so Life OS and Rose Shadow work are now part of the current LUMAN OS build direction.
+
+Files changed:
+- `LUMAN_OS/life_os/LIFE_OS_MENU.md`
+- `LUMAN_OS/life_os/LIFESPAN_MAXIMIZATION_DOCTRINE.md`
+- `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md`
+- `06_SESSION_LOGS/2026-06/2026-06-28-lifespan-action-doctrine-and-rose-shadow.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `00_CORE/CHANGELOG.md`
+
+Command-routing implication:
+```text
+/open life os           -> LUMAN_OS/life_os/LIFE_OS_MENU.md
+/lifespan doctrine      -> LUMAN_OS/life_os/LIFESPAN_MAXIMIZATION_DOCTRINE.md
+/rose shadow cove       -> LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md
+/daily embodied action  -> future Life OS loop file
+/regulation reset       -> future Life OS regulation loop file
+```
+
+Current recommended next move:
+```text
+Test Life OS with one Daily Embodied Action loop.
+```
+
 ## 2026-06-19 - LUMAN_OS interface, bridge, Harmonic Time, and command routing reconciled
 
 Updated:
@@ -48,13 +83,15 @@ Closed integrity loops:
 
 Remaining integrity loops:
 - Create a modern `LUMAN_OS/system_settings/` section.
-- Create modern section indexes for Music, Life OS, Money System, Work / Quality Tools, Creative Vault, and Vehicle / Home Records when needed.
+- Create modern section indexes for Music, Money System, Work / Quality Tools, Creative Vault, and Vehicle / Home Records when needed.
 - Continue Harmonic Time System buildout with a book/framework file and reusable PDF/report formatting standards.
 - Continue Roseborn work by reconciling the 20-book vs. 23-book architecture conflict and running Chapter 5 clearance.
+- Test Life OS with one Daily Embodied Action loop.
+- Build the Order of the Rose Shadow technique index.
 
 Recommended next move:
 ```text
-Create a modern LUMAN_OS/system_settings/ section.
+Test Life OS with one Daily Embodied Action loop.
 ```
 
 ## 2026-06-18 - LUMAN OS integrity scan completed
