@@ -2,7 +2,7 @@
 
 ## LUMAN OS Core System
 
-Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, Harmonic Time System, Harmonic Time archive index, Edward’s exact chart-basis file, Edward’s saved sample Harmonic Time Map, the `00_CORE/` ↔ `LUMAN_OS/` master bridge index, the first command-routing reconciliation pass, the two-layer changelog reconciliation, and the first modern Life OS module files are now in place.
+Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, Harmonic Time System, Harmonic Time archive index, Edward’s exact chart-basis file, Edward’s saved sample Harmonic Time Map, the `00_CORE/` ↔ `LUMAN_OS/` master bridge index, the first command-routing reconciliation pass, the two-layer changelog reconciliation, the first modern Life OS module files, and the official Order of the Rose Shadow technique index are now in place.
 
 ## Completed on 2026-06-17
 
@@ -61,7 +61,8 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 - Created `LUMAN_OS/life_os/LIFE_OS_MENU.md` as the modern Life OS interface.
 - Created `LUMAN_OS/life_os/LIFESPAN_MAXIMIZATION_DOCTRINE.md` as the source-of-truth doctrine for turning cosmic understanding into lifespan action.
 - Created `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` as the embodied practice, nervous-system regulation, and living martial arts cove file.
-- Updated `00_CORE/ACTIVE_PRIORITIES.md` so Life OS and Order of the Rose Shadow are now active build priorities.
+- Created `LUMAN_OS/life_os/ROSE_SHADOW_TECHNIQUE_INDEX.md` as the official Order of the Rose Shadow technique index.
+- Updated `00_CORE/ACTIVE_PRIORITIES.md` so Life OS and Rose Shadow work route toward illustration prompts, Daily Embodied Action loop creation, and system settings.
 
 ## Current Open Loops
 
@@ -70,15 +71,15 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 1. Create a modern `LUMAN_OS/system_settings/` section.
 2. Create modern section indexes for Music, Money System, Work / Quality Tools, Creative Vault, and Vehicle / Home Records when needed.
 3. Continue keeping `COMMANDS.md`, `DEPLOYMENT_INDEX.md`, `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`, `LUMAN_OS/ROOT_MENU.md`, and section menus aligned as new commands are added.
-4. Mirror `/open life os`, `/lifespan doctrine`, `/daily embodied action`, `/rose shadow cove`, and `/regulation reset` into root command surfaces when the Life OS command set is tested.
+4. Mirror `/open life os`, `/lifespan doctrine`, `/daily embodied action`, `/rose shadow cove`, `/rose shadow techniques`, and `/regulation reset` into root command surfaces when the Life OS command set is tested.
 
 ### Life OS Loops
 
-1. Test the Life OS response format in a real weekly sync.
-2. Build a Daily Embodied Action loop file.
-3. Build an Order of the Rose Shadow technique index.
-4. Create a short safety/ethics protocol for physical training and self-defense language.
-5. Decide whether the Architecture of Consciousness framework should live under Life OS, Creative Vault, Book Section, or all three through a bridge index.
+1. Build a Daily Embodied Action loop file.
+2. Create detailed illustration prompts for Rank 1: Shadow Petal techniques.
+3. Create a short safety/ethics protocol for physical training and self-defense language.
+4. Decide whether the Architecture of Consciousness framework should live under Life OS, Creative Vault, Book Section, or all three through a bridge index.
+5. Build individual lesson files for each Rank 1 technique after the prompt set is approved.
 
 ### Harmonic Time System Loops
 
@@ -105,5 +106,5 @@ Current status: the GitHub-backed LUMAN OS foundation is active. Core command ro
 ## Recommended Next Move
 
 ```text
-Test Life OS with one Daily Embodied Action loop.
+Create detailed illustration prompts for Rank 1: Shadow Petal techniques.
 ```
