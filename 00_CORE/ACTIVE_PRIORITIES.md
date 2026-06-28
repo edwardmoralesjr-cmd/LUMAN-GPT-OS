@@ -12,14 +12,17 @@
 - Maintain both changelog layers, `00_CORE/CHANGELOG.md` and `LUMAN_OS/CHANGELOG.md`, after major structural changes.
 - Build LUMAN OS through small loop-engineered workflows instead of overwhelming one-shot systems.
 - Use `/start daily next move loop` as the default small-start command when Edward wants one best action.
+- Maintain the new Life OS module as the home for lifespan action doctrine, embodied meaning, nervous-system regulation, and the Order of the Rose Shadow cove.
+- Advance the Lifespan Maximization Doctrine from philosophy into daily, weekly, and embodied action loops.
+- Keep the Order of the Rose Shadow grounded as a lawful, defensive, regulation-first living martial arts and nervous-system practice.
 - Advance the Harmonic Time System now that it has an archive index, Edward’s exact chart-basis file, and a saved full sample Harmonic Time Map report.
 - Continue Roseborn development by resolving the 20-book vs 23-book architecture conflict and running Chapter 5 clearance.
-- Continue building vault-specific dashboards, especially Life OS, OMNI-Vault, KIA records, Work Quality systems, and Lucid Syntax.
+- Continue building vault-specific dashboards, especially Money System, OMNI-Vault, KIA records, Work Quality systems, and Lucid Syntax.
 
 ## Current Top 3
 
 ```text
-[1] Create a modern LUMAN_OS/system_settings/ section
-[2] Create the Harmonic Time System book/framework file
-[3] Create reusable PDF/report formatting standards for Harmonic Time Maps
+[1] Test Life OS with one daily embodied action loop
+[2] Build the Order of the Rose Shadow technique index
+[3] Create a modern LUMAN_OS/system_settings/ section
 ```
