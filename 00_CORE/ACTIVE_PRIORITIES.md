@@ -15,6 +15,7 @@
 - Maintain the new Life OS module as the home for lifespan action doctrine, embodied meaning, nervous-system regulation, and the Order of the Rose Shadow cove.
 - Advance the Lifespan Maximization Doctrine from philosophy into daily, weekly, and embodied action loops.
 - Keep the Order of the Rose Shadow grounded as a lawful, defensive, regulation-first living martial arts and nervous-system practice.
+- Use `LUMAN_OS/life_os/ROSE_SHADOW_TECHNIQUE_INDEX.md` as the official technique index for the Rose Shadow Method.
 - Advance the Harmonic Time System now that it has an archive index, Edward’s exact chart-basis file, and a saved full sample Harmonic Time Map report.
 - Continue Roseborn development by resolving the 20-book vs 23-book architecture conflict and running Chapter 5 clearance.
 - Continue building vault-specific dashboards, especially Money System, OMNI-Vault, KIA records, Work Quality systems, and Lucid Syntax.
@@ -22,7 +23,7 @@
 ## Current Top 3
 
 ```text
-[1] Test Life OS with one daily embodied action loop
-[2] Build the Order of the Rose Shadow technique index
+[1] Create detailed illustration prompts for Rank 1: Shadow Petal techniques
+[2] Build the Daily Embodied Action loop file
 [3] Create a modern LUMAN_OS/system_settings/ section
 ```
