@@ -4,6 +4,8 @@
 
 LUMAN OS is active, GitHub-backed, and now includes a modern System Settings governance layer with a Master Command Center, Project Registry, Source-of-Truth Matrix, Ninety-Day Execution Path, Autopilot Operating Law, command reference, changelog, and permanent session record.
 
+The modern interface, Master Bridge, core command-routing index, live active priorities, and live open-loop layer are synchronized.
+
 ## Completed on 2026-07-10
 
 - Created `LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md`.
@@ -16,6 +18,8 @@ LUMAN OS is active, GitHub-backed, and now includes a modern System Settings gov
 - Created `LUMAN_OS/system_settings/COMMANDS.md`.
 - Created `LUMAN_OS/system_settings/CHANGELOG.md`.
 - Updated `LUMAN_OS/ROOT_MENU.md` with direct System Settings and command-center routing.
+- Updated `LUMAN_OS/MASTER_BRIDGE_INDEX.md` with the System Settings ownership layer and source hierarchy.
+- Updated `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with the full command-center command surface.
 - Updated `00_CORE/ACTIVE_PRIORITIES.md` to align with the three-front portfolio.
 - Created `06_SESSION_LOGS/2026-07/2026-07-10-luman-master-command-center-upgrade.md`.
 - Reclassified Visionary as Active Shipping.
@@ -24,14 +28,13 @@ LUMAN OS is active, GitHub-backed, and now includes a modern System Settings gov
 
 ## Current Open Loops
 
-### Remaining System Integrity Loops
+### Remaining Legacy-Surface Cleanup
 
-1. Reconcile `LUMAN_OS/MASTER_BRIDGE_INDEX.md` with the new System Settings ownership layer.
-2. Mirror the System Settings commands into root `COMMANDS.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`.
-3. Synchronize `00_CORE/CHANGELOG.md` and `LUMAN_OS/CHANGELOG.md` with the 2026-07-10 command-center update.
-4. Review `DEPLOYMENT_INDEX.md` after command-routing synchronization.
+1. Mirror the highest-value System Settings commands into root `COMMANDS.md` without removing its existing detailed command history.
+2. Add the 2026-07-10 command-center update to `00_CORE/CHANGELOG.md` and `LUMAN_OS/CHANGELOG.md` without replacing their historical entries.
+3. Review `DEPLOYMENT_INDEX.md` after root command mirroring.
 
-These are legacy-surface synchronization tasks. The modern interface, live priorities, command center, audit, and project registry are already active.
+These are legacy-surface cleanup tasks. They do not block the new command center, modern interface, source matrix, live priorities, or routing index from operating now.
 
 ### Human Foundation Loops
 
