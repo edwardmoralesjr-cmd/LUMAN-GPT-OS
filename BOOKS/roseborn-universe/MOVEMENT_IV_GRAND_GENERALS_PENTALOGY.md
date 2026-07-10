@@ -1,12 +1,20 @@
-# Movement IV — Grand Generals Pentalogy
+# Movement IV: Grand Generals Pentalogy
 
-## State
+## Canon Status
 
-Active grounded fiction branch inside a working five-book movement.
+Active Working Canon
 
-## Book Count
+## Position
 
-5
+Books 16–20 of the 21-book Roseborn master architecture.
+
+## Books
+
+16. Grand Generals I: The Waking Stone
+17. Grand Generals II: The Broken Registry
+18. Grand Generals III: The Gray Verge
+19. Grand Generals IV: The Sovereign Threshold
+20. Grand Generals V: The Grand Generals
 
 ## Core Focus
 
@@ -15,27 +23,21 @@ Active grounded fiction branch inside a working five-book movement.
 - Solren
 - Cairnwake
 - Buried sacred architecture
-- Waking Threshold
 - Managed forgetting
+- Waking Threshold
 - Gradual revelation of the deeper Roseborn world
 
 ## Reader Function
 
-Grand Generals is the intended grounded reader entry point even though the cosmology begins in much earlier eras.
+Grand Generals remains the grounded reader entry point even though its numbered position follows earlier chronological movements.
 
-## Book One
+## Active Frontier
 
-Begins with haunted normality and moves through anomaly, denial, investigation, descent, proof, loss, and awakening.
+```text
+Grand Generals I: The Waking Stone
+Chapter 5: A Crack in Sequence
+```
 
-## Later-Book Open Questions
+## Next Gate
 
-- Expansion beyond Cairnwake
-- Trio evolution
-- Connection to dragon currents
-- Public consequences of awakening
-- Grand General title and institution
-- Relationship to the broader Roseborn Saga
-
-## Dependency
-
-Book One can continue through approved continuity after architecture reconciliation and Chapter Five clearance. Later books require the pentalogy's role to be confirmed in the master series.
+Run Chapter 5 clearance against current rolling continuity and create `CHAPTER_5_CLEARANCE.md`.

@@ -1,12 +1,16 @@
-# Movement V — The Third Emergence
+# Movement V: The Third Emergence
 
-## State
+## Canon Status
 
-Future finale concept within the remembered 21-book architecture.
+Active Working Canon
 
-## Book Count
+## Position
 
-1
+Book 21 of the Roseborn master architecture.
+
+## Book
+
+21. The Third Emergence
 
 ## Function
 
@@ -26,16 +30,8 @@ Final convergence of:
 
 ## Core Requirement
 
-The finale must arise from character choice and accumulated cost, not only cosmological spectacle.
+The finale must arise from accumulated character choices, obligations, losses, and transformations. Cosmological spectacle cannot replace emotional and moral consequence.
 
-## Open Questions
+## Next Gate
 
-- Meaning of the Third Emergence
-- Final protagonist convergence
-- Fate of the current twelvefold order
-- Role of the Living Flame
-- Whether wholeness restores, transforms, or surpasses the original Bloom
-
-## Dependency
-
-Do not lock finale mechanics before the preceding movements and active master architecture are approved.
+Keep finale mechanics unresolved until the preceding movements establish the true cost and meaning of the Third Emergence.

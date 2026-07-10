@@ -2,105 +2,84 @@
 
 ## Purpose
 
-Track book material confirmed to have existed or likely to exist, but not currently available in retained LUMAN memory or the GitHub repository.
-
-Do not reconstruct missing raw content as fact. Recover the original file, transcript, post, export, or user-confirmed summary.
+Track book material known or likely to exist but not currently available in retained LUMAN memory or GitHub. Never reconstruct missing raw content as fact.
 
 ## Highest-Value Missing Sources
 
 ### 1. Rose Codex Manuscripts
 
-Needed:
-
-- Current Red Rose manuscript or outline
-- Current Yellow Rose manuscript or outline
+- Red Rose manuscript or outline
+- Yellow Rose manuscript or outline
 - Voidborn manuscript material
 - White Rose manuscript material
 - Infinite Bloom source-Codex draft
-- Complete Black Rose published manuscript or publication metadata if not already stored privately
+- Black Rose publication archive
 
-Known retained detail has been placed in each Codex folder.
+### 2. Original 20-Book Roseborn Blueprint
 
-### 2. Roseborn Architecture Versions
+Status:
+
+```text
+Existence confirmed
+Exact list unrecovered
+Non-governing after 2026-07-10 reconciliation
+```
+
+Needed:
+
+- Original conversation transcript
+- Original outline or export
+- Screenshot or title list
+
+The missing source no longer blocks active planning. The 21-book architecture is active Working Canon, and the 23-book expanded variant is archived intact.
+
+### 3. Active Roseborn Story Bible Update
 
 Needed:
 
-- Original 20-book blueprint
-- Full 23-book working structure
-- Source or approval record for the 21-book five-movement architecture
+- Updated master bible with 21-book numbering
+- Updated rolling continuity with active architecture source
+- Chapter 5 clearance record
 
-Purpose:
-
-Formal Canon Guardian reconciliation.
-
-### 3. Grand Generals Manuscript Files
-
-Needed:
+### 4. Grand Generals Manuscript Files
 
 - Current chapters
 - Chapter snapshots
-- Earlier original Grand Generals version
-- Any offline manuscript edits after the active continuity file
+- Earlier First Theater version
+- Offline manuscript edits
 
-### 4. Wildbound 250-Entry Codex
-
-Needed:
+### 5. Wildbound 250-Entry Codex
 
 - Complete entry export
-- Any region maps
-- Type system
-- Battle rules
+- Region maps
+- Type and battle systems
 - Evolution rules
 - Existing creature art or prompts
 
-### 5. Veilborn Source Material
+### 6. Veilborn Source Material
 
-Needed:
-
-- Notd.io chapter posts
-- Drafts
+- Notd.io chapters
 - Character names
 - Plot outline
 - Chapter titles
 - Ending plan
 
-### 6. Horror Script Archive
-
-Needed:
+### 7. Horror Script Archive
 
 - Two-minute horror scripts
-- Video narration drafts
 - Top Comment Terror episodes
-- Audience-selected branches
+- Audience branches
 - Alternate endings
 
-### 7. Oracle Deck Master List
-
-Needed:
+### 8. Oracle Deck Master List
 
 - Final 33-card list
 - Arc assignments
-- Existing messages and reflections
+- Messages and reflections
 - Art prompts
 - Guidebook drafts
-- Decision on Red Rose deck versus Infinite Bloom deck
-
-### 8. Jace Collaboration
-
-Needed from a new family-safe creative session:
-
-- Title
-- Genre
-- Hero
-- World
-- Existing child-created ideas
-- Intended format
-
-Do not expose private family details in the public repository.
 
 ### 9. Yushioism Original Notes
-
-Needed:
 
 - Definition
 - Beliefs
@@ -110,48 +89,40 @@ Needed:
 
 ### 10. Earth's Field Guide Draft
 
-Needed:
-
-- Existing chapter material
+- Chapter material
 - Soul-mapping process
 - Starseed sections
-- Any visual concepts
+- Visual concepts
 
-### 11. Mental Health Journey Source Notes
+### 11. Mental Health Journey Private Source Notes
 
-Needed privately before public drafting:
+Before public drafting, define:
 
-- Timeline Edward chooses to disclose
-- Boundaries around medical details
+- Disclosure timeline
+- Medical boundaries
 - Family privacy decisions
 - Reader promise
-- Consent and sensitivity review
-
-The public GitHub should store structure, not detailed private medical records.
+- Sensitivity review
 
 ### 12. Words That Breathe Publication Archive
 
-Needed if available:
-
 - Final manuscript
 - Table of contents
-- Publication date
-- ISBN / edition metadata
+- Publication metadata
 - Cover files
-- Poem-to-song relationship map
+- Poem-to-song map
 
 ## Recovery Procedure
 
-1. Locate original source.
-2. Preserve original filename and date.
-3. Identify whether it is published, approved, draft, or historical.
+1. Locate the original source.
+2. Preserve filename and date.
+3. Identify canon or publication status.
 4. Import into the correct private or public-safe location.
-5. Update the project's recovered-history file.
-6. Update the Book Project Registry.
-7. Record contradictions rather than silently merging them.
+5. Update the project recovery file.
+6. Record contradictions rather than silently merging them.
 
 ## Recommended Next Move
 
 ```text
-Recover the three Roseborn architecture source versions or the complete Wildbound Codex, depending on which original files are most accessible.
+Recover the Rose Codex manuscripts or complete Wildbound Codex while Grand Generals advances through Chapter 5 clearance.
 ```

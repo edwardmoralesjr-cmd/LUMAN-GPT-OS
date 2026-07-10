@@ -1,39 +1,43 @@
-# Movement II — Roseborn Saga Decalogy
+# Movement II: Roseborn Saga Decalogy
 
-## State
+## Canon Status
 
-Working series architecture pending reconciliation.
+Active Working Canon
 
-## Book Count
+## Position
 
-10
+Books 3–12 of the 21-book Roseborn master architecture.
+
+## Books
+
+3. The Wounded Petal
+4. The Thorn of Memory
+5. The Mirror of Ash
+6. The Spiral Crown
+7. The Rootfire Covenant
+8. The House of Broken Crests
+9. The Bloom Without Mercy
+10. The Sovereign Ruin
+11. The Living Codex
+12. The Roseborn Flame
 
 ## Function
 
-Carry the high-myth backbone of the Roseborn Universe through:
+Carry the high-myth backbone through broken lineage, memory, dragon Houses, Codices, sovereignty, living sacred response, and the full embodiment of Roseborn identity.
 
-- Codices
-- Dragon doctrine
-- Sacred houses
-- Roseborn emergence
-- Mortal inheritance
-- Factions
-- Recovery of memory
-- Struggle between fracture and wholeness
-- Preparation for later convergence
+## Reserved Expansion Titles
 
-## Design Requirement
+```text
+The Academy of Petals
+The Last Bloom Before Silence
+```
 
-Each book should advance both personal character stakes and cosmological understanding. Lore revelation cannot replace story consequence.
+These remain preserved but are not part of the active numbered Decalogy.
 
-## Open Questions
+## Design Rule
 
-- Ten individual titles
-- Primary protagonists
-- House and dragon distribution
-- Relationship to Grand Generals reading order
-- Which Codices appear in each volume
+Each novel must advance character consequence and cosmological understanding. Lore revelation cannot replace story.
 
-## Dependency
+## Next Gate
 
-Blocked from detailed series outlining until the active master architecture is approved.
+Build individual protagonist and book bibles after the grounded Grand Generals branch establishes the reader-facing language of the universe.

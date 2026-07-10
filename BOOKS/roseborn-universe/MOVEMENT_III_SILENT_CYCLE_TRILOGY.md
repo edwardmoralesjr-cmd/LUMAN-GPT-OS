@@ -1,32 +1,33 @@
-# Movement III — Silent Cycle Trilogy
+# Movement III: Silent Cycle Trilogy
 
-## State
+## Canon Status
 
-Working series architecture pending reconciliation.
+Active Working Canon
 
-## Book Count
+## Position
 
-3
+Books 13–15 of the 21-book Roseborn master architecture.
 
-## Recovered Scope
+## Books
 
-- Secrecy after major awakenings
-- Aftermath
+13. The Quiet Seals
+14. The Names That Remain
+15. The Silence Before Return
+
+## Scope
+
+- Secretive aftermath
+- Incomplete awakening
 - Memory return
-- Reconfiguration of institutions and identities
-- Unstable resurgence of deeper powers
-- Consequences of revelations that cannot be publicly absorbed all at once
+- Identity conflict
+- Institutional reconfiguration
+- Old powers repositioning
+- Concealment becoming unsustainable
 
 ## Function
 
-Bridge high-myth awakening and grounded later-era consequences. Explore what happens after truth returns but society remains unable to integrate it cleanly.
+Bridge high-myth awakening and grounded later-era consequences. Explore what happens when truth returns before society can safely absorb it.
 
-## Open Questions
+## Next Gate
 
-- Exact historical placement relative to Grand Generals
-- Protagonist continuity
-- Whether the cycle is prequel, interquel, or aftermath from the reader's perspective
-
-## Dependency
-
-Await master series reconciliation.
+Preserve the trilogy's function while Grand Generals continuity clarifies exactly how its reader-facing timeline intersects the Silent Cycle.

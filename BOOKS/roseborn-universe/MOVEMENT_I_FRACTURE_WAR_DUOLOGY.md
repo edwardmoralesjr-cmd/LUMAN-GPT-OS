@@ -1,36 +1,33 @@
-# Movement I — Fracture War Duology
+# Movement I: Fracture War Duology
 
-## State
+## Canon Status
 
-Working series architecture pending three-version reconciliation.
+Active Working Canon
 
-## Book Count
+## Position
 
-2
+Books 1–2 of the 21-book Roseborn master architecture.
 
-## Historical Scope
+## Books
 
-- Late Veiled Dissonance
+1. The Veiled Dissonance
+2. The Codex Fracture
+
+## Scope
+
+- Late Bloom Concord
 - Doctrinal division
-- Hidden strain within the Bloom Concord
+- Growing Choir influence
 - Myrrak's dissent
-- Growth of the Choir of the Unshaped
 - Betrayal
 - Codex Fracture
-- Collapse of sacred harmony
+- Wounding of memory and time
 - Beginning of the Ashen Seals
 
-## Narrative Function
+## Function
 
-Show how a unified sacred civilization became divided, why protection failed, what Myrrak believed, and how the fracture reshaped memory, time, doctrine, and mortal inheritance.
+Show how sacred unity failed, why Myrrak rebelled, and how the Fracture created the historical and psychological conditions governing every later movement.
 
-## Open Questions
+## Next Gate
 
-- Protagonist or ensemble viewpoint
-- Myrrak's exact moral logic
-- Division between Book One and Book Two
-- How much mystery to preserve for later reader-entry books
-
-## Dependency
-
-Do not finalize titles or chapter architecture until the 20 / 23 / 21-book reconciliation is complete.
+Create detailed duology outlines only after Grand Generals reaches a stable manuscript rhythm.
