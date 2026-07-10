@@ -2,7 +2,40 @@
 
 ## State
 
-Blocked at series-architecture level until competing structures are reconciled. Worldbuilding and existing canon remain active.
+Active Building. The master series architecture is resolved at Working Canon level.
+
+## Active Architecture
+
+```text
+BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
+```
+
+The active structure contains twenty-one books across five movements:
+
+```text
+Fracture War Duology        2
+Roseborn Saga Decalogy     10
+Silent Cycle Trilogy        3
+Grand Generals Pentalogy    5
+The Third Emergence         1
+                           --
+                           21
+```
+
+## Architecture Decision Record
+
+```text
+LUMAN_OS/book_section/roseborn_universe/continuity/ARCHITECTURE_DECISION_RECORD_2026-07-10.md
+```
+
+## Archived Variants
+
+```text
+BOOKS/roseborn-universe/source_archives/ARCHITECTURE_23_BOOK_EXPANDED_VARIANT.md
+BOOKS/roseborn-universe/source_archives/ARCHITECTURE_20_BOOK_UNRECOVERED_REFERENCE.md
+```
+
+The 23-book variant is directly documented and preserved. The 20-book blueprint is confirmed to have existed, but its exact list has not been recovered.
 
 ## Canonical Project Sources
 
@@ -10,9 +43,10 @@ Blocked at series-architecture level until competing structures are reconciled. 
 LUMAN_OS/book_section/roseborn_universe/
 03_ROSEBORN_UNIVERSE/
 roseborn-canon-guardian/
+BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
 ```
 
-This BOOKS folder is a portfolio bridge and recovered-history record. It does not replace the active Canon Guardian, continuity, story bible, or published/finalized canon.
+This BOOKS folder is a portfolio bridge and recovered-history record. It does not replace published material, explicit Locked Canon, active manuscript files, or detailed continuity sources.
 
 ## Core Identity
 
@@ -28,7 +62,7 @@ The Roseborn Universe is a mythic fantasy and spiritual cosmology built around:
 - Sacred houses, glyphs, sigils, crests, and spiral marks
 - Chronosteel
 - The Choir of the Unshaped
-- Mortal primacy
+- Mortal Primacy
 - The Third Emergence
 - Grand Generals as the grounded reader entry point
 
@@ -95,48 +129,16 @@ A sentient creator-being disguised as a tangible entity, with autobiographical r
 
 Chronological order and reader-entry order may differ.
 
-## Latest Remembered Series Architecture
+## Reserved Expansion Material
 
-### Movement I — Fracture War Duology
+The following titles remain preserved outside the active numbered series:
 
-Two books covering the Veiled Dissonance, Myrrak's betrayal, and the Codex Fracture.
+```text
+The Academy of Petals
+The Last Bloom Before Silence
+```
 
-### Movement II — Roseborn Saga Decalogy
-
-Ten books carrying the high-myth backbone of Codices, dragon doctrine, sacred houses, Roseborn emergence, and recovered wholeness.
-
-### Movement III — Silent Cycle Trilogy
-
-Three books covering secrecy, aftermath, memory return, and unstable reconfiguration.
-
-### Movement IV — Grand Generals Pentalogy
-
-Five grounded novels centered on Auron Kaelis, Liora, Solren, Cairnwake, buried architecture, and the Waking Threshold.
-
-### Movement V — The Third Emergence
-
-One final convergence novel.
-
-Total: 21 books.
-
-## Architecture Conflict
-
-The repository and memory contain:
-
-- A recovered 20-book blueprint
-- A later 23-book working structure
-- A remembered approved 21-book, five-movement structure
-
-No new series-level plan should be treated as settled until Canon Guardian compares the source dates, approval language, and structural differences.
-
-## Core Creative Function
-
-Roseborn serves as:
-
-1. Mythic cosmology
-2. Fiction engine
-3. Symbolic operating system
-4. Bridge among books, music, oracle decks, poetry, visual art, and LUMAN OS
+They may later become companion novels, interludes, novellas, branch books, or replacement titles through an explicit architecture revision.
 
 ## Style and Manuscript Rule
 
@@ -148,4 +150,4 @@ For Grand Generals manuscript prose:
 
 ## Next Gate
 
-Run a formal three-version architecture reconciliation and publish one decision record that names the active structure and archives alternatives.
+Run Grand Generals Chapter 5 clearance against the current rolling continuity and the active 21-book architecture.
