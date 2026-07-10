@@ -1,103 +1,119 @@
 # LUMAN Command Routing Index
 
-**Purpose:** Give LUMAN OS one clean command-routing source of truth across the modern interface layer, the core protocol layer, and all active vaults.
+## Purpose
 
----
+Give LUMAN OS one clean command-routing source of truth across the modern interface layer, core protocol layer, System Settings orchestration layer, and active project vaults.
 
-## Current Routing Architecture
-
-LUMAN OS now has two cooperating architecture layers:
+## Current Architecture
 
 ```text
-[1] LUMAN_OS/  = modern user interface layer
-[2] 00_CORE/   = core protocol, loop, routing, status, and GitHub update layer
+LUMAN_OS/                  = modern user interface and active module layer
+LUMAN_OS/system_settings/  = portfolio orchestration, governance, audit, and source mapping
+00_CORE/                   = protocol, live status, routing, GitHub updates, and loop engineering
+Project vaults             = domain-specific truth, assets, canon, records, and workflows
+Chat                       = living intelligence and active update room
+GitHub                     = durable public-safe external brain
 ```
 
-Bridge file:
+Primary bridge:
 
 ```text
 LUMAN_OS/MASTER_BRIDGE_INDEX.md
 ```
 
-Default rule:
+Source authority matrix:
 
 ```text
-Modern slash commands and screen navigation start in LUMAN_OS/.
-Core protocols, GitHub updates, active priorities, open loops, and loop engineering still start in 00_CORE/.
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
 ```
-
----
 
 ## Routing Priority
 
-When Edward gives a command, resolve it in this order:
+Resolve commands in this order:
 
-1. Exact command match in this routing index.
-2. Exact command or section match in `LUMAN_OS/ROOT_MENU.md` or a modern `LUMAN_OS/` section menu.
-3. Bridge ownership using `LUMAN_OS/MASTER_BRIDGE_INDEX.md`.
-4. Matching vault dashboard or module command file.
-5. Closest known command in `COMMANDS.md` or `DEPLOYMENT_INDEX.md`.
-6. If still unclear, infer the most likely vault from the command wording and proceed with a best-effort response.
+1. Exact command match in this file.
+2. Exact command in a modern section `COMMANDS.md` or menu.
+3. Source ownership from `SOURCE_OF_TRUTH_MATRIX.md`.
+4. Architecture ownership from `MASTER_BRIDGE_INDEX.md`.
+5. Matching project dashboard, module command file, or vault.
+6. Closest known command in root `COMMANDS.md` or `DEPLOYMENT_INDEX.md`.
+7. Best-effort inference when the route is still clear enough to act safely.
 
-Do not ask for clarification unless the request is unsafe, impossible, or would risk corrupting important project structure.
+Do not ask for clarification unless the request is unsafe, impossible, or risks corrupting important project structure.
 
----
+## Root and Dashboard Commands
 
-## Modern Root Interface Commands
+| Command | Route To | Default Action |
+|---|---|---|
+| `/open luman` | `LUMAN_OS/ROOT_MENU.md` | Open the modern home screen and pull live priorities and open loops from `00_CORE/`. |
+| `Open LUMAN OS` | `LUMAN_OS/ROOT_MENU.md` | Treat the repository as the active operating system. |
+| `/dashboard` | Root Menu + Master Command Center + core dashboard | Show current mode, strategic fronts, project state, open loops, warnings, and next move. |
+| `Open LUMAN dashboards` | `00_CORE/LUMAN_DASHBOARD.md` | Show operational status and vault context. |
+| `/open loops` | `00_CORE/OPEN_LOOPS.md` | Show the live master open-loop list. |
+| `/next move` | Active Priorities + Open Loops + Command Center | Choose the highest-leverage next action. |
+| `/main menu` | `LUMAN_OS/ROOT_MENU.md` | Return to the root interface. |
+| `/help` | This file + root `COMMANDS.md` | Show useful commands. |
+| `/back` | Current section context | Return to the previous logical menu. |
+
+## System Settings and Command Center Commands
 
 Primary files:
 
 ```text
-LUMAN_OS/ROOT_MENU.md
-LUMAN_OS/MASTER_BRIDGE_INDEX.md
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
+LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+LUMAN_OS/system_settings/COMMANDS.md
 ```
 
 | Command | Route To | Default Action |
 |---|---|---|
-| `/open luman` | `LUMAN_OS/ROOT_MENU.md` | Open the clean modern root interface, then fill current priorities and open loops from `00_CORE/`. |
-| `Open LUMAN OS` | `LUMAN_OS/ROOT_MENU.md` | Treat the repo as the active operating system and show status, priorities, open loops, and one next move. |
-| `/dashboard` | `LUMAN_OS/ROOT_MENU.md` + `00_CORE/LUMAN_DASHBOARD.md` | Show system status, project status, open loops, active systems, and next best action. |
-| `Open LUMAN dashboards` | `00_CORE/LUMAN_DASHBOARD.md` | Show system status, priorities, open loops, vault status, commands, and one next best action. |
-| `/open loops` | `00_CORE/OPEN_LOOPS.md` | Show the live master open-loop list. |
-| `/next move` | `00_CORE/OPEN_LOOPS.md` + `00_CORE/ACTIVE_PRIORITIES.md` | Choose the highest-leverage next action from current priorities and loops. |
-| `/system update` | `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` | Route a durable update into the correct file or module. |
-| `/create github update` | `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` | Prepare or perform the relevant GitHub update workflow. |
-| `/help` | `COMMANDS.md` | Show useful available commands. |
-| `/back` | Current section context | Return to the previous logical menu when possible. |
-| `/main menu` | `LUMAN_OS/ROOT_MENU.md` | Return to the LUMAN OS root menu. |
+| `/system settings` | `SYSTEM_SETTINGS_MENU.md` | Open governance, audit, routing, versioning, privacy, and portfolio controls. |
+| `/open command center` | `MASTER_COMMAND_CENTER.md` | Show current mode, active fronts, gates, warning, open loops, and one next move. |
+| `/system audit` | Latest System Settings integration audit | Review architecture, source ownership, contradictions, privacy, and synchronization. |
+| `/source map` | `SOURCE_OF_TRUTH_MATRIX.md` | Resolve which source owns the truth when files, memory, chat, canon, or archives disagree. |
+| `/project registry` | `PROJECT_REGISTRY.md` | Show project state, owner, dependency, and next gate. |
+| `/90 day path` | Current ninety-day execution file | Show phases, strategic fronts, exit criteria, and current gate. |
+| `/autopilot law` | `AUTOPILOT_OPERATING_LAW.md` | Apply classification, routing, privacy, canon, and project-activation rules. |
+| `/integration status` | Command Center + Registry + core status files | Detect status drift and routing mismatch. |
+| `/system next move` | Command Center + live status | Choose the smallest action that protects the foundation or completes an active gate. |
+| `/active fronts` | Command Center | Show the three-front portfolio. |
+| `/activate project: [name]` | Project Registry + Source Matrix | Validate ownership, capacity, dependency, next gate, and definition of done before activation. |
+| `/incubate project: [name]` | Project Registry | Capture without adding it to current execution priorities. |
+| `/archive project: [name]` | Project Registry + project changelog | Preserve history and remove from active execution. |
+| `/project gate: [name]` | Project Registry + project source | Return state, dependency, next gate, and definition of done. |
+| `/check drift` | Source Matrix + bridge + live status | Check presentation drift, status drift, version conflict, canon contradiction, ownership ambiguity, and privacy conflict. |
+| `/privacy check` | GitHub protocol + Autopilot Law | Verify that proposed public-repo content is safe. |
 
----
-
-## Core System Commands
+## Core Repository Commands
 
 | Command | Route To | Default Action |
 |---|---|---|
-| `Use GitHub` | `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` | Treat repo as source of truth and perform requested repo work. |
-| `Update LUMAN OS:` | `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` + bridge index | Classify update, route it, and prepare or commit changes when requested. |
-| `Create summary` | `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md` | Create a LUMAN GitHub Update Packet. |
-| `Commit this summary to GitHub` | Core OS / session logs | Convert latest update packet into repo changes. |
-| `Show command routing` | `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` | Display the current routing map. |
-| `Quality check LUMAN OS` | Core OS | Audit commands, dashboards, open loops, safety rules, and vault readiness. |
-
----
+| `Use GitHub` | `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` | Read current sources, update the smallest useful set, and report commits. |
+| `Update LUMAN OS:` | GitHub protocol + Source Matrix + bridge | Classify and route a durable update. |
+| `/system update` | GitHub protocol | Perform or prepare a source-of-truth update. |
+| `/create github update` | GitHub protocol | Prepare a GitHub update workflow. |
+| `Create summary` | `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md` | Create a structured update packet. |
+| `Commit this summary to GitHub` | Core protocol + session logs | Convert the latest packet into repository changes. |
+| `Show command routing` | This file | Display the routing map. |
+| `Quality check LUMAN OS` | System audit + quality loop | Audit commands, dashboards, status, safety, and readiness. |
 
 ## Modern Section Commands
 
 | Command | Route To | Default Action |
 |---|---|---|
-| `/open books` | `LUMAN_OS/book_section/BOOK_SECTION_MENU.md` | Open the Book Section command center. |
-| `/open music` | `LUMAN_OS/music_section/` or `02_LUCID_SYNTAX/` | Open Lucid Syntax and music rollout workflows. |
-| `/weekly sync` | Life OS | Run Edward’s weekly Life OS sync. |
-| `/money check` | Life OS / Money System | Review financial peace-system structure without storing sensitive private data. |
-| `/open work tools` | `LUMAN_OS/work_quality_tools/` or `05_WORK_QUALITY_SYSTEMS/` | Open work-quality, SPC, measurement, and improvement workflows. |
-| `/open gpt lab` | `LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md` | Open Edward’s GPT registry and module-development lab. |
-| `/open creative vault` | `LUMAN_OS/creative_vault/` | Open creative ideas, poems, prompts, lyrics, and future concepts. |
-| `/open records` | `LUMAN_OS/records/` | Open vehicle/home records and maintenance-planning structures. |
-| `/system settings` | `LUMAN_OS/system_settings/` or `LUMAN_OS/MASTER_BRIDGE_INDEX.md` | Open system rules, commands, modules, versioning, and memory logic. |
-
----
+| `/open books` | `LUMAN_OS/book_section/BOOK_SECTION_MENU.md` | Open writing, canon, publishing, and manuscript tools. |
+| `/open music` | `02_LUCID_SYNTAX/` + `lucid-syntax-promo-pro/` until modern section exists | Open Lucid Syntax planning, release, assets, and promotion. |
+| `/open life os` | `LUMAN_OS/life_os/LIFE_OS_MENU.md` | Open life, family, regulation, and embodied-action systems. |
+| `/weekly sync` | Life OS | Run the weekly status, priorities, responsibilities, and next-action review. |
+| `/daily embodied action` | Life OS target loop | Choose one action that improves lived physical reality. |
+| `/regulation reset` | Life OS | Pause, breathe, locate the body, soften threat response, choose cleanly, and act. |
+| `/money check` | Private money system + public-safe Life OS structure | Review financial peace without storing live private data in GitHub. |
+| `/open work tools` | `05_WORK_QUALITY_SYSTEMS/` until modern section exists | Open reusable non-confidential quality, SPC, measurement, and career tools. |
+| `/open gpt lab` | `LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md` | Open GPT modules, knowledge files, audits, and upgrades. |
+| `/open creative vault` | `07_KNOWLEDGE_PACKS/` until modern section exists | Capture and classify creative seeds without activating every idea. |
+| `/open records` | Private records systems + future public-safe index | Open vehicle and home maintenance structures. |
 
 ## Harmonic Time System Commands
 
@@ -109,32 +125,28 @@ LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
 LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md
 ```
 
-| Command | Route To | Default Action |
-|---|---|---|
-| `/open harmonic time system` | `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md` | Open the Harmonic Time System section menu. |
-| `/open harmonic time analyst` | `LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/` | Open the specialist GPT module for Harmonic Time Map readings. |
-| `/harmonic intake` | Harmonic Time System Analyst | Collect name, birth date, birth time, birth place, and optional intention. |
-| `/soul numbers` | Harmonic Time System Analyst | Calculate and interpret Life Path, Expression, Soul Urge, and Personal Year. |
-| `/numerology map` | Harmonic Time System Analyst | Create a numerology-first Harmonic Time Map. |
-| `/chart data check` | Harmonic Time System Analyst | Determine whether exact astrology interpretation is supported. |
-| `/astrology reading` | Harmonic Time System Analyst | Interpret astrology placements only when reliable data or documented basis exists. |
-| `/harmonic synthesis` | Harmonic Time System Analyst | Weave numerology and astrology into one coherent reading. |
-| `/harmonic forecast` | Harmonic Time System Analyst | Create a 12-month symbolic timing forecast. |
-| `/create harmonic time map` | `READING_TEMPLATE.md` | Create the full Harmonic Time Map report. |
-| `/create harmonic time map Edward Morales Jr.` | Edward chart basis + `READING_TEMPLATE.md` | Create Edward’s full map using the saved chart-basis file. |
-| `/compatibility reading` | Harmonic Time System Analyst | Create a reflective relationship reading without fixed-fate framing. |
-| `/journal prompts` | Harmonic Time System Analyst | Create reflective prompts from reading themes. |
-| `/affirmation set` | Harmonic Time System Analyst | Create grounded affirmations from the central themes. |
-| `/visual chart concept` | Harmonic Time System Analyst | Create a visual/PDF concept for a Harmonic Time Map. |
-| `/open harmonic time book` | Harmonic Time System book/framework target | Open or create the Harmonic Time System book/framework area. |
-| `/open harmonic archive` | `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md` | Open saved Harmonic Time archive files. |
-| `/open edward chart basis` | `EDWARD_MORALES_JR_EXACT_CHART_BASIS.md` | Open Edward’s saved exact chart-basis/provenance file. |
+| Command | Default Action |
+|---|---|
+| `/open harmonic time system` | Open the Harmonic Time System menu. |
+| `/open harmonic time analyst` | Open the specialist GPT module. |
+| `/harmonic intake` | Collect required identity and birth information. |
+| `/soul numbers` | Calculate and interpret core numerology values. |
+| `/numerology map` | Create a numerology-first map. |
+| `/chart data check` | Determine whether exact astrology interpretation is supported. |
+| `/astrology reading` | Interpret only documented or reliably calculated placements. |
+| `/harmonic synthesis` | Combine numerology and astrology coherently. |
+| `/harmonic forecast` | Create a symbolic timing forecast. |
+| `/create harmonic time map` | Create a full report from the official template. |
+| `/compatibility reading` | Create a reflective relationship reading. |
+| `/journal prompts` | Create prompts from reading themes. |
+| `/affirmation set` | Create grounded affirmations. |
+| `/visual chart concept` | Create a report or visual concept. |
+| `/open harmonic archive` | Open saved readings and provenance files. |
+| `/open edward chart basis` | Open Edward's saved chart-basis file. |
 
 Accuracy rule:
 
-Do not claim newly recalculated astrology unless a calculation method, user-provided chart, or reliable chart-basis file is documented.
-
----
+Do not claim newly recalculated astrology without a documented method, user-provided chart, or reliable chart-basis file.
 
 ## Loop Engineering Commands
 
@@ -146,129 +158,110 @@ Primary files:
 00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md
 ```
 
-| Command | Route To | Default Action |
-|---|---|---|
-| `/start daily next move loop` | `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` | Pick one small high-impact action and return current focus, current state, best next move, action, log, and next step. |
-| `/start daily next move loop: [project]` | `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` | Run the Daily Next Move Loop for the named project or vault. |
-| `/start loop: [loop name]` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Start the named loop using the standard LUMAN loop format. |
-| `/run quality loop on this` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Review the current output, find weak points, improve it, and verify the result. |
-| `/run decision loop` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Compare options using Edward's filters and choose one next action. |
-| `/upgrade luman os` | `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` | Run the Evolution Loop to simplify, improve, and update the operating system. |
-
----
+| Command | Default Action |
+|---|---|
+| `/start daily next move loop` | Choose one small high-impact action. |
+| `/start daily next move loop: [project]` | Run the loop for the named project. |
+| `/start loop: [loop name]` | Run the named standard loop. |
+| `/run quality loop on this` | Find weaknesses, improve, and verify. |
+| `/run decision loop` | Compare options and choose one action. |
+| `/upgrade luman os` | Simplify and improve the operating system. |
 
 ## Roseborn Universe Commands
 
-Modern primary path:
+Primary modern path:
 
 ```text
 LUMAN_OS/book_section/roseborn_universe/
 ```
 
-Legacy/project path:
+Legacy history path:
 
 ```text
 03_ROSEBORN_UNIVERSE/
 ```
 
-Primary files:
+| Command | Default Action |
+|---|---|
+| `/open roseborn canon guardian` | Open the active canon-governance module. |
+| `/canoncheck` | Check proposed material against active canon and continuity. |
+| `/canonstatus` | Show Locked, Working, Unresolved, and Contradiction states. |
+| `/clearance` | Run chapter or scene clearance. |
+| `/audit` | Audit continuity, revelation cost, source basis, and contradictions. |
+| `/draft` | Draft canon-safe material from approved sources. |
+| `/rewrite` | Rewrite without violating canon or style rules. |
+| `/altpaths` | Generate non-canon alternatives labeled clearly. |
+| `/contradiction` | Log and analyze a conflict. |
+| `/reconcile` | Resolve competing versions through explicit source comparison. |
+| `/revisecanon` | Revise canon only with Edward's explicit approval. |
+| `/refresh` | Reassert current canon and operational law. |
+| `/updatecanon` | Update continuity after approval. |
+| `/sessionupdate` | Create a canon handoff record. |
+| `Open Roseborn vault` | Bridge modern Canon Guardian tools with legacy project history. |
+| `Build Grand Generals` | Continue from the active story bible and approved frontier. |
+| `Open Infinite Bloom` | Work from current Infinite Bloom and Codex sources. |
+
+Current blocking rule:
 
 ```text
-LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/
-03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md
-03_ROSEBORN_UNIVERSE/ROSEBORN_COMMANDS.md
-03_ROSEBORN_UNIVERSE/CHANGELOG.md
+Do not expand series-level planning until the 20-book, 23-book, and 21-book architectures are reconciled.
 ```
-
-| Command | Route To | Default Action |
-|---|---|---|
-| `Open Roseborn vault` | Modern Roseborn path + legacy vault | Show Roseborn status and continue from the most relevant modern or legacy file. |
-| `Open Roseborn dashboard` | `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md` | Show Roseborn mission, canon status, projects, open loops, commands, and next action. |
-| `Roseborn canon` | Roseborn Canon Guardian workflow | Summarize locked canon, working canon, contradictions, and next canon action. |
-| `Update Roseborn canon:` | Roseborn Canon Guardian workflow | Classify the update as locked, working, contradiction, task, or open loop. |
-| `Lock this as Roseborn canon` | Roseborn Canon Guardian workflow | Treat provided item as finalized unless it conflicts with existing canon. |
-| `Add this to working Roseborn canon` | Roseborn Canon Guardian workflow | Store as active working canon rather than finalized canon. |
-| `Build Grand Generals` | Roseborn dashboard / Grand Generals section | Continue Grand Generals development from active story bible context. |
-| `Open Dragon Doctrine` | Dragon doctrine workflow | Open or create Dragon Doctrine index/pages. |
-| `Open Infinite Bloom` | Infinite Bloom workflow | Work from Infinite Bloom, Architect Layer, Codex Fracture, and Codex structure. |
-| `Create Roseborn session summary` | Session logs / Roseborn vault | Create a Roseborn-focused update packet or session log. |
-
----
 
 ## Lucid Syntax Commands
 
-Primary files:
+Primary sources:
 
 ```text
-lucid-syntax-promo-pro/deployment_instructions.md
-lucid-syntax-promo-pro/promo_output_format.md
-lucid-syntax-promo-pro/album_metadata.md
 02_LUCID_SYNTAX/
+lucid-syntax-promo-pro/
 ```
 
-| Command | Route To | Default Action |
-|---|---|---|
-| `Open Lucid Syntax vault` | Lucid Syntax module | Show Lucid Syntax campaign status and next action. |
-| `Lucid Syntax promotion` | Lucid Syntax Promo Pro | Default to Visionary era and Paint unless Edward names another song. |
-| `Lucid Syntax promotion for [song title]` | Lucid Syntax Promo Pro | Build song-specific promo package. |
-| `Visionary rollout` | Lucid Syntax / Visionary | Work on Visionary album rollout strategy and promo plan. |
-| `Paint promo pack` | Lucid Syntax / Paint | Build or refine Paint promotional assets. |
+| Command | Default Action |
+|---|---|
+| `Open Lucid Syntax vault` | Show current album, release, asset, and promotion state. |
+| `Lucid Syntax promotion` | Build a promotion package from the active release state. |
+| `Lucid Syntax promotion for [song title]` | Build a song-specific package. |
+| `Visionary rollout` | Work from the official eleven-track Visionary album state. |
+| `/visionary assembly` | Build or update the release-assembly inventory. |
 
----
+Current rule:
 
-## Life OS Commands
+```text
+Visionary is Active Shipping. Prioritize verified assembly over additional concept generation.
+```
 
-| Command | Route To | Default Action |
-|---|---|---|
-| `Life OS sync` | Life OS | Show status snapshot, priorities, automation check, trip fund progress, and decision support. |
-| `Run Weekly Sync` | Life OS | Run Edward’s weekly Life OS sync structure. |
-| `Update Life OS:` | Life OS | Classify and store durable life-system updates when requested. |
+## Life, Records, Work, and OMNI-Vault Commands
 
----
-
-## Vehicle / KIA Commands
-
-| Command | Route To | Default Action |
-|---|---|---|
-| `KIA service records` | KIA service workflow | Show vehicle service status, completed items, open diagnostics, and next action. |
-| `Update KIA records:` | KIA service workflow | Capture date, mileage, work, findings, cost, and next recommendation. |
-
----
-
-## Work Quality Commands
-
-| Command | Route To | Default Action |
-|---|---|---|
-| `Work quality dashboard` | Work Quality systems | Help structure dashboards, SPC, measurement systems, and process improvement. |
-| `Quality analysis:` | Work Quality systems | Analyze quality/process problem using non-sensitive data. |
-
----
-
-## OMNI-Vault Commands
-
-| Command | Route To | Default Action |
-|---|---|---|
-| `OMNI-Vault template` | OMNI-Vault / GPT Builder | Build or refine second-brain templates and vault workflows. |
-| `Update OMNI-Vault:` | OMNI-Vault | Classify information into permanent, active, draft, temporary, task, or open-loop status. |
-
----
+| Command | Default Action |
+|---|---|
+| `Life OS sync` | Run a life status and next-action review. |
+| `Update Life OS:` | Route durable life-system updates safely. |
+| `KIA service records` | Show private record status without publishing sensitive details. |
+| `Update KIA records:` | Capture service information in the appropriate private record system. |
+| `Work quality dashboard` | Open reusable non-confidential quality tools. |
+| `Quality analysis:` | Analyze user-provided non-sensitive process data. |
+| `OMNI-Vault template` | Build second-brain templates and vault workflows. |
+| `Update OMNI-Vault:` | Classify information into permanent, active, draft, temporary, task, open-loop, archived, or sensitive states. |
 
 ## Routing Maintenance Rules
 
-- When a new modern menu is created under `LUMAN_OS/`, add its open command here.
-- When a new dashboard is created under legacy numbered vaults, add its open command here.
-- When a new vault command is created, add it here and in that vault’s command file.
-- When a new loop is created, add it to `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`, `00_CORE/LUMAN_LOOP_COMMANDS.md`, and this routing index if it needs a command.
-- Keep `COMMANDS.md`, `DEPLOYMENT_INDEX.md`, `LUMAN_OS/ROOT_MENU.md`, and section menus aligned with this index when possible.
-- If safety checks block a large root-file update, create or update the relevant module command file and record the routing here.
-- Prefer small, focused updates over large rewrites.
-- Use `LUMAN_OS/MASTER_BRIDGE_INDEX.md` before duplicating source-of-truth files across old and new architectures.
+- Add new modern section commands here when their menus become active.
+- Add project-specific commands in the project's own command file first, then mirror only high-value commands here.
+- Use the Source-of-Truth Matrix before choosing between modern, legacy, memory, chat, canon, and archive sources.
+- Preserve legacy vaults for history, but do not let historical files silently outrank current approved sources.
+- Keep live priorities and open loops in `00_CORE/` until an explicit migration is approved.
+- Never route sensitive private data into the public repository.
+- Every command response should end with one Recommended Next Move when appropriate.
 
----
+## Status
 
-## Current Routing Gaps
+Status: Active routing source of truth  
+Version: v2.0  
+Last Updated: 2026-07-10  
+Owner: LUMAN OS Core
 
-- Create a modern `LUMAN_OS/system_settings/` section.
-- Create modern section indexes for Music, Life OS, Money System, Work / Quality Tools, Creative Vault, and Vehicle / Home Records when needed.
-- Create `LUMAN_OS/book_section/roseborn_universe/ROSEBORN_BRIDGE_INDEX.md` to reconcile the modern Roseborn Canon Guardian tool layer with the older `03_ROSEBORN_UNIVERSE/` vault.
-- Update changelog layers after this routing reconciliation.
+## Recommended Next Move
+
+```text
+Mirror the highest-value System Settings commands into root COMMANDS.md during the next legacy-surface cleanup pass.
+```
