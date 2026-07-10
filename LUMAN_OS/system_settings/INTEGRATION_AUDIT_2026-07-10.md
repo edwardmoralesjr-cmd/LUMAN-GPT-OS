@@ -47,6 +47,8 @@ CHANGELOG.md
 
 ```text
 LUMAN_OS/ROOT_MENU.md
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
 00_CORE/ACTIVE_PRIORITIES.md
 00_CORE/OPEN_LOOPS.md
 06_SESSION_LOGS/2026-07/2026-07-10-luman-master-command-center-upgrade.md
@@ -59,7 +61,7 @@ Previous practical state: B+
 Current structural state: A-
 ```
 
-The system has reached A-level functional integration inside the modern interface and live status layers. The remaining gap to a full A is reconciliation of older master command-routing and top-level changelog surfaces.
+The modern interface, orchestration, bridge, core routing, live priorities, and open-loop layers are synchronized. The remaining gap to a full A is mirroring the new commands into older root command and top-level changelog/deployment surfaces without losing their detailed history.
 
 ## Critical Findings
 
@@ -186,12 +188,15 @@ The public repository must never contain credentials, live financial details, me
 [✓] Create Autopilot Operating Law
 [✓] Create System Settings command reference
 [✓] Update Root Menu routing
+[✓] Update Master Bridge ownership and routing
+[✓] Update core command-routing index
 [✓] Update live Active Priorities
 [✓] Update live Open Loops
 [✓] Create System Settings changelog
 [✓] Create permanent session record
-[ ] Reconcile older master command-routing surfaces
+[ ] Mirror System Settings commands into older root COMMANDS.md
 [ ] Synchronize older top-level changelog surfaces
+[ ] Review DEPLOYMENT_INDEX.md after legacy command mirroring
 ```
 
 ## Current Strategic Fronts
