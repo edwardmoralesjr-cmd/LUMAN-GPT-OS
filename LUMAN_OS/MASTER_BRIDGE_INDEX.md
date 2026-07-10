@@ -1,52 +1,38 @@
 # LUMAN OS Master Bridge Index
 
-## File Purpose
+## Purpose
 
-This file bridges the older `00_CORE/` vault architecture with the newer `LUMAN_OS/` interface architecture.
+This file defines how the modern interface, System Settings orchestration layer, core protocol layer, legacy vaults, chat, memory, and project-specific sources cooperate.
 
-It exists so LUMAN can answer one essential question before routing any command:
+Before routing a command or creating a new source, answer:
 
 ```text
-Which layer owns the source-of-truth for this action right now?
+Which layer owns the truth, which layer presents it, and which layer records the live state?
 ```
 
 ## System Status
 
 Status: Active bridge index  
+Version: v2.0  
 Created: 2026-06-18  
-Last Updated: 2026-06-19  
-System: LUMAN OS  
-Bridge Scope: `00_CORE/` ↔ `LUMAN_OS/`  
-Primary Role: Architecture reconciliation and command-routing clarity
+Last Updated: 2026-07-10  
+Primary Role: Architecture reconciliation, source ownership, and command-routing clarity
 
-## Core Principle
+## Architecture Layers
 
-```text
-LUMAN_OS/ = modern user interface layer
-00_CORE/  = core protocol, routing, status, loop, and GitHub update layer
-```
-
-They do not compete. They cooperate.
-
-Use this bridge index before creating duplicate files or changing command routing.
-
----
-
-# Layer Definitions
-
-## `LUMAN_OS/` — Modern Interface Layer
-
-Purpose:
-
-`LUMAN_OS/` is Edward’s clean modern operating-system interface.
-
-It contains root menus, section menus, GPT modules, module manifests, archive indexes, and slash-command screens.
-
-Primary use:
+### 1. Modern Interface Layer
 
 ```text
-Use LUMAN_OS/ when Edward is opening a section, using slash commands, navigating menus, working with modules, or treating LUMAN like a clean operating system UI.
+LUMAN_OS/
 ```
+
+Owns:
+
+- Root and section menus
+- Modern GPT modules
+- Active tool interfaces
+- User-facing slash-command screens
+- Modern continuity and archive indexes
 
 Primary entry point:
 
@@ -54,472 +40,466 @@ Primary entry point:
 LUMAN_OS/ROOT_MENU.md
 ```
 
-Main command:
-
-```text
-/open luman
-```
-
-Key files:
-
-```text
-LUMAN_OS/ROOT_MENU.md
-LUMAN_OS/MASTER_BRIDGE_INDEX.md
-LUMAN_OS/CHANGELOG.md
-LUMAN_OS/book_section/BOOK_SECTION_MENU.md
-LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/MODULE_MANIFEST.md
-LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/COMMANDS.md
-LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/SESSION_UPDATE_TEMPLATE.md
-LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/CONTRADICTION_LOG.md
-LUMAN_OS/book_section/roseborn_universe/continuity/WORKING_CANON_Rolling_Continuity_Roseborn_v2026-06-18.md
-LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
-LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/MODULE_MANIFEST.md
-LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/COMMANDS.md
-LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/SOURCE_KNOWLEDGE.md
-LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/READING_TEMPLATE.md
-LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
-LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md
-LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md
-LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md
-```
-
-## `00_CORE/` — Core Protocol and Legacy Command Layer
-
-Purpose:
-
-`00_CORE/` is the older but still active backbone for system protocols, command routing, update rules, open loops, active priorities, dashboards, loop engineering, and changelogs.
-
-Primary use:
-
-```text
-Use 00_CORE/ when Edward is asking about system rules, command routing, GitHub updates, open loops, active priorities, loop engineering, dashboards, or source-of-truth protocol.
-```
-
-Primary control files:
-
-```text
-00_CORE/LUMAN_DASHBOARD.md
-00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
-00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
-00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md
-00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md
-00_CORE/LUMAN_LOOP_COMMANDS.md
-00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-00_CORE/CHANGELOG.md
-```
-
-Supporting root files connected to `00_CORE/`:
-
-```text
-README.md
-COMMANDS.md
-DEPLOYMENT_INDEX.md
-07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md
-06_SESSION_LOGS/
-```
-
----
-
-# Command Routing Bridge
-
-## `/open luman`
-
-Primary file:
-
-```text
-LUMAN_OS/ROOT_MENU.md
-```
-
-Secondary context:
-
-```text
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-```
-
-Behavior:
-
-Open the clean LUMAN OS home screen from `LUMAN_OS/ROOT_MENU.md`, then fill current priorities and open loops from the `00_CORE/` status files when GitHub-backed accuracy is needed.
-
-## `/dashboard`
-
-Primary file:
-
-```text
-LUMAN_OS/ROOT_MENU.md
-```
-
-Secondary file:
-
-```text
-00_CORE/LUMAN_DASHBOARD.md
-```
-
-Behavior:
-
-Use `LUMAN_OS/ROOT_MENU.md` for the modern UI and `00_CORE/LUMAN_DASHBOARD.md` for system status, vault status, control files, and operational context.
-
-## `/open books`
-
-Primary file:
-
-```text
-LUMAN_OS/book_section/BOOK_SECTION_MENU.md
-```
-
-Related legacy/project vault:
-
-```text
-03_ROSEBORN_UNIVERSE/
-```
-
-Behavior:
-
-Open the modern Book Section first. If Edward asks specifically for older Roseborn vault files, bridge to `03_ROSEBORN_UNIVERSE/`.
-
-## `/open roseborn vault`
-
-Primary modern path:
-
-```text
-LUMAN_OS/book_section/roseborn_universe/
-```
-
-Legacy/project path:
-
-```text
-03_ROSEBORN_UNIVERSE/
-```
-
-Behavior:
-
-Use the modern `LUMAN_OS/book_section/roseborn_universe/` path for active Book Section tooling and the older `03_ROSEBORN_UNIVERSE/` vault for legacy dashboards, older canon files, and project-specific history until fully reconciled.
-
-## `/open harmonic time system`
-
-Primary file:
-
-```text
-LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
-```
-
-Related module:
-
-```text
-LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
-```
-
-Related archive:
-
-```text
-LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md
-```
-
-Behavior:
-
-Open the Harmonic Time System menu, then route exact-chart or archived-reading requests through the archive index and module files.
-
-## `/open gpt lab`
-
-Primary file:
-
-```text
-LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
-```
-
-Behavior:
-
-Use the modern GPT registry as the active module source.
-
-## `Use GitHub` / `Update LUMAN OS:`
-
-Primary protocol file:
-
-```text
-00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
-```
-
-Supporting files:
-
-```text
-LUMAN_OS/MASTER_BRIDGE_INDEX.md
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-00_CORE/CHANGELOG.md
-06_SESSION_LOGS/
-```
-
-Behavior:
-
-Use the core GitHub update protocol first, then write to the modern `LUMAN_OS/` layer or legacy/project vault depending on the update target.
-
-## `/start daily next move loop`
-
-Primary file:
-
-```text
-00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md
-```
-
-Supporting loop files:
-
-```text
-00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md
-00_CORE/LUMAN_LOOP_COMMANDS.md
-```
-
-Behavior:
-
-Use the core loop engine, then route the chosen next move into the correct modern or legacy section.
-
----
-
-# Section Mapping
-
-## Dashboard
-
-```text
-Modern interface: LUMAN_OS/ROOT_MENU.md
-Core operational context: 00_CORE/LUMAN_DASHBOARD.md, 00_CORE/ACTIVE_PRIORITIES.md, 00_CORE/OPEN_LOOPS.md
-```
-
-Rule: modern UI wins for presentation. Core files win for live operational status until status widgets are fully migrated into `LUMAN_OS/`.
-
-## Book Section
-
-```text
-Modern interface: LUMAN_OS/book_section/BOOK_SECTION_MENU.md
-Modern Roseborn tool path: LUMAN_OS/book_section/roseborn_universe/tools/roseborn_canon_guardian/
-Legacy Roseborn vault: 03_ROSEBORN_UNIVERSE/
-```
-
-Rule: use modern Book Section menus for navigation and tool activation. Use legacy Roseborn vault files for older dashboards, historical canon, and migration context.
-
-## Music Section
-
-```text
-Modern target: LUMAN_OS/music_section/
-Current legacy/project vault: 02_LUCID_SYNTAX/
-```
-
-Rule: until a full `LUMAN_OS/music_section/` exists, route Lucid Syntax work through `02_LUCID_SYNTAX/` and root `COMMANDS.md` Lucid Syntax promotion rules.
-
-## Life Operating System
-
-```text
-Modern target: LUMAN_OS/life_os/
-Current legacy/project vault: 01_LIFE_OS/
-```
-
-Rule: until a full modern Life OS section exists, use legacy Life OS patterns plus the user’s Life Operating System workflow stored in memory and core commands.
-
-## Money System
-
-```text
-Modern target: LUMAN_OS/money_system/
-Likely legacy/project context: 01_LIFE_OS/
-```
-
-Rule: store only safe financial system structure in GitHub. Do not store live private financial details.
-
-## Work / Quality Tools
-
-```text
-Modern target: LUMAN_OS/work_quality_tools/
-Current legacy/project vault: 05_WORK_QUALITY_SYSTEMS/
-```
-
-Rule: store only non-sensitive templates, workflows, measurement-method structures, and generic analysis tools. Do not store employer-confidential data.
-
-## GPT Builder Lab
-
-```text
-Modern interface: LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
-Legacy/project target: 04_GPT_BUILDER_LAB/
-```
-
-Rule: use the modern registry as the active module index. Use older GPT builder folders only if they contain templates that still need migration.
-
-## Creative Vault
-
-```text
-Modern target: LUMAN_OS/creative_vault/
-Current legacy/project context: 07_KNOWLEDGE_PACKS/
-```
-
-Rule: use GitHub for reusable structure, prompts, public-safe creative frameworks, and project indexes.
-
-## Vehicle / Home Records
-
-```text
-Modern target: LUMAN_OS/records/
-Current source context: KIA Service Records GPT / user-provided service memories / future records vault
-```
-
-Rule: GitHub may store general templates and non-sensitive maintenance structure.
-
-## Harmonic Time System
-
-```text
-Modern interface: LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
-Module path: LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
-Archive path: LUMAN_OS/harmonic_time_system/archive/
-```
-
-Rule: use the archive index for saved readings and provenance. Do not claim newly recalculated astrology unless a calculation source is documented.
-
----
-
-# Source-of-Truth Rules
-
-## Rule 1: Modern interface first
-
-When Edward gives a slash command such as `/open luman`, `/open books`, `/open harmonic time system`, or `/open gpt lab`, begin with the modern `LUMAN_OS/` interface file.
-
-## Rule 2: Core protocol governs updates
-
-When Edward asks to update GitHub, commit summaries, classify open loops, use loop engineering, or follow system protocol, use `00_CORE/` files first.
-
-## Rule 3: Project vaults preserve history
-
-Older numbered vaults such as `01_LIFE_OS/`, `02_LUCID_SYNTAX/`, and `03_ROSEBORN_UNIVERSE/` preserve project history and should not be deleted or ignored.
-
-## Rule 4: Bridge before duplicating
-
-Before creating a new file in `LUMAN_OS/`, check whether a legacy file already contains the same function. If it does, either:
-
-```text
-[1] Create a bridge reference
-[2] Migrate and summarize
-[3] Keep both with clear ownership
-```
-
-Do not create duplicate source-of-truth files without defining which one wins.
-
-## Rule 5: Open loops live in `00_CORE/` until migrated
-
-For now, the live master open-loop list remains:
-
-```text
-00_CORE/OPEN_LOOPS.md
-```
-
-Future option:
-
-```text
-LUMAN_OS/system_settings/OPEN_LOOPS.md
-```
-
-## Rule 6: Active priorities live in `00_CORE/` until migrated
-
-For now, the live master priority list remains:
-
-```text
-00_CORE/ACTIVE_PRIORITIES.md
-```
-
-Future option:
-
-```text
-LUMAN_OS/system_settings/ACTIVE_PRIORITIES.md
-```
-
----
-
-# Migration Priorities
-
-## Priority 1: System settings section
-
-Create a modern system settings section:
+### 2. System Settings Orchestration Layer
 
 ```text
 LUMAN_OS/system_settings/
 ```
 
-Recommended future files:
+Owns:
+
+- Master Command Center
+- Project Registry
+- Source-of-Truth Matrix
+- System audits
+- Ninety-day execution paths
+- Autopilot operating law
+- Portfolio limits and cross-project dependencies
+
+Primary entry points:
 
 ```text
 LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md
-LUMAN_OS/system_settings/COMMAND_ROUTING_INDEX.md
-LUMAN_OS/system_settings/OPEN_LOOPS.md
-LUMAN_OS/system_settings/ACTIVE_PRIORITIES.md
-LUMAN_OS/system_settings/CHANGELOG.md
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
 ```
 
-## Priority 2: Vault modernization
-
-Create or reconcile these modern sections as needed:
+Ownership boundary:
 
 ```text
-LUMAN_OS/music_section/
-LUMAN_OS/life_os/
-LUMAN_OS/money_system/
-LUMAN_OS/work_quality_tools/
-LUMAN_OS/creative_vault/
-LUMAN_OS/records/
+System Settings coordinates project truth. It does not replace project truth.
 ```
 
-## Priority 3: Roseborn bridge
-
-Create a dedicated Roseborn bridge file:
+### 3. Core Operational Layer
 
 ```text
-LUMAN_OS/book_section/roseborn_universe/ROSEBORN_BRIDGE_INDEX.md
+00_CORE/
 ```
 
-Purpose:
+Owns:
 
-Bridge the modern Roseborn Canon Guardian tool layer with the older `03_ROSEBORN_UNIVERSE/` vault.
+- GitHub update protocol
+- Live active priorities
+- Live open loops
+- Command-routing index
+- Loop engineering
+- Core dashboards
+- Summary-packet rules
+- Core changelog
 
----
-
-# Default Routing Decision Tree
+Primary control files:
 
 ```text
-START
-
-1. Is Edward opening a modern screen or slash-command menu?
-   YES → Use LUMAN_OS/ first.
-   NO → Continue.
-
-2. Is Edward asking about protocol, GitHub updates, commands, priorities, open loops, or loops?
-   YES → Use 00_CORE/ first.
-   NO → Continue.
-
-3. Is Edward working in a named project vault?
-   YES → Use the most relevant vault/module, then check whether a modern bridge exists.
-   NO → Continue.
-
-4. Is the information permanent, structural, reusable, or system-level?
-   YES → Route to GitHub using 00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md.
-   NO → Keep it in chat unless Edward asks to save it.
+00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
+00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md
 ```
 
----
+### 4. Project and Legacy Vault Layer
 
-# Current Bridge Status
+Examples:
 
 ```text
-[✓] LUMAN_OS/ROOT_MENU.md exists as modern root interface
-[✓] 00_CORE/LUMAN_DASHBOARD.md exists as core dashboard spine
-[✓] 00_CORE/ACTIVE_PRIORITIES.md remains live priority source
-[✓] 00_CORE/OPEN_LOOPS.md remains live open-loop source
-[✓] Harmonic Time System has modern menu, archive index, chart-basis file, and sample report
-[✓] Roseborn Canon Guardian is installed inside the modern Book Section
-[✓] Root COMMANDS.md recognizes the newer LUMAN_OS slash-command interface
-[✓] DEPLOYMENT_INDEX.md recognizes the newer LUMAN_OS interface layer
-[✓] 00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md recognizes the newer LUMAN_OS interface layer
-[✓] 00_CORE/CHANGELOG.md and LUMAN_OS/CHANGELOG.md have been updated after structural reconciliation
-[ ] Modern System Settings section does not yet exist
-[ ] Several vaults still need modern LUMAN_OS section indexes
+01_LIFE_OS/
+02_LUCID_SYNTAX/
+03_ROSEBORN_UNIVERSE/
+04_GPT_BUILDER_LAB/
+05_WORK_QUALITY_SYSTEMS/
+07_KNOWLEDGE_PACKS/
+BOOKS/
+lucid-syntax-promo-pro/
 ```
 
----
+Owns:
 
-# Recommended Next Move
+- Domain-specific assets
+- Project history
+- Manuscripts
+- Canon and continuity
+- Release metadata
+- Specialized workflows
+- Historical versions
+
+Rule:
+
+Legacy does not mean obsolete. Historical project vaults remain valid sources, but they must not silently outrank a newer explicitly approved source.
+
+### 5. Chat and Memory Layer
 
 ```text
-Create a modern LUMAN_OS/system_settings/ section.
+Chat   = living intelligence, reasoning, creation, and active tool operation
+Memory = continuity, personalization, and durable high-level project context
+```
+
+Neither chat nor memory replaces detailed canon files, manuscripts, asset libraries, ledgers, receipts, or documented source material.
+
+### 6. Private Source Layer
+
+Owns information that must not enter the public GitHub repository:
+
+- Credentials and encryption secrets
+- Live financial details
+- Medical records
+- Sensitive family records
+- Employer-confidential data
+- Private vehicle, home, or legal records when detailed exposure is unnecessary
+
+GitHub may store public-safe templates, generalized status, routing, and reusable structures only.
+
+## Core Cooperation Rule
+
+```text
+LUMAN_OS/                  = presents and operates
+system_settings/           = coordinates and governs
+00_CORE/                   = tracks and controls live operations
+Project vaults             = own domain truth
+Chat                       = reasons and acts
+GitHub                     = preserves public-safe durable state
+Private systems            = retain sensitive details
+```
+
+These layers cooperate. They do not compete.
+
+## Source-of-Truth Authority
+
+Use:
+
+```text
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+```
+
+Default authority order:
+
+1. Published or explicitly Locked Canon material
+2. Explicitly approved current source-of-truth file
+3. Current project continuity, registry, or active module file
+4. Current GitHub status and command files
+5. Edward's explicit instruction in the active conversation
+6. Saved memory and prior summaries
+7. Historical drafts, legacy alternatives, and archives
+8. Inference
+
+A newer modification timestamp alone does not create authority.
+
+## Command Routing Bridge
+
+### `/open luman`
+
+Primary:
+
+```text
+LUMAN_OS/ROOT_MENU.md
+```
+
+Supporting live state:
+
+```text
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+```
+
+### `/dashboard`
+
+Primary orchestration:
+
+```text
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+```
+
+Supporting interface and operations:
+
+```text
+LUMAN_OS/ROOT_MENU.md
+00_CORE/LUMAN_DASHBOARD.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+```
+
+### `/system settings`
+
+Primary:
+
+```text
+LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md
+```
+
+### `/open command center`
+
+Primary:
+
+```text
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+```
+
+### `/source map`
+
+Primary:
+
+```text
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+```
+
+### `/project registry`
+
+Primary:
+
+```text
+LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+```
+
+### `/90 day path`
+
+Primary:
+
+```text
+LUMAN_OS/system_settings/90_DAY_EXECUTION_PATH_2026-07-10.md
+```
+
+### `/autopilot law`
+
+Primary:
+
+```text
+LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md
+```
+
+### `Use GitHub` or `Update LUMAN OS:`
+
+Primary protocol:
+
+```text
+00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
+```
+
+Routing support:
+
+```text
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+```
+
+### `/next move`
+
+Use:
+
+```text
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+```
+
+Choose the smallest action that protects the human foundation, completes the shipping gate, resolves a blocker, prevents contradiction, or advances the approved deep-building gate.
+
+## Section Mapping
+
+### Books
+
+```text
+Modern interface: LUMAN_OS/book_section/
+Roseborn active tools: LUMAN_OS/book_section/roseborn_universe/
+Roseborn legacy history: 03_ROSEBORN_UNIVERSE/
+Other books: BOOKS/
+```
+
+Rule:
+
+Project-specific canon and manuscripts own content truth. System Settings owns portfolio state and dependencies.
+
+### Music
+
+```text
+Current active sources: 02_LUCID_SYNTAX/ and lucid-syntax-promo-pro/
+Modern target: LUMAN_OS/music_section/
+```
+
+Current portfolio state:
+
+```text
+Visionary = Active Shipping
+```
+
+### Life OS
+
+```text
+Modern interface: LUMAN_OS/life_os/
+Legacy history: 01_LIFE_OS/
+```
+
+Current foundation role:
+
+Protect family peace, regulation, sustainable attention, and embodied action.
+
+### Money
+
+```text
+Private live source: Edward's financial tools and current statements
+Public-safe target: LUMAN_OS/money_system/
+```
+
+Rule:
+
+Never treat public GitHub as the live ledger.
+
+### Work and Quality
+
+```text
+Current project source: 05_WORK_QUALITY_SYSTEMS/
+Modern target: LUMAN_OS/work_quality_tools/
+```
+
+Rule:
+
+Store reusable non-confidential methods only.
+
+### GPT Builder
+
+```text
+Modern interface: LUMAN_OS/gpt_builder_lab/
+Legacy project context: 04_GPT_BUILDER_LAB/
+```
+
+### Creative Vault
+
+```text
+Current context: 07_KNOWLEDGE_PACKS/
+Modern target: LUMAN_OS/creative_vault/
+```
+
+Default flow:
+
+```text
+Capture -> classify -> connect -> incubate
+```
+
+### Vehicle and Home Records
+
+```text
+Private original sources: receipts, service records, and detailed logs
+Public-safe target: LUMAN_OS/records/
+```
+
+### Harmonic Time System
+
+```text
+Modern interface: LUMAN_OS/harmonic_time_system/
+GPT module: LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
+Archive: LUMAN_OS/harmonic_time_system/archive/
+```
+
+## Portfolio Bridge
+
+The command center limits default active strategic work to:
+
+```text
+[1] Human foundation
+[2] One shipping project
+[3] One deep-building project
+```
+
+Current fronts:
+
+```text
+[1] Life OS and family stability
+[2] Visionary release assembly
+[3] Roseborn architecture reconciliation and Grand Generals continuity
+```
+
+A project may remain operational or maintained without becoming an active strategic front.
+
+## Current High-Impact Dependency Rules
+
+### Roseborn
+
+Series-level planning is blocked until these are reconciled:
+
+```text
+20-book recovered blueprint
+23-book working architecture
+21-book five-movement architecture
+```
+
+### Visionary
+
+The next gate is verified release assembly, not additional concept generation.
+
+### Sovereignty Framework
+
+The Algorithm of the Shadow, Architect of Sovereignty, and Architecture of Consciousness require explicit ownership before thesis material is duplicated.
+
+## Migration and Duplication Rules
+
+Before creating a new file:
+
+1. Search for an existing source.
+2. Identify its authority and current state.
+3. Choose one of these actions:
+
+```text
+Bridge
+Migrate and summarize
+Keep both with explicit ownership
+Archive the losing version
+```
+
+Do not create duplicate sources without defining which one wins.
+
+## Live Status Ownership
+
+Until an explicit migration is approved:
+
+```text
+Live priorities = 00_CORE/ACTIVE_PRIORITIES.md
+Live open loops = 00_CORE/OPEN_LOOPS.md
+Portfolio coordination = LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+Project state registry = LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+```
+
+## Privacy Firewall
+
+Never commit:
+
+- Credentials, keys, tokens, passwords, or seed phrases
+- Live balances or detailed financial records
+- Medical records
+- Employer-confidential information
+- Sensitive family records
+- Unnecessary private identifiers
+
+## Maintenance Rule
+
+When a major structural update occurs:
+
+1. Update the relevant modern interface.
+2. Update System Settings governance when portfolio ownership changes.
+3. Update live priorities and open loops.
+4. Update the command-routing index.
+5. Update the relevant module changelog.
+6. Create a session log when the change is substantial.
+7. Preserve historical sources without allowing silent authority drift.
+
+## Current Integrity State
+
+```text
+Modern interface: Active
+System Settings orchestration: Active
+Core protocol layer: Active
+Project vault layer: Active
+Source authority matrix: Active
+Autopilot law: Active
+Modern integration grade: A-
+```
+
+Remaining legacy synchronization:
+
+- Mirror high-value System Settings commands into root `COMMANDS.md`
+- Add the 2026-07-10 update to older top-level changelog surfaces
+- Review `DEPLOYMENT_INDEX.md`
+
+## Recommended Next Move
+
+```text
+Create the Visionary release-assembly inventory while Roseborn Canon Guardian prepares the three-version architecture reconciliation.
 ```
