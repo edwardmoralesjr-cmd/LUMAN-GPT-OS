@@ -1,110 +1,100 @@
 # LUMAN OS Open Loops
 
-## LUMAN OS Core System
+## Current System State
 
-Current status: the GitHub-backed LUMAN OS foundation is active. Core command routing, dashboards, loop engineering files, root commands, deployment-index loop commands, Lucid Syntax vault dashboard, the newer `LUMAN_OS/` root interface layer, Roseborn Canon Guardian, Harmonic Time System, Harmonic Time archive index, Edward’s exact chart-basis file, Edward’s saved sample Harmonic Time Map, the `00_CORE/` ↔ `LUMAN_OS/` master bridge index, the first command-routing reconciliation pass, the two-layer changelog reconciliation, the first modern Life OS module files, and the official Order of the Rose Shadow technique index are now in place.
+LUMAN OS is active, GitHub-backed, and now includes a modern System Settings governance layer.
 
-## Completed on 2026-06-17
+The system has:
 
-- Updated `DEPLOYMENT_INDEX.md` with GitHub update commands.
-- Expanded `COMMANDS.md` into a broader LUMAN OS command library.
-- Created `06_SESSION_LOGS/README.md` as the session log structure guide.
-- Created `00_CORE/LUMAN_DASHBOARD.md` as the main LUMAN OS dashboard.
-- Created `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md` as the first vault-specific dashboard.
-- Created `03_ROSEBORN_UNIVERSE/CHANGELOG.md` as the first Roseborn module changelog.
-- Created `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as the command routing source of truth.
-- Created `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` as the core loop engineering doctrine.
-- Created `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` as the first small operational loop.
-- Created `00_CORE/LUMAN_LOOP_COMMANDS.md` as the command surface for repeatable loops.
-- Updated `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with loop engineering commands.
-- Updated `00_CORE/ACTIVE_PRIORITIES.md` to prioritize small loop-engineered workflows.
-- Mirrored key loop engineering commands into root `COMMANDS.md`.
-- Mirrored key loop engineering commands into `DEPLOYMENT_INDEX.md`.
-- Created `02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md`.
-- Created `02_LUCID_SYNTAX/LUCID_SYNTAX_COMMANDS.md`.
+- A modern root interface
+- A core protocol and routing layer
+- A master bridge between modern and legacy structures
+- A Master Command Center
+- A unified Project Registry
+- A Source-of-Truth Matrix
+- A Ninety-Day Execution Path
+- A formal Autopilot Operating Law
+- Specialized Roseborn, Harmonic Time, Life OS, Lucid Syntax, and GPT Builder structures
 
-## Completed on 2026-06-18
+## Completed on 2026-07-10
 
-- Created `LUMAN_OS/ROOT_MENU.md` as the newer clean root interface.
-- Created `LUMAN_OS/book_section/BOOK_SECTION_MENU.md`.
-- Installed Roseborn Canon Guardian as a Book Section tool.
-- Created Roseborn Canon Guardian `MODULE_MANIFEST.md`, `COMMANDS.md`, `SESSION_UPDATE_TEMPLATE.md`, and `CONTRADICTION_LOG.md`.
-- Created refreshed Roseborn rolling continuity through Chapter 4.
-- Created `LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md`.
-- Installed Harmonic Time System Analyst as GPT-001 inside GPT Builder Lab.
-- Created Harmonic Time System Analyst `MODULE_MANIFEST.md`, `COMMANDS.md`, `SOURCE_KNOWLEDGE.md`, and `READING_TEMPLATE.md`.
-- Created `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`.
-- Added Harmonic Time System to `LUMAN_OS/ROOT_MENU.md` as section [11].
-- Added Edward’s Mini Harmonic Time Reading to the LUMAN OS homepage.
-- Upgraded the homepage reading to exact natal chart + numerology snapshot.
-- Synced `GPT_REGISTRY.md` with Harmonic Time System root integration.
-- Synced `HARMONIC_TIME_SYSTEM_MENU.md` with root integration and exact chart mode.
-- Created `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_EXACT_CHART_BASIS.md`.
-- Created `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md`.
-- Created `LUMAN_OS/harmonic_time_system/archive/EDWARD_MORALES_JR_SAMPLE_HARMONIC_TIME_MAP_2026.md`.
-- Updated `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md` with archive file references and completed Harmonic Time loop status.
-- Created `LUMAN_OS/MASTER_BRIDGE_INDEX.md` to bridge the older `00_CORE/` vault architecture with the newer `LUMAN_OS/` interface architecture.
-- Updated root `COMMANDS.md` with the newer `LUMAN_OS/` slash-command interface and Harmonic Time commands.
-- Updated `DEPLOYMENT_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
-- Updated `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` to recognize the newer `LUMAN_OS/` interface layer.
-- Updated `LUMAN_OS/MASTER_BRIDGE_INDEX.md` bridge status after command-routing reconciliation.
-
-## Completed on 2026-06-19
-
-- Updated `00_CORE/CHANGELOG.md` with the completed `LUMAN_OS` interface, bridge, Harmonic Time, and command-routing reconciliation work.
-- Updated `LUMAN_OS/CHANGELOG.md` with the matching master changelog entry.
-- Updated `00_CORE/OPEN_LOOPS.md` and `00_CORE/ACTIVE_PRIORITIES.md` so changelog reconciliation is no longer listed as the top unfinished task.
-- Updated `LUMAN_OS/MASTER_BRIDGE_INDEX.md` so changelog reconciliation is marked complete in the bridge status.
-
-## Completed on 2026-06-28
-
-- Created `LUMAN_OS/life_os/LIFE_OS_MENU.md` as the modern Life OS interface.
-- Created `LUMAN_OS/life_os/LIFESPAN_MAXIMIZATION_DOCTRINE.md` as the source-of-truth doctrine for turning cosmic understanding into lifespan action.
-- Created `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` as the embodied practice, nervous-system regulation, and living martial arts cove file.
-- Created `LUMAN_OS/life_os/ROSE_SHADOW_TECHNIQUE_INDEX.md` as the official Order of the Rose Shadow technique index.
-- Updated `00_CORE/ACTIVE_PRIORITIES.md` so Life OS and Rose Shadow work route toward illustration prompts, Daily Embodied Action loop creation, and system settings.
+- Created `LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md`.
+- Created `LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md`.
+- Created `LUMAN_OS/system_settings/PROJECT_REGISTRY.md`.
+- Created `LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md`.
+- Created `LUMAN_OS/system_settings/INTEGRATION_AUDIT_2026-07-10.md`.
+- Created `LUMAN_OS/system_settings/90_DAY_EXECUTION_PATH_2026-07-10.md`.
+- Created `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md`.
+- Reclassified Visionary as Active Shipping.
+- Identified the full Roseborn architecture conflict as 20-book vs 23-book vs 21-book.
+- Established a default three-front portfolio limit.
+- Updated live active priorities to align with the Master Command Center.
 
 ## Current Open Loops
 
 ### Highest-Priority Integrity Loops
 
-1. Create a modern `LUMAN_OS/system_settings/` section.
-2. Create modern section indexes for Music, Money System, Work / Quality Tools, Creative Vault, and Vehicle / Home Records when needed.
-3. Continue keeping `COMMANDS.md`, `DEPLOYMENT_INDEX.md`, `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`, `LUMAN_OS/ROOT_MENU.md`, and section menus aligned as new commands are added.
-4. Mirror `/open life os`, `/lifespan doctrine`, `/daily embodied action`, `/rose shadow cove`, `/rose shadow techniques`, and `/regulation reset` into root command surfaces when the Life OS command set is tested.
+1. Update `LUMAN_OS/ROOT_MENU.md` so System Settings routes directly to the new menu and command center.
+2. Update `LUMAN_OS/MASTER_BRIDGE_INDEX.md` with the System Settings ownership layer.
+3. Update `COMMANDS.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with `/open command center`, `/system audit`, `/source map`, `/project registry`, `/90 day path`, and `/autopilot law`.
+4. Synchronize `00_CORE/CHANGELOG.md` and `LUMAN_OS/CHANGELOG.md` with the 2026-07-10 integration update.
+5. Update the integration-audit completion checklist after synchronization is complete.
 
-### Life OS Loops
+### Human Foundation Loops
 
-1. Build a Daily Embodied Action loop file.
-2. Create detailed illustration prompts for Rank 1: Shadow Petal techniques.
-3. Create a short safety/ethics protocol for physical training and self-defense language.
-4. Decide whether the Architecture of Consciousness framework should live under Life OS, Creative Vault, Book Section, or all three through a bridge index.
-5. Build individual lesson files for each Rank 1 technique after the prompt set is approved.
+1. Build `LUMAN_OS/life_os/DAILY_EMBODIED_ACTION_LOOP.md`.
+2. Establish one weekly LUMAN sync rhythm.
+3. Add a concise safety and ethics protocol for Order of the Rose Shadow physical practice.
+4. Keep family peace, regulation, and sustainable attention above portfolio expansion.
 
-### Harmonic Time System Loops
+### Visionary Shipping Loops
 
-1. Create a Harmonic Time System book/framework file.
-2. Create reusable PDF/report formatting standards for Harmonic Time Maps.
-3. Add future completed readings to `LUMAN_OS/harmonic_time_system/archive/ARCHIVE_INDEX.md` as they are created.
+1. Create a verified Visionary release-assembly inventory.
+2. Classify every required asset as Ready, Missing, Needs Review, or Not Applicable.
+3. Verify master audio, metadata, artwork, lyrics, credits, distribution fields, visual assets, promo packs, and release dependencies.
+4. Build one sustainable release calendar after the inventory is complete.
 
 ### Roseborn Universe Loops
 
-1. Run `/reconcile 20-book vs 23-book Roseborn series architecture`.
-2. Run `/clearance Chapter 5, A Crack in Sequence`.
-3. Create `CHAPTER_5_CLEARANCE.md` after clearance is approved.
-4. Build `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md` or bridge it to the newer `LUMAN_OS/book_section/roseborn_universe/` structure.
-5. Create `LUMAN_OS/book_section/roseborn_universe/ROSEBORN_BRIDGE_INDEX.md` to connect the modern Roseborn Canon Guardian tool layer with the older `03_ROSEBORN_UNIVERSE/` vault.
+1. Run a three-version architecture reconciliation covering the 20-book, 23-book, and 21-book structures.
+2. Produce one approved architecture decision record and archive losing alternatives.
+3. Synchronize the active architecture across Canon Guardian, dashboards, continuity, and contradiction logs.
+4. Run Grand Generals Chapter 5 clearance after architecture resolution.
+5. Create `CHAPTER_5_CLEARANCE.md` after approval.
+6. Create or complete the modern Roseborn bridge index.
 
-### LUMAN OS Expansion Loops
+### Sovereignty and Book Architecture Loops
 
-1. Build fuller vault indexes for Money System, OMNI-Vault, KIA records, Work Quality systems, and Lucid Syntax.
-2. Add module-level changelogs where missing.
-3. Continue converting major conversations into session logs when Edward says `Create summary` and `Commit this summary to GitHub`.
-4. Preserve the Autopilot Law: LUMAN routes important information by default unless Edward overrides it.
-5. Keep platform/tool language neutral and avoid making Grok or any external creative platform a required default.
+1. Decide the formal relationship among The Algorithm of the Shadow, Architect of Sovereignty, and Architecture of Consciousness.
+2. Create a dedicated GitHub project home for Architect of Sovereignty when ownership is approved.
+3. Prevent duplicate thesis material across the three projects.
+
+### Harmonic Time System Loops
+
+1. Create the Harmonic Time System book/framework file.
+2. Create reusable report and PDF formatting standards.
+3. Add future completed readings to the archive index.
+
+### Modern Section Expansion Loops
+
+Create modern indexes only when they support an active gate:
+
+1. Music Section
+2. Money System
+3. Work / Quality Tools
+4. Creative Vault
+5. Vehicle / Home Records
+
+### Ongoing Governance Loops
+
+1. Preserve the public-repository privacy firewall.
+2. Keep active priorities, open loops, routing surfaces, and changelogs synchronized.
+3. Keep platform language neutral unless Edward names a specific tool.
+4. Use small meaningful commits instead of large unfocused restructures.
+5. Preserve Autopilot classification while requiring explicit approval for Locked Canon.
 
 ## Recommended Next Move
 
 ```text
-Create detailed illustration prompts for Rank 1: Shadow Petal techniques.
+Complete root routing and changelog synchronization, then build the Visionary release-assembly inventory.
 ```
