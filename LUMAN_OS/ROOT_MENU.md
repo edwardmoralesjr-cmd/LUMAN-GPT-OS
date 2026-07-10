@@ -1,9 +1,5 @@
 # LUMAN OS Root Menu
 
-## File Name
-
-ROOT_MENU.md
-
 ## System Name
 
 LUMAN OS  
@@ -11,19 +7,25 @@ Living User Matrix Interface
 
 ## Purpose
 
-This file is the root interface for LUMAN OS.
+This file is the home screen and main entry point for Edward's personal operating system.
 
-It functions as the home screen, main menu, and starting point for Edward’s personal operating system.
-
-LUMAN OS organizes life, books, music, money, work, creative projects, GPT tools, memory systems, records, Harmonic Time System work, and next-best-action planning into one clean command system.
+LUMAN OS organizes life, books, music, money, work, creative projects, GPT tools, records, Harmonic Time System work, memory systems, and next-best-action planning into one coordinated command system.
 
 ## Core Identity
 
-LUMAN OS is a living command system for life, books, music, money, memory, creativity, spiritual timing, and personal evolution.
+```text
+Chat is the living intelligence layer.
+GitHub is the durable public-safe external brain.
+LUMAN_OS/system_settings/ is the orchestration and governance layer.
+00_CORE/ is the live protocol, status, routing, and loop layer.
+Project vaults own their domain-specific truth.
+```
 
 ## Home Command
 
+```text
 /open luman
+```
 
 ## Home Screen
 
@@ -33,44 +35,26 @@ LUMAN OS is a living command system for life, books, music, money, memory, creat
 ║        Living User Matrix Interface    ║
 ╚════════════════════════════════════════╝
 
-HOME SCREEN
+CURRENT MODE
+Consolidate, protect, finish, then expand
 
-Current Mode:
-[Daily Command / Creative Work / Life Sync / System Update]
+ACTIVE STRATEGIC FRONTS
+[1] Human Foundation: Life OS, family peace, regulation, sustainable attention
+[2] Shipping Front: Lucid Syntax — Visionary release assembly
+[3] Deep-Building Front: Roseborn architecture reconciliation and Grand Generals continuity
 
-Active Focus:
-[What Edward is currently working on]
+CURRENT TOP 3
+[1] Build the Daily Embodied Action loop
+[2] Create the Visionary release-assembly inventory
+[3] Reconcile the 20-book, 23-book, and 21-book Roseborn architectures
 
-Mini Harmonic Time Reading:
-Edward Morales Jr.
-Reading Type: Exact natal chart + numerology snapshot
-Chart Basis: Tropical zodiac, Placidus houses, Chicago IL, February 17 1986, 6:00 PM CST, calculated as February 18 1986, 00:00 UTC
-Life Path: 7 — The Seeker / Mystic Analyst
-Expression: 4 — The Architect / System Builder, based on “Edward Morales Jr.”
-Personal Year 2026: 11/2 — Intuition, patience, partnership, emotional refinement
-Sun: 29°02′ Aquarius, 6th House — visionary service, systems, refinement, collective work
-Moon: 11°41′ Gemini, 10th House — public voice, communication, ideas, visible emotional intelligence
-Rising: 6°33′ Virgo — precision, analysis, service, devotion to useful structure
-Midheaven: 2°07′ Gemini — vocation through words, learning, communication, teaching, signal-building
-Key Signature: Sun conjunct Jupiter at late Aquarius, exact orb about 0°19′ — expanded vision, future-facing purpose, big-system thinking
-Today’s Harmonic Directive: Refine the system before expanding the empire. Let depth, patience, discernment, and exact structure lead the next move.
-Accuracy Note: This homepage reading uses exact calculated chart placements for the listed Sun, Moon, Rising, Midheaven, houses, and key signature. Interpretations remain reflective guidance, not fixed destiny.
+INTEGRITY WARNING
+Roseborn series-level expansion remains blocked until one architecture is explicitly approved.
 
-Top 3 Priorities:
-[1]
-[2]
-[3]
-
-Open Loops:
-[1]
-[2]
-[3]
-
-Recommended Next Move:
-[One clear action]
+RECOMMENDED NEXT MOVE
+Create the Visionary release-assembly inventory while Roseborn Canon Guardian prepares the architecture reconciliation.
 
 MAIN MENU
-
 [1] Dashboard
 [2] Book Section
 [3] Music Section
@@ -80,10 +64,32 @@ MAIN MENU
 [7] GPT Builder Lab
 [8] Creative Vault
 [9] Vehicle / Home Records
-[10] System Settings
+[10] System Settings and Master Command Center
 [11] Harmonic Time System
 
 Type a number, section name, or command.
+```
+
+## Strategic Source Files
+
+```text
+Portfolio orchestration:
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+
+Project states and next gates:
+LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+
+Source authority and conflict resolution:
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+
+Live priorities:
+00_CORE/ACTIVE_PRIORITIES.md
+
+Live open loops:
+00_CORE/OPEN_LOOPS.md
+
+Architecture bridge:
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
 ```
 
 ## Main Sections
@@ -92,30 +98,34 @@ Type a number, section name, or command.
 
 Command:
 
+```text
 /dashboard
+```
 
 Purpose:
 
-Shows Edward’s current life status, active projects, open loops, top priorities, and recommended next move.
+Shows current mode, active strategic fronts, project status, open loops, priorities, integrity warnings, and one recommended next move.
 
-Includes:
+Primary sources:
 
-- Current focus
-- Project status
-- Open loops
-- Weekly priorities
-- Active systems
-- Next best action
+```text
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+00_CORE/LUMAN_DASHBOARD.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+```
 
 ### 2. Book Section
 
 Command:
 
+```text
 /open books
+```
 
 Purpose:
 
-Opens the writing, publishing, canon, Codex, manuscript, and story-development command center.
+Opens writing, publishing, canon, Codex, manuscript, and story-development tools.
 
 Includes:
 
@@ -124,230 +134,259 @@ Includes:
 - The Infinite Bloom
 - The Rose Codices
 - The Algorithm of the Shadow
-- Publishing tools
-- Manuscript tools
-- Canon tools
+- Architect of Sovereignty
+- Architecture of Consciousness
+- Publishing and manuscript tools
+
+Primary source:
+
+```text
+LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+```
 
 ### 3. Music Section
 
 Command:
 
+```text
 /open music
+```
 
 Purpose:
 
-Opens Lucid Syntax, album rollout planning, lyrics, visuals, promo packs, release schedules, and music strategy.
+Opens Lucid Syntax, album planning, release assembly, lyrics, visuals, promo packs, and platform strategy.
 
-Includes:
+Current primary sources:
 
-- Lucid Syntax
-- Visionary rollout
-- Song promo packs
-- Lyric video planning
-- TikTok content
-- Platform posts
-- Album roadmap
+```text
+02_LUCID_SYNTAX/
+lucid-syntax-promo-pro/
+```
+
+Current shipping gate:
+
+```text
+Visionary release-assembly inventory
+```
 
 ### 4. Life Operating System
 
-Command:
+Commands:
 
+```text
+/open life os
 /weekly sync
+/daily embodied action
+/regulation reset
+```
 
 Purpose:
 
-Manages Edward’s life rhythm, family goals, personal systems, routines, health, emotional balance, and weekly direction.
+Protects family direction, personal rhythm, health-supporting routines, nervous-system regulation, and meaningful action inside one finite life.
 
-Includes:
+Primary source:
 
-- Weekly Sync
-- Daily reset
-- Family plan
-- Health check
-- Decision support
-- Open loops
+```text
+LUMAN_OS/life_os/LIFE_OS_MENU.md
+```
 
 ### 5. Money System
 
 Command:
 
+```text
 /money check
+```
 
 Purpose:
 
-Manages Edward’s financial peace system.
+Supports Edward's financial peace system, weekly budget structure, bills, savings, investments, and next financial action.
 
-Includes:
+Privacy rule:
 
-- Weekly budget
-- Bills
-- Savings buckets
-- Emergency fund
-- Vacation fund
-- Investments
-- Monthly projections
-- Financial next move
+```text
+Do not store live balances, account details, or private financial records in the public repository.
+```
 
 ### 6. Work / Quality Tools
 
 Command:
 
+```text
 /open work tools
+```
 
 Purpose:
 
-Manages Edward’s work systems, Pella projects, quality analysis, measurement tools, SPC, improvement ideas, and career moves.
+Opens quality analysis, SPC, measurement methods, improvement systems, dashboards, and career-support tools.
 
-Includes:
+Current primary source:
 
-- Quality analysis
-- SPC checks
-- Measurement systems
-- Data dashboards
-- Career advancement
-- Resume updates
+```text
+05_WORK_QUALITY_SYSTEMS/
+```
+
+Privacy rule:
+
+```text
+Store reusable non-confidential methods and templates only.
+```
 
 ### 7. GPT Builder Lab
 
 Command:
 
+```text
 /open gpt lab
+```
 
 Purpose:
 
-Manages Edward’s custom GPTs, knowledge files, GitHub-backed modules, prompt systems, audits, and upgrades.
+Manages custom GPTs, knowledge files, GitHub-backed modules, audits, prompts, deployment instructions, and upgrades.
 
-Includes:
+Primary source:
 
-- GPT registry
-- GPT ingestion
-- GPT audits
-- GPT upgrades
-- Knowledge file creation
-- Instruction set creation
-- GitHub update packets
+```text
+LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
+```
 
 ### 8. Creative Vault
 
 Command:
 
+```text
 /open creative vault
+```
 
 Purpose:
 
-Stores creative ideas, poems, spiritual reflections, lyrics, art prompts, book seeds, invention ideas, and future concepts.
+Captures poems, spiritual reflections, art prompts, book seeds, song seeds, inventions, and future concepts without activating every idea as a current project.
 
-Includes:
+Default flow:
 
-- New ideas
-- Prompt builds
-- Poems
-- Book seeds
-- Song seeds
-- Image directions
-- Spiritual reflections
+```text
+Capture -> classify -> connect -> incubate
+```
 
 ### 9. Vehicle / Home Records
 
 Command:
 
+```text
 /open records
+```
 
 Purpose:
 
-Tracks vehicle maintenance, home records, service logs, inspections, and preventive planning.
+Routes maintenance, service, inspection, preventive-planning, and home-record workflows.
 
-Includes:
+Privacy rule:
 
-- Kia records
-- Honda records
-- Service logs
-- Maintenance schedules
-- Home records
-- Repair planning
+```text
+Original receipts and detailed private records remain in private sources. GitHub stores templates and public-safe structures only.
+```
 
-### 10. System Settings
+### 10. System Settings and Master Command Center
 
-Command:
+Primary commands:
 
+```text
 /system settings
+/open command center
+/system audit
+/source map
+/project registry
+/90 day path
+/autopilot law
+/system next move
+```
 
 Purpose:
 
-Manages the structure, rules, commands, modules, GitHub updates, versioning, and memory logic of LUMAN OS.
+Governs the architecture, source hierarchy, project registry, privacy firewall, Autopilot behavior, portfolio limits, dependencies, and system upgrades.
 
-Includes:
+Primary menu:
 
-- Module registry
-- Command palette
-- Changelog
-- GitHub structure
-- Memory rules
-- System updates
+```text
+LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md
+```
+
+Core files:
+
+```text
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+LUMAN_OS/system_settings/INTEGRATION_AUDIT_2026-07-10.md
+LUMAN_OS/system_settings/90_DAY_EXECUTION_PATH_2026-07-10.md
+LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md
+```
 
 ### 11. Harmonic Time System
 
 Command:
 
+```text
 /open harmonic time system
+```
 
 Purpose:
 
-Opens Edward’s spiritual timing, numerology, astrology, symbolic self-mapping, Harmonic Time Map, and soul-rhythm command center.
+Opens numerology, astrology, symbolic self-mapping, Harmonic Time Maps, compatibility, journaling, and soul-rhythm tools.
 
-This section is powered by the Harmonic Time System Analyst GPT module and uses the dedicated Harmonic Time System menu.
-
-Section Menu:
+Primary sources:
 
 ```text
-LUMAN_OS / harmonic_time_system / HARMONIC_TIME_SYSTEM_MENU.md
+LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
+LUMAN_OS/gpt_builder_lab/modules/harmonic_time_system_analyst/
 ```
 
-Primary GPT Module:
+Accuracy rule:
+
+Do not claim exact astrology calculation unless reliable calculation support or documented chart placements are available.
+
+## Mini Harmonic Time Reading
+
+Edward Morales Jr.
 
 ```text
-LUMAN_OS / gpt_builder_lab / modules / harmonic_time_system_analyst
+Reading Type: Exact natal chart plus numerology snapshot
+Chart Basis: Tropical zodiac, Placidus houses, Chicago IL, February 17 1986, 6:00 PM CST
+Life Path: 7 — The Seeker / Mystic Analyst
+Expression: 4 — The Architect / System Builder
+Personal Year 2026: 11/2 — Intuition, patience, partnership, emotional refinement
+Sun: 29°02′ Aquarius, 6th House
+Moon: 11°41′ Gemini, 10th House
+Rising: 6°33′ Virgo
+Midheaven: 2°07′ Gemini
+Key Signature: Sun conjunct Jupiter at late Aquarius
+Directive: Refine the system before expanding the empire.
 ```
 
-Includes:
-
-- Harmonic Time System Analyst
-- Harmonic Intake
-- Soul Numbers
-- Numerology Map
-- Chart Data Check
-- Astrology Reading
-- Harmonic Synthesis
-- Harmonic Flow Forecast
-- Full Harmonic Time Map
-- Compatibility Reading
-- Journal Prompts
-- Affirmation Sets
-- Visual Chart Concepts
-- Harmonic Time System Book / Framework
-- Harmonic Time System Archive
-
-Accuracy Rule:
-
-Do not claim exact astrology calculation unless reliable chart-calculation support or user-provided placements are available.
-
-If exact astrology is unavailable, use symbolic, numerology-first, or user-provided-placement readings and label them clearly.
+Interpretations are reflective guidance, not fixed destiny.
 
 ## Universal Commands
 
 ```text
 /open luman
 /dashboard
+/open command center
+/system settings
+/system audit
+/source map
+/project registry
+/90 day path
+/autopilot law
 /open books
 /open music
+/open life os
 /weekly sync
 /money check
+/open work tools
 /open gpt lab
 /open creative vault
 /open records
-/system settings
 /open harmonic time system
-/open harmonic time analyst
 /next move
 /open loops
 /system update
@@ -357,33 +396,60 @@ If exact astrology is unavailable, use symbolic, numerology-first, or user-provi
 /main menu
 ```
 
-## Required Screen Rule
+## Operating Laws
+
+### Required Screen Rule
 
 Every LUMAN OS screen must end with:
 
+```text
 Recommended Next Move
+```
+
+### Three-Front Limit
+
+Default active strategic portfolio:
+
+```text
+[1] Human foundation
+[2] One shipping project
+[3] One deep-building project
+```
+
+### Source Discipline
+
+Use the project source for content truth, the command center for portfolio coordination, and `00_CORE/` for live operational status and protocol.
+
+### Public Repository Firewall
+
+Never commit credentials, financial ledgers, medical records, employer-confidential data, sensitive family records, or private identifying information.
 
 ## Operating Questions
 
 LUMAN OS should always help Edward answer:
 
-Where am I?  
-What matters most right now?  
-What is open?  
-What should I do next?  
-What system needs to be improved?  
+1. Where am I?
+2. What matters most right now?
+3. Which source owns the truth?
+4. What is open, blocked, or ready to ship?
+5. What should I do next?
+6. What should I stop, delay, or archive?
 
 ## Root Interface Status
 
 Status: Active  
-Version: v1.3  
+Version: v1.4  
+Last Updated: 2026-07-10  
 Section: Root Interface  
 GitHub Role: Main entry point for LUMAN OS
 
 ## Latest Root Menu Updates
 
-2026-06-18: Added Harmonic Time System as section [11] and linked it to the dedicated Harmonic Time System menu and Harmonic Time System Analyst GPT module.
+- 2026-07-10: Added the Master Command Center, System Settings governance layer, strategic-front limit, live Top 3, source hierarchy, and new command routes.
+- 2026-06-18: Added Harmonic Time System as section [11] and integrated Edward's chart-basis snapshot.
 
-2026-06-18: Added Edward’s Mini Harmonic Time Reading under Active Focus on the home screen.
+## Recommended Next Move
 
-2026-06-18: Updated Edward’s Mini Harmonic Time Reading from symbolic-only astrology to an exact natal chart and numerology snapshot.
+```text
+Open the command center, then create the Visionary release-assembly inventory.
+```
