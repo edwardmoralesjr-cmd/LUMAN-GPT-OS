@@ -42,7 +42,7 @@ Archived        = historical source retained for provenance
 | WORK-001 | Work | Work / Quality Systems | Maintenance | `05_WORK_QUALITY_SYSTEMS/` | Create modern bridge around reusable non-confidential tools |
 | CREATE-001 | Creative | Creative Vault | Maintenance | `07_KNOWLEDGE_PACKS/` and project folders | Classify new seeds without turning every idea into an active project |
 | GAME-001 | Games | LUMAN Game Lab | Maintenance | `LUMAN_OS/game_lab/` | Maintain project homes, shared systems, and public-safe game-development structure |
-| GAME-002 | Games | Gatherer's Ascension | Incubating | `LUMAN_OS/game_lab/gatherers_ascension/PROJECT_HOME.md` | Import the first playable browser build and validate the core gathering loop |
+| GAME-002 | Games | Gatherer's Ascension | Incubating | `LUMAN_OS/game_lab/gatherers_ascension/PROJECT_HOME.md` and `app/` | Publish the validated playable prototype through a repository-level GitHub Pages workflow |
 
 ## Active Strategic Front Limit
 
