@@ -1,6 +1,7 @@
 import './style.css';
 import './collection.css';
 import './command-center.css';
+import './font-scale.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
