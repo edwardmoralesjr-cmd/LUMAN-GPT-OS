@@ -34,12 +34,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: ${{ env.APP_DIRECTORY }}/package-lock.json
 
       - name: Install dependencies
         working-directory: ${{ env.APP_DIRECTORY }}
-        run: npm ci
+        run: npm install
 
       - name: Build production game
         working-directory: ${{ env.APP_DIRECTORY }}
