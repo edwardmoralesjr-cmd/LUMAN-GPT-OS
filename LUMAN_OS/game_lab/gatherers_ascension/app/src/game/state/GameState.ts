@@ -1,7 +1,34 @@
 import type { BiomeId, HarvestQuality, StatId, ToolId } from '../data/content';
+import type { GathererRole } from '../data/network';
 
 export interface PlayerStats extends Record<StatId, number> {}
 export interface ToolLevels extends Record<ToolId, number> {}
+
+export interface GathererState {
+  id: string;
+  templateId: string;
+  name: string;
+  role: GathererRole;
+  specialty: ToolId;
+  level: number;
+  xp: number;
+  equipmentLevel: number;
+  efficiency: number;
+  endurance: number;
+  fortune: number;
+  totalGathered: number;
+  cyclesCompleted: number;
+  assignedZoneId: string | null;
+  lastCycleAt: number | null;
+}
+
+export interface NetworkActivity {
+  id: string;
+  timestamp: number;
+  title: string;
+  detail: string;
+  tone: 'normal' | 'success' | 'rare' | 'warning';
+}
 
 export interface GameState {
   version: number;
@@ -28,6 +55,16 @@ export interface GameState {
     relicWard: number;
   };
   skills: Record<ToolId, { level: number; xp: number }>;
+  network: {
+    level: number;
+    xp: number;
+    commandPoints: number;
+    unlockedZones: string[];
+    gatherers: GathererState[];
+    activity: NetworkActivity[];
+    totalAutomatedGathered: number;
+    expeditionsCompleted: number;
+  };
   totals: {
     gathered: number;
     coinsEarned: number;
@@ -39,9 +76,29 @@ export interface GameState {
   };
 }
 
+function starterGatherer(): GathererState {
+  return {
+    id: 'gatherer-rowan',
+    templateId: 'rowan',
+    name: 'Rowan Vale',
+    role: 'Forager',
+    specialty: 'sickle',
+    level: 1,
+    xp: 0,
+    equipmentLevel: 1,
+    efficiency: 1.08,
+    endurance: 8,
+    fortune: 5,
+    totalGathered: 0,
+    cyclesCompleted: 0,
+    assignedZoneId: null,
+    lastCycleAt: null,
+  };
+}
+
 export function createInitialState(): GameState {
   return {
-    version: 3,
+    version: 4,
     updatedAt: Date.now(),
     playerName: 'The Gatherer',
     level: 1,
@@ -82,6 +139,22 @@ export function createInitialState(): GameState {
       sickle: { level: 1, xp: 0 },
       gloves: { level: 1, xp: 0 },
     },
+    network: {
+      level: 1,
+      xp: 0,
+      commandPoints: 0,
+      unlockedZones: ['worldwood-grove'],
+      gatherers: [starterGatherer()],
+      activity: [{
+        id: 'network-online',
+        timestamp: Date.now(),
+        title: 'Worldroot Network Online',
+        detail: 'Rowan Vale is ready for the first automated deployment.',
+        tone: 'success',
+      }],
+      totalAutomatedGathered: 0,
+      expeditionsCompleted: 0,
+    },
     totals: {
       gathered: 0,
       coinsEarned: 0,
@@ -98,6 +171,7 @@ export function normalizeState(raw: Partial<GameState> | null | undefined): Game
   const base = createInitialState();
   if (!raw) return base;
 
+  const rawNetwork = raw.network;
   return {
     ...base,
     ...raw,
@@ -112,6 +186,16 @@ export function normalizeState(raw: Partial<GameState> | null | undefined): Game
       sickle: { ...base.skills.sickle, ...(raw.skills?.sickle ?? {}) },
       gloves: { ...base.skills.gloves, ...(raw.skills?.gloves ?? {}) },
     },
+    network: {
+      ...base.network,
+      ...(rawNetwork ?? {}),
+      unlockedZones: rawNetwork?.unlockedZones?.length ? rawNetwork.unlockedZones : base.network.unlockedZones,
+      gatherers: rawNetwork?.gatherers?.length ? rawNetwork.gatherers.map((gatherer) => ({
+        ...starterGatherer(),
+        ...gatherer,
+      })) : base.network.gatherers,
+      activity: rawNetwork?.activity?.length ? rawNetwork.activity.slice(0, 40) : base.network.activity,
+    },
     totals: { ...base.totals, ...(raw.totals ?? {}) },
     unlockedBiomes: raw.unlockedBiomes?.length ? raw.unlockedBiomes : base.unlockedBiomes,
     discovered: raw.discovered ?? base.discovered,
@@ -119,6 +203,6 @@ export function normalizeState(raw: Partial<GameState> | null | undefined): Game
     rareMomentum: raw.rareMomentum ?? base.rareMomentum,
     activeBoostUntil: raw.activeBoostUntil ?? base.activeBoostUntil,
     updatedAt: raw.updatedAt ?? Date.now(),
-    version: 3,
+    version: 4,
   };
 }
