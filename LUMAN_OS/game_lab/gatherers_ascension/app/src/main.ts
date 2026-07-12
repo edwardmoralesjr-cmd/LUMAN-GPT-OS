@@ -1,14 +1,15 @@
 import './style.css';
 import './collection.css';
+import './command-center.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
-import { UIController } from './game/ui/UIController';
+import { CommandCenterUI } from './game/ui/CommandCenterUI';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
 const saves = new SaveService();
-const ui = new UIController(store);
+const ui = new CommandCenterUI(store);
 
 async function bootstrap(): Promise<void> {
   try {
@@ -17,7 +18,9 @@ async function bootstrap(): Promise<void> {
     ui.setCloudStatus(cloudStatus);
     const chosen = await saves.reconcile(local);
     if (chosen) store.hydrate(chosen);
+    const offlineYield = store.processAutomation(Date.now());
     ui.setSaveStatus(chosen ? 'Progress restored' : 'New journey ready');
+    if (offlineYield > 0) ui.toast('Network operations reconciled', `${offlineYield} materials were gathered while you were away.`);
   } catch (error) {
     console.error(error);
     ui.setSaveStatus('Save loaded with limited sync');
@@ -43,6 +46,7 @@ async function bootstrap(): Promise<void> {
     }
   };
 
+  window.setInterval(() => store.processAutomation(Date.now()), 1_000);
   window.setInterval(() => void persist(Boolean(saves.status.user)), 10_000);
   window.addEventListener('beforeunload', () => void saves.saveLocal(store.snapshot as GameState));
 
