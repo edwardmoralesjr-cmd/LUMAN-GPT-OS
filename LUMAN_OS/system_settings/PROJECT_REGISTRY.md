@@ -20,7 +20,7 @@ Archived        = historical source retained for provenance
 
 | ID | Domain | Project / System | State | Primary Source | Next Gate |
 |---|---|---|---|---|---|
-| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Maintain synchronized status, routing, and source discipline |
+| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Keep modern menus, live status, routing, and source discipline synchronized |
 | SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
@@ -35,9 +35,11 @@ Archived        = historical source retained for provenance
 | BOOK-006 | Books | Architecture of Consciousness | Incubating | `BOOKS/architecture-of-consciousness/` | Create source-aware master outline and evidence map |
 | BOOK-007 | Books | Seventh Codex Biography | Incubating | `BOOKS/rose-codices/seventh-codex-biography/` | Maintain life-thread archive until active drafting begins |
 | BOOK-008 | Books | Master Book Portfolio | Maintenance | `LUMAN_OS/book_section/BOOK_IDEA_MASTER_CATALOG.md` | Recover missing original manuscripts and source files |
-| MUSIC-001 | Music | Lucid Syntax | Active Shipping | `02_LUCID_SYNTAX/`, `lucid-syntax-promo-pro/` | Maintain release system and artist identity |
-| MUSIC-002 | Music | Visionary | Active Shipping | Lucid Syntax vault and completed session assets | Build verified release-assembly packet |
-| MUSIC-003 | Music | Seven-Album Roadmap | Active Building | Lucid Syntax planning sources | Preserve sequence while avoiding premature expansion |
+| MUSIC-001 | Music | Music Section | Foundation | `LUMAN_OS/music_section/MUSIC_SECTION_MENU.md` | Keep project routing, release canon, and music laws synchronized |
+| MUSIC-002 | Music | Lucid Syntax | Active Shipping | `02_LUCID_SYNTAX/`, `lucid-syntax-promo-pro/` | Maintain artist identity and complete the Visionary release system |
+| MUSIC-003 | Music | Visionary | Active Shipping | `02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md` | Build In-Between release packet and verified September 25 album assembly |
+| MUSIC-004 | Music | Lucid Syntax Seven-Album Roadmap | Active Building | `02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md` | Preserve Working Canon without activating later albums prematurely |
+| MUSIC-005 | Music | Infinite Bloom Music Project | Active Building | `LUMAN_OS/music_section/infinite_bloom_music/` | Complete sound law application and first Elarion prototype without entering the shipping front |
 | TIME-001 | Spiritual Systems | Harmonic Time System | Active Building | `LUMAN_OS/harmonic_time_system/`, `BOOKS/harmonic-time-system-book/` | Build canonical book/framework source and report standard |
 | WORK-001 | Work | Work / Quality Systems | Maintenance | `05_WORK_QUALITY_SYSTEMS/` | Create modern bridge around reusable non-confidential tools |
 | CREATE-001 | Creative | Creative Vault | Maintenance | `07_KNOWLEDGE_PACKS/` and project folders | Classify new seeds without turning every idea into an active project |
@@ -54,9 +56,11 @@ Archived        = historical source retained for provenance
 
 ```text
 [1] Life OS / family stability
-[2] Visionary release assembly
+[2] Visionary release assembly, led by the In-Between campaign
 [3] Grand Generals Chapter 5 clearance and Roseborn continuity
 ```
+
+The Infinite Bloom Music Project is documented and actively developed at a controlled level, but it does not displace the three strategic fronts.
 
 ## Architecture Resolution Note
 
@@ -69,5 +73,5 @@ The Roseborn count conflict was resolved at Working Canon level on 2026-07-10:
 ## Recommended Next Move
 
 ```text
-Run Grand Generals Chapter 5 clearance while continuing the Visionary release-assembly inventory.
+Complete the In-Between release packet while running Grand Generals Chapter 5 clearance and protecting the human foundation.
 ```
