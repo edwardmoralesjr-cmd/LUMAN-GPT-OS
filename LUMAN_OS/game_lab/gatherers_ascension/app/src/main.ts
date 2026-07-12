@@ -8,12 +8,14 @@ import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
 import { CommandCenterUI } from './game/ui/CommandCenterUI';
 import { AudioManager } from './game/systems/AudioManager';
+import { EconomyHUD } from './game/ui/EconomyHUD';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
 const saves = new SaveService();
 const ui = new CommandCenterUI(store);
 const audio = new AudioManager(store);
+const economy = new EconomyHUD(store);
 audio.initialize();
 
 async function bootstrap(): Promise<void> {
@@ -55,6 +57,7 @@ async function bootstrap(): Promise<void> {
   window.setInterval(() => void persist(Boolean(saves.status.user)), 10_000);
   window.addEventListener('beforeunload', () => {
     audio.destroy();
+    economy.destroy();
     void saves.saveLocal(store.snapshot as GameState);
   });
 
