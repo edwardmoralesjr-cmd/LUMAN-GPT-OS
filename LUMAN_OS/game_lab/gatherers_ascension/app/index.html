@@ -36,6 +36,27 @@
         </div>
       </header>
 
+      <section class="economy-command-bar glass-panel" aria-label="Worldroot treasury and music controls">
+        <div class="treasury-identity">
+          <div class="treasury-sigil" aria-hidden="true">◈</div>
+          <div><span>WORLDROOT TREASURY</span><strong id="economy-status">CAPITAL FORMING</strong></div>
+        </div>
+        <div class="economy-readout primary"><span>COIN RESERVE</span><strong id="economy-coins">0</strong><small>spendable capital</small></div>
+        <div class="economy-readout"><span>CARGO VALUE</span><strong id="economy-cargo">0</strong><small>unrealized inventory</small></div>
+        <div class="economy-readout"><span>TOTAL NET WORTH</span><strong id="economy-net-worth">0</strong><small>coins plus cargo</small></div>
+        <div class="economy-readout"><span>NETWORK VALUE / MIN</span><strong id="economy-rate">0</strong><small>estimated production</small></div>
+        <div class="economy-target">
+          <div><span id="economy-target-label">NEXT INVESTMENT</span><strong id="economy-target-value">--</strong></div>
+          <div class="economy-progress" aria-hidden="true"><span id="economy-progress-fill"></span></div>
+        </div>
+        <button id="economy-sell-all" class="treasury-action" type="button">LIQUIDATE CARGO</button>
+        <div class="music-console">
+          <button id="music-toggle" class="music-toggle" type="button" aria-pressed="true">♪ ON</button>
+          <div class="music-track"><span>MUSIC CHANNEL</span><strong id="music-track">Tap anywhere to start music</strong></div>
+          <input id="music-volume" class="music-volume" type="range" min="0" max="100" value="34" aria-label="Background music volume" />
+        </div>
+      </section>
+
       <main class="command-grid">
         <aside class="telemetry-rail left-rail glass-panel" aria-label="Left command telemetry">
           <div id="left-panel-content" class="telemetry-content"></div>
