@@ -1,45 +1,53 @@
 # Lucid Syntax Dashboard
 
-**Purpose:** Provide a clean command-center view for Lucid Syntax, the Visionary rollout, active release priorities, promo assets, and next actions.
+## Purpose
 
----
+Provide the current command-center view for Lucid Syntax, the Visionary rollout, active release priorities, album continuity, promotion systems, and next actions.
 
-## 1. Current Era
+## Current Era
 
-**Current era:** Visionary
+```text
+Era: Visionary
+Project identity: Human heart, AI vessel.
+```
 
-**Project identity:** Human heart, AI vessel.
+Lucid Syntax is a human-led cinematic metal project shaped by Edward's lyrics, lived emotion, spiritual message, storytelling, curation, and worldbuilding. AI production is the vessel and instrument, not the emotional identity.
 
-Lucid Syntax should be presented as a human-led cinematic metal project shaped by Edward’s lyrics, emotional themes, spiritual message, storytelling, and worldbuilding. AI production is the vessel/instrument, not the core identity.
+## Current Release Status
 
----
+```text
+Lead single: Paint
+Release date: July 3, 2026
+Status: Released
 
-## 2. Current Release Status
+Next single: In-Between
+Target window: Late July 2026
+Status: Active campaign build
 
-**Lead single:** Paint
+Pre-album single: Three Colors
+Target window: Late August or early September 2026
+Status: Planned
 
-**Paint release date:** July 3, 2026
+Album: Visionary
+Album launch: September 25, 2026
+Status: Active Shipping
+```
 
-**Album:** Visionary
+Primary release source:
 
-**Album release window:** Fall 2026
+```text
+02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md
+```
 
-**Current campaign phase:** Pre-release / lead-single buildup
-
----
-
-## 3. Visionary Album Status
-
-Current status:
+## Visionary Album Status
 
 - Official track list is locked.
 - Lyrics are complete.
 - Song art is complete.
-- Album is moving from creative asset creation into release assembly, metadata prep, promo packs, lyric videos, Spotify Canvas concepts, and launch-calendar execution.
+- Paint has been released.
+- The project is in release assembly, single-campaign execution, metadata verification, lyric-video planning, Spotify Canvas planning, and launch-calendar construction.
 
----
-
-## 4. Official Visionary Track List
+## Official Visionary Track List
 
 1. Empty Canvas
 2. Paint
@@ -53,91 +61,127 @@ Current status:
 10. Visionary
 11. Smile
 
----
+## Current Campaign Priorities
 
-## 5. Active Campaign Priorities
+### In-Between
 
-### Paint Lead-Single Campaign
+Role:
 
-Primary message:
+```text
+The mechanical and psychological second chapter between nightmare and dream.
+```
 
-Pain becomes creation.
+Build next:
 
-Campaign angle:
+- Verified release packet
+- Metadata and credit check
+- Cover-art readiness check
+- Short-form campaign sequence
+- Lyric-video direction
+- Spotify Canvas concepts
+- YouTube description and pinned comment
+- TikTok, Facebook, X, YouTube Community, Pinterest, and LinkedIn copy
+- Release-day and post-release rhythm
 
-Now that the words can breathe, it is time to create. Paint begins the Visionary chapter.
+### Three Colors
 
-Current priorities:
+Role:
 
-- Keep the July 3, 2026 Paint release visible.
-- Mention that the Visionary album will be available in Fall 2026.
-- Build short-form lead-up videos without making the rollout feel rushed.
-- Keep the campaign human, emotional, and intentional.
-- Use strong visual identity: dark cinematic futuristic gothic, black/silver/red/white palette, sacred geometry, smoke, red circuitry, reflective black floors, corridor/portal imagery, and the locked Visionary album aesthetic.
+```text
+The cinematic pre-album cliffhanger that unlocks deeper awareness.
+```
 
-### Visionary Album Rollout
+Build after In-Between:
 
-Current priorities:
+- Pre-album campaign arc
+- Visual threshold language
+- Album countdown bridge
+- September 25 conversion path
 
-- Prepare song-by-song promo packs.
-- Build lyric video concepts.
-- Build Spotify Canvas concepts.
-- Build 9:16 short-form teaser prompts.
-- Build YouTube descriptions and pinned comments.
-- Prepare release-week and post-release content rhythm.
-- Avoid flooding the audience or making the 7-album roadmap look rushed.
+### Visionary Album
 
----
+Current gate:
 
-## 6. Promo Asset Checklist
+```text
+Classify every required asset as Ready, Missing, Needs Review, or Not Applicable.
+```
 
-### Completed / Available
+Required areas:
 
-- Visionary album concept and locked visual identity.
-- Official Visionary track list.
-- Lyrics for all 11 tracks.
-- Song art for all 11 tracks.
-- Lead single chosen: Paint.
-- Paint release date set: July 3, 2026.
-- Album release window set: Fall 2026.
+- Masters
+- Metadata
+- Artwork
+- Lyrics
+- Credits
+- Distribution fields
+- Visual assets
+- Promo packs
+- Platform descriptions
+- Launch calendar
+- Post-release continuation
 
-### To Build Next
+## Seven-Album Roadmap
 
-- Paint platform promo pack.
-- Paint short-form video scripts.
-- Paint 9:16 visual prompts.
-- Paint Spotify Canvas concepts.
-- Paint YouTube lyric video description.
-- Paint Facebook/X/Instagram/TikTok/Pinterest captions.
-- Visionary rollout calendar.
-- Song-by-song Visionary promo dashboard.
-- Metadata checklist for distribution.
+Primary source:
 
----
+```text
+02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md
+```
 
-## 7. Standard Lucid Syntax Promo Output
+Working Canon sequence:
 
-When Edward asks for Lucid Syntax promotion, use separate copy/paste blocks for major outputs.
+1. Words That Breathe
+2. Visionary
+3. Shadowwork
+4. Via Negativa
+5. The Human Syntax
+6. Infinite Bloom
+7. The Living Signal
 
-Recommended sections:
+The roadmap preserves long-term direction but does not activate later albums as immediate release fronts.
 
-1. Campaign Angle
-2. Emotional Hook
-3. Main Promo Caption
-4. Platform Versions
-5. Short-Form Video Script
-6. Visual Direction
+## Creative and Production Laws
+
+- Preserve a completely distinct opening identity for every song.
+- Favor intricate lyrics and intricate breakdown development.
+- Target approximately 2.5 to 3.5 minutes when the song format supports it.
+- Do not use choir elements unless Edward explicitly requests them.
+- Avoid repeatedly using the word or image `teeth`.
+- Avoid formulaic arrangement, repetitive chugs, recycled breakdowns, and generic genre clichés.
+- Keep public positioning honest without leading with AI as the primary identity.
+
+## Promotion Output Standard
+
+A full promotion package should include:
+
+1. Campaign angle
+2. Emotional hook
+3. Main promo caption
+4. Platform-specific versions
+5. Short-form video script
+6. Visual direction
 7. CTA
-8. Exactly 5 Hashtags
-9. Next Best Use
+8. Exactly five hashtags when requested by the established promo workflow
+9. Next best use
 
-Do not wrap the entire promotion package in one giant block.
+Keep major outputs separated for easy copying rather than placing the entire package inside one combined block.
 
----
+## Commands
 
-## 8. Commands
+```text
+/open lucid syntax
+/open visionary
+/open lucid roadmap
+/visionary assembly
+/in-between campaign
+/three colors campaign
+/lucid song: [title]
+/lucid promo: [title]
+/music canon status
+/music next move
+```
 
-Primary commands:
+Legacy-compatible phrases:
 
 ```text
 Open Lucid Syntax vault
@@ -145,37 +189,27 @@ Open Lucid Syntax dashboard
 Lucid Syntax promotion
 Lucid Syntax promotion for [song title]
 Visionary rollout
-Paint promo pack
-/start daily next move loop: Lucid Syntax
 ```
 
-Default behavior when opening this dashboard:
+## Open Loops
 
-1. Show current era and release status.
-2. Summarize active campaign priorities.
-3. Show open loops.
-4. Recommend one next best action.
+1. Archive the Paint pre-release loop and capture lessons.
+2. Complete the In-Between release packet.
+3. Complete the verified Visionary assembly inventory.
+4. Build the Three Colors pre-album campaign.
+5. Build the September 25 launch calendar.
+6. Preserve the seven-album roadmap without rushing future releases.
+7. Keep the separate Infinite Bloom music project distinct from Lucid Syntax.
 
----
-
-## 9. Open Loops
-
-- Build the Paint promo pack.
-- Build the Paint short-form lead-up sequence.
-- Build the Paint YouTube lyric video description and pinned comment.
-- Build the Paint Spotify Canvas concept set.
-- Build the Visionary rollout calendar.
-- Build a song-by-song Visionary promo index.
-- Keep rollout pacing human and intentional.
-
----
-
-## 10. Current Next Best Action
-
-Create the Paint promo pack as the first full Lucid Syntax loop-engineered campaign asset.
-
-Recommended command:
+## Current Next Best Action
 
 ```text
-Lucid Syntax promotion for Paint
+Complete the In-Between release packet and use it as the verified template for Three Colors and the album launch.
 ```
+
+## Status
+
+Status: Active  
+Version: v2.0  
+Updated: 2026-07-12  
+Owner: Lucid Syntax
