@@ -1,5 +1,37 @@
 # Gatherer's Ascension Changelog
 
+## 2026-07-12: Worldroot Command Network v1
+
+### Added
+
+- UI-first command-center game structure inspired by high-information field-operation dashboards
+- Dashboard, Field, Network, Gatherers, Codex, and Upgrades command views
+- Recruitable and individually progressing gatherers
+- One free starter gatherer and five future specialists
+- Twelve automated gathering zones across the four current biomes
+- Repeating automated extraction cycles
+- Offline gathering reconciliation
+- Gatherer assignment, recall, leveling, equipment upgrades, and lifetime statistics
+- Network level, network XP, command points, capacity, and operation telemetry
+- Zone unlock costs, progression requirements, danger, stability, rarity bonuses, and specialty matching
+- Automated base-material, quality-tier, and Mythic-variant discoveries
+- Live operation timers, progress bars, map sectors, activity logs, objectives, and system telemetry
+- Responsive command interface for desktop and mobile
+
+### Changed
+
+- The interface is now the primary game surface
+- Direct Phaser gathering is now the dedicated Field command view
+- Save schema upgraded from version 3 to version 4
+- Player progression and automated network progression now advance together
+
+### Validation
+
+- TypeScript validation passed
+- Vite production build passed
+- 60 application modules transformed successfully
+- Automated gathering smoke test returned materials and updated inventory and network totals
+
 ## 2026-07-12: Ascendant Visual Overhaul v1
 
 ### Added
