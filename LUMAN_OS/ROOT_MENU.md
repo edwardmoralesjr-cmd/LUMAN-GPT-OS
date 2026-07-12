@@ -38,13 +38,22 @@ Consolidate, protect, finish, then expand
 
 ACTIVE STRATEGIC FRONTS
 [1] Human Foundation: Life OS, family peace, regulation, sustainable attention
-[2] Shipping Front: Lucid Syntax, Visionary release assembly
+[2] Shipping Front: Lucid Syntax, In-Between campaign, Visionary release assembly
 [3] Deep-Building Front: Grand Generals Chapter 5 clearance and Roseborn continuity
+
+PROTECTED SECONDARY BUILD
+Infinite Bloom Music Project: dragon-cycle canon and Elarion prototype
 
 CURRENT TOP 3
 [1] Build the Daily Embodied Action loop
-[2] Create the Visionary release-assembly inventory
+[2] Complete the In-Between release packet and verified Visionary assembly
 [3] Run Grand Generals Chapter 5 clearance
+
+VISIONARY STATUS
+Paint released July 3, 2026
+In-Between targeted for late July 2026
+Three Colors targeted for late August or early September 2026
+Visionary album launches September 25, 2026
 
 ROSEBORN STATUS
 21-book architecture is active Working Canon.
@@ -52,7 +61,7 @@ ROSEBORN STATUS
 20-book blueprint remains an unrecovered historical reference.
 
 RECOMMENDED NEXT MOVE
-Run Grand Generals Chapter 5 clearance while building the Visionary release-assembly inventory.
+Complete the In-Between release packet while running Grand Generals Chapter 5 clearance and protecting the human foundation.
 
 MAIN MENU
 [1] Dashboard
@@ -85,6 +94,15 @@ Live priorities:
 Live open loops:
 00_CORE/OPEN_LOOPS.md
 
+Music section:
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
+
+Visionary release canon:
+02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md
+
+Lucid Syntax roadmap:
+02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md
+
 Book catalog:
 LUMAN_OS/book_section/BOOK_IDEA_MASTER_CATALOG.md
 
@@ -100,7 +118,7 @@ BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
 /dashboard
 ```
 
-Shows current mode, active fronts, priorities, open loops, warnings, and one next move.
+Shows current mode, human foundation, active fronts, protected secondary builds, priorities, open loops, warnings, and one next move.
 
 ### 2. Book Section
 
@@ -123,12 +141,24 @@ LUMAN_OS/book_section/BOOK_SECTION_MENU.md
 /open music
 ```
 
-Opens Lucid Syntax, Visionary release assembly, lyrics, visual assets, promo packs, and platform strategy.
+Opens Lucid Syntax, Visionary release assembly, the seven-album roadmap, lyrics, visual assets, promo systems, and the separate Infinite Bloom Music Project.
+
+Primary source:
+
+```text
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
+```
 
 Current shipping gate:
 
 ```text
-Visionary release-assembly inventory
+In-Between release packet and verified September 25 Visionary assembly
+```
+
+Protected secondary build:
+
+```text
+Infinite Bloom dragon-cycle album and first Elarion prototype
 ```
 
 ### 4. Life Operating System
@@ -199,7 +229,7 @@ Routes private maintenance and record workflows. GitHub stores public-safe struc
 /system next move
 ```
 
-Governs architecture, source authority, privacy, project states, dependencies, and Autopilot behavior.
+Governs architecture, source authority, privacy, project states, dependencies, protected secondary builds, and Autopilot behavior.
 
 ### 11. Harmonic Time System
 
@@ -212,6 +242,25 @@ Opens numerology, astrology, symbolic self-mapping, Harmonic Time Maps, compatib
 Accuracy rule:
 
 Do not claim exact astrology calculation unless reliable calculation support or documented chart placements are available.
+
+## Music Commands
+
+```text
+/open music
+/open lucid syntax
+/open visionary
+/open lucid roadmap
+/visionary assembly
+/in-between campaign
+/three colors campaign
+/lucid song: [title]
+/lucid promo: [title]
+/open infinite bloom music
+/open dragon cycle
+/dragon song: [dragon name]
+/music canon status
+/music next move
+```
 
 ## Roseborn Commands
 
@@ -291,13 +340,15 @@ Recommended Next Move
 [3] One deep-building project
 ```
 
+Protected secondary builds may preserve momentum but may not silently replace a strategic front.
+
 ### Source Discipline
 
 Project sources own content truth. The command center coordinates the portfolio. `00_CORE/` owns live operational status and protocol.
 
 ### Canon Discipline
 
-Published and Locked Canon outrank Working Canon. Unrecovered history must not be invented.
+Published and Locked Canon outrank Working Canon. Unrecovered history must not be invented. Music interpretation may not silently create Roseborn lore.
 
 ### Public Repository Firewall
 
@@ -306,18 +357,20 @@ Never commit credentials, financial ledgers, medical records, employer-confident
 ## Root Interface Status
 
 Status: Active  
-Version: v1.5  
-Last Updated: 2026-07-10  
+Version: v1.6  
+Last Updated: 2026-07-12  
 GitHub Role: Main entry point for LUMAN OS
 
 ## Latest Update
 
-- Resolved Roseborn 20 vs 23 vs 21 architecture at Working Canon level.
-- Activated the 21-book series structure.
-- Advanced the Roseborn gate to Grand Generals Chapter 5 clearance.
+- Created the modern Music Section.
+- Corrected Visionary release status and exact September 25, 2026 launch.
+- Captured the Lucid Syntax seven-album roadmap as Working Canon.
+- Installed the separate Infinite Bloom Music Project manifest, sound law, and dragon-cycle map.
+- Preserved the three-front portfolio while allowing controlled secondary development.
 
 ## Recommended Next Move
 
 ```text
-Run Grand Generals Chapter 5 clearance while building the Visionary release-assembly inventory.
+Complete the In-Between release packet while running Grand Generals Chapter 5 clearance and protecting the Daily Embodied Action loop.
 ```
