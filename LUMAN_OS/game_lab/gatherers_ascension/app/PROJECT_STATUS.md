@@ -3,16 +3,31 @@
 ## Current State
 
 **Playable Source:** Imported and actively expanding  
+**Game Direction:** UI-first gathering command RPG  
 **Collection Loop:** Version 1 implemented  
-**Visual Baseline:** Ascendant Visual Overhaul v1 implemented  
-**Engine Stack:** Phaser, TypeScript, Vite, and GitHub Pages retained  
+**Command Network:** Version 1 implemented  
+**Visual Baseline:** Ascendant Visual Overhaul v1 retained  
+**Engine Stack:** Phaser, TypeScript, Vite, and GitHub Pages  
 **Build Validation:** Passed  
 **TypeScript Check:** Passed  
 **Vite Production Build:** Passed  
-**Deployment Workflow:** Configured and previously confirmed successful  
+**Deployment Workflow:** Configured  
 **Target URL:** `https://edwardmoralesjr-cmd.github.io/LUMAN-GPT-OS/`  
-**Local Saves:** Implemented with IndexedDB and migrated to save version 3  
+**Local Saves:** IndexedDB with save migration to version 4  
 **Cloud Saves:** Implemented but inactive until Supabase and GitHub OAuth are configured
+
+## Command Network v1
+
+- Dashboard, Field, Network, Gatherers, Codex, and Upgrades views
+- High-information command-center interface
+- One starter gatherer and five recruitable specialists
+- Individual gatherer levels, XP, specialties, traits, equipment tiers, efficiency, endurance, and fortune
+- Twelve automated gathering zones across four biomes
+- Zone unlocking, deployment, recall, and operation timers
+- Repeating automated cycles and offline progress
+- Network level, XP, command points, capacity, activity logs, and lifetime yield
+- Automated material, quality, and Mythic discoveries
+- Shared inventory, Codex, player XP, and progression between direct and automated play
 
 ## Premium Visual Systems
 
@@ -25,32 +40,19 @@
 - Quality and rarity auras, orbiting sparks, animated outlines, pulses, bobbing, and scale response
 - Layered gatherer avatar with hood, cloak, rune core, Worldpack detail, idle motion, movement trails, shadow, and level-based visual growth
 - Unique orbiting axe, pickaxe, sickle, and relic-glove emblems with evolving visual tiers
-- Dual animated gathering rings
-- Tap destination indicators
 - Harvest shockwaves, particle bursts, floating reward typography, flashes, camera shake, and Mythic zoom effects
-- Premium biome title plate and smooth fade transitions
-- Worldroot Ascendant interface shell with upgraded glass panels, ornamental framing, animated progress displays, refined menus, and responsive mobile styling
-- Enhanced Codex entries, Mythic cards, unidentified silhouettes, quality chips, and full-screen discovery presentation
-- Reduced-motion support for major interface animation
+- Responsive Worldroot command interface with gauges, progress bars, operation queues, maps, activity feeds, objectives, and system telemetry
 
 ## Core Playable Systems
 
 - Desktop, tap-to-walk, and touch movement
 - Automatic nearby resource gathering
-- Resource disappearance and timed respawning
 - Four biomes
-- Ten base resources
-- Ten hidden Mythic rare variants
+- Ten base resources and ten hidden Mythic variants
 - Five specimen qualities: Standard, Fine, Perfected, Ancient, and Enchanted
 - Full Collection Codex and permanent first-discovery records
-- Resource lore, unique properties, potential uses, rarity, and native-biome records
-- Character levels, XP, and permanent stat points
-- Four gathering mastery tracks
-- Four tool-evolution paths
-- Four equipment-upgrade paths
-- Gear Level biome gates
-- Unlimited Worldpack inventory
-- Quality-aware market values
+- Character levels, XP, permanent stat points, mastery, tool evolution, and Gear Level gates
+- Unlimited Worldpack inventory and quality-aware market values
 - Critical Harvest, Bountiful Cluster, Echo Harvest, Rare Mutation, and Discovery Resonance events
 - Fair discovery momentum that softens long rare-find dry streaks
 - Codex milestones at 5, 10, 15, and 20 discoveries
@@ -58,8 +60,6 @@
 - Optional authenticated cloud-save reconciliation
 
 ## Validation Record
-
-The Ascendant Visual Overhaul source was tested with:
 
 ```bash
 npm run build
@@ -69,22 +69,23 @@ Result:
 
 ```text
 TypeScript validation passed
-58 modules transformed
+60 modules transformed
 Production HTML generated
 Production CSS generated
 Production JavaScript generated
 Build completed successfully
 ```
 
-Vite reported a non-blocking large-bundle warning because Phaser is included in the main JavaScript chunk. This does not prevent the game from building or running.
+A separate automation smoke test assigned Rowan Vale to Worldwood Grove, simulated elapsed time, collected 22 materials, and verified inventory and network totals.
 
-Automated browser screenshot validation was attempted, but the sandbox Chromium environment could not initialize WebGL. Visual playtesting should therefore be completed through the live GitHub Pages build.
+Vite reported a non-blocking large-bundle warning because Phaser is included in the main JavaScript chunk. This does not prevent the game from building or running.
 
 ## Design Sources
 
 ```text
 LUMAN_OS/game_lab/gatherers_ascension/GAME_DESIGN.md
 LUMAN_OS/game_lab/gatherers_ascension/VISUAL_DIRECTION.md
+LUMAN_OS/game_lab/gatherers_ascension/UI_FIRST_COMMAND_SYSTEM.md
 LUMAN_OS/game_lab/gatherers_ascension/ROADMAP.md
 LUMAN_OS/game_lab/gatherers_ascension/CHANGELOG.md
 ```
@@ -101,15 +102,15 @@ The workflow builds the nested app and publishes the generated `dist` directory 
 
 ## Known Limitations
 
-- The current visual language uses detailed procedural artwork instead of final hand-painted sprites, texture atlases, or commissioned character illustrations
-- There is no character-creation screen yet
-- Cloud saving requires external Supabase configuration
-- Audio, music, haptic feedback, advanced weather, contracts, crafting, fishing, excavation, and specialization trees remain future systems
-- Mythic material infusion is designed but not yet implemented
-- In-game toggles for camera shake, screen flash, particles, and performance quality still need to be added
+- Automated operations currently use one gatherer per zone rather than multi-member expedition teams
+- Gatherer equipment is represented by a single equipment tier rather than individual item slots
+- Zone hazards and environmental events are displayed as intelligence but are not yet full simulation systems
+- The current world map is a premium command visualization rather than a freely zoomable geographic atlas
+- Final hand-authored portraits, icons, biome maps, and tool artwork remain future asset passes
+- Audio, music, haptics, accessibility toggles, and performance-quality controls remain future systems
 
 ## Recommended Next Move
 
 ```text
-Open the live game after deployment completes, hard refresh the page, and playtest the Ascendant visuals on desktop and mobile before beginning the sound and hand-authored asset pass.
+Playtest the command dashboard, deploy Rowan Vale, confirm offline yield, and then build expedition teams, research, and individual gatherer equipment.
 ```
