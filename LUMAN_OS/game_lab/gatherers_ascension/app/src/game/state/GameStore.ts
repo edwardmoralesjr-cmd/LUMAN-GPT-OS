@@ -14,8 +14,9 @@ import {
   type StatId,
   type ToolId,
 } from '../data/content';
+import { gathererTemplates, gatheringZones, type GatheringZoneDefinition } from '../data/network';
 import { gearLevel, gearUpgradeCost, skillXpForLevel, toolUpgradeCost, xpForLevel } from '../systems/Progression';
-import { createInitialState, normalizeState, type GameState } from './GameState';
+import { createInitialState, normalizeState, type GameState, type GathererState, type NetworkActivity } from './GameState';
 
 export interface NodeRoll {
   resourceId: string;
@@ -261,6 +262,159 @@ export class GameStore {
     this.toast('Journey complete', `You entered ${biomes[biomeId].name}.`);
   }
 
+  maxGathererSlots(): number {
+    return Math.min(8, 1 + Math.floor((this.state.level - 1) / 5) + Math.floor((this.state.network.level - 1) / 5));
+  }
+
+  zoneUnlockCost(zoneId: string): number {
+    const zone = gatheringZones[zoneId];
+    return zone ? zone.tier * 180 + zone.unlockLevel * 25 : 0;
+  }
+
+  gathererUpgradeCost(gathererId: string): number {
+    const gatherer = this.state.network.gatherers.find((item) => item.id === gathererId);
+    return gatherer ? 140 + gatherer.level * 90 + gatherer.equipmentLevel * 120 : 0;
+  }
+
+  automationCycleDuration(gatherer: GathererState, zone: GatheringZoneDefinition): number {
+    const specialtyBonus = gatherer.specialty === zone.specialty ? 1.18 : 1;
+    const equipmentBonus = 1 + Math.max(0, gatherer.equipmentLevel - 1) * 0.06;
+    const networkBonus = 1 + Math.max(0, this.state.network.level - 1) * 0.015;
+    return Math.max(7_000, (zone.durationSeconds * 1000) / (gatherer.efficiency * specialtyBonus * equipmentBonus * networkBonus));
+  }
+
+  recruitGatherer(templateId: string): void {
+    const template = gathererTemplates[templateId];
+    if (!template) return;
+    if (this.state.network.gatherers.some((gatherer) => gatherer.templateId === templateId)) return;
+    if (this.state.level < template.unlockLevel || this.state.coins < template.recruitCost) return;
+    if (this.state.network.gatherers.length >= this.maxGathererSlots()) return;
+
+    this.state.coins -= template.recruitCost;
+    const gatherer: GathererState = {
+      id: `gatherer-${template.id}`,
+      templateId: template.id,
+      name: template.name,
+      role: template.role,
+      specialty: template.specialty,
+      level: 1,
+      xp: 0,
+      equipmentLevel: 1,
+      efficiency: template.efficiency,
+      endurance: template.endurance,
+      fortune: template.fortune,
+      totalGathered: 0,
+      cyclesCompleted: 0,
+      assignedZoneId: null,
+      lastCycleAt: null,
+    };
+    this.state.network.gatherers.push(gatherer);
+    this.addNetworkActivity('Gatherer Recruited', `${template.name}, ${template.role}, joined the Worldroot network.`, 'success');
+    this.touch();
+    this.emitState();
+    this.toast('New gatherer recruited', `${template.name} is ready for deployment.`);
+  }
+
+  unlockZone(zoneId: string): void {
+    const zone = gatheringZones[zoneId];
+    if (!zone || this.state.network.unlockedZones.includes(zoneId)) return;
+    if (this.state.level < zone.unlockLevel || !this.state.unlockedBiomes.includes(zone.biomeId)) return;
+    const cost = this.zoneUnlockCost(zoneId);
+    if (this.state.coins < cost) return;
+    this.state.coins -= cost;
+    this.state.network.unlockedZones.push(zoneId);
+    this.state.network.xp += zone.tier * 25;
+    this.resolveNetworkLevels();
+    this.addNetworkActivity('Zone Activated', `${zone.name} is now connected to the gathering network.`, 'success');
+    this.touch();
+    this.emitState();
+    this.toast('Gathering zone unlocked', zone.name);
+  }
+
+  assignGatherer(gathererId: string, zoneId: string): void {
+    const gatherer = this.state.network.gatherers.find((item) => item.id === gathererId);
+    const zone = gatheringZones[zoneId];
+    if (!gatherer || !zone || gatherer.assignedZoneId) return;
+    if (!this.state.network.unlockedZones.includes(zoneId)) return;
+    if (this.state.network.gatherers.some((item) => item.assignedZoneId === zoneId)) return;
+    gatherer.assignedZoneId = zoneId;
+    gatherer.lastCycleAt = Date.now();
+    this.addNetworkActivity('Deployment Started', `${gatherer.name} deployed to ${zone.name}.`, 'normal');
+    this.touch();
+    this.emitState();
+    this.toast('Gatherer deployed', `${gatherer.name} is now operating in ${zone.name}.`);
+  }
+
+  recallGatherer(gathererId: string): void {
+    this.processAutomation(Date.now());
+    const gatherer = this.state.network.gatherers.find((item) => item.id === gathererId);
+    if (!gatherer || !gatherer.assignedZoneId) return;
+    const zoneName = gatheringZones[gatherer.assignedZoneId]?.name ?? 'the field';
+    gatherer.assignedZoneId = null;
+    gatherer.lastCycleAt = null;
+    this.addNetworkActivity('Gatherer Recalled', `${gatherer.name} returned from ${zoneName}.`, 'normal');
+    this.touch();
+    this.emitState();
+  }
+
+  upgradeGatherer(gathererId: string): void {
+    const gatherer = this.state.network.gatherers.find((item) => item.id === gathererId);
+    if (!gatherer) return;
+    const cost = this.gathererUpgradeCost(gathererId);
+    if (this.state.coins < cost) return;
+    this.state.coins -= cost;
+    gatherer.equipmentLevel += 1;
+    gatherer.efficiency += 0.055;
+    gatherer.endurance += 1;
+    if (gatherer.equipmentLevel % 3 === 0) gatherer.fortune += 1;
+    this.addNetworkActivity('Loadout Improved', `${gatherer.name}'s equipment reached tier ${gatherer.equipmentLevel}.`, 'success');
+    this.touch();
+    this.emitState();
+    this.toast('Gatherer upgraded', `${gatherer.name} is now more efficient.`);
+  }
+
+  processAutomation(now = Date.now()): number {
+    let totalCollected = 0;
+    let firstDiscovery: { definition: ResourceDefinition; quality: HarvestQuality } | null = null;
+
+    for (const gatherer of this.state.network.gatherers) {
+      if (!gatherer.assignedZoneId) continue;
+      const zone = gatheringZones[gatherer.assignedZoneId];
+      if (!zone) continue;
+      if (!gatherer.lastCycleAt) gatherer.lastCycleAt = now;
+      const cycleDuration = this.automationCycleDuration(gatherer, zone);
+      const elapsed = Math.max(0, now - gatherer.lastCycleAt);
+      const cycles = Math.min(96, Math.floor(elapsed / cycleDuration));
+      if (cycles <= 0) continue;
+
+      let gathererCollected = 0;
+      let rareFound = false;
+      for (let cycle = 0; cycle < cycles; cycle += 1) {
+        const result = this.resolveAutomatedCycle(gatherer, zone);
+        gathererCollected += result.quantity;
+        totalCollected += result.quantity;
+        if (result.newDiscovery && !firstDiscovery) firstDiscovery = { definition: result.definition, quality: result.quality };
+        if (result.definition.isVariant || result.quality === 'Ancient' || result.quality === 'Enchanted') rareFound = true;
+      }
+
+      gatherer.lastCycleAt += cycles * cycleDuration;
+      this.addNetworkActivity(
+        rareFound ? 'Rare Operation Result' : 'Automated Yield Secured',
+        `${gatherer.name} completed ${cycles} cycle${cycles === 1 ? '' : 's'} in ${zone.name} and returned ${gathererCollected} materials.`,
+        rareFound ? 'rare' : 'success',
+      );
+    }
+
+    if (totalCollected > 0) {
+      this.resolveNetworkLevels();
+      this.resolveLevelUps();
+      this.touch();
+      this.emitState();
+      if (firstDiscovery) this.emit({ type: 'discovery', ...firstDiscovery });
+    }
+    return totalCollected;
+  }
+
   private rollQuality(forceElevated = false): HarvestQuality {
     const fortune = this.state.stats.fortune;
     const perception = this.state.stats.perception;
@@ -280,6 +434,106 @@ export class GameStore {
 
   private isBoostActive(): boolean {
     return this.state.activeBoostUntil > Date.now();
+  }
+
+  private resolveAutomatedCycle(gatherer: GathererState, zone: GatheringZoneDefinition): {
+    quantity: number; definition: ResourceDefinition; quality: HarvestQuality; newDiscovery: boolean;
+  } {
+    const fallbackResourceId = zone.resources[0];
+    if (!fallbackResourceId) throw new Error(`Zone ${zone.id} has no resource pool.`);
+    const baseResourceId = zone.resources[Math.floor(Math.random() * zone.resources.length)] ?? fallbackResourceId;
+    let resourceId: string = baseResourceId;
+    const variantId = variantByBase[baseResourceId];
+    const variant = variantId ? rareVariants[variantId] : undefined;
+    const leaderBonus = this.state.network.gatherers.some((item) => item.role === 'Expedition Leader' && item.assignedZoneId) ? 0.004 : 0;
+    const variantChance = Math.min(0.09, (variant?.spawnChance ?? 0) + zone.rarityBonus + gatherer.fortune * 0.00018 + leaderBonus);
+    if (variant && Math.random() < variantChance) resourceId = variant.id;
+
+    const definition = allResources[resourceId] ?? resources[baseResourceId];
+    if (!definition) throw new Error(`Unknown automated resource: ${resourceId}`);
+    const quality = this.rollAutomationQuality(zone.rarityBonus, gatherer.fortune);
+    const specialtyBonus = gatherer.specialty === zone.specialty ? 1.25 : 1;
+    const commandBonus = 1 + Math.max(0, this.state.network.level - 1) * 0.025;
+    const quantity = Math.max(1, Math.floor(zone.baseYield * gatherer.efficiency * specialtyBonus * commandBonus * (1 + gatherer.equipmentLevel * 0.07) * (0.82 + Math.random() * 0.38)));
+    const key = inventoryKey(resourceId, quality);
+    this.state.inventory[key] = (this.state.inventory[key] ?? 0) + quantity;
+
+    const newDiscovery = !this.state.discovered.includes(resourceId);
+    if (newDiscovery) {
+      this.state.discovered.push(resourceId);
+      if (definition.isVariant) this.state.totals.variantsFound += 1;
+      this.resolveCollectionMilestones();
+    }
+    const qualities = this.state.discoveredQualities[resourceId] ?? [];
+    if (!qualities.includes(quality)) this.state.discoveredQualities[resourceId] = [...qualities, quality];
+
+    gatherer.totalGathered += quantity;
+    gatherer.cyclesCompleted += 1;
+    gatherer.xp += quantity * zone.tier * 3;
+    while (gatherer.xp >= this.gathererXpForLevel(gatherer.level)) {
+      gatherer.xp -= this.gathererXpForLevel(gatherer.level);
+      gatherer.level += 1;
+      gatherer.efficiency += 0.025;
+      gatherer.endurance += 1;
+    }
+
+    this.state.network.xp += quantity * zone.tier * 2;
+    this.state.network.totalAutomatedGathered += quantity;
+    this.state.network.expeditionsCompleted += 1;
+    this.state.xp += Math.max(1, Math.floor(quantity * zone.tier * 0.45));
+    this.state.totals.gathered += quantity;
+    if (definition.isVariant) {
+      this.state.totals.rareFinds += 1;
+      this.state.rareMomentum = 0;
+    } else {
+      this.state.rareMomentum = Math.min(400, this.state.rareMomentum + 1);
+    }
+    if (qualityDefinitions[quality].rank >= 2) this.state.totals.perfectedFinds += 1;
+
+    return { quantity, definition, quality, newDiscovery };
+  }
+
+  private rollAutomationQuality(rarityBonus: number, fortune: number): HarvestQuality {
+    const roll = Math.random();
+    const enchanted = 0.001 + rarityBonus * 0.08 + fortune * 0.00008;
+    const ancient = enchanted + 0.006 + rarityBonus * 0.16 + fortune * 0.00018;
+    const perfected = ancient + 0.035 + rarityBonus * 0.28 + fortune * 0.00035;
+    const fine = perfected + 0.18 + rarityBonus * 0.4 + fortune * 0.0008;
+    if (roll < enchanted) return 'Enchanted';
+    if (roll < ancient) return 'Ancient';
+    if (roll < perfected) return 'Perfected';
+    if (roll < fine) return 'Fine';
+    return 'Standard';
+  }
+
+  private gathererXpForLevel(level: number): number {
+    return Math.floor(90 + Math.pow(level, 1.42) * 70);
+  }
+
+  private resolveNetworkLevels(): void {
+    let needed = this.networkXpForLevel(this.state.network.level);
+    while (this.state.network.xp >= needed) {
+      this.state.network.xp -= needed;
+      this.state.network.level += 1;
+      this.state.network.commandPoints += 1;
+      this.toast('Network command rank increased', `Worldroot Network reached level ${this.state.network.level}.`);
+      needed = this.networkXpForLevel(this.state.network.level);
+    }
+  }
+
+  private networkXpForLevel(level: number): number {
+    return Math.floor(140 + Math.pow(level, 1.5) * 95);
+  }
+
+  private addNetworkActivity(title: string, detail: string, tone: NetworkActivity['tone']): void {
+    this.state.network.activity.unshift({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      timestamp: Date.now(),
+      title,
+      detail,
+      tone,
+    });
+    this.state.network.activity = this.state.network.activity.slice(0, 40);
   }
 
   private resolveCollectionMilestones(): void {
@@ -321,7 +575,7 @@ export class GameStore {
   private surpriseMessage(event: string, name: string, quantity: number): string {
     if (event === 'Rare mutation') return `${name} transformed at the moment of harvest.`;
     if (event === 'Bountiful cluster') return `The node opened into a cluster and yielded ${quantity}.`;
-    if (event === 'Echo harvest') return 'The harvest echoed through the ground and doubled its yield.';
+    if (event === 'Echo harvest') return `The harvest echoed through the ground and doubled its yield.`;
     return 'For 30 seconds, rare variants and elevated qualities are more likely.';
   }
 
