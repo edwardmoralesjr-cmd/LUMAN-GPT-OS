@@ -1,195 +1,258 @@
 # LUMAN OS Dashboard
 
-**Purpose:** Provide Edward with a single command-center view of the current LUMAN OS state, active priorities, open loops, vaults, commands, and next actions.
+## Purpose
 
----
+Provide one command-center view of LUMAN OS status, strategic fronts, project gates, source files, open loops, and next actions.
 
-## 1. Current Mission
+## Current Mission
 
-Build LUMAN OS into Edward’s external GitHub-backed second brain.
+Build LUMAN OS into Edward's durable GitHub-backed second brain while protecting family peace, useful attention, creative integrity, and public-repository safety.
 
-The system has three layers:
+## System Layers
 
-1. **Chat layer:** active reasoning, refinement, planning, creative work, and decision support.
-2. **GitHub layer:** durable source of truth for commands, vaults, GPT systems, session logs, reusable protocols, and loop-engineered workflows.
-3. **Vault layer:** organized project memory across life, creative work, music, Roseborn, vehicle/home, quality systems, and GPT development.
+```text
+Chat                       = living intelligence, reasoning, creation, and active update room
+GitHub                     = durable public-safe external brain
+LUMAN_OS/                  = modern interface and section menus
+LUMAN_OS/system_settings/  = orchestration, governance, project state, and source authority
+00_CORE/                   = protocols, routing, live priorities, open loops, updates, and loops
+Project vaults             = domain-specific truth, assets, canon, and workflows
+```
 
-The current build direction is small-loop engineering: create repeatable loops that reduce overwhelm and turn each session into a clear next action.
+## Current Mode
 
----
+```text
+Consolidate, protect, finish, then expand
+```
 
-## 2. Core Control Files
+Snapshot: 2026-07-12
 
-Use these files as the main dashboard spine:
+## Strategic Fronts
 
-- `README.md` — repo purpose and high-level mission
-- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` — command routing source of truth
-- `COMMANDS.md` — activation command library
-- `DEPLOYMENT_INDEX.md` — deployment-ready systems and command routing
-- `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` — GitHub update rules
-- `00_CORE/LUMAN_CREATE_SUMMARY_PACKET_TEMPLATE.md` — summary packet structure
-- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md` — loop engineering doctrine
-- `00_CORE/LUMAN_LOOP_COMMANDS.md` — loop command surface
-- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md` — first small operational loop
-- `00_CORE/ACTIVE_PRIORITIES.md` — current priorities
-- `00_CORE/OPEN_LOOPS.md` — unresolved tasks and next build items
-- `00_CORE/CHANGELOG.md` — system history
-- `07_KNOWLEDGE_PACKS/LUMAN_KNOWLEDGE_PACK.md` — durable LUMAN OS knowledge
-- `06_SESSION_LOGS/` — committed session summaries
+```text
+[1] Human Foundation: Life OS, family peace, regulation, sustainable attention
+[2] Shipping Front: In-Between campaign and Visionary release assembly
+[3] Deep-Building Front: Grand Generals Chapter 5 clearance and Roseborn continuity
+```
 
----
+Protected secondary build:
 
-## 3. Current Active Priorities
+```text
+Infinite Bloom Music Project: dragon-cycle canon and first Elarion prototype
+```
 
-- Build LUMAN OS into Edward’s external GitHub-backed second brain.
-- Keep GitHub as the durable source of truth for core workflows, commands, vaults, and GPT systems.
-- Use chat as the active update room for refining and committing new LUMAN OS changes.
-- Expand and maintain `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` as the routing source of truth.
-- Build LUMAN OS through small loop-engineered workflows instead of overwhelming one-shot systems.
-- Use `/start daily next move loop` as the default small-start command when Edward wants one best action.
+A protected secondary build may preserve controlled momentum but may not silently replace one of the three strategic fronts.
 
----
+## Current Top 3
 
-## 4. Current Open Loops
+1. Build the Daily Embodied Action loop.
+2. Complete the In-Between release packet and verified Visionary assembly.
+3. Run Grand Generals Chapter 5 clearance.
 
-### LUMAN OS GitHub Brain
+## Music Status
 
-- Test `/start daily next move loop` across LUMAN OS, Lucid Syntax, Roseborn, and Life OS.
-- Mirror key loop commands into root `COMMANDS.md` and `DEPLOYMENT_INDEX.md` when safe.
-- Build fuller vault indexes for Lucid Syntax, Life OS, OMNI-Vault, KIA records, and Work Quality systems.
-- Add module-level changelogs where missing.
-- Continue converting major conversations into session logs when Edward says `Create summary` and `Commit this summary to GitHub`.
+### Lucid Syntax
 
-### Roseborn Universe
+```text
+Project positioning: Human heart, AI vessel.
+```
 
-- Roseborn dashboard created.
-- Roseborn command routing exists in `03_ROSEBORN_UNIVERSE/ROSEBORN_COMMANDS.md` and `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`.
-- Next Roseborn build: create `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`.
+```text
+Paint          Released July 3, 2026
+In-Between     Next single, late July 2026 target
+Three Colors   Pre-album single, late August or early September target
+Visionary      Album launch September 25, 2026
+```
 
----
+Primary sources:
 
-## 5. Primary Vaults
+```text
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md
+02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md
+```
 
-### 00_CORE
+### Infinite Bloom Music
 
-Core protocols, command routing, commands, loop engineering, changelog, open loops, active priorities, dashboards, and GitHub update rules.
+Role:
 
-Primary routing file:
+```text
+Separate official musical vessel of the Infinite Bloom and Roseborn Universe.
+```
 
-- `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md`
+Current state:
 
-Primary loop files:
+- Project manifest installed
+- Canonical sound law installed
+- Twelve-dragon album map installed
+- Elarion prototype is the next controlled gate
+- No public artist name or release date locked
 
-- `00_CORE/LUMAN_LOOP_ENGINEERING_SYSTEM.md`
-- `00_CORE/LUMAN_LOOP_COMMANDS.md`
-- `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`
+Primary source:
 
-### 01_LIFE_OS
+```text
+LUMAN_OS/music_section/infinite_bloom_music/
+```
 
-Family, finances, health, home, routines, weekly syncs, life operating systems, and decision support.
+## Roseborn Status
 
-### 02_LUCID_SYNTAX
+```text
+21-book architecture = Active Working Canon
+23-book variant       = Archived expanded variant
+20-book blueprint     = Unrecovered non-governing history
+```
 
-Music rollout systems, Visionary campaign, promo packs, lyric video workflows, visuals, album roadmaps, and human-heart / AI-vessel positioning.
+Current gate:
 
-### 03_ROSEBORN_UNIVERSE
+```text
+Grand Generals Chapter 5 clearance
+```
 
-Roseborn Saga, Infinite Bloom, Codices, dragons, Grand Generals, canon hierarchy, doctrine, lore, timelines, and mythic architecture.
+## Human Foundation Status
 
-Primary dashboard:
+Current gate:
 
-- `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md`
+```text
+Create LUMAN_OS/life_os/DAILY_EMBODIED_ACTION_LOOP.md
+```
 
-Primary command file:
+Operating law:
 
-- `03_ROSEBORN_UNIVERSE/ROSEBORN_COMMANDS.md`
+```text
+Creative expansion may not outrank family peace, regulation, health-supporting action, or sustainable attention.
+```
 
-### 04_GPT_BUILDER_LAB
+## Core Control Files
 
-Custom GPT development, deployment instructions, test prompts, module templates, and prompt systems.
+```text
+LUMAN_OS/ROOT_MENU.md
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+LUMAN_OS/MASTER_BRIDGE_INDEX.md
+00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
+00_CORE/ACTIVE_PRIORITIES.md
+00_CORE/OPEN_LOOPS.md
+00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
+COMMANDS.md
+DEPLOYMENT_INDEX.md
+```
 
-### 05_WORK_QUALITY_SYSTEMS
+## Vault Status
 
-Work-quality dashboards, measurement systems, Minitab/SPC templates, non-sensitive process improvement frameworks, and analysis workflows.
+### `00_CORE/`
 
-### 06_SESSION_LOGS
+Active protocols, routing, live status, updates, loops, and changelog.
 
-Durable summaries of meaningful LUMAN OS sessions.
+### `LUMAN_OS/system_settings/`
 
-### 07_KNOWLEDGE_PACKS
+Active orchestration, source authority, project registry, Autopilot law, and execution planning.
 
-Condensed durable knowledge that helps future LUMAN sessions stay aligned.
+### `LUMAN_OS/book_section/`
 
----
+Active book portfolio, Roseborn tools, publishing, manuscript, and recovery systems.
 
-## 6. Main Commands
+### `LUMAN_OS/music_section/`
 
-- `Open LUMAN OS`
-- `Open LUMAN dashboards`
-- `Show command routing`
-- `Quality check LUMAN OS`
-- `Use GitHub`
-- `Update LUMAN OS:`
-- `Create summary`
-- `Commit this summary to GitHub`
-- `/start daily next move loop`
-- `/start daily next move loop: [project]`
-- `/start loop: [loop name]`
-- `/run quality loop on this`
-- `/run decision loop`
-- `/upgrade luman os`
-- `Open Roseborn vault`
-- `Open Roseborn dashboard`
-- `Open Lucid Syntax vault`
-- `Lucid Syntax promotion`
-- `Roseborn canon`
-- `Open Dragon Doctrine`
-- `Open Infinite Bloom`
-- `Life OS sync`
-- `Run Weekly Sync`
-- `KIA service records`
-- `Work quality dashboard`
-- `OMNI-Vault template`
+Active modern music command center, Lucid Syntax routing, and Infinite Bloom Music project.
 
----
+### `01_LIFE_OS/` and `LUMAN_OS/life_os/`
 
-## 7. Dashboard Response Format
+Human foundation, family, regulation, and embodied practice.
 
-When Edward says `Open LUMAN dashboards`, respond with:
+### `02_LUCID_SYNTAX/`
 
-1. **System Status** — current mission and whether the GitHub brain is active.
-2. **Active Priorities** — top current priorities from `00_CORE/ACTIVE_PRIORITIES.md`.
-3. **Open Loops** — next unresolved tasks from `00_CORE/OPEN_LOOPS.md`.
-4. **Vault Status** — quick scan of each major vault or module.
-5. **Available Commands** — most useful commands for the moment.
-6. **Next Best Action** — one recommended action, not a long list.
+Lucid Syntax release canon, roadmap, dashboard, and campaign state.
 
-When Edward uses `/start daily next move loop`, respond with the smaller loop format from `00_CORE/LUMAN_DAILY_NEXT_MOVE_LOOP.md`.
+### `03_ROSEBORN_UNIVERSE/`
 
----
+Legacy Roseborn history and project sources bridged to modern Canon Guardian tooling.
 
-## 8. Safety Rules
+### `04_GPT_BUILDER_LAB/` and `LUMAN_OS/gpt_builder_lab/`
 
-Do not store the following in the public repository:
+Custom GPT modules, knowledge files, audits, and deployment systems.
 
-- API keys, passwords, credentials, or tokens
-- Seed phrases or private encryption material
-- Live financial balances or private account data
-- Employer-confidential information
-- Sensitive private family records
-- Anything that would cause harm if exposed
+### `05_WORK_QUALITY_SYSTEMS/`
 
-Use GitHub for durable structure, not private secrets.
+Reusable non-confidential quality, measurement, SPC, improvement, and career tools.
 
----
+### `06_SESSION_LOGS/`
 
-## 9. Current Next Best Action
+Durable records of meaningful LUMAN OS updates.
 
-Test the first operational loop in real use:
+### `07_KNOWLEDGE_PACKS/`
 
-- `/start daily next move loop: LUMAN OS`
+Condensed durable knowledge and legacy creative-vault functions.
 
-After the loop has proven useful, continue with:
+## Current Open Loops
 
-- `03_ROSEBORN_UNIVERSE/ROSEBORN_CANON_INDEX.md`
-- `02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md`
+### Human Foundation
+
+- Build Daily Embodied Action loop.
+- Establish weekly LUMAN sync rhythm.
+- Add Rose Shadow safety and ethics protocol.
+
+### Visionary
+
+- Archive Paint pre-release lessons.
+- Build In-Between release packet.
+- Build Three Colors pre-album campaign.
+- Complete September 25 album assembly and calendar.
+
+### Infinite Bloom Music
+
+- Build Elarion identity sheet.
+- Draft and canon-audit Elarion prototype.
+- Build remaining dragon identity sheets.
+
+### Roseborn
+
+- Sync 21-book numbering into story bible and continuity.
+- Run Chapter 5 clearance.
+- Create `CHAPTER_5_CLEARANCE.md` after approval.
+
+### Book Portfolio
+
+- Recover missing manuscripts, Wildbound Codex, Veilborn work, and oracle master list.
+- Define the relationship among the consciousness and sovereignty books.
+
+## Primary Commands
+
+```text
+/open luman
+/dashboard
+/open command center
+/open books
+/open music
+/open lucid syntax
+/in-between campaign
+/open infinite bloom music
+/open dragon cycle
+/open life os
+/weekly sync
+/open roseborn canon guardian
+/clearance
+/open harmonic time system
+/open gpt lab
+/open work tools
+/open records
+/next move
+```
+
+## Safety Rules
+
+Never store credentials, seed phrases, private keys, live financial data, medical records, employer-confidential information, sensitive family records, or unnecessary private identifiers in the public repository.
+
+## Status
+
+Status: Active  
+Version: v2.0  
+Updated: 2026-07-12  
+Owner: LUMAN OS Core
+
+## Recommended Next Move
+
+```text
+Complete the In-Between release packet while running Grand Generals Chapter 5 clearance and protecting the Daily Embodied Action loop.
+```
