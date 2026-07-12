@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#09110f" />
     <meta
       name="description"
-      content="Gatherer's Ascension is a peaceful visual gathering RPG about harvesting, leveling, upgrading gear, and unlocking new biomes."
+      content="Gatherer's Ascension is a peaceful visual gathering RPG about harvesting, leveling, upgrading gear, completing a Collection Codex, and discovering hidden rare materials."
     />
     <title>Gatherer's Ascension</title>
   </head>
@@ -41,6 +41,7 @@
           <nav class="tabs" aria-label="Game panels">
             <button class="tab active" data-tab="status">Status</button>
             <button class="tab" data-tab="inventory">Inventory</button>
+            <button class="tab" data-tab="codex">Codex</button>
             <button class="tab" data-tab="market">Market</button>
             <button class="tab" data-tab="biomes">Biomes</button>
           </nav>
@@ -49,6 +50,7 @@
       </main>
 
       <div id="toast-layer" class="toast-layer" aria-live="polite"></div>
+      <div id="discovery-layer" class="discovery-layer" aria-live="assertive"></div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
