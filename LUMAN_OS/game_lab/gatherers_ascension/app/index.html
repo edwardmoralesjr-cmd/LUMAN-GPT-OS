@@ -3,60 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#050b09" />
-    <meta
-      name="description"
-      content="Gatherer's Ascension is a premium visual gathering RPG about harvesting, leveling, evolving tools, completing a Collection Codex, and discovering hidden Mythic materials."
-    />
+    <meta name="theme-color" content="#040a08" />
+    <meta name="description" content="Gatherer's Ascension is a UI-first gathering command RPG about exploration, automated deployments, rare discoveries, and building a world-spanning gathering network." />
     <title>Gatherer's Ascension</title>
   </head>
   <body>
-    <div id="app">
-      <header class="topbar glass-panel">
+    <div id="app" class="command-app">
+      <header class="command-header glass-panel">
         <div class="brand-block">
           <div class="brand-sigil" aria-hidden="true">✦</div>
           <div class="brand-copy">
-            <p class="eyebrow">WORLDROOT ASCENDANT BUILD</p>
+            <p class="eyebrow">WORLDROOT INTELLIGENCE NETWORK</p>
             <h1>Gatherer's Ascension</h1>
-            <div class="brand-subtitle">A living world of discovery, mastery, and rare materials</div>
+            <div class="brand-subtitle">Resource command, field operations, and living-world discovery</div>
           </div>
         </div>
-        <div class="topbar-actions">
-          <span class="live-chip">WORLD ONLINE</span>
+
+        <nav class="command-nav" aria-label="Command views">
+          <button class="command-tab active" data-view="dashboard">Dashboard</button>
+          <button class="command-tab" data-view="field">Field</button>
+          <button class="command-tab" data-view="network">Network</button>
+          <button class="command-tab" data-view="gatherers">Gatherers</button>
+          <button class="command-tab" data-view="codex">Codex</button>
+          <button class="command-tab" data-view="market">Upgrades</button>
+        </nav>
+
+        <div class="header-telemetry">
+          <div class="header-readout"><span>SERVER TIME</span><strong id="server-time">--:--:--</strong></div>
+          <span class="live-chip">● WORLD ONLINE</span>
           <span id="save-status" class="save-status">Loading save…</span>
           <button id="cloud-button" class="secondary-button" type="button">Connect GitHub Save</button>
         </div>
       </header>
 
-      <main class="game-layout">
-        <section class="game-shell glass-panel">
-          <div id="game-container" aria-label="Gatherer's Ascension game world"></div>
-          <div class="frame-corner tl" aria-hidden="true"></div>
-          <div class="frame-corner tr" aria-hidden="true"></div>
-          <div class="frame-corner bl" aria-hidden="true"></div>
-          <div class="frame-corner br" aria-hidden="true"></div>
-          <div class="render-badge">PREMIUM PROCEDURAL 2.5D</div>
-          <div class="mobile-controls" aria-label="Touch movement controls">
-            <button data-move="up" aria-label="Move up">▲</button>
+      <main class="command-grid">
+        <aside class="telemetry-rail left-rail glass-panel" aria-label="Left command telemetry">
+          <div id="left-panel-content" class="telemetry-content"></div>
+        </aside>
+
+        <section class="command-stage glass-panel">
+          <div class="stage-header">
             <div>
-              <button data-move="left" aria-label="Move left">◀</button>
-              <button data-move="down" aria-label="Move down">▼</button>
-              <button data-move="right" aria-label="Move right">▶</button>
+              <p class="eyebrow" id="operation-kicker">LIVE FIELD OPERATIONS</p>
+              <h2 id="operation-title">Greenveil Meadow</h2>
+              <p id="operation-subtitle">Direct gathering and automated extraction are synchronized.</p>
+            </div>
+            <div class="stage-status">
+              <span class="status-pill">NODE LINK <strong>STABLE</strong></span>
+              <span class="status-pill">SYNC <strong>100%</strong></span>
             </div>
           </div>
-          <div class="world-hint">Move with WASD, arrow keys, touch controls, or tap the world. Gathering happens automatically nearby.</div>
+
+          <div class="game-shell command-viewport">
+            <div id="game-container" aria-label="Gatherer's Ascension game world"></div>
+            <div id="strategic-overlay" class="strategic-overlay visible" aria-live="polite"></div>
+            <div class="frame-corner tl" aria-hidden="true"></div>
+            <div class="frame-corner tr" aria-hidden="true"></div>
+            <div class="frame-corner bl" aria-hidden="true"></div>
+            <div class="frame-corner br" aria-hidden="true"></div>
+            <div class="render-badge">WORLDROOT COMMAND INTERFACE</div>
+            <div class="mobile-controls" aria-label="Touch movement controls">
+              <button data-move="up" aria-label="Move up">▲</button>
+              <div>
+                <button data-move="left" aria-label="Move left">◀</button>
+                <button data-move="down" aria-label="Move down">▼</button>
+                <button data-move="right" aria-label="Move right">▶</button>
+              </div>
+            </div>
+            <div class="world-hint">FIELD MODE: Move with WASD, arrows, touch controls, or tap the world. Nearby materials harvest automatically.</div>
+          </div>
         </section>
 
-        <aside class="side-panel glass-panel">
-          <nav class="tabs" aria-label="Game panels">
-            <button class="tab active" data-tab="status">Status</button>
-            <button class="tab" data-tab="inventory">Inventory</button>
-            <button class="tab" data-tab="codex">Codex</button>
-            <button class="tab" data-tab="market">Market</button>
-            <button class="tab" data-tab="biomes">Biomes</button>
-          </nav>
-          <div id="panel-content" class="panel-content"></div>
+        <aside class="telemetry-rail right-rail glass-panel" aria-label="Right command telemetry">
+          <div id="right-panel-content" class="telemetry-content"></div>
         </aside>
+
+        <section class="bottom-deck glass-panel" aria-label="Command intelligence deck">
+          <div id="bottom-panel-content" class="bottom-panel-content"></div>
+        </section>
       </main>
 
       <div id="toast-layer" class="toast-layer" aria-live="polite"></div>
