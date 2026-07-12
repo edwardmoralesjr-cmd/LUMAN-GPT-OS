@@ -35,54 +35,75 @@ The earlier HTML concept established several important features:
 - Desktop and touch controls
 - Automatic local saving
 
-This recovered foundation should guide the rebuild unless Edward explicitly changes it.
+This recovered foundation guides the current rebuild unless Edward explicitly changes it.
 
-## Current Technical Direction
-
-Use a modular browser-game architecture rather than one giant HTML file.
+## Current Technical Architecture
 
 ```text
 Engine: Phaser
 Language: TypeScript
 Build Tool: Vite
 Local Save: IndexedDB
-Deployment: GitHub Pages
+Deployment Target: GitHub Pages
 Optional Cloud Save: Supabase with GitHub authentication
+Application Path: LUMAN_OS/game_lab/gatherers_ascension/app/
 ```
 
-The first version should remain installable as a Progressive Web App when practical.
+## Imported Playable Build
+
+The first playable source build is now stored inside LUMAN OS.
+
+Implemented systems:
+
+- Visual 2D gathering world
+- Desktop, tap-to-walk, and touch movement
+- Automatic nearby gathering
+- Resource disappearance and timed respawning
+- Four gathering biomes
+- Ten resource types
+- Common through Legendary rarity
+- Character levels and experience
+- Six permanent stats
+- Four tool mastery tracks
+- Tool and equipment upgrades
+- Unlimited Worldpack inventory
+- Market selling
+- Gear Level biome gates
+- Resource Codex discoveries
+- Critical gathering results
+- IndexedDB autosaving every ten seconds
+- Optional Supabase cloud-save reconciliation
+
+## Build Validation
+
+The imported source passed:
+
+```text
+TypeScript validation
+Vite production compilation
+57-module transformation
+Production HTML, CSS, and JavaScript generation
+```
+
+The current build has one non-blocking optimization warning because Phaser is included in a large JavaScript bundle.
+
+Detailed status:
+
+```text
+LUMAN_OS/game_lab/gatherers_ascension/app/PROJECT_STATUS.md
+```
 
 ## Save-System Law
 
-GitHub remembers the game's source code, design, schemas, and development history. It should not be used as the player's live save database.
+GitHub remembers the game's source code, design, schemas, and development history. It is not the player's live save database.
 
-Player progress should use:
+Player progress uses:
 
 1. IndexedDB for automatic local saves
-2. Export and import save files for manual backup
-3. Optional authenticated cloud saving later
+2. Export and import save files as a planned manual-backup feature
+3. Optional authenticated cloud saving through Supabase
 
-Never commit credentials, tokens, service keys, or private player-save records to the public repository.
-
-## First Playable Scope
-
-The first complete build should contain:
-
-- One playable gatherer
-- Visual movement
-- Automatic nearby gathering
-- Four gathering biomes
-- At least ten resources
-- Character level and experience
-- Gathering skill progression
-- Permanent stat points
-- Upgradeable tools
-- Upgradeable gathering equipment
-- Market selling
-- Gear-level biome gates
-- Resource Codex discoveries
-- Desktop and mobile controls
-- Reliable automatic saving
+Never commit credentials, tokens, service keys, `.env` files, or private player-save records to the public repository.
 
 ## Core Player Stats
 
@@ -93,46 +114,50 @@ The first complete build should contain:
 - Knowledge
 - Fortune
 
-## Core Gathering Skills
+## Current Gathering Masteries
 
-- Foraging
-- Mining
-- Logging
-- Fishing
-- Excavation
-- Salvaging
-- Harvesting
-- Tracking
-- Resource Identification
+- Worldroot Axe
+- Veinbreaker Pick
+- Dawn Sickle
+- Relic Gloves
 
-The first playable build may launch with a smaller supported set, but the data model should allow expansion.
+The broader design may later expand into Foraging, Mining, Logging, Fishing, Excavation, Salvaging, Harvesting, Tracking, and Resource Identification.
 
-## Project Folder Plan
+## Project Structure
 
 ```text
 LUMAN_OS/game_lab/gatherers_ascension/
   PROJECT_HOME.md
-  GAME_DESIGN.md
-  ROADMAP.md
-  CHANGELOG.md
   app/
-  docs/
-  public/
-  save-schema/
+    README.md
+    PROJECT_STATUS.md
+    package.json
+    tsconfig.json
+    vite.config.ts
+    index.html
+    src/
+    supabase/
+  GAME_DESIGN.md       planned
+  ROADMAP.md           planned
+  CHANGELOG.md         planned
+  docs/                planned
+  public/              planned
+  save-schema/         planned
 ```
-
-Only `PROJECT_HOME.md` is required at the incubation stage. Add the remaining folders as development begins.
 
 ## Working Status
 
 ```text
 Concept: Recovered and expanded
-Core loop: Defined
+Core loop: Defined and implemented
 Visual direction: Browser-based 2D game
-Architecture: Selected
-Playable source: Ready to import
-Cloud save: Planned, not required for first launch
-Deployment: GitHub Pages planned
+Architecture: Imported
+Playable source: Present in GitHub
+Build validation: Passed
+Local autosave: Implemented
+Cloud save: Code and schema present, external setup required
+Deployment: GitHub Pages workflow still required
+Final artwork: Not started
 ```
 
 ## Commands
@@ -143,16 +168,16 @@ Deployment: GitHub Pages planned
 /build game: gatherers ascension
 /game design: gatherers ascension
 /game roadmap: gatherers ascension
-/import game build: gatherers ascension
+/test game: gatherers ascension
 /deploy game: gatherers ascension
 ```
 
 ## Activation Rule
 
-Gatherer's Ascension remains Incubating until Edward explicitly makes it an active strategic front. Development work may still be captured, organized, tested, and imported while it is incubating.
+Gatherer's Ascension remains Incubating until Edward explicitly makes it an active strategic front. Development work may still be captured, organized, tested, imported, and deployed while it is incubating.
 
 ## Recommended Next Move
 
 ```text
-Import the first playable Phaser, TypeScript, and Vite build into LUMAN_OS/game_lab/gatherers_ascension/app/.
+Create a repository-level GitHub Pages workflow and publish the playable prototype.
 ```
