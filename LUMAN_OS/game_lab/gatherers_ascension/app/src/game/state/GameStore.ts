@@ -1,11 +1,41 @@
-import { biomes, resources, type BiomeId, type ResourceDefinition, type StatId, type ToolId } from '../data/content';
+import {
+  allResources,
+  biomes,
+  inventoryKey,
+  parseInventoryKey,
+  qualityDefinitions,
+  rareVariants,
+  resources,
+  toolForm,
+  variantByBase,
+  type BiomeId,
+  type HarvestQuality,
+  type ResourceDefinition,
+  type StatId,
+  type ToolId,
+} from '../data/content';
 import { gearLevel, gearUpgradeCost, skillXpForLevel, toolUpgradeCost, xpForLevel } from '../systems/Progression';
 import { createInitialState, normalizeState, type GameState } from './GameState';
+
+export interface NodeRoll {
+  resourceId: string;
+  quality: HarvestQuality;
+}
+
+export interface GatherResult {
+  quantity: number;
+  critical: boolean;
+  definition: ResourceDefinition;
+  quality: HarvestQuality;
+  surprise?: string;
+  newDiscovery: boolean;
+}
 
 export type StoreEvent =
   | { type: 'state'; state: GameState }
   | { type: 'toast'; title: string; message: string }
-  | { type: 'biome'; biome: BiomeId };
+  | { type: 'biome'; biome: BiomeId }
+  | { type: 'discovery'; definition: ResourceDefinition; quality: HarvestQuality };
 
 export class GameStore {
   private state: GameState = createInitialState();
@@ -34,60 +64,143 @@ export class GameStore {
     this.toast('New path begun', 'Your gathering journey has been reset.');
   }
 
-  gather(resourceId: string): { quantity: number; critical: boolean; definition: ResourceDefinition } {
-    const definition = resources[resourceId];
-    if (!definition) throw new Error(`Unknown resource: ${resourceId}`);
+  rollNode(baseResourceId: string): NodeRoll {
+    const variantId = variantByBase[baseResourceId];
+    const variant = variantId ? rareVariants[variantId] : undefined;
+    let resourceId = baseResourceId;
+
+    if (variant) {
+      const fortuneBonus = this.state.stats.fortune * 0.00008;
+      const perceptionBonus = this.state.stats.perception * 0.00004;
+      const momentumBonus = Math.min(0.025, this.state.rareMomentum * 0.00008);
+      const boostBonus = this.isBoostActive() ? 0.015 : 0;
+      const chance = Math.min(0.08, (variant.spawnChance ?? 0) + fortuneBonus + perceptionBonus + momentumBonus + boostBonus);
+      if (Math.random() < chance) resourceId = variant.id;
+    }
+
+    return { resourceId, quality: this.rollQuality() };
+  }
+
+  gather(initialResourceId: string, initialQuality: HarvestQuality = 'Standard'): GatherResult {
+    let resourceId = initialResourceId;
+    const initialDefinition = allResources[resourceId];
+    if (!initialDefinition) throw new Error(`Unknown resource: ${resourceId}`);
+    let definition: ResourceDefinition = initialDefinition;
+
+    let quality = initialQuality;
+    let surprise: string | undefined;
+
+    if (!definition.isVariant) {
+      const mutationTarget = variantByBase[resourceId];
+      const mutationChance = 0.0015 + this.state.stats.fortune * 0.00003 + (this.isBoostActive() ? 0.004 : 0);
+      if (mutationTarget && Math.random() < mutationChance) {
+        const mutatedDefinition = allResources[mutationTarget];
+        if (mutatedDefinition) {
+          resourceId = mutationTarget;
+          definition = mutatedDefinition;
+          quality = this.rollQuality(true);
+          surprise = 'Rare mutation';
+        }
+      }
+    }
 
     const toolLevel = this.state.tools[definition.tool];
     const statPower = this.state.stats.power;
     const fortune = this.state.stats.fortune;
     const perception = this.state.stats.perception;
     const baseBonus = Math.floor((toolLevel - 1) / 3) + Math.floor((statPower - 1) / 5);
-    const criticalChance = Math.min(0.35, 0.04 + fortune * 0.008 + perception * 0.004);
+    const criticalChance = Math.min(0.42, 0.04 + fortune * 0.008 + perception * 0.004 + (this.isBoostActive() ? 0.04 : 0));
     const critical = Math.random() < criticalChance;
-    const quantity = Math.max(1, 1 + baseBonus + (critical ? 1 + Math.floor(fortune / 4) : 0));
-    const knowledgeBonus = 1 + (this.state.stats.knowledge - 1) * 0.025;
-    const xpGain = Math.floor(definition.xp * quantity * knowledgeBonus);
+    const qualityInfo = qualityDefinitions[quality];
+    let quantity = Math.max(1, 1 + baseBonus + qualityInfo.yieldBonus + (critical ? 1 + Math.floor(fortune / 4) : 0));
 
-    this.state.inventory[resourceId] = (this.state.inventory[resourceId] ?? 0) + quantity;
-    this.state.xp += xpGain;
-    this.state.skills[definition.tool].xp += definition.skillXp * quantity;
-    this.state.totals.gathered += quantity;
-    if (!this.state.discovered.includes(resourceId)) {
-      this.state.discovered.push(resourceId);
-      this.toast('New codex entry', `${definition.name} has been discovered.`);
+    if (!surprise) {
+      const surpriseRoll = Math.random();
+      const bountifulChance = Math.min(0.12, 0.035 + fortune * 0.0015);
+      const echoChance = bountifulChance + Math.min(0.055, 0.012 + perception * 0.0008);
+      const surgeChance = echoChance + Math.min(0.035, 0.008 + fortune * 0.0005);
+
+      if (surpriseRoll < bountifulChance) {
+        quantity += 2 + Math.floor(fortune / 5);
+        surprise = 'Bountiful cluster';
+      } else if (surpriseRoll < echoChance) {
+        quantity *= 2;
+        surprise = 'Echo harvest';
+      } else if (surpriseRoll < surgeChance) {
+        this.state.activeBoostUntil = Math.max(this.state.activeBoostUntil, Date.now() + 30_000);
+        surprise = 'Discovery resonance';
+      }
     }
-    if (critical && ['Rare', 'Epic', 'Legendary'].includes(definition.rarity)) this.state.totals.rareFinds += 1;
+
+    const knowledgeBonus = 1 + (this.state.stats.knowledge - 1) * 0.025;
+    const xpGain = Math.floor(definition.xp * quantity * knowledgeBonus * qualityInfo.xpMultiplier);
+    const key = inventoryKey(resourceId, quality);
+
+    this.state.inventory[key] = (this.state.inventory[key] ?? 0) + quantity;
+    this.state.xp += xpGain;
+    this.state.skills[definition.tool].xp += Math.floor(definition.skillXp * quantity * qualityInfo.xpMultiplier);
+    this.state.totals.gathered += quantity;
+    if (critical) this.state.totals.criticalHarvests += 1;
+    if (surprise) this.state.totals.surpriseEvents += 1;
+    if (qualityInfo.rank >= 2) this.state.totals.perfectedFinds += 1;
+
+    const newDiscovery = !this.state.discovered.includes(resourceId);
+    if (newDiscovery) {
+      this.state.discovered.push(resourceId);
+      if (definition.isVariant) this.state.totals.variantsFound += 1;
+      this.emit({ type: 'discovery', definition, quality });
+      this.resolveCollectionMilestones();
+    }
+
+    const knownQualities = this.state.discoveredQualities[resourceId] ?? [];
+    if (!knownQualities.includes(quality)) {
+      this.state.discoveredQualities[resourceId] = [...knownQualities, quality];
+      if (!newDiscovery && quality !== 'Standard') {
+        this.toast(`${quality} specimen discovered`, `${definition.name} now has a new visual tier in your Codex.`);
+      }
+    }
+
+    if (definition.isVariant) {
+      this.state.rareMomentum = 0;
+      this.state.totals.rareFinds += 1;
+    } else {
+      this.state.rareMomentum = Math.min(400, this.state.rareMomentum + 1);
+      if (critical && ['Rare', 'Epic', 'Legendary'].includes(definition.rarity)) this.state.totals.rareFinds += 1;
+    }
 
     this.resolveLevelUps();
     this.resolveSkillLevels(definition.tool);
     this.touch();
     this.emitState();
 
-    return { quantity, critical, definition };
+    if (surprise) this.toast(surprise, this.surpriseMessage(surprise, definition.name, quantity));
+
+    return { quantity, critical, definition, quality, surprise, newDiscovery };
   }
 
-  sellResource(resourceId: string, amount?: number): void {
-    const definition = resources[resourceId];
-    const owned = this.state.inventory[resourceId] ?? 0;
+  sellResource(inventoryId: string, amount?: number): void {
+    const { resourceId, quality } = parseInventoryKey(inventoryId);
+    const definition = allResources[resourceId];
+    const owned = this.state.inventory[inventoryId] ?? 0;
     if (!definition || owned <= 0) return;
     const sold = Math.max(0, Math.min(owned, amount ?? owned));
-    const total = sold * definition.value;
-    this.state.inventory[resourceId] = owned - sold;
+    const total = Math.floor(sold * definition.value * qualityDefinitions[quality].valueMultiplier);
+    this.state.inventory[inventoryId] = owned - sold;
     this.state.coins += total;
     this.state.totals.coinsEarned += total;
     this.touch();
     this.emitState();
-    this.toast('Resources sold', `${sold} ${definition.name} exchanged for ${total} coins.`);
+    this.toast('Resources sold', `${sold} ${quality} ${definition.name} exchanged for ${total} coins.`);
   }
 
   sellAll(): void {
     let total = 0;
-    for (const [id, amount] of Object.entries(this.state.inventory)) {
-      const definition = resources[id];
+    for (const [key, amount] of Object.entries(this.state.inventory)) {
+      const { resourceId, quality } = parseInventoryKey(key);
+      const definition = allResources[resourceId];
       if (!definition || amount <= 0) continue;
-      total += amount * definition.value;
-      this.state.inventory[id] = 0;
+      total += Math.floor(amount * definition.value * qualityDefinitions[quality].valueMultiplier);
+      this.state.inventory[key] = 0;
     }
     if (total <= 0) return;
     this.state.coins += total;
@@ -103,9 +216,10 @@ export class GameStore {
     if (this.state.coins < cost) return;
     this.state.coins -= cost;
     this.state.tools[tool] += 1;
+    const nextLevel = current + 1;
     this.touch();
     this.emitState();
-    this.toast('Tool strengthened', `Your tool reached level ${current + 1}.`);
+    this.toast('Tool evolved', `Level ${nextLevel} reached. ${toolForm(nextLevel)} is now visible.`);
   }
 
   upgradeGear(gear: keyof GameState['gear']): void {
@@ -147,6 +261,41 @@ export class GameStore {
     this.toast('Journey complete', `You entered ${biomes[biomeId].name}.`);
   }
 
+  private rollQuality(forceElevated = false): HarvestQuality {
+    const fortune = this.state.stats.fortune;
+    const perception = this.state.stats.perception;
+    const boost = this.isBoostActive() ? 1 : 0;
+    const roll = Math.random();
+    const enchanted = 0.001 + fortune * 0.00006 + boost * 0.0025;
+    const ancient = enchanted + 0.004 + fortune * 0.00015 + perception * 0.00005 + boost * 0.004;
+    const perfected = ancient + 0.02 + fortune * 0.00035 + perception * 0.00015 + boost * 0.009;
+    const fine = perfected + 0.12 + fortune * 0.001 + perception * 0.0004 + boost * 0.02;
+
+    if (roll < enchanted) return 'Enchanted';
+    if (roll < ancient) return 'Ancient';
+    if (roll < perfected || forceElevated) return 'Perfected';
+    if (roll < fine) return 'Fine';
+    return 'Standard';
+  }
+
+  private isBoostActive(): boolean {
+    return this.state.activeBoostUntil > Date.now();
+  }
+
+  private resolveCollectionMilestones(): void {
+    const count = this.state.discovered.length;
+    const milestones = [5, 10, 15, 20];
+    for (const milestone of milestones) {
+      if (count < milestone || this.state.claimedMilestones.includes(milestone)) continue;
+      this.state.claimedMilestones.push(milestone);
+      const coinReward = milestone * 35;
+      this.state.coins += coinReward;
+      this.state.statPoints += 1;
+      this.state.activeBoostUntil = Math.max(this.state.activeBoostUntil, Date.now() + 45_000);
+      this.toast('Collection milestone complete', `${milestone} Codex entries. +${coinReward} coins, +1 stat point, and a discovery boost.`);
+    }
+  }
+
   private resolveLevelUps(): void {
     let needed = xpForLevel(this.state.level);
     while (this.state.xp >= needed) {
@@ -167,6 +316,13 @@ export class GameStore {
       this.toast('Mastery increased', `${tool} mastery reached level ${skill.level}.`);
       needed = skillXpForLevel(skill.level);
     }
+  }
+
+  private surpriseMessage(event: string, name: string, quantity: number): string {
+    if (event === 'Rare mutation') return `${name} transformed at the moment of harvest.`;
+    if (event === 'Bountiful cluster') return `The node opened into a cluster and yielded ${quantity}.`;
+    if (event === 'Echo harvest') return 'The harvest echoed through the ground and doubled its yield.';
+    return 'For 30 seconds, rare variants and elevated qualities are more likely.';
   }
 
   private touch(): void {
