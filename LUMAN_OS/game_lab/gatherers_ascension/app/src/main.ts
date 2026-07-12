@@ -2,15 +2,19 @@ import './style.css';
 import './collection.css';
 import './command-center.css';
 import './font-scale.css';
+import './economy-audio.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
 import { CommandCenterUI } from './game/ui/CommandCenterUI';
+import { AudioManager } from './game/systems/AudioManager';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
 const saves = new SaveService();
 const ui = new CommandCenterUI(store);
+const audio = new AudioManager(store);
+audio.initialize();
 
 async function bootstrap(): Promise<void> {
   try {
@@ -49,7 +53,10 @@ async function bootstrap(): Promise<void> {
 
   window.setInterval(() => store.processAutomation(Date.now()), 1_000);
   window.setInterval(() => void persist(Boolean(saves.status.user)), 10_000);
-  window.addEventListener('beforeunload', () => void saves.saveLocal(store.snapshot as GameState));
+  window.addEventListener('beforeunload', () => {
+    audio.destroy();
+    void saves.saveLocal(store.snapshot as GameState);
+  });
 
   ui.bindCloudButton(async () => {
     try {
