@@ -47,7 +47,7 @@ Do not ask for clarification unless the request is unsafe, impossible, or risks 
 |---|---|---|
 | `/open luman` | `LUMAN_OS/ROOT_MENU.md` | Open the modern home screen and pull live priorities and open loops from `00_CORE/`. |
 | `Open LUMAN OS` | `LUMAN_OS/ROOT_MENU.md` | Treat the repository as the active operating system. |
-| `/dashboard` | Root Menu + Master Command Center + core dashboard | Show current mode, strategic fronts, project state, open loops, warnings, and next move. |
+| `/dashboard` | Root Menu + Master Command Center + core dashboard | Show current mode, human foundation, strategic fronts, protected secondary builds, project state, open loops, warnings, and next move. |
 | `Open LUMAN dashboards` | `00_CORE/LUMAN_DASHBOARD.md` | Show operational status and vault context. |
 | `/open loops` | `00_CORE/OPEN_LOOPS.md` | Show the live master open-loop list. |
 | `/next move` | Active Priorities + Open Loops + Command Center | Choose the highest-leverage next action. |
@@ -70,7 +70,7 @@ LUMAN_OS/system_settings/COMMANDS.md
 | Command | Route To | Default Action |
 |---|---|---|
 | `/system settings` | `SYSTEM_SETTINGS_MENU.md` | Open governance, audit, routing, versioning, privacy, and portfolio controls. |
-| `/open command center` | `MASTER_COMMAND_CENTER.md` | Show current mode, active fronts, gates, warning, open loops, and one next move. |
+| `/open command center` | `MASTER_COMMAND_CENTER.md` | Show current mode, active fronts, protected secondary builds, gates, warning, open loops, and one next move. |
 | `/system audit` | Latest System Settings integration audit | Review architecture, source ownership, contradictions, privacy, and synchronization. |
 | `/source map` | `SOURCE_OF_TRUTH_MATRIX.md` | Resolve which source owns the truth when files, memory, chat, canon, or archives disagree. |
 | `/project registry` | `PROJECT_REGISTRY.md` | Show project state, owner, dependency, and next gate. |
@@ -78,7 +78,7 @@ LUMAN_OS/system_settings/COMMANDS.md
 | `/autopilot law` | `AUTOPILOT_OPERATING_LAW.md` | Apply classification, routing, privacy, canon, and project-activation rules. |
 | `/integration status` | Command Center + Registry + core status files | Detect status drift and routing mismatch. |
 | `/system next move` | Command Center + live status | Choose the smallest action that protects the foundation or completes an active gate. |
-| `/active fronts` | Command Center | Show the three-front portfolio. |
+| `/active fronts` | Command Center | Show the three-front portfolio and any protected secondary build. |
 | `/activate project: [name]` | Project Registry + Source Matrix | Validate ownership, capacity, dependency, next gate, and definition of done before activation. |
 | `/incubate project: [name]` | Project Registry | Capture without adding it to current execution priorities. |
 | `/archive project: [name]` | Project Registry + project changelog | Preserve history and remove from active execution. |
@@ -104,7 +104,7 @@ LUMAN_OS/system_settings/COMMANDS.md
 | Command | Route To | Default Action |
 |---|---|---|
 | `/open books` | `LUMAN_OS/book_section/BOOK_SECTION_MENU.md` | Open writing, canon, publishing, and manuscript tools. |
-| `/open music` | `02_LUCID_SYNTAX/` + `lucid-syntax-promo-pro/` until modern section exists | Open Lucid Syntax planning, release, assets, and promotion. |
+| `/open music` | `LUMAN_OS/music_section/MUSIC_SECTION_MENU.md` | Open Lucid Syntax, Visionary, roadmaps, promotion systems, and Infinite Bloom Music. |
 | `/open life os` | `LUMAN_OS/life_os/LIFE_OS_MENU.md` | Open life, family, regulation, and embodied-action systems. |
 | `/weekly sync` | Life OS | Run the weekly status, priorities, responsibilities, and next-action review. |
 | `/daily embodied action` | Life OS target loop | Choose one action that improves lived physical reality. |
@@ -114,6 +114,44 @@ LUMAN_OS/system_settings/COMMANDS.md
 | `/open gpt lab` | `LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md` | Open GPT modules, knowledge files, audits, and upgrades. |
 | `/open creative vault` | `07_KNOWLEDGE_PACKS/` until modern section exists | Capture and classify creative seeds without activating every idea. |
 | `/open records` | Private records systems + future public-safe index | Open vehicle and home maintenance structures. |
+
+## Music Section Commands
+
+Primary files:
+
+```text
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
+02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md
+LUMAN_OS/music_section/infinite_bloom_music/
+```
+
+| Command | Default Action |
+|---|---|
+| `/open lucid syntax` | Open the Lucid Syntax dashboard and current era. |
+| `/open visionary` | Open the Visionary release canon and active assembly state. |
+| `/open lucid roadmap` | Open the seven-album Working Canon roadmap. |
+| `/visionary assembly` | Build or update the Ready, Missing, Needs Review, and Not Applicable inventory. |
+| `/in-between campaign` | Build the next single release packet and campaign. |
+| `/three colors campaign` | Build the cinematic pre-album campaign. |
+| `/lucid song: [title]` | Work on a Lucid Syntax song using current project writing and sound laws. |
+| `/lucid promo: [title]` | Build a song-specific promotion package. |
+| `/open infinite bloom music` | Open the separate Infinite Bloom Music Project manifest. |
+| `/open dragon cycle` | Open the twelve-song dragon-cycle album map. |
+| `/dragon song: [dragon name]` | Build a canon-aware dragon song identity sheet or draft. |
+| `/music canon status` | Show release canon, roadmap status, project separation, and unresolved music questions. |
+| `/music next move` | Choose the smallest action that advances the current music gate without widening the shipping front. |
+
+Current music rule:
+
+```text
+Visionary is Active Shipping.
+Paint was released July 3, 2026.
+In-Between is the next active campaign.
+Visionary launches September 25, 2026.
+Infinite Bloom Music is a protected secondary build, not the shipping front.
+```
 
 ## Harmonic Time System Commands
 
@@ -201,33 +239,13 @@ Legacy history path:
 | `Build Grand Generals` | Continue from the active story bible and approved frontier. |
 | `Open Infinite Bloom` | Work from current Infinite Bloom and Codex sources. |
 
-Current blocking rule:
+Current Roseborn rule:
 
 ```text
-Do not expand series-level planning until the 20-book, 23-book, and 21-book architectures are reconciled.
-```
-
-## Lucid Syntax Commands
-
-Primary sources:
-
-```text
-02_LUCID_SYNTAX/
-lucid-syntax-promo-pro/
-```
-
-| Command | Default Action |
-|---|---|
-| `Open Lucid Syntax vault` | Show current album, release, asset, and promotion state. |
-| `Lucid Syntax promotion` | Build a promotion package from the active release state. |
-| `Lucid Syntax promotion for [song title]` | Build a song-specific package. |
-| `Visionary rollout` | Work from the official eleven-track Visionary album state. |
-| `/visionary assembly` | Build or update the release-assembly inventory. |
-
-Current rule:
-
-```text
-Visionary is Active Shipping. Prioritize verified assembly over additional concept generation.
+The 21-book architecture is active Working Canon.
+The 23-book variant is archived.
+The 20-book blueprint is a non-governing unrecovered historical source.
+Series planning may continue from the 21-book architecture.
 ```
 
 ## Life, Records, Work, and OMNI-Vault Commands
@@ -256,12 +274,12 @@ Visionary is Active Shipping. Prioritize verified assembly over additional conce
 ## Status
 
 Status: Active routing source of truth  
-Version: v2.0  
-Last Updated: 2026-07-10  
+Version: v2.1  
+Last Updated: 2026-07-12  
 Owner: LUMAN OS Core
 
 ## Recommended Next Move
 
 ```text
-Mirror the highest-value System Settings commands into root COMMANDS.md during the next legacy-surface cleanup pass.
+Use /in-between campaign for the current shipping gate or /clearance for Grand Generals Chapter 5.
 ```
