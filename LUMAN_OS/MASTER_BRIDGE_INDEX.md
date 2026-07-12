@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This file defines how the modern interface, System Settings orchestration layer, core protocol layer, legacy vaults, chat, memory, and project-specific sources cooperate.
+Define how the modern interface, System Settings orchestration layer, core protocol layer, project vaults, chat, memory, private sources, and GitHub cooperate.
 
-Before routing a command or creating a new source, answer:
+Before routing a command or creating a source, answer:
 
 ```text
 Which layer owns the truth, which layer presents it, and which layer records the live state?
@@ -13,9 +13,9 @@ Which layer owns the truth, which layer presents it, and which layer records the
 ## System Status
 
 Status: Active bridge index  
-Version: v2.0  
+Version: v2.1  
 Created: 2026-06-18  
-Last Updated: 2026-07-10  
+Last Updated: 2026-07-12  
 Primary Role: Architecture reconciliation, source ownership, and command-routing clarity
 
 ## Architecture Layers
@@ -26,18 +26,22 @@ Primary Role: Architecture reconciliation, source ownership, and command-routing
 LUMAN_OS/
 ```
 
-Owns:
-
-- Root and section menus
-- Modern GPT modules
-- Active tool interfaces
-- User-facing slash-command screens
-- Modern continuity and archive indexes
+Owns root and section menus, modern modules, active tool interfaces, user-facing slash-command screens, modern continuity indexes, and archive indexes.
 
 Primary entry point:
 
 ```text
 LUMAN_OS/ROOT_MENU.md
+```
+
+Active section menus include:
+
+```text
+LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
+LUMAN_OS/life_os/LIFE_OS_MENU.md
+LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md
+LUMAN_OS/gpt_builder_lab/GPT_REGISTRY.md
 ```
 
 ### 2. System Settings Orchestration Layer
@@ -54,7 +58,9 @@ Owns:
 - System audits
 - Ninety-day execution paths
 - Autopilot operating law
-- Portfolio limits and cross-project dependencies
+- Portfolio limits
+- Protected secondary build rules
+- Cross-project dependencies
 
 Primary entry points:
 
@@ -111,15 +117,7 @@ BOOKS/
 lucid-syntax-promo-pro/
 ```
 
-Owns:
-
-- Domain-specific assets
-- Project history
-- Manuscripts
-- Canon and continuity
-- Release metadata
-- Specialized workflows
-- Historical versions
+Owns domain-specific assets, project history, manuscripts, canon, continuity, release metadata, specialized workflows, and historical versions.
 
 Rule:
 
@@ -143,7 +141,7 @@ Owns information that must not enter the public GitHub repository:
 - Medical records
 - Sensitive family records
 - Employer-confidential data
-- Private vehicle, home, or legal records when detailed exposure is unnecessary
+- Detailed private vehicle, home, or legal records when exposure is unnecessary
 
 GitHub may store public-safe templates, generalized status, routing, and reusable structures only.
 
@@ -173,7 +171,7 @@ Default authority order:
 
 1. Published or explicitly Locked Canon material
 2. Explicitly approved current source-of-truth file
-3. Current project continuity, registry, or active module file
+3. Current project continuity, registry, release-canon, or active module file
 4. Current GitHub status and command files
 5. Edward's explicit instruction in the active conversation
 6. Saved memory and prior summaries
@@ -184,118 +182,26 @@ A newer modification timestamp alone does not create authority.
 
 ## Command Routing Bridge
 
-### `/open luman`
-
-Primary:
-
-```text
-LUMAN_OS/ROOT_MENU.md
-```
-
-Supporting live state:
-
-```text
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-```
-
-### `/dashboard`
-
-Primary orchestration:
-
-```text
-LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
-```
-
-Supporting interface and operations:
-
-```text
-LUMAN_OS/ROOT_MENU.md
-00_CORE/LUMAN_DASHBOARD.md
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-```
-
-### `/system settings`
-
-Primary:
-
-```text
-LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md
-```
-
-### `/open command center`
-
-Primary:
-
-```text
-LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
-```
-
-### `/source map`
-
-Primary:
-
-```text
-LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
-```
-
-### `/project registry`
-
-Primary:
-
-```text
-LUMAN_OS/system_settings/PROJECT_REGISTRY.md
-```
-
-### `/90 day path`
-
-Primary:
-
-```text
-LUMAN_OS/system_settings/90_DAY_EXECUTION_PATH_2026-07-10.md
-```
-
-### `/autopilot law`
-
-Primary:
-
-```text
-LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md
-```
-
-### `Use GitHub` or `Update LUMAN OS:`
-
-Primary protocol:
-
-```text
-00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md
-```
-
-Routing support:
-
-```text
-LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
-LUMAN_OS/MASTER_BRIDGE_INDEX.md
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-```
-
-### `/next move`
-
-Use:
-
-```text
-LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
-00_CORE/ACTIVE_PRIORITIES.md
-00_CORE/OPEN_LOOPS.md
-```
-
-Choose the smallest action that protects the human foundation, completes the shipping gate, resolves a blocker, prevents contradiction, or advances the approved deep-building gate.
+| Command | Primary Route | Supporting Sources |
+|---|---|---|
+| `/open luman` | `LUMAN_OS/ROOT_MENU.md` | Active Priorities and Open Loops |
+| `/dashboard` | `LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md` | Root Menu, core dashboard, priorities, open loops |
+| `/system settings` | `LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md` | System Settings modules |
+| `/open command center` | `LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md` | Registry and live state |
+| `/source map` | `LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md` | Bridge and project sources |
+| `/project registry` | `LUMAN_OS/system_settings/PROJECT_REGISTRY.md` | Project dashboards |
+| `/90 day path` | `LUMAN_OS/system_settings/90_DAY_EXECUTION_PATH_2026-07-10.md` | Current priorities and gates |
+| `/autopilot law` | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Source Matrix |
+| `/open books` | `LUMAN_OS/book_section/BOOK_SECTION_MENU.md` | `BOOKS/` and project vaults |
+| `/open music` | `LUMAN_OS/music_section/MUSIC_SECTION_MENU.md` | Lucid Syntax and Infinite Bloom Music sources |
+| `/open life os` | `LUMAN_OS/life_os/LIFE_OS_MENU.md` | `01_LIFE_OS/` |
+| `/open harmonic time system` | Harmonic Time System menu | Analyst module and archive |
+| `Use GitHub` or `Update LUMAN OS:` | `00_CORE/LUMAN_GITHUB_UPDATE_PROTOCOL.md` | Source Matrix, bridge, priorities, open loops |
+| `/next move` | Master Command Center | Priorities and open loops |
 
 ## Section Mapping
 
-### Books
+### Books and Roseborn
 
 ```text
 Modern interface: LUMAN_OS/book_section/
@@ -304,21 +210,57 @@ Roseborn legacy history: 03_ROSEBORN_UNIVERSE/
 Other books: BOOKS/
 ```
 
-Rule:
-
 Project-specific canon and manuscripts own content truth. System Settings owns portfolio state and dependencies.
+
+Current Roseborn architecture rule:
+
+```text
+21-book structure = Active Working Canon
+23-book variant   = Archived expanded variant
+20-book blueprint = Unrecovered non-governing history
+```
+
+Series-level planning is no longer blocked by the resolved architecture conflict.
 
 ### Music
 
+Modern interface:
+
 ```text
-Current active sources: 02_LUCID_SYNTAX/ and lucid-syntax-promo-pro/
-Modern target: LUMAN_OS/music_section/
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
 ```
 
-Current portfolio state:
+Lucid Syntax project truth:
+
+```text
+02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md
+02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md
+lucid-syntax-promo-pro/
+```
+
+Infinite Bloom Music truth:
+
+```text
+LUMAN_OS/music_section/infinite_bloom_music/
+```
+
+Roseborn lore truth remains owned by Roseborn canon and Canon Guardian sources.
+
+Current music state:
 
 ```text
 Visionary = Active Shipping
+Paint = Released July 3, 2026
+In-Between = Next campaign
+Visionary album = September 25, 2026
+Infinite Bloom Music = Protected secondary build
+```
+
+Project separation rule:
+
+```text
+Lucid Syntax and Infinite Bloom Music may share Edward's authorship and mythic source material, but they do not share one project identity, sound law, visual system, or release plan.
 ```
 
 ### Life OS
@@ -328,9 +270,7 @@ Modern interface: LUMAN_OS/life_os/
 Legacy history: 01_LIFE_OS/
 ```
 
-Current foundation role:
-
-Protect family peace, regulation, sustainable attention, and embodied action.
+Foundation role: protect family peace, regulation, sustainable attention, and embodied action.
 
 ### Money
 
@@ -338,8 +278,6 @@ Protect family peace, regulation, sustainable attention, and embodied action.
 Private live source: Edward's financial tools and current statements
 Public-safe target: LUMAN_OS/money_system/
 ```
-
-Rule:
 
 Never treat public GitHub as the live ledger.
 
@@ -349,8 +287,6 @@ Never treat public GitHub as the live ledger.
 Current project source: 05_WORK_QUALITY_SYSTEMS/
 Modern target: LUMAN_OS/work_quality_tools/
 ```
-
-Rule:
 
 Store reusable non-confidential methods only.
 
@@ -391,7 +327,7 @@ Archive: LUMAN_OS/harmonic_time_system/archive/
 
 ## Portfolio Bridge
 
-The command center limits default active strategic work to:
+Default strategic work is limited to:
 
 ```text
 [1] Human foundation
@@ -403,27 +339,35 @@ Current fronts:
 
 ```text
 [1] Life OS and family stability
-[2] Visionary release assembly
-[3] Roseborn architecture reconciliation and Grand Generals continuity
+[2] In-Between campaign and Visionary release assembly
+[3] Grand Generals Chapter 5 clearance and Roseborn continuity
 ```
 
-A project may remain operational or maintained without becoming an active strategic front.
+Protected secondary build:
+
+```text
+Infinite Bloom Music Project: controlled Elarion prototype work
+```
+
+A project may remain maintained, incubating, or protected without becoming an active strategic front.
 
 ## Current High-Impact Dependency Rules
 
-### Roseborn
+### Human Foundation
 
-Series-level planning is blocked until these are reconciled:
-
-```text
-20-book recovered blueprint
-23-book working architecture
-21-book five-movement architecture
-```
+Creative work must not outrank family peace, regulation, health-supporting action, or sustainable attention.
 
 ### Visionary
 
-The next gate is verified release assembly, not additional concept generation.
+The next gate is the In-Between release packet and verified September 25 album assembly, not additional unrelated concept expansion.
+
+### Roseborn
+
+The architecture conflict is resolved. The next gate is Chapter 5 clearance and active-source synchronization.
+
+### Infinite Bloom Music
+
+Music interpretation may interpret established canon but may not silently invent lore. Uncertain dragon doctrine routes through Roseborn Canon Guardian.
 
 ### Sovereignty Framework
 
@@ -435,7 +379,7 @@ Before creating a new file:
 
 1. Search for an existing source.
 2. Identify its authority and current state.
-3. Choose one of these actions:
+3. Choose one action:
 
 ```text
 Bridge
@@ -448,25 +392,17 @@ Do not create duplicate sources without defining which one wins.
 
 ## Live Status Ownership
 
-Until an explicit migration is approved:
-
 ```text
-Live priorities = 00_CORE/ACTIVE_PRIORITIES.md
-Live open loops = 00_CORE/OPEN_LOOPS.md
-Portfolio coordination = LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
-Project state registry = LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+Live priorities          = 00_CORE/ACTIVE_PRIORITIES.md
+Live open loops          = 00_CORE/OPEN_LOOPS.md
+Portfolio coordination   = LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+Project state registry   = LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+Command routing          = 00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
 ```
 
 ## Privacy Firewall
 
-Never commit:
-
-- Credentials, keys, tokens, passwords, or seed phrases
-- Live balances or detailed financial records
-- Medical records
-- Employer-confidential information
-- Sensitive family records
-- Unnecessary private identifiers
+Never commit credentials, keys, tokens, passwords, seed phrases, live balances, detailed financial records, medical records, employer-confidential information, sensitive family records, or unnecessary private identifiers.
 
 ## Maintenance Rule
 
@@ -476,9 +412,10 @@ When a major structural update occurs:
 2. Update System Settings governance when portfolio ownership changes.
 3. Update live priorities and open loops.
 4. Update the command-routing index.
-5. Update the relevant module changelog.
-6. Create a session log when the change is substantial.
-7. Preserve historical sources without allowing silent authority drift.
+5. Update root commands and deployment when activation surfaces change.
+6. Update relevant changelogs.
+7. Create a session log when the change is substantial.
+8. Preserve historical sources without allowing silent authority drift.
 
 ## Current Integrity State
 
@@ -488,18 +425,15 @@ System Settings orchestration: Active
 Core protocol layer: Active
 Project vault layer: Active
 Source authority matrix: Active
+Modern Music Section: Active
 Autopilot law: Active
-Modern integration grade: A-
+Modern integration grade: A
 ```
 
-Remaining legacy synchronization:
-
-- Mirror high-value System Settings commands into root `COMMANDS.md`
-- Add the 2026-07-10 update to older top-level changelog surfaces
-- Review `DEPLOYMENT_INDEX.md`
+The July 10 legacy command/deployment cleanup and the July 12 Music Section synchronization are complete on the active synchronization branch.
 
 ## Recommended Next Move
 
 ```text
-Create the Visionary release-assembly inventory while Roseborn Canon Guardian prepares the three-version architecture reconciliation.
+Complete the In-Between release packet while running Grand Generals Chapter 5 clearance and protecting the Daily Embodied Action loop.
 ```
