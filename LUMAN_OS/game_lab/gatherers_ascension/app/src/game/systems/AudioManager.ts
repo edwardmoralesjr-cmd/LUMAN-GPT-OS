@@ -73,6 +73,12 @@ export class AudioManager {
       this.currentView = detail?.view ?? 'dashboard';
       void this.syncTrack();
     });
+    document.querySelectorAll<HTMLButtonElement>('.command-tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        this.currentView = (tab.dataset.view as AudioCommandView | undefined) ?? 'dashboard';
+        void this.syncTrack();
+      });
+    });
 
     this.unsubscribe = this.store.subscribe((event: StoreEvent) => {
       if (event.type === 'biome' || event.type === 'state') void this.syncTrack();
