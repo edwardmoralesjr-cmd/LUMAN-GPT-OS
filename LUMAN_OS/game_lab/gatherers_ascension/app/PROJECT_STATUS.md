@@ -2,40 +2,52 @@
 
 ## Current state
 
-**Playable Source:** Imported  
+**Playable Source:** Imported and actively expanding  
+**Collection Loop:** Version 1 implemented  
 **Build Validation:** Passed  
 **TypeScript Check:** Passed  
 **Vite Production Build:** Passed  
-**Deployment Workflow:** Configured  
-**Live Publication:** Pending confirmation from the initial GitHub Pages workflow run  
+**Deployment Workflow:** Configured and previously confirmed successful  
 **Target URL:** `https://edwardmoralesjr-cmd.github.io/LUMAN-GPT-OS/`  
-**Local Saves:** Implemented with IndexedDB  
+**Local Saves:** Implemented with IndexedDB and migrated to save version 3  
 **Cloud Saves:** Implemented but inactive until Supabase and GitHub OAuth are configured
 
-## Imported systems
+## Core playable systems
 
 - Visual 2D Phaser world
 - Desktop, tap-to-walk, and touch movement
 - Automatic nearby resource gathering
 - Resource disappearance and timed respawning
 - Four biomes
-- Ten resources across Common through Legendary rarity
-- Character levels and XP
-- Permanent stat points
-- Four tool mastery tracks
-- Four tool-upgrade paths
+- Ten base resources
+- Ten hidden Mythic rare variants
+- Unknown silhouettes before rare-variant discovery
+- Five specimen qualities: Standard, Fine, Perfected, Ancient, and Enchanted
+- Full Collection Codex
+- Permanent first-discovery records
+- Resource lore, unique properties, potential uses, rarity, and native-biome records
+- Character levels, XP, and permanent stat points
+- Four gathering mastery tracks
+- Four tool-evolution paths
+- Visible avatar level tiers
+- Visible orbiting tool emblems
 - Four equipment-upgrade paths
 - Gear Level biome gates
 - Unlimited Worldpack inventory
-- Market selling
-- Resource Codex discoveries
-- Critical gathering results
+- Quality-aware market values
+- Critical Harvest events
+- Bountiful Cluster events
+- Echo Harvest events
+- Rare Mutation events
+- Temporary Discovery Resonance boosts
+- Fair discovery momentum that softens long rare-find dry streaks
+- Codex milestones at 5, 10, 15, and 20 discoveries
 - Local autosaving every ten seconds
 - Optional authenticated cloud-save reconciliation
 
 ## Validation record
 
-The imported source was tested with:
+The Collection Loop v1 source was tested with:
 
 ```bash
 npm run build
@@ -45,7 +57,7 @@ Result:
 
 ```text
 TypeScript validation passed
-57 modules transformed
+58 modules transformed
 Production HTML generated
 Production CSS generated
 Production JavaScript generated
@@ -53,6 +65,14 @@ Build completed successfully
 ```
 
 Vite reported a non-blocking large-bundle warning because Phaser is included in the main JavaScript chunk. This does not prevent the game from building or running.
+
+## Design sources
+
+```text
+LUMAN_OS/game_lab/gatherers_ascension/GAME_DESIGN.md
+LUMAN_OS/game_lab/gatherers_ascension/ROADMAP.md
+LUMAN_OS/game_lab/gatherers_ascension/CHANGELOG.md
+```
 
 ## Deployment record
 
@@ -62,28 +82,19 @@ Repository-level workflow:
 .github/workflows/deploy-gatherers-ascension.yml
 ```
 
-The workflow:
-
-1. Runs when the game app or deployment workflow changes on `main`.
-2. Uses Node.js 22.
-3. Installs the app dependencies inside the nested project directory.
-4. Runs the verified production build.
-5. Uploads the generated `dist` directory as a GitHub Pages artifact.
-6. Publishes the artifact through `actions/deploy-pages`.
-7. Can also be started manually with `workflow_dispatch`.
-
-The repository's GitHub Pages source may need to be set to **GitHub Actions** in repository settings if it was not already enabled. The connected GitHub workflow tools do not currently expose the Pages settings screen or push-triggered workflow status, so live publication is not marked confirmed until GitHub reports the run as successful.
+The workflow builds the nested app and publishes the generated `dist` directory through GitHub Pages whenever game files change on `main`.
 
 ## Known prototype limitations
 
-- Procedural circles are used instead of final sprite artwork.
+- Procedural shapes are used instead of final resource, avatar, and tool artwork.
 - There is no character-creation screen yet.
 - Cloud saving requires external Supabase configuration.
-- Audio, weather, contracts, crafting, fishing, excavation, and specialization trees remain future systems.
-- A committed package lockfile should be added later for fully reproducible deployment installs.
+- Audio, haptic feedback, weather, contracts, crafting, fishing, excavation, and specialization trees remain future systems.
+- Mythic material infusion is designed but not yet implemented.
+- Accessibility controls for flash, shake, and motion effects still need to be added.
 
 ## Recommended Next Move
 
 ```text
-Confirm the initial GitHub Pages workflow succeeds, then open the public game and run a browser playtest.
+Open the live game after the deployment completes and playtest the Collection Codex, unidentified variants, elevated qualities, surprise events, and tool visuals.
 ```
