@@ -6,7 +6,7 @@ export function createGame(store: GameStore): Phaser.Game {
   return new Phaser.Game({
     type: Phaser.AUTO,
     parent: 'game-container',
-    backgroundColor: '#0f241c',
+    backgroundColor: '#050a09',
     transparent: false,
     scene: [new WorldScene(store)],
     scale: {
@@ -17,8 +17,13 @@ export function createGame(store: GameStore): Phaser.Game {
     },
     render: {
       antialias: true,
+      antialiasGL: true,
       pixelArt: false,
       roundPixels: false,
+      powerPreference: 'high-performance',
+    },
+    input: {
+      activePointers: 3,
     },
   });
 }
