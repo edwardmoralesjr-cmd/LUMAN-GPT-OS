@@ -1,18 +1,10 @@
 # LUMAN OS System Settings Menu
 
-## File Name
-
-SYSTEM_SETTINGS_MENU.md
-
-## System
-
-LUMAN OS / System Settings
-
 ## Purpose
 
-This file is the modern interface for governing, auditing, routing, and upgrading LUMAN OS.
+This is the modern interface for governing, auditing, routing, and upgrading LUMAN OS.
 
-System Settings does not replace the source-of-truth files owned by books, music, life, money, work, records, or GPT modules. It coordinates them, identifies conflicts, protects boundaries, and determines what should happen next.
+System Settings does not replace source-of-truth files owned by books, music, life, money, work, records, or GPT modules. It coordinates them, identifies conflicts, protects boundaries, and determines what should happen next.
 
 ## Primary Command
 
@@ -31,81 +23,92 @@ System Settings does not replace the source-of-truth files owned by books, music
 /autopilot law
 /integration status
 /system next move
+/active fronts
+/check drift
+/privacy check
 ```
 
 ## Main Modules
 
 ### 1. Master Command Center
 
-Source file:
-
 ```text
 LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
 ```
-
-Purpose:
 
 Provides the unified operating picture across Edward's life systems, creative projects, professional tools, records, and long-term legacy work.
 
 ### 2. Project Registry
 
-Source file:
-
 ```text
 LUMAN_OS/system_settings/PROJECT_REGISTRY.md
 ```
 
-Purpose:
-
-Tracks each major project by domain, operating state, source location, dependency, and next gate.
+Tracks each major project by domain, operating state, source location, dependency, protected-build status, and next gate.
 
 ### 3. Source-of-Truth Matrix
-
-Source file:
 
 ```text
 LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
 ```
 
-Purpose:
-
 Defines which file or vault owns each kind of information and what wins when memory, chat, legacy files, and modern modules disagree.
 
-### 4. Integration Audit
+### 4. Integration Audits
 
-Source file:
+Current audit:
+
+```text
+LUMAN_OS/system_settings/INTEGRATION_AUDIT_2026-07-12.md
+```
+
+Historical foundation audit:
 
 ```text
 LUMAN_OS/system_settings/INTEGRATION_AUDIT_2026-07-10.md
 ```
 
-Purpose:
-
-Records the first full-system integration audit performed after the GPT-5.6 Thinking upgrade.
+The July 12 audit records the Music Section installation, current release-canon synchronization, Infinite Bloom Music architecture, and legacy command/deployment cleanup. The July 10 audit preserves the first Master Command Center installation record.
 
 ### 5. Ninety-Day Execution Path
-
-Source file:
 
 ```text
 LUMAN_OS/system_settings/90_DAY_EXECUTION_PATH_2026-07-10.md
 ```
 
-Purpose:
-
-Converts the full system into a limited execution path that protects family peace while advancing the highest-value creative work.
+The file retains its original period and filename but was synchronized on July 12 after the Roseborn architecture decision and current Visionary release dates were recorded.
 
 ### 6. Autopilot Operating Law
-
-Source file:
 
 ```text
 LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md
 ```
 
-Purpose:
-
 Defines how LUMAN classifies, routes, protects, advances, and archives important information by default.
+
+### 7. Music Governance Sources
+
+```text
+LUMAN_OS/music_section/MUSIC_SECTION_MENU.md
+02_LUCID_SYNTAX/VISIONARY_RELEASE_CANON_2026.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_7_ALBUM_ROADMAP.md
+LUMAN_OS/music_section/infinite_bloom_music/
+```
+
+System Settings coordinates their portfolio state. These project sources own music-specific truth.
+
+## Current Operating State
+
+```text
+Mode: Consolidate, protect, finish, then expand
+
+[1] Human Foundation
+[2] Shipping Front: In-Between campaign and Visionary release assembly
+[3] Deep-Building Front: Grand Generals Chapter 5 clearance and Roseborn continuity
+
+Protected Secondary Build:
+Infinite Bloom Music Project
+```
 
 ## Ownership Boundary
 
@@ -143,12 +146,13 @@ Every System Settings response should answer:
 ## Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Created: 2026-07-10  
+Updated: 2026-07-12  
 GitHub Role: Modern LUMAN OS governance and orchestration interface
 
 ## Recommended Next Move
 
 ```text
-Open the Master Command Center and execute the current Top 3 in dependency order.
+Complete the In-Between release packet while running Grand Generals Chapter 5 clearance and protecting the Daily Embodied Action loop.
 ```
