@@ -1,8 +1,4 @@
-import type { BiomeId } from '../data/content';
-import type { GameStore, StoreEvent } from '../state/GameStore';
-
-export type AudioCommandView = 'dashboard' | 'field' | 'network' | 'gatherers' | 'codex' | 'market';
-type TrackKey = 'command' | BiomeId;
+type TrackKey = 'command' | 'greenveil' | 'ironfall' | 'crystal-vale' | 'emberdeep';
 
 interface TrackDefinition {
   label: string;
@@ -19,27 +15,43 @@ const tracks: Record<TrackKey, TrackDefinition> = {
 
 const VOLUME_KEY = 'gatherers-ascension-music-volume';
 const MUTED_KEY = 'gatherers-ascension-music-muted';
+const TRACK_KEY = 'gatherers-ascension-selected-track';
+
+function isTrackKey(value: string): value is TrackKey {
+  return Object.prototype.hasOwnProperty.call(tracks, value);
+}
 
 export class AudioManager {
-  private currentView: AudioCommandView = 'dashboard';
+  private selectedKey = this.readSelectedTrack();
   private currentKey: TrackKey | null = null;
   private activeAudio: HTMLAudioElement | null = null;
   private fadingAudio: HTMLAudioElement | null = null;
   private armed = false;
-  private switching = false;
+  private transitionId = 0;
   private volume = this.readVolume();
   private muted = localStorage.getItem(MUTED_KEY) === 'true';
   private trackLabel: HTMLElement | null = null;
   private toggleButton: HTMLButtonElement | null = null;
   private volumeSlider: HTMLInputElement | null = null;
-  private unsubscribe: (() => void) | null = null;
-
-  constructor(private store: GameStore) {}
+  private trackSelect: HTMLSelectElement | null = null;
 
   initialize(): void {
     this.trackLabel = document.querySelector<HTMLElement>('#music-track');
     this.toggleButton = document.querySelector<HTMLButtonElement>('#music-toggle');
     this.volumeSlider = document.querySelector<HTMLInputElement>('#music-volume');
+    this.trackSelect = document.querySelector<HTMLSelectElement>('#music-select');
+
+    if (this.trackSelect) {
+      this.trackSelect.value = this.selectedKey;
+      this.trackSelect.addEventListener('change', () => {
+        const value = this.trackSelect?.value ?? 'command';
+        if (!isTrackKey(value)) return;
+        this.selectedKey = value;
+        localStorage.setItem(TRACK_KEY, value);
+        this.arm();
+        void this.syncTrack();
+      });
+    }
 
     if (this.volumeSlider) {
       this.volumeSlider.value = String(Math.round(this.volume * 100));
@@ -52,15 +64,19 @@ export class AudioManager {
     }
 
     this.toggleButton?.addEventListener('click', () => {
-      this.arm();
       this.muted = !this.muted;
       localStorage.setItem(MUTED_KEY, String(this.muted));
+      this.arm();
+
       if (this.activeAudio) {
-        if (this.muted) this.fadeTo(this.activeAudio, 0, 250);
-        else {
+        if (this.muted) {
+          this.fadeTo(this.activeAudio, 0, 250);
+        } else {
           void this.activeAudio.play().catch(() => undefined);
           this.fadeTo(this.activeAudio, this.volume, 350);
         }
+      } else if (!this.muted) {
+        void this.syncTrack();
       }
       this.updateControls();
     });
@@ -68,27 +84,12 @@ export class AudioManager {
     const unlock = () => this.arm();
     window.addEventListener('pointerdown', unlock, { once: true, capture: true });
     window.addEventListener('keydown', unlock, { once: true, capture: true });
-    window.addEventListener('command-view-changed', (event) => {
-      const detail = (event as CustomEvent<{ view?: AudioCommandView }>).detail;
-      this.currentView = detail?.view ?? 'dashboard';
-      void this.syncTrack();
-    });
-    document.querySelectorAll<HTMLButtonElement>('.command-tab').forEach((tab) => {
-      tab.addEventListener('click', () => {
-        this.currentView = (tab.dataset.view as AudioCommandView | undefined) ?? 'dashboard';
-        void this.syncTrack();
-      });
-    });
-
-    this.unsubscribe = this.store.subscribe((event: StoreEvent) => {
-      if (event.type === 'biome' || event.type === 'state') void this.syncTrack();
-    });
 
     this.updateControls();
   }
 
   destroy(): void {
-    this.unsubscribe?.();
+    this.transitionId += 1;
     this.activeAudio?.pause();
     this.fadingAudio?.pause();
   }
@@ -99,31 +100,22 @@ export class AudioManager {
     void this.syncTrack();
   }
 
-  private desiredTrack(): TrackKey {
-    return this.currentView === 'field' ? this.store.snapshot.currentBiome : 'command';
-  }
-
   private async syncTrack(): Promise<void> {
-    const desired = this.desiredTrack();
+    const desired = this.selectedKey;
     if (!this.armed) {
-      this.currentKey = desired;
-      this.updateControls('Tap anywhere to start music');
+      this.updateControls('Tap anywhere to start selected music');
       return;
     }
     if (desired === this.currentKey && this.activeAudio) {
       this.updateControls();
       return;
     }
-    if (this.switching) return;
-    this.switching = true;
-    try {
-      await this.switchTrack(desired);
-    } finally {
-      this.switching = false;
-    }
+
+    const requestId = ++this.transitionId;
+    await this.switchTrack(desired, requestId);
   }
 
-  private async switchTrack(key: TrackKey): Promise<void> {
+  private async switchTrack(key: TrackKey, requestId: number): Promise<void> {
     const definition = tracks[key];
     const next = new Audio(new URL(definition.file, document.baseURI).href);
     next.loop = true;
@@ -133,7 +125,13 @@ export class AudioManager {
     try {
       await next.play();
     } catch {
-      this.updateControls('Music assets loading');
+      if (requestId === this.transitionId) this.updateControls('Unable to load selected track');
+      return;
+    }
+
+    if (requestId !== this.transitionId) {
+      next.pause();
+      next.src = '';
       return;
     }
 
@@ -141,9 +139,10 @@ export class AudioManager {
     this.fadingAudio = previous;
     this.activeAudio = next;
     this.currentKey = key;
-    this.fadeTo(next, this.muted ? 0 : this.volume, 1500);
+    this.fadeTo(next, this.muted ? 0 : this.volume, 1200);
+
     if (previous) {
-      this.fadeTo(previous, 0, 1500, () => {
+      this.fadeTo(previous, 0, 1200, () => {
         previous.pause();
         previous.src = '';
         if (this.fadingAudio === previous) this.fadingAudio = null;
@@ -166,8 +165,9 @@ export class AudioManager {
   }
 
   private updateControls(override?: string): void {
-    const desired = tracks[this.desiredTrack()];
-    if (this.trackLabel) this.trackLabel.textContent = override ?? desired.label;
+    const selected = tracks[this.selectedKey];
+    if (this.trackLabel) this.trackLabel.textContent = override ?? selected.label;
+    if (this.trackSelect) this.trackSelect.value = this.selectedKey;
     if (this.toggleButton) {
       this.toggleButton.textContent = this.muted ? '♪ OFF' : '♪ ON';
       this.toggleButton.setAttribute('aria-pressed', String(!this.muted));
@@ -179,5 +179,10 @@ export class AudioManager {
   private readVolume(): number {
     const saved = Number(localStorage.getItem(VOLUME_KEY));
     return Number.isFinite(saved) && saved >= 0 && saved <= 1 ? saved : 0.34;
+  }
+
+  private readSelectedTrack(): TrackKey {
+    const saved = localStorage.getItem(TRACK_KEY) ?? '';
+    return isTrackKey(saved) ? saved : 'command';
   }
 }
