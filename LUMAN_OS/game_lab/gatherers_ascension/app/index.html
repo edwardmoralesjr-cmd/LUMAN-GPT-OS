@@ -52,7 +52,17 @@
         <button id="economy-sell-all" class="treasury-action" type="button">LIQUIDATE CARGO</button>
         <div class="music-console">
           <button id="music-toggle" class="music-toggle" type="button" aria-pressed="true">♪ ON</button>
-          <div class="music-track"><span>MUSIC CHANNEL</span><strong id="music-track">Tap anywhere to start music</strong></div>
+          <label class="music-picker" for="music-select">
+            <span>SELECT SOUNDTRACK</span>
+            <select id="music-select" aria-label="Select background music">
+              <option value="command">Worldroot Command Center</option>
+              <option value="greenveil">Greenveil Meadow</option>
+              <option value="ironfall">Ironfall Basin</option>
+              <option value="crystal-vale">Crystal Vale</option>
+              <option value="emberdeep">Emberdeep Archive</option>
+            </select>
+          </label>
+          <div class="music-track"><span>NOW PLAYING</span><strong id="music-track">Tap anywhere to start music</strong></div>
           <input id="music-volume" class="music-volume" type="range" min="0" max="100" value="34" aria-label="Background music volume" />
         </div>
       </section>
