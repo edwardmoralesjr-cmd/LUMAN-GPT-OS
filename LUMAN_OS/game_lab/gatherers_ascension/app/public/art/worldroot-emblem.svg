@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" role="img" aria-label="Gatherer's Ascension worldroot emblem">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="42%" r="58%"><stop offset="0" stop-color="#8dffd0" stop-opacity=".8"/><stop offset=".24" stop-color="#28bd83" stop-opacity=".28"/><stop offset="1" stop-color="#04110d" stop-opacity="0"/></radialGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1fff8"/><stop offset=".25" stop-color="#84b9a4"/><stop offset=".5" stop-color="#e8fff4"/><stop offset=".72" stop-color="#426c5b"/><stop offset="1" stop-color="#d7f4e5"/></linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path d="M120 6l18 28 48 22 31 48-6 94-40 55-51 22-51-22-40-55-6-94 31-48 48-22z" fill="#03100c" stroke="url(#silver)" stroke-width="5"/>
+  <path d="M120 24l12 24 37 17 27 42-5 82-32 45-39 18-39-18-32-45-5-82 27-42 37-17z" fill="none" stroke="#52d69a" stroke-opacity=".55" stroke-width="2"/>
+  <ellipse cx="120" cy="125" rx="78" ry="92" fill="url(#g)"/>
+  <g stroke="url(#silver)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M120 58v118"/><path d="M120 84c-19 8-33 20-44 37M120 97c21 7 36 19 47 34M120 119c-25 4-45 15-59 31M120 133c24 3 43 13 58 28"/>
+    <path d="M120 176c-17 13-29 31-35 53M120 176c17 13 29 31 35 53M120 177c-5 20-5 39 0 60M120 186c-31 17-50 34-59 52M120 186c31 17 50 34 59 52"/>
+  </g>
+  <g fill="#73efad" stroke="#d9ffed" stroke-width="1.2">
+    <path d="M75 111c-18-13-29-8-34 7 17 7 29 4 34-7z"/><path d="M91 93c-12-17-24-16-33-4 13 12 25 13 33 4z"/><path d="M164 119c17-14 29-10 35 5-17 8-29 6-35-5z"/><path d="M147 98c10-18 23-18 33-7-12 13-24 15-33 7z"/><path d="M62 149c-17-8-27-2-29 12 16 3 26-1 29-12z"/><path d="M177 157c17-9 27-4 30 10-16 4-26 1-30-10z"/>
+  </g>
+  <g filter="url(#glow)"><path d="M120 36l9 17-9 17-9-17z" fill="#dffff1" stroke="#65ffc1" stroke-width="2"/><circle cx="120" cy="53" r="5" fill="#fff"/></g>
+  <path d="M120 4l7 12-7 12-7-12zM120 252l7 12-7 12-7-12z" fill="#dffff1" stroke="#68eeb1" stroke-width="2"/>
+</svg>
