@@ -7,6 +7,7 @@ import './music-selector.css';
 import './upgrade-preview.css';
 import './upgrade-preview-overrides.css';
 import './command-center-v3.css';
+import './command-center-v3-brand.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
