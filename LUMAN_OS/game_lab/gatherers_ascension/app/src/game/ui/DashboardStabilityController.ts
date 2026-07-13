@@ -21,6 +21,9 @@ type TelemetryInternals = {
 type OperationsInternals = {
   render: () => void;
   timer: number | null;
+  state: Readonly<GameState>;
+  active: boolean;
+  mount: HTMLElement | null;
 };
 
 /**
@@ -33,8 +36,10 @@ type OperationsInternals = {
  */
 export class DashboardStabilityController {
   private originalDashboardRender: (() => void) | null = null;
+  private originalOperationsRender: (() => void) | null = null;
   private dashboardPollTimer: number | null = null;
   private lastDashboardSignature = '';
+  private lastOperationsSignature = '';
   private rendering = false;
   private destroyed = false;
 
@@ -69,6 +74,10 @@ export class DashboardStabilityController {
 
   stabilizeOperationsConsole(consoleSystem: PersistentOperationsConsole): void {
     const internal = consoleSystem as unknown as OperationsInternals;
+    if (!this.originalOperationsRender) {
+      this.originalOperationsRender = internal.render.bind(consoleSystem);
+      internal.render = () => this.renderOperationsSafely(internal);
+    }
     if (internal.timer !== null) window.clearInterval(internal.timer);
     internal.timer = window.setInterval(() => internal.render(), 2_000);
   }
@@ -117,6 +126,15 @@ export class DashboardStabilityController {
     }
   }
 
+  private renderOperationsSafely(internal: OperationsInternals): void {
+    if (!this.originalOperationsRender || !internal.active) return;
+    const mounted = Boolean(internal.mount && document.contains(internal.mount));
+    const signature = this.operationsSignature(internal.state);
+    if (mounted && signature === this.lastOperationsSignature) return;
+    this.originalOperationsRender();
+    this.lastOperationsSignature = signature;
+  }
+
   private dashboardSignature(internal: DashboardInternals): string {
     const state = internal.state;
     const assignments = state.network.gatherers
@@ -144,6 +162,35 @@ export class DashboardStabilityController {
       internal.selectedZoneId ?? '-',
       scanActive ? 'scan-on' : 'scan-off',
       Math.floor(state.totals.gathered / 100),
+    ].join('::');
+  }
+
+  private operationsSignature(state: Readonly<GameState>): string {
+    const inventoryUnits = Object.values(state.inventory).reduce((sum, amount) => sum + Math.max(0, amount), 0);
+    const tools = Object.entries(state.tools)
+      .map(([tool, level]) => `${tool}:${level}:${(state.toolDurability[tool as keyof typeof state.toolDurability] ?? 100).toFixed(1)}`)
+      .join('|');
+    const gatherers = state.network.gatherers
+      .map((gatherer) => `${gatherer.id}:${gatherer.assignedZoneId ?? '-'}:${gatherer.fatigue.toFixed(1)}:${gatherer.endurance}`)
+      .join('|');
+    const ecology = state.biomeEcology[state.currentBiome];
+
+    return [
+      state.currentBiome,
+      state.coins,
+      inventoryUnits,
+      state.level,
+      state.network.level,
+      state.stats.endurance,
+      state.gear.worldpack,
+      tools,
+      gatherers,
+      ecology?.saturation.toFixed(1) ?? '12.0',
+      ecology?.totalPressure.toFixed(1) ?? '0.0',
+      state.operations.totalRepairs,
+      state.operations.totalRepairCost,
+      state.operations.capacityStops,
+      state.operations.exhaustionRecalls,
     ].join('::');
   }
 }
