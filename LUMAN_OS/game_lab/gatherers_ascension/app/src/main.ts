@@ -3,6 +3,7 @@ import './collection.css';
 import './command-center.css';
 import './font-scale.css';
 import './economy-audio.css';
+import './music-selector.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
@@ -14,7 +15,7 @@ import type { GameState } from './game/state/GameState';
 const store = new GameStore();
 const saves = new SaveService();
 const ui = new CommandCenterUI(store);
-const audio = new AudioManager(store);
+const audio = new AudioManager();
 const economy = new EconomyHUD(store);
 audio.initialize();
 
