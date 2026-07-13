@@ -6,6 +6,7 @@ import './economy-audio.css';
 import './music-selector.css';
 import './upgrade-preview.css';
 import './upgrade-preview-overrides.css';
+import './command-center-v2.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
@@ -13,6 +14,7 @@ import { CommandCenterUI } from './game/ui/CommandCenterUI';
 import { AudioManager } from './game/systems/AudioManager';
 import { EconomyHUD } from './game/ui/EconomyHUD';
 import { UpgradePreviewSystem } from './game/ui/UpgradePreviewSystem';
+import { CommandCenterDashboardV2 } from './game/ui/CommandCenterDashboardV2';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
@@ -21,8 +23,10 @@ const ui = new CommandCenterUI(store);
 const audio = new AudioManager();
 const economy = new EconomyHUD(store);
 const upgradePreview = new UpgradePreviewSystem(store);
+const tacticalCommandCenter = new CommandCenterDashboardV2(store);
 audio.initialize();
 upgradePreview.initialize();
+tacticalCommandCenter.initialize();
 
 async function bootstrap(): Promise<void> {
   try {
@@ -65,6 +69,7 @@ async function bootstrap(): Promise<void> {
     audio.destroy();
     economy.destroy();
     upgradePreview.destroy();
+    tacticalCommandCenter.destroy();
     void saves.saveLocal(store.snapshot as GameState);
   });
 
