@@ -94,7 +94,9 @@ export class DashboardStabilityController {
     window.removeEventListener('scroll', this.handleWindowScroll);
     window.removeEventListener('wheel', this.markUserScroll);
     window.removeEventListener('touchstart', this.markUserScroll);
+    window.removeEventListener('touchmove', this.markUserScroll);
     window.removeEventListener('pointerdown', this.markUserScroll);
+    window.removeEventListener('pointermove', this.markUserScroll);
     document.removeEventListener('keydown', this.markUserScroll, true);
   }
 
@@ -111,10 +113,15 @@ export class DashboardStabilityController {
     window.addEventListener('scroll', this.handleWindowScroll, { passive: true });
     window.addEventListener('wheel', this.markUserScroll, { passive: true });
     window.addEventListener('touchstart', this.markUserScroll, { passive: true });
+    window.addEventListener('touchmove', this.markUserScroll, { passive: true });
     window.addEventListener('pointerdown', this.markUserScroll, { passive: true });
+    window.addEventListener('pointermove', this.markUserScroll, { passive: true });
     document.addEventListener('keydown', this.markUserScroll, true);
 
-    this.scrollObserver = new MutationObserver(() => this.scheduleScrollRestore());
+    this.scrollObserver = new MutationObserver(() => {
+      this.ensureTelemetryDeckFirst();
+      this.scheduleScrollRestore();
+    });
     this.scrollObserver.observe(overlay, {
       subtree: true,
       childList: true,
