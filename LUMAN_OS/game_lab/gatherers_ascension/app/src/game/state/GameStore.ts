@@ -38,9 +38,15 @@ export type StoreEvent =
   | { type: 'biome'; biome: BiomeId }
   | { type: 'discovery'; definition: ResourceDefinition; quality: HarvestQuality };
 
+const toolIds: readonly ToolId[] = ['axe', 'pickaxe', 'sickle', 'gloves'];
+const biomeIds: readonly BiomeId[] = ['greenveil', 'ironfall', 'crystal-vale', 'emberdeep'];
+const riskWeight: Record<GatheringZoneDefinition['danger'], number> = { Low: 1, Moderate: 2, High: 3, Extreme: 4 };
+
 export class GameStore {
   private state: GameState = createInitialState();
   private listeners = new Set<(event: StoreEvent) => void>();
+  private lastCapacityWarningAt = 0;
+  private lastToolWarningAt = 0;
 
   get snapshot(): Readonly<GameState> {
     return this.state;
@@ -65,17 +71,113 @@ export class GameStore {
     this.toast('New path begun', 'Your gathering journey has been reset.');
   }
 
+  inventoryUnits(): number {
+    return Object.values(this.state.inventory).reduce((sum, amount) => sum + Math.max(0, amount), 0);
+  }
+
+  inventoryCapacity(): number {
+    return Math.floor(
+      250
+      + this.state.gear.worldpack * 180
+      + this.state.level * 18
+      + this.state.stats.endurance * 12
+      + this.state.network.level * 25,
+    );
+  }
+
+  inventorySpaceRemaining(): number {
+    return Math.max(0, this.inventoryCapacity() - this.inventoryUnits());
+  }
+
+  inventoryLoadPercent(): number {
+    return Math.max(0, (this.inventoryUnits() / Math.max(1, this.inventoryCapacity())) * 100);
+  }
+
+  biomeSaturation(biomeId: BiomeId): number {
+    return this.state.biomeEcology[biomeId]?.saturation ?? 12;
+  }
+
+  biomeRecoveryRate(): number {
+    return 1.2;
+  }
+
+  toolRepairCost(tool: ToolId): number {
+    const missing = Math.max(0, 100 - this.state.toolDurability[tool]);
+    return Math.ceil(missing * (1.2 + this.state.tools[tool] * 0.35));
+  }
+
+  repairTool(tool: ToolId): void {
+    const cost = this.toolRepairCost(tool);
+    if (cost <= 0) {
+      this.toast('Maintenance check complete', `${toolForm(this.state.tools[tool])} is already at full condition.`);
+      return;
+    }
+    if (this.state.coins < cost) {
+      this.toast('Repair unavailable', `${cost.toLocaleString()} coins are required to restore this tool.`);
+      return;
+    }
+    this.state.coins -= cost;
+    this.state.toolDurability[tool] = 100;
+    this.state.operations.totalRepairs += 1;
+    this.state.operations.totalRepairCost += cost;
+    this.state.operations.lastMaintenanceAt = Date.now();
+    this.addNetworkActivity('Tool Restored', `${tool} returned to full operational condition for ${cost} coins.`, 'success');
+    this.touch();
+    this.emitState();
+    this.toast('Tool repaired', `Full condition restored for ${cost.toLocaleString()} coins.`);
+  }
+
+  repairAllTools(): void {
+    const damaged = toolIds.filter((tool) => this.state.toolDurability[tool] < 99.95);
+    if (!damaged.length) {
+      this.toast('Maintenance check complete', 'Every gathering tool is already at full condition.');
+      return;
+    }
+    const cost = damaged.reduce((sum, tool) => sum + this.toolRepairCost(tool), 0);
+    if (this.state.coins < cost) {
+      this.toast('Repair All unavailable', `${cost.toLocaleString()} coins are required for complete maintenance.`);
+      return;
+    }
+    this.state.coins -= cost;
+    damaged.forEach((tool) => { this.state.toolDurability[tool] = 100; });
+    this.state.operations.totalRepairs += damaged.length;
+    this.state.operations.totalRepairCost += cost;
+    this.state.operations.lastMaintenanceAt = Date.now();
+    this.addNetworkActivity('Maintenance Cycle Complete', `${damaged.length} tools restored for ${cost} coins.`, 'success');
+    this.touch();
+    this.emitState();
+    this.toast('All tools repaired', `${damaged.length} tools restored for ${cost.toLocaleString()} coins.`);
+  }
+
+  projectedCycleUnits(gatherer: GathererState, zone: GatheringZoneDefinition): number {
+    const specialtyBonus = gatherer.specialty === zone.specialty ? 1.25 : 1;
+    const commandBonus = 1 + Math.max(0, this.state.network.level - 1) * 0.025;
+    const fatigueMultiplier = Math.max(0.5, 1 - gatherer.fatigue * 0.0045);
+    const saturationMultiplier = this.saturationYieldMultiplier(zone.biomeId);
+    return Math.max(1, Math.floor(
+      zone.baseYield
+      * gatherer.efficiency
+      * specialtyBonus
+      * commandBonus
+      * (1 + gatherer.equipmentLevel * 0.07)
+      * fatigueMultiplier
+      * saturationMultiplier,
+    ));
+  }
+
   rollNode(baseResourceId: string): NodeRoll {
     const variantId = variantByBase[baseResourceId];
     const variant = variantId ? rareVariants[variantId] : undefined;
     let resourceId = baseResourceId;
 
     if (variant) {
+      const saturation = this.biomeSaturation(variant.nativeBiome);
+      const ecologyModifier = saturation < 35 ? (35 - saturation) * 0.00012 : -(saturation - 65) * 0.00008;
       const fortuneBonus = this.state.stats.fortune * 0.00008;
       const perceptionBonus = this.state.stats.perception * 0.00004;
       const momentumBonus = Math.min(0.025, this.state.rareMomentum * 0.00008);
       const boostBonus = this.isBoostActive() ? 0.015 : 0;
-      const chance = Math.min(0.08, (variant.spawnChance ?? 0) + fortuneBonus + perceptionBonus + momentumBonus + boostBonus);
+      const chance = Math.min(0.08, Math.max(0, (variant.spawnChance ?? 0) + ecologyModifier + fortuneBonus + perceptionBonus + momentumBonus + boostBonus));
       if (Math.random() < chance) resourceId = variant.id;
     }
 
@@ -87,13 +189,16 @@ export class GameStore {
     const initialDefinition = allResources[resourceId];
     if (!initialDefinition) throw new Error(`Unknown resource: ${resourceId}`);
     let definition: ResourceDefinition = initialDefinition;
-
     let quality = initialQuality;
     let surprise: string | undefined;
 
-    if (!definition.isVariant) {
+    const durability = this.state.toolDurability[definition.tool];
+    const toolBroken = durability <= 0.01;
+
+    if (!definition.isVariant && !toolBroken) {
       const mutationTarget = variantByBase[resourceId];
-      const mutationChance = 0.0015 + this.state.stats.fortune * 0.00003 + (this.isBoostActive() ? 0.004 : 0);
+      const ecologyBonus = this.biomeSaturation(this.state.currentBiome) < 35 ? 0.0015 : 0;
+      const mutationChance = 0.0015 + ecologyBonus + this.state.stats.fortune * 0.00003 + (this.isBoostActive() ? 0.004 : 0);
       if (mutationTarget && Math.random() < mutationChance) {
         const mutatedDefinition = allResources[mutationTarget];
         if (mutatedDefinition) {
@@ -109,18 +214,27 @@ export class GameStore {
     const statPower = this.state.stats.power;
     const fortune = this.state.stats.fortune;
     const perception = this.state.stats.perception;
+    const conditionMultiplier = toolBroken ? 0.2 : 0.5 + durability * 0.005;
+    const saturationMultiplier = this.saturationYieldMultiplier(this.state.currentBiome);
     const baseBonus = Math.floor((toolLevel - 1) / 3) + Math.floor((statPower - 1) / 5);
-    const criticalChance = Math.min(0.42, 0.04 + fortune * 0.008 + perception * 0.004 + (this.isBoostActive() ? 0.04 : 0));
+    const criticalChance = toolBroken ? 0 : Math.min(0.42, (0.04 + fortune * 0.008 + perception * 0.004 + (this.isBoostActive() ? 0.04 : 0)) * conditionMultiplier);
     const critical = Math.random() < criticalChance;
     const qualityInfo = qualityDefinitions[quality];
-    let quantity = Math.max(1, 1 + baseBonus + qualityInfo.yieldBonus + (critical ? 1 + Math.floor(fortune / 4) : 0));
+    let quantity = Math.max(1, Math.floor((1 + baseBonus + qualityInfo.yieldBonus + (critical ? 1 + Math.floor(fortune / 4) : 0)) * conditionMultiplier * saturationMultiplier));
 
-    if (!surprise) {
+    if (toolBroken) {
+      quality = 'Standard';
+      surprise = undefined;
+      quantity = 1;
+      if (Date.now() - this.lastToolWarningAt > 8_000) {
+        this.lastToolWarningAt = Date.now();
+        this.toast('Tool condition critical', 'Improvised gathering is limited to one unit until the tool is repaired.');
+      }
+    } else if (!surprise) {
       const surpriseRoll = Math.random();
       const bountifulChance = Math.min(0.12, 0.035 + fortune * 0.0015);
       const echoChance = bountifulChance + Math.min(0.055, 0.012 + perception * 0.0008);
       const surgeChance = echoChance + Math.min(0.035, 0.008 + fortune * 0.0005);
-
       if (surpriseRoll < bountifulChance) {
         quantity += 2 + Math.floor(fortune / 5);
         surprise = 'Bountiful cluster';
@@ -133,17 +247,28 @@ export class GameStore {
       }
     }
 
-    const knowledgeBonus = 1 + (this.state.stats.knowledge - 1) * 0.025;
-    const xpGain = Math.floor(definition.xp * quantity * knowledgeBonus * qualityInfo.xpMultiplier);
-    const key = inventoryKey(resourceId, quality);
+    const remaining = this.inventorySpaceRemaining();
+    if (remaining <= 0) {
+      quantity = 1;
+      if (Date.now() - this.lastCapacityWarningAt > 8_000) {
+        this.lastCapacityWarningAt = Date.now();
+        this.toast('Worldpack overloaded', 'Manual gathering is reduced to emergency single-unit collection. Sell cargo or upgrade the Worldpack.');
+      }
+    } else {
+      quantity = Math.max(1, Math.min(quantity, remaining));
+    }
 
+    const finalQualityInfo = qualityDefinitions[quality];
+    const knowledgeBonus = 1 + (this.state.stats.knowledge - 1) * 0.025;
+    const xpGain = Math.floor(definition.xp * quantity * knowledgeBonus * finalQualityInfo.xpMultiplier);
+    const key = inventoryKey(resourceId, quality);
     this.state.inventory[key] = (this.state.inventory[key] ?? 0) + quantity;
     this.state.xp += xpGain;
-    this.state.skills[definition.tool].xp += Math.floor(definition.skillXp * quantity * qualityInfo.xpMultiplier);
+    this.state.skills[definition.tool].xp += Math.floor(definition.skillXp * quantity * finalQualityInfo.xpMultiplier);
     this.state.totals.gathered += quantity;
     if (critical) this.state.totals.criticalHarvests += 1;
     if (surprise) this.state.totals.surpriseEvents += 1;
-    if (qualityInfo.rank >= 2) this.state.totals.perfectedFinds += 1;
+    if (finalQualityInfo.rank >= 2) this.state.totals.perfectedFinds += 1;
 
     const newDiscovery = !this.state.discovered.includes(resourceId);
     if (newDiscovery) {
@@ -156,9 +281,7 @@ export class GameStore {
     const knownQualities = this.state.discoveredQualities[resourceId] ?? [];
     if (!knownQualities.includes(quality)) {
       this.state.discoveredQualities[resourceId] = [...knownQualities, quality];
-      if (!newDiscovery && quality !== 'Standard') {
-        this.toast(`${quality} specimen discovered`, `${definition.name} now has a new visual tier in your Codex.`);
-      }
+      if (!newDiscovery && quality !== 'Standard') this.toast(`${quality} specimen discovered`, `${definition.name} now has a new visual tier in your Codex.`);
     }
 
     if (definition.isVariant) {
@@ -169,13 +292,23 @@ export class GameStore {
       if (critical && ['Rare', 'Epic', 'Legendary'].includes(definition.rarity)) this.state.totals.rareFinds += 1;
     }
 
+    if (!toolBroken) {
+      const wearBase = 0.48 + finalQualityInfo.rank * 0.14 + (definition.isVariant ? 0.55 : 0);
+      const wearReduction = Math.min(0.55, (toolLevel - 1) * 0.018 + this.state.gear.fieldKit * 0.015);
+      const wear = Math.max(0.12, wearBase * (1 - wearReduction));
+      this.state.toolDurability[definition.tool] = Math.max(0, durability - wear);
+      if (this.state.toolDurability[definition.tool] <= 0.01) {
+        this.addNetworkActivity('Tool Failure', `${definition.tool} reached zero condition and now requires repair.`, 'warning');
+        this.toast('Tool disabled', 'The tool has reached zero condition. Emergency single-unit gathering remains available.');
+      }
+    }
+
+    this.applyBiomePressure(this.state.currentBiome, 0.18 + quantity * 0.055 + finalQualityInfo.rank * 0.09);
     this.resolveLevelUps();
     this.resolveSkillLevels(definition.tool);
     this.touch();
     this.emitState();
-
     if (surprise) this.toast(surprise, this.surpriseMessage(surprise, definition.name, quantity));
-
     return { quantity, critical, definition, quality, surprise, newDiscovery };
   }
 
@@ -217,10 +350,11 @@ export class GameStore {
     if (this.state.coins < cost) return;
     this.state.coins -= cost;
     this.state.tools[tool] += 1;
+    this.state.toolDurability[tool] = 100;
     const nextLevel = current + 1;
     this.touch();
     this.emitState();
-    this.toast('Tool evolved', `Level ${nextLevel} reached. ${toolForm(nextLevel)} is now visible.`);
+    this.toast('Tool evolved', `Level ${nextLevel} reached. ${toolForm(nextLevel)} is now visible and fully restored.`);
   }
 
   upgradeGear(gear: keyof GameState['gear']): void {
@@ -280,7 +414,9 @@ export class GameStore {
     const specialtyBonus = gatherer.specialty === zone.specialty ? 1.18 : 1;
     const equipmentBonus = 1 + Math.max(0, gatherer.equipmentLevel - 1) * 0.06;
     const networkBonus = 1 + Math.max(0, this.state.network.level - 1) * 0.015;
-    return Math.max(7_000, (zone.durationSeconds * 1000) / (gatherer.efficiency * specialtyBonus * equipmentBonus * networkBonus));
+    const fatiguePenalty = 1 + gatherer.fatigue * 0.006;
+    const saturationPenalty = 1 + Math.max(0, this.biomeSaturation(zone.biomeId) - 35) * 0.005;
+    return Math.max(7_000, ((zone.durationSeconds * 1000) / (gatherer.efficiency * specialtyBonus * equipmentBonus * networkBonus)) * fatiguePenalty * saturationPenalty);
   }
 
   recruitGatherer(templateId: string): void {
@@ -289,8 +425,8 @@ export class GameStore {
     if (this.state.network.gatherers.some((gatherer) => gatherer.templateId === templateId)) return;
     if (this.state.level < template.unlockLevel || this.state.coins < template.recruitCost) return;
     if (this.state.network.gatherers.length >= this.maxGathererSlots()) return;
-
     this.state.coins -= template.recruitCost;
+    const now = Date.now();
     const gatherer: GathererState = {
       id: `gatherer-${template.id}`,
       templateId: template.id,
@@ -303,6 +439,8 @@ export class GameStore {
       efficiency: template.efficiency,
       endurance: template.endurance,
       fortune: template.fortune,
+      fatigue: 0,
+      fatigueUpdatedAt: now,
       totalGathered: 0,
       cyclesCompleted: 0,
       assignedZoneId: null,
@@ -332,13 +470,24 @@ export class GameStore {
   }
 
   assignGatherer(gathererId: string, zoneId: string): void {
+    this.advancePersistentSystems(Date.now());
     const gatherer = this.state.network.gatherers.find((item) => item.id === gathererId);
     const zone = gatheringZones[zoneId];
     if (!gatherer || !zone || gatherer.assignedZoneId) return;
     if (!this.state.network.unlockedZones.includes(zoneId)) return;
     if (this.state.network.gatherers.some((item) => item.assignedZoneId === zoneId)) return;
+    if (gatherer.fatigue >= 85) {
+      this.toast('Gatherer requires recovery', `${gatherer.name} is at ${Math.round(gatherer.fatigue)}% fatigue and cannot deploy yet.`);
+      return;
+    }
+    if (this.inventoryLoadPercent() >= 100) {
+      this.toast('Deployment blocked', 'Worldpack storage is full. Liquidate cargo before starting another automated operation.');
+      return;
+    }
+    const now = Date.now();
     gatherer.assignedZoneId = zoneId;
-    gatherer.lastCycleAt = Date.now();
+    gatherer.lastCycleAt = now;
+    gatherer.fatigueUpdatedAt = now;
     this.addNetworkActivity('Deployment Started', `${gatherer.name} deployed to ${zone.name}.`, 'normal');
     this.touch();
     this.emitState();
@@ -352,7 +501,8 @@ export class GameStore {
     const zoneName = gatheringZones[gatherer.assignedZoneId]?.name ?? 'the field';
     gatherer.assignedZoneId = null;
     gatherer.lastCycleAt = null;
-    this.addNetworkActivity('Gatherer Recalled', `${gatherer.name} returned from ${zoneName}.`, 'normal');
+    gatherer.fatigueUpdatedAt = Date.now();
+    this.addNetworkActivity('Gatherer Recalled', `${gatherer.name} returned from ${zoneName} at ${Math.round(gatherer.fatigue)}% fatigue.`, 'normal');
     this.touch();
     this.emitState();
   }
@@ -366,46 +516,62 @@ export class GameStore {
     gatherer.equipmentLevel += 1;
     gatherer.efficiency += 0.055;
     gatherer.endurance += 1;
+    gatherer.fatigue = Math.max(0, gatherer.fatigue - 12);
+    gatherer.fatigueUpdatedAt = Date.now();
     if (gatherer.equipmentLevel % 3 === 0) gatherer.fortune += 1;
     this.addNetworkActivity('Loadout Improved', `${gatherer.name}'s equipment reached tier ${gatherer.equipmentLevel}.`, 'success');
     this.touch();
     this.emitState();
-    this.toast('Gatherer upgraded', `${gatherer.name} is now more efficient.`);
+    this.toast('Gatherer upgraded', `${gatherer.name} is now more efficient and recovered 12 fatigue.`);
   }
 
   processAutomation(now = Date.now()): number {
     let totalCollected = 0;
     let firstDiscovery: { definition: ResourceDefinition; quality: HarvestQuality } | null = null;
+    let changed = this.advancePersistentSystems(now);
 
     for (const gatherer of this.state.network.gatherers) {
       if (!gatherer.assignedZoneId) continue;
       const zone = gatheringZones[gatherer.assignedZoneId];
       if (!zone) continue;
       if (!gatherer.lastCycleAt) gatherer.lastCycleAt = now;
-      const cycleDuration = this.automationCycleDuration(gatherer, zone);
-      const elapsed = Math.max(0, now - gatherer.lastCycleAt);
-      const cycles = Math.min(96, Math.floor(elapsed / cycleDuration));
-      if (cycles <= 0) continue;
-
+      let completedCycles = 0;
       let gathererCollected = 0;
       let rareFound = false;
-      for (let cycle = 0; cycle < cycles; cycle += 1) {
+
+      while (completedCycles < 96 && gatherer.assignedZoneId) {
+        const duration = this.automationCycleDuration(gatherer, zone);
+        const elapsed = Math.max(0, now - (gatherer.lastCycleAt ?? now));
+        if (elapsed < duration) break;
+        if (this.inventorySpaceRemaining() <= 0) {
+          this.stopGathererForCapacity(gatherer, zone);
+          changed = true;
+          break;
+        }
         const result = this.resolveAutomatedCycle(gatherer, zone);
+        gatherer.lastCycleAt = (gatherer.lastCycleAt ?? now) + duration;
+        completedCycles += 1;
         gathererCollected += result.quantity;
         totalCollected += result.quantity;
+        changed = true;
         if (result.newDiscovery && !firstDiscovery) firstDiscovery = { definition: result.definition, quality: result.quality };
         if (result.definition.isVariant || result.quality === 'Ancient' || result.quality === 'Enchanted') rareFound = true;
+        if (gatherer.fatigue >= 100) {
+          this.stopGathererForExhaustion(gatherer, zone);
+          break;
+        }
       }
 
-      gatherer.lastCycleAt += cycles * cycleDuration;
-      this.addNetworkActivity(
-        rareFound ? 'Rare Operation Result' : 'Automated Yield Secured',
-        `${gatherer.name} completed ${cycles} cycle${cycles === 1 ? '' : 's'} in ${zone.name} and returned ${gathererCollected} materials.`,
-        rareFound ? 'rare' : 'success',
-      );
+      if (completedCycles > 0) {
+        this.addNetworkActivity(
+          rareFound ? 'Rare Operation Result' : 'Automated Yield Secured',
+          `${gatherer.name} completed ${completedCycles} cycle${completedCycles === 1 ? '' : 's'} in ${zone.name} and returned ${gathererCollected} materials. Fatigue ${Math.round(gatherer.fatigue)}%.`,
+          rareFound ? 'rare' : 'success',
+        );
+      }
     }
 
-    if (totalCollected > 0) {
+    if (changed) {
       this.resolveNetworkLevels();
       this.resolveLevelUps();
       this.touch();
@@ -413,27 +579,6 @@ export class GameStore {
       if (firstDiscovery) this.emit({ type: 'discovery', ...firstDiscovery });
     }
     return totalCollected;
-  }
-
-  private rollQuality(forceElevated = false): HarvestQuality {
-    const fortune = this.state.stats.fortune;
-    const perception = this.state.stats.perception;
-    const boost = this.isBoostActive() ? 1 : 0;
-    const roll = Math.random();
-    const enchanted = 0.001 + fortune * 0.00006 + boost * 0.0025;
-    const ancient = enchanted + 0.004 + fortune * 0.00015 + perception * 0.00005 + boost * 0.004;
-    const perfected = ancient + 0.02 + fortune * 0.00035 + perception * 0.00015 + boost * 0.009;
-    const fine = perfected + 0.12 + fortune * 0.001 + perception * 0.0004 + boost * 0.02;
-
-    if (roll < enchanted) return 'Enchanted';
-    if (roll < ancient) return 'Ancient';
-    if (roll < perfected || forceElevated) return 'Perfected';
-    if (roll < fine) return 'Fine';
-    return 'Standard';
-  }
-
-  private isBoostActive(): boolean {
-    return this.state.activeBoostUntil > Date.now();
   }
 
   private resolveAutomatedCycle(gatherer: GathererState, zone: GatheringZoneDefinition): {
@@ -446,15 +591,17 @@ export class GameStore {
     const variantId = variantByBase[baseResourceId];
     const variant = variantId ? rareVariants[variantId] : undefined;
     const leaderBonus = this.state.network.gatherers.some((item) => item.role === 'Expedition Leader' && item.assignedZoneId) ? 0.004 : 0;
-    const variantChance = Math.min(0.09, (variant?.spawnChance ?? 0) + zone.rarityBonus + gatherer.fortune * 0.00018 + leaderBonus);
+    const ecologyBonus = Math.max(-0.012, Math.min(0.006, (40 - this.biomeSaturation(zone.biomeId)) * 0.00012));
+    const fatiguePenalty = gatherer.fatigue * 0.000025;
+    const variantChance = Math.min(0.09, Math.max(0, (variant?.spawnChance ?? 0) + zone.rarityBonus + gatherer.fortune * 0.00018 + leaderBonus + ecologyBonus - fatiguePenalty));
     if (variant && Math.random() < variantChance) resourceId = variant.id;
 
     const definition = allResources[resourceId] ?? resources[baseResourceId];
     if (!definition) throw new Error(`Unknown automated resource: ${resourceId}`);
     const quality = this.rollAutomationQuality(zone.rarityBonus, gatherer.fortune);
-    const specialtyBonus = gatherer.specialty === zone.specialty ? 1.25 : 1;
-    const commandBonus = 1 + Math.max(0, this.state.network.level - 1) * 0.025;
-    const quantity = Math.max(1, Math.floor(zone.baseYield * gatherer.efficiency * specialtyBonus * commandBonus * (1 + gatherer.equipmentLevel * 0.07) * (0.82 + Math.random() * 0.38)));
+    const projected = this.projectedCycleUnits(gatherer, zone);
+    const rolled = Math.max(1, Math.floor(projected * (0.82 + Math.random() * 0.38)));
+    const quantity = Math.max(1, Math.min(rolled, this.inventorySpaceRemaining()));
     const key = inventoryKey(resourceId, quality);
     this.state.inventory[key] = (this.state.inventory[key] ?? 0) + quantity;
 
@@ -467,6 +614,9 @@ export class GameStore {
     const qualities = this.state.discoveredQualities[resourceId] ?? [];
     if (!qualities.includes(quality)) this.state.discoveredQualities[resourceId] = [...qualities, quality];
 
+    const fatigueGain = Math.max(0.7, 0.75 + zone.tier * 0.42 + riskWeight[zone.danger] * 0.28 - gatherer.endurance * 0.045);
+    gatherer.fatigue = Math.min(100, gatherer.fatigue + fatigueGain);
+    gatherer.fatigueUpdatedAt = Date.now();
     gatherer.totalGathered += quantity;
     gatherer.cyclesCompleted += 1;
     gatherer.xp += quantity * zone.tier * 3;
@@ -477,6 +627,7 @@ export class GameStore {
       gatherer.endurance += 1;
     }
 
+    this.applyBiomePressure(zone.biomeId, 0.28 + zone.tier * 0.16 + quantity * 0.045);
     this.state.network.xp += quantity * zone.tier * 2;
     this.state.network.totalAutomatedGathered += quantity;
     this.state.network.expeditionsCompleted += 1;
@@ -489,8 +640,84 @@ export class GameStore {
       this.state.rareMomentum = Math.min(400, this.state.rareMomentum + 1);
     }
     if (qualityDefinitions[quality].rank >= 2) this.state.totals.perfectedFinds += 1;
-
     return { quantity, definition, quality, newDiscovery };
+  }
+
+  private advancePersistentSystems(now: number): boolean {
+    let changed = false;
+    for (const biomeId of biomeIds) {
+      const ecology = this.state.biomeEcology[biomeId];
+      const elapsed = Math.max(0, now - ecology.updatedAt);
+      if (elapsed < 5_000) continue;
+      const recovered = Math.min(ecology.saturation - 8, (elapsed / 60_000) * this.biomeRecoveryRate());
+      if (recovered > 0.01) {
+        ecology.saturation = Math.max(8, ecology.saturation - recovered);
+        changed = true;
+      }
+      ecology.updatedAt = now;
+    }
+
+    for (const gatherer of this.state.network.gatherers) {
+      const elapsed = Math.max(0, now - gatherer.fatigueUpdatedAt);
+      if (elapsed < 5_000) continue;
+      if (!gatherer.assignedZoneId && gatherer.fatigue > 0) {
+        const recoveryPerMinute = 3.5 + gatherer.endurance * 0.12;
+        const recovered = Math.min(gatherer.fatigue, (elapsed / 60_000) * recoveryPerMinute);
+        if (recovered > 0.01) {
+          gatherer.fatigue = Math.max(0, gatherer.fatigue - recovered);
+          changed = true;
+        }
+      }
+      gatherer.fatigueUpdatedAt = now;
+    }
+    return changed;
+  }
+
+  private applyBiomePressure(biomeId: BiomeId, pressure: number): void {
+    const ecology = this.state.biomeEcology[biomeId];
+    ecology.saturation = Math.min(100, ecology.saturation + pressure);
+    ecology.totalPressure += pressure;
+    ecology.updatedAt = Date.now();
+  }
+
+  private saturationYieldMultiplier(biomeId: BiomeId): number {
+    const saturation = this.biomeSaturation(biomeId);
+    if (saturation <= 35) return 1 + (35 - saturation) * 0.004;
+    return Math.max(0.5, 1 - (saturation - 35) * 0.007);
+  }
+
+  private stopGathererForCapacity(gatherer: GathererState, zone: GatheringZoneDefinition): void {
+    gatherer.assignedZoneId = null;
+    gatherer.lastCycleAt = null;
+    gatherer.fatigueUpdatedAt = Date.now();
+    this.state.operations.capacityStops += 1;
+    this.addNetworkActivity('Cargo Capacity Reached', `${gatherer.name} returned from ${zone.name} because shared storage is full.`, 'warning');
+    this.toast('Automated operation paused', `${gatherer.name} returned because the Worldpack network is full.`);
+  }
+
+  private stopGathererForExhaustion(gatherer: GathererState, zone: GatheringZoneDefinition): void {
+    gatherer.assignedZoneId = null;
+    gatherer.lastCycleAt = null;
+    gatherer.fatigueUpdatedAt = Date.now();
+    this.state.operations.exhaustionRecalls += 1;
+    this.addNetworkActivity('Gatherer Exhausted', `${gatherer.name} automatically returned from ${zone.name} and entered recovery.`, 'warning');
+    this.toast('Gatherer recalled for recovery', `${gatherer.name} reached maximum fatigue.`);
+  }
+
+  private rollQuality(forceElevated = false): HarvestQuality {
+    const fortune = this.state.stats.fortune;
+    const perception = this.state.stats.perception;
+    const boost = this.isBoostActive() ? 1 : 0;
+    const roll = Math.random();
+    const enchanted = 0.001 + fortune * 0.00006 + boost * 0.0025;
+    const ancient = enchanted + 0.004 + fortune * 0.00015 + perception * 0.00005 + boost * 0.004;
+    const perfected = ancient + 0.02 + fortune * 0.00035 + perception * 0.00015 + boost * 0.009;
+    const fine = perfected + 0.12 + fortune * 0.001 + perception * 0.0004 + boost * 0.02;
+    if (roll < enchanted) return 'Enchanted';
+    if (roll < ancient) return 'Ancient';
+    if (roll < perfected || forceElevated) return 'Perfected';
+    if (roll < fine) return 'Fine';
+    return 'Standard';
   }
 
   private rollAutomationQuality(rarityBonus: number, fortune: number): HarvestQuality {
@@ -504,6 +731,10 @@ export class GameStore {
     if (roll < perfected) return 'Perfected';
     if (roll < fine) return 'Fine';
     return 'Standard';
+  }
+
+  private isBoostActive(): boolean {
+    return this.state.activeBoostUntil > Date.now();
   }
 
   private gathererXpForLevel(level: number): number {
