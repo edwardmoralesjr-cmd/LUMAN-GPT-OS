@@ -160,17 +160,15 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Make the tactical map a secondary analysis section rather than the opening screen. */
-.tactical-map-card::before {
-  content: "TACTICAL ANALYSIS · SELECT A NODE OR ROUTE AFTER REVIEWING LIVE OPERATIONS";
-  display: block;
-  padding: 8px 13px;
-  border-bottom: 1px solid rgba(123, 218, 149, .1);
-  color: #6f8f7b;
-  background: rgba(2, 11, 8, .72);
-  font-size: .58rem;
-  font-weight: 900;
-  letter-spacing: .12em;
+/* The tactical map is intentionally secondary after live and rolling telemetry. */
+.tactical-map-card {
+  border-color: rgba(113, 206, 139, .14);
+}
+
+.tactical-map-head {
+  background:
+    linear-gradient(90deg, rgba(78, 174, 104, .07), transparent 55%),
+    rgba(2, 12, 8, .68);
 }
 
 @media (max-width: 1450px) {
