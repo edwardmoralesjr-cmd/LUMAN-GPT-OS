@@ -7,6 +7,7 @@ import './music-selector.css';
 import './upgrade-preview.css';
 import './upgrade-preview-overrides.css';
 import './command-center-v2.css';
+import './live-dashboard-telemetry.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
@@ -15,6 +16,7 @@ import { AudioManager } from './game/systems/AudioManager';
 import { EconomyHUD } from './game/ui/EconomyHUD';
 import { UpgradePreviewSystem } from './game/ui/UpgradePreviewSystem';
 import { CommandCenterDashboardV2 } from './game/ui/CommandCenterDashboardV2';
+import { LiveDashboardTelemetry } from './game/ui/LiveDashboardTelemetry';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
@@ -24,9 +26,11 @@ const audio = new AudioManager();
 const economy = new EconomyHUD(store);
 const upgradePreview = new UpgradePreviewSystem(store);
 const tacticalCommandCenter = new CommandCenterDashboardV2(store);
+const liveDashboardTelemetry = new LiveDashboardTelemetry(store);
 audio.initialize();
 upgradePreview.initialize();
 tacticalCommandCenter.initialize();
+liveDashboardTelemetry.initialize();
 
 async function bootstrap(): Promise<void> {
   try {
@@ -70,6 +74,7 @@ async function bootstrap(): Promise<void> {
     economy.destroy();
     upgradePreview.destroy();
     tacticalCommandCenter.destroy();
+    liveDashboardTelemetry.destroy();
     void saves.saveLocal(store.snapshot as GameState);
   });
 
