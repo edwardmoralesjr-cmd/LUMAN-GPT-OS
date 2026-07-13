@@ -1,0 +1,194 @@
+/* Real-time-first dashboard hierarchy.
+   Live operational data appears before the tactical map; rolling and historical data follows. */
+
+.command-v2-shell {
+  grid-template-rows: auto auto auto;
+  height: auto;
+  min-height: 100%;
+  align-content: start;
+}
+
+.command-v2-shell > .live-telemetry-deck {
+  order: 0;
+  margin: 0 0 12px;
+  border-color: rgba(126, 231, 157, .32);
+  background:
+    linear-gradient(105deg, rgba(61, 181, 97, .11), transparent 34%, transparent 70%, rgba(220, 181, 81, .08)),
+    rgba(2, 12, 8, .97);
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, .38),
+    inset 0 1px rgba(225, 255, 233, .06),
+    0 0 34px rgba(72, 210, 112, .055);
+}
+
+.command-v2-shell > .tactical-map-card {
+  order: 1;
+  grid-template-rows: auto minmax(340px, 48vh) auto;
+  min-height: 0;
+}
+
+.command-v2-shell > .command-v2-summary-row {
+  order: 2;
+}
+
+/* Keep the most important live readouts visible while examining live panels. */
+.live-telemetry-head {
+  position: sticky;
+  top: -12px;
+  z-index: 12;
+  padding: 10px 8px 9px;
+  background: rgba(2, 13, 9, .985);
+  box-shadow: 0 9px 18px rgba(0, 0, 0, .25);
+}
+
+.live-kpi-strip {
+  position: sticky;
+  top: 49px;
+  z-index: 11;
+  padding: 7px 0 9px;
+  background: linear-gradient(180deg, rgba(2, 13, 9, .99) 72%, rgba(2, 13, 9, .86));
+  border-bottom: 1px solid rgba(125, 224, 153, .12);
+}
+
+.live-kpi {
+  min-height: 74px;
+  padding: 10px 11px;
+  border-color: rgba(130, 218, 155, .17);
+}
+
+.live-kpi > span { font-size: .62rem; }
+.live-kpi strong { font-size: 1.12rem; }
+.live-kpi small { font-size: .52rem; }
+
+/* Explicit information hierarchy inside the live telemetry deck. */
+.live-telemetry-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 9px;
+}
+
+.live-telemetry-grid::before,
+.live-telemetry-grid::after {
+  grid-column: 1 / -1;
+  padding: 8px 10px;
+  border-left: 3px solid #78df97;
+  color: #a7d9b4;
+  background: linear-gradient(90deg, rgba(68, 170, 96, .13), transparent 72%);
+  font-size: .67rem;
+  font-weight: 950;
+  letter-spacing: .16em;
+}
+
+.live-telemetry-grid::before {
+  content: "LIVE NOW · CURRENT OPERATIONS AND IMMEDIATE DECISIONS";
+  order: 0;
+}
+
+.live-telemetry-grid::after {
+  content: "ROLLING & LONG-TERM · PRODUCTION HISTORY AND SYSTEM CONTEXT";
+  order: 10;
+  margin-top: 3px;
+  border-left-color: #d9bc6e;
+  color: #d8c68c;
+  background: linear-gradient(90deg, rgba(169, 126, 43, .12), transparent 72%);
+}
+
+/* LIVE NOW */
+.live-telemetry-grid > article:nth-child(1) {
+  order: 1;
+  grid-column: span 2;
+  border-color: rgba(119, 231, 151, .24);
+  background:
+    radial-gradient(circle at 100% 0, rgba(86, 199, 116, .09), transparent 43%),
+    rgba(4, 18, 12, .82);
+}
+
+.live-telemetry-grid > article:nth-child(4) {
+  order: 2;
+  grid-column: span 1;
+}
+
+.live-telemetry-grid > article:nth-child(3) {
+  order: 3;
+  grid-column: span 1;
+}
+
+.live-telemetry-grid > article:nth-child(5) {
+  order: 4;
+  grid-column: span 1;
+}
+
+.live-telemetry-grid > article:nth-child(7) {
+  order: 5;
+  grid-column: span 1;
+}
+
+/* ROLLING & LONG-TERM */
+.live-telemetry-grid > article:nth-child(2) {
+  order: 11;
+  grid-column: span 1;
+}
+
+.live-telemetry-grid > article:nth-child(6) {
+  order: 12;
+  grid-column: span 2;
+}
+
+.live-panel {
+  padding: 12px;
+}
+
+.live-panel > header span { font-size: .72rem; }
+.live-panel > header small { font-size: .59rem; }
+.live-operation-title strong { font-size: .82rem; }
+.live-operation-title span { font-size: .63rem; }
+.live-operation-title b { font-size: .94rem; }
+.live-operation-stats small { font-size: .54rem; }
+.live-operation-stats strong { font-size: .69rem; }
+.live-metric-matrix span { font-size: .59rem; }
+.live-metric-matrix strong { font-size: .78rem; }
+
+/* Avoid hiding information behind additional small scroll boxes. */
+.live-operation-grid,
+.live-inventory-list,
+.live-event-list {
+  max-height: none;
+  overflow: visible;
+}
+
+.live-event-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Make the tactical map a secondary analysis section rather than the opening screen. */
+.tactical-map-card::before {
+  content: "TACTICAL ANALYSIS · SELECT A NODE OR ROUTE AFTER REVIEWING LIVE OPERATIONS";
+  display: block;
+  padding: 8px 13px;
+  border-bottom: 1px solid rgba(123, 218, 149, .1);
+  color: #6f8f7b;
+  background: rgba(2, 11, 8, .72);
+  font-size: .58rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+@media (max-width: 1450px) {
+  .live-telemetry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .live-telemetry-grid > article:nth-child(1),
+  .live-telemetry-grid > article:nth-child(6) { grid-column: 1 / -1; }
+  .live-telemetry-grid > article:nth-child(3),
+  .live-telemetry-grid > article:nth-child(4),
+  .live-telemetry-grid > article:nth-child(5),
+  .live-telemetry-grid > article:nth-child(7),
+  .live-telemetry-grid > article:nth-child(2) { grid-column: span 1; }
+}
+
+@media (max-width: 900px) {
+  .live-telemetry-head,
+  .live-kpi-strip { position: static; }
+  .live-telemetry-grid { grid-template-columns: 1fr; }
+  .live-telemetry-grid > article { grid-column: 1 / -1 !important; }
+  .live-event-list { grid-template-columns: 1fr; }
+  .command-v2-shell > .tactical-map-card { grid-template-rows: auto minmax(320px, 55vh) auto; }
+}
