@@ -26,36 +26,36 @@ type OperationsInternals = {
   mount: HTMLElement | null;
 };
 
+const scrollKeys = new Set(['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' ', 'Spacebar']);
+
 /**
- * Prevents the tactical dashboard, real-time telemetry, and persistent
- * operations console from rebuilding the same DOM on overlapping timers.
- *
- * The tactical screen now performs a full render only when its structural
- * signature changes. Live values continue updating through their dedicated
- * telemetry systems without resetting the map, scroll position, or controls.
+ * Gives the tactical Dashboard one structural renderer and protects both the
+ * internal command viewport and browser page from live-data layout shifts.
  */
 export class DashboardStabilityController {
   private originalDashboardRender: (() => void) | null = null;
   private originalOperationsRender: (() => void) | null = null;
-  private dashboardPollTimer: number | null = null;
+  private dashboardInternal: DashboardInternals | null = null;
   private lastDashboardSignature = '';
   private lastOperationsSignature = '';
   private rendering = false;
   private destroyed = false;
 
+  private overlay: HTMLElement | null = null;
+  private scrollObserver: MutationObserver | null = null;
+  private restoreFrame: number | null = null;
+  private intendedOverlayScroll = 0;
+  private intendedWindowScroll = 0;
+  private userScrollUntil = 0;
+
   stabilizeDashboard(dashboard: CommandCenterDashboardV2): void {
     const internal = dashboard as unknown as DashboardInternals;
     if (this.originalDashboardRender) return;
 
+    this.dashboardInternal = internal;
     this.originalDashboardRender = internal.render.bind(dashboard);
     internal.render = () => this.renderDashboardSafely(internal);
-
-    const overlay = document.querySelector<HTMLElement>('#strategic-overlay');
-    overlay?.classList.add('dashboard-render-stable');
-
-    this.dashboardPollTimer = window.setInterval(() => {
-      if (!this.destroyed && internal.active) internal.render();
-    }, 1_000);
+    this.installScrollGuard();
   }
 
   disableNativeDashboardTimer(dashboard: CommandCenterDashboardV2): void {
@@ -84,22 +84,76 @@ export class DashboardStabilityController {
 
   destroy(): void {
     this.destroyed = true;
-    if (this.dashboardPollTimer !== null) window.clearInterval(this.dashboardPollTimer);
-    this.dashboardPollTimer = null;
+    this.scrollObserver?.disconnect();
+    this.scrollObserver = null;
+    if (this.restoreFrame !== null) cancelAnimationFrame(this.restoreFrame);
+    this.restoreFrame = null;
+
+    const overlay = this.overlay;
+    overlay?.removeEventListener('scroll', this.handleOverlayScroll);
+    window.removeEventListener('scroll', this.handleWindowScroll);
+    window.removeEventListener('wheel', this.markUserScroll);
+    window.removeEventListener('touchstart', this.markUserScroll);
+    window.removeEventListener('pointerdown', this.markUserScroll);
+    document.removeEventListener('keydown', this.markUserScroll, true);
   }
+
+  private installScrollGuard(): void {
+    const overlay = document.querySelector<HTMLElement>('#strategic-overlay');
+    if (!overlay) return;
+
+    this.overlay = overlay;
+    this.intendedOverlayScroll = overlay.scrollTop;
+    this.intendedWindowScroll = window.scrollY;
+    overlay.classList.add('dashboard-render-stable');
+
+    overlay.addEventListener('scroll', this.handleOverlayScroll, { passive: true });
+    window.addEventListener('scroll', this.handleWindowScroll, { passive: true });
+    window.addEventListener('wheel', this.markUserScroll, { passive: true });
+    window.addEventListener('touchstart', this.markUserScroll, { passive: true });
+    window.addEventListener('pointerdown', this.markUserScroll, { passive: true });
+    document.addEventListener('keydown', this.markUserScroll, true);
+
+    this.scrollObserver = new MutationObserver(() => this.scheduleScrollRestore());
+    this.scrollObserver.observe(overlay, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+    });
+  }
+
+  private readonly markUserScroll = (event: Event): void => {
+    if (event instanceof KeyboardEvent && !scrollKeys.has(event.key)) return;
+    this.userScrollUntil = performance.now() + 900;
+  };
+
+  private readonly handleOverlayScroll = (): void => {
+    if (!this.overlay || performance.now() > this.userScrollUntil) return;
+    this.intendedOverlayScroll = this.overlay.scrollTop;
+  };
+
+  private readonly handleWindowScroll = (): void => {
+    if (performance.now() > this.userScrollUntil) return;
+    this.intendedWindowScroll = window.scrollY;
+  };
 
   private renderDashboardSafely(internal: DashboardInternals): void {
     if (this.rendering || !this.originalDashboardRender || !internal.active) return;
 
-    const overlay = document.querySelector<HTMLElement>('#strategic-overlay');
+    const overlay = this.overlay ?? document.querySelector<HTMLElement>('#strategic-overlay');
     const hasDashboard = Boolean(overlay?.querySelector('.command-v2-shell'));
     const signature = this.dashboardSignature(internal);
-    if (hasDashboard && signature === this.lastDashboardSignature) return;
+    if (hasDashboard && signature === this.lastDashboardSignature) {
+      this.ensureTelemetryDeckFirst();
+      return;
+    }
 
     this.rendering = true;
-    const savedScrollTop = overlay?.scrollTop ?? 0;
-    const savedScrollLeft = overlay?.scrollLeft ?? 0;
+    const savedOverlayScroll = overlay?.scrollTop ?? this.intendedOverlayScroll;
+    const savedWindowScroll = window.scrollY;
     const telemetryDeck = overlay?.querySelector<HTMLElement>('.live-telemetry-deck') ?? null;
+    this.intendedOverlayScroll = savedOverlayScroll;
+    this.intendedWindowScroll = savedWindowScroll;
 
     try {
       telemetryDeck?.remove();
@@ -110,17 +164,13 @@ export class DashboardStabilityController {
       if (telemetryDeck && freshShell) freshShell.prepend(telemetryDeck);
 
       if (freshOverlay) {
+        this.overlay = freshOverlay;
         freshOverlay.classList.add('dashboard-render-stable');
-        freshOverlay.scrollTop = savedScrollTop;
-        freshOverlay.scrollLeft = savedScrollLeft;
-        requestAnimationFrame(() => {
-          if (!freshOverlay.isConnected) return;
-          freshOverlay.scrollTop = savedScrollTop;
-          freshOverlay.scrollLeft = savedScrollLeft;
-        });
       }
 
+      this.ensureTelemetryDeckFirst();
       this.lastDashboardSignature = signature;
+      this.scheduleScrollRestore(true);
     } finally {
       this.rendering = false;
     }
@@ -133,6 +183,50 @@ export class DashboardStabilityController {
     if (mounted && signature === this.lastOperationsSignature) return;
     this.originalOperationsRender();
     this.lastOperationsSignature = signature;
+    this.scheduleScrollRestore();
+  }
+
+  private ensureTelemetryDeckFirst(): void {
+    const overlay = this.overlay;
+    if (!overlay) return;
+    const shell = overlay.querySelector<HTMLElement>('.command-v2-shell');
+    const deck = shell?.querySelector<HTMLElement>(':scope > .live-telemetry-deck');
+    if (!shell || !deck || shell.firstElementChild === deck) return;
+
+    const overlayScroll = overlay.scrollTop;
+    const windowScroll = window.scrollY;
+    shell.prepend(deck);
+    this.intendedOverlayScroll = overlayScroll;
+    this.intendedWindowScroll = windowScroll;
+    this.scheduleScrollRestore(true);
+  }
+
+  private scheduleScrollRestore(force = false): void {
+    if (this.destroyed || !this.dashboardInternal?.active) return;
+    if (!force && performance.now() <= this.userScrollUntil) return;
+    if (this.restoreFrame !== null) cancelAnimationFrame(this.restoreFrame);
+
+    this.restoreFrame = requestAnimationFrame(() => {
+      this.restoreFrame = null;
+      this.restoreScrollPosition();
+    });
+  }
+
+  private restoreScrollPosition(): void {
+    if (this.destroyed || !this.dashboardInternal?.active || performance.now() <= this.userScrollUntil) return;
+    const overlay = this.overlay;
+    if (!overlay) return;
+
+    const overlayMaximum = Math.max(0, overlay.scrollHeight - overlay.clientHeight);
+    const overlayTarget = Math.min(this.intendedOverlayScroll, overlayMaximum);
+    if (Math.abs(overlay.scrollTop - overlayTarget) > 1) overlay.scrollTop = overlayTarget;
+
+    const documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    const windowMaximum = Math.max(0, documentHeight - window.innerHeight);
+    const windowTarget = Math.min(this.intendedWindowScroll, windowMaximum);
+    if (Math.abs(window.scrollY - windowTarget) > 1) {
+      window.scrollTo({ top: windowTarget, left: window.scrollX, behavior: 'auto' });
+    }
   }
 
   private dashboardSignature(internal: DashboardInternals): string {
