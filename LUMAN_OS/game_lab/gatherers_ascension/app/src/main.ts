@@ -5,6 +5,7 @@ import './font-scale.css';
 import './economy-audio.css';
 import './music-selector.css';
 import './upgrade-preview.css';
+import './upgrade-preview-overrides.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
