@@ -8,6 +8,7 @@ import './upgrade-preview.css';
 import './upgrade-preview-overrides.css';
 import './command-center-v2.css';
 import './live-dashboard-telemetry.css';
+import './dashboard-realtime-first.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
