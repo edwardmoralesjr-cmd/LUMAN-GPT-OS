@@ -9,6 +9,7 @@ import './upgrade-preview-overrides.css';
 import './command-center-v2.css';
 import './live-dashboard-telemetry.css';
 import './dashboard-realtime-first.css';
+import './persistent-operations.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
@@ -18,6 +19,7 @@ import { EconomyHUD } from './game/ui/EconomyHUD';
 import { UpgradePreviewSystem } from './game/ui/UpgradePreviewSystem';
 import { CommandCenterDashboardV2 } from './game/ui/CommandCenterDashboardV2';
 import { LiveDashboardTelemetry } from './game/ui/LiveDashboardTelemetry';
+import { PersistentOperationsConsole } from './game/ui/PersistentOperationsConsole';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
@@ -28,10 +30,12 @@ const economy = new EconomyHUD(store);
 const upgradePreview = new UpgradePreviewSystem(store);
 const tacticalCommandCenter = new CommandCenterDashboardV2(store);
 const liveDashboardTelemetry = new LiveDashboardTelemetry(store);
+const persistentOperations = new PersistentOperationsConsole(store);
 audio.initialize();
 upgradePreview.initialize();
 tacticalCommandCenter.initialize();
 liveDashboardTelemetry.initialize();
+persistentOperations.initialize();
 
 async function bootstrap(): Promise<void> {
   try {
@@ -76,6 +80,7 @@ async function bootstrap(): Promise<void> {
     upgradePreview.destroy();
     tacticalCommandCenter.destroy();
     liveDashboardTelemetry.destroy();
+    persistentOperations.destroy();
     void saves.saveLocal(store.snapshot as GameState);
   });
 
