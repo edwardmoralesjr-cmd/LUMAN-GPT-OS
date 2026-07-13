@@ -10,6 +10,7 @@ import './command-center-v2.css';
 import './live-dashboard-telemetry.css';
 import './dashboard-realtime-first.css';
 import './persistent-operations.css';
+import './dashboard-stability.css';
 import { createGame } from './game/createGame';
 import { GameStore } from './game/state/GameStore';
 import { SaveService } from './game/systems/SaveService';
@@ -20,6 +21,7 @@ import { UpgradePreviewSystem } from './game/ui/UpgradePreviewSystem';
 import { CommandCenterDashboardV2 } from './game/ui/CommandCenterDashboardV2';
 import { LiveDashboardTelemetry } from './game/ui/LiveDashboardTelemetry';
 import { PersistentOperationsConsole } from './game/ui/PersistentOperationsConsole';
+import { DashboardStabilityController } from './game/ui/DashboardStabilityController';
 import type { GameState } from './game/state/GameState';
 
 const store = new GameStore();
@@ -31,11 +33,17 @@ const upgradePreview = new UpgradePreviewSystem(store);
 const tacticalCommandCenter = new CommandCenterDashboardV2(store);
 const liveDashboardTelemetry = new LiveDashboardTelemetry(store);
 const persistentOperations = new PersistentOperationsConsole(store);
+const dashboardStability = new DashboardStabilityController();
+
 audio.initialize();
 upgradePreview.initialize();
+dashboardStability.stabilizeDashboard(tacticalCommandCenter);
 tacticalCommandCenter.initialize();
+dashboardStability.disableNativeDashboardTimer(tacticalCommandCenter);
 liveDashboardTelemetry.initialize();
+dashboardStability.stabilizeTelemetry(liveDashboardTelemetry);
 persistentOperations.initialize();
+dashboardStability.stabilizeOperationsConsole(persistentOperations);
 
 async function bootstrap(): Promise<void> {
   try {
@@ -81,6 +89,7 @@ async function bootstrap(): Promise<void> {
     tacticalCommandCenter.destroy();
     liveDashboardTelemetry.destroy();
     persistentOperations.destroy();
+    dashboardStability.destroy();
     void saves.saveLocal(store.snapshot as GameState);
   });
 
