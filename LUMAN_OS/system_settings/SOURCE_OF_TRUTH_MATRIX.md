@@ -31,6 +31,7 @@ A newer timestamp alone does not create authority. A copied or recently modified
 | Live priorities | `00_CORE/ACTIVE_PRIORITIES.md` | Master Command Center | Core file wins until formally migrated |
 | Live open loops | `00_CORE/OPEN_LOOPS.md` | Project registries and dashboards | Core file wins until formally migrated |
 | Cross-project orchestration | `LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md` | Project registry | Command center coordinates but never replaces project sources |
+| Cross-project synthesis and anti-stagnation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Project registries, project sources, Canon Guardians, approved node data | The engine may suggest connections and actions, but project sources retain content truth and canon-sensitive changes require approval |
 | Project state and ownership | `LUMAN_OS/system_settings/PROJECT_REGISTRY.md` | Project dashboards and changelogs | Project source controls content; registry controls portfolio state |
 | Roseborn canon | Explicit Locked Canon, then active Roseborn continuity and Canon Guardian files | Legacy Roseborn vault | Do not infer resolution when conflicting structures remain open |
 | Grand Generals continuity | Active Roseborn continuity and approved manuscript files | Chapter snapshots | New drafting must pass Canon Guardian clearance |
@@ -43,6 +44,15 @@ A newer timestamp alone does not create authority. A copied or recently modified
 | Work and quality data | Approved non-confidential tools and current user-provided data | Generic templates | Never infer or publish employer-confidential information |
 | Harmonic Time calculations | Documented chart-basis or reliable calculation source | Interpretive files | Provenance file wins; symbolic interpretation must be labeled |
 | Session history | `06_SESSION_LOGS/` and project changelogs | Chat summaries | History informs but does not override current sources |
+
+## Creative Ecosystem Authority Rule
+
+```text
+The Creative Ecosystem Engine owns relationship suggestions, gap analysis, stagnation analysis, transformation options, and task-ranking logic.
+It does not own lyrics, manuscripts, canon, release metadata, personal records, or project activation decisions.
+```
+
+Suggested relationships remain noncanonical until approved. A high synthesis score does not outrank project truth, current strategic priorities, privacy rules, or Canon Guardian findings.
 
 ## Chat, Memory, and GitHub Roles
 
@@ -75,12 +85,13 @@ Use for commands, governance, project structures, public-safe status, templates,
 When two sources disagree, classify the conflict as:
 
 ```text
-Presentation Drift       = menus or commands describe the same function differently
-Status Drift             = project stage or next action differs
-Version Conflict         = competing drafts or structures claim current authority
-Canon Contradiction      = two story facts cannot both be true
-Ownership Ambiguity      = no source clearly owns the information
+Presentation Drift        = menus or commands describe the same function differently
+Status Drift              = project stage or next action differs
+Version Conflict          = competing drafts or structures claim current authority
+Canon Contradiction       = two story facts cannot both be true
+Ownership Ambiguity       = no source clearly owns the information
 Privacy Boundary Conflict = useful information is unsafe for public storage
+Synthesis Overreach       = a suggested connection is being treated as source truth or canon without approval
 ```
 
 ## Resolution Procedure
@@ -92,6 +103,7 @@ Privacy Boundary Conflict = useful information is unsafe for public storage
 5. Preserve the losing version as archived history when useful.
 6. Record unresolved conflicts instead of silently choosing.
 7. Update routing, registry, continuity, and changelog files as needed.
+8. Reject or relabel Creative Ecosystem suggestions that exceed their authority.
 
 ## Non-Negotiable Security Rule
 
@@ -100,12 +112,13 @@ Never commit credentials, encryption seeds, account numbers, live balances, priv
 ## Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Created: 2026-07-10  
+Last Updated: 2026-07-15  
 Owner: LUMAN OS System Settings
 
 ## Recommended Next Move
 
 ```text
-Apply this matrix during the Roseborn architecture reconciliation and sovereignty-book ownership decision.
+Apply this matrix during the first Creative Ecosystem Engine pilot and preserve each project's existing source authority.
 ```
