@@ -23,6 +23,7 @@ Archived        = historical source retained for provenance
 | SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Maintain synchronized status, routing, and source discipline |
 | SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
+| SYS-004 | System | Creative Ecosystem Engine | Foundation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Pilot normalized nodes from Visionary, Black Rose Codex, and one Roseborn doctrine without activating a new strategic front |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -60,6 +61,8 @@ Archived        = historical source retained for provenance
 [3] Grand Generals Chapter 5 clearance and Roseborn continuity
 ```
 
+The Creative Ecosystem Engine is installed as Foundation infrastructure and does not create a fourth strategic front.
+
 ## Architecture Resolution Note
 
 The Roseborn count conflict was resolved at Working Canon level on 2026-07-10:
@@ -71,5 +74,5 @@ The Roseborn count conflict was resolved at Working Canon level on 2026-07-10:
 ## Recommended Next Move
 
 ```text
-Run Grand Generals Chapter 5 clearance while continuing the Visionary release-assembly inventory.
+Run Grand Generals Chapter 5 clearance while continuing the Visionary release-assembly inventory. Pilot the Creative Ecosystem Engine only with a small approved node set.
 ```

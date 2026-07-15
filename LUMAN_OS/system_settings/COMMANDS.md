@@ -109,6 +109,58 @@ Choose one action using this order:
 4. Prevent contradiction or information loss.
 5. Advance the approved deep-building gate.
 
+## Creative Ecosystem Commands
+
+Primary module:
+
+```text
+LUMAN_OS/system_settings/modules/creative_ecosystem_engine/
+```
+
+### `/open creative ecosystem`
+
+Open the module manifest, governance, current integration gate, and command reference.
+
+### `/synthesize`
+
+Find meaningful cross-project relationships. Return suggestions as noncanonical until approved.
+
+### `/pivot`
+
+Recommend a related task that acts as active recovery without abandoning the larger mission or violating the three-front limit.
+
+### `/evolve`
+
+Classify proposed work as evolution, refinement, repetition risk, or disconnected work.
+
+### `/recycle`
+
+Find dormant, archived, completed, or published material with unrealized transformation value.
+
+### `/gaps`
+
+Identify missing musical, literary, visual, practical, philosophical, family-learning, or worldbuilding counterparts.
+
+### `/next`
+
+Rank actions by project priority, momentum, cross-project value, dependency value, emotional alignment, completion probability, anti-stagnation value, time fit, and burnout risk.
+
+### `/lineage`
+
+Trace where a concept originated and how it has transformed through the ecosystem.
+
+### `/ecosystem`
+
+Show ecosystem health, project balance, synthesis opportunities, gaps, dormant nutrients, and stagnation risk.
+
+### `/transform`
+
+Propose a governed transformation of existing material into another medium or project form.
+
+### `/stagnation-check`
+
+Detect blocked work, theme repetition without evolution, excessive active-node load, neglected high-value material, and creation-integration imbalance.
+
 ## Portfolio Commands
 
 ### `/active fronts`
@@ -186,12 +238,13 @@ Recommended Next Move
 ## Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Created: 2026-07-10  
+Last Updated: 2026-07-15  
 Owner: LUMAN OS System Settings
 
 ## Recommended Next Move
 
 ```text
-Use `/open command center` as the default portfolio-level entry point.
+Use /open command center as the default portfolio-level entry point. Use /open creative ecosystem for controlled cross-project synthesis and anti-stagnation work.
 ```

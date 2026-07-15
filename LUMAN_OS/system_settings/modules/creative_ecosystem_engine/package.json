@@ -1,0 +1,14 @@
+{
+  "name": "@lumanos/creative-ecosystem-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cross-project synthesis, anti-stagnation, context-pivot, and next-best-action base engine for LUMAN OS.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

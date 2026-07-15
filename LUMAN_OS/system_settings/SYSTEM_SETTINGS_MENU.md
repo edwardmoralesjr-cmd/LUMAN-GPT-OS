@@ -31,6 +31,7 @@ System Settings does not replace the source-of-truth files owned by books, music
 /autopilot law
 /integration status
 /system next move
+/open creative ecosystem
 ```
 
 ## Main Modules
@@ -107,10 +108,28 @@ Purpose:
 
 Defines how LUMAN classifies, routes, protects, advances, and archives important information by default.
 
+### 7. Creative Ecosystem Engine
+
+Source folder:
+
+```text
+LUMAN_OS/system_settings/modules/creative_ecosystem_engine/
+```
+
+Purpose:
+
+Connects Edward's music, books, philosophy, mythology, visual work, family learning, games, and lived experience into one governed creative ecosystem. It identifies synthesis opportunities, productive context pivots, missing counterparts, dormant high-value material, stagnation risks, and next-best actions without replacing project sources or silently changing canon.
+
+Primary entry command:
+
+```text
+/open creative ecosystem
+```
+
 ## Ownership Boundary
 
 ```text
-LUMAN_OS/system_settings/ = orchestration, governance, audit, source mapping, and execution planning
+LUMAN_OS/system_settings/ = orchestration, governance, audit, source mapping, execution planning, and cross-project synthesis
 00_CORE/                  = live priorities, open loops, routing protocols, GitHub update rules, and loop engineering
 Project vaults            = domain-specific source material, canon, assets, records, and workflows
 Chat                      = living intelligence, active reasoning, and update room
@@ -140,15 +159,22 @@ Every System Settings response should answer:
 4. What is the smallest high-leverage correction?
 5. What should Edward do next?
 
+The Creative Ecosystem Engine should additionally ask:
+
+1. What existing work can support this?
+2. Is the proposed action evolution, repetition, or distraction?
+3. Would a context pivot preserve momentum without creating a fourth strategic front?
+
 ## Status
 
 Status: Active  
-Version: v1.0  
+Version: v1.1  
 Created: 2026-07-10  
-GitHub Role: Modern LUMAN OS governance and orchestration interface
+Last Updated: 2026-07-15  
+GitHub Role: Modern LUMAN OS governance, orchestration, and creative-ecosystem interface
 
 ## Recommended Next Move
 
 ```text
-Open the Master Command Center and execute the current Top 3 in dependency order.
+Open the Master Command Center for portfolio execution. Use /open creative ecosystem only for a small approved pilot across Visionary, the Black Rose Codex, and one Roseborn doctrine.
 ```
