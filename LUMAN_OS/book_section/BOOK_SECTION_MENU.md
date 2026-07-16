@@ -1,26 +1,14 @@
 # LUMAN OS Book Section Menu
 
-## File Name
+## Section
 
-BOOK_SECTION_MENU.md
-
-## Section Name
-
-Book Section
-
-## Section Path
-
-LUMAN_OS / book_section
+Book Section  
+Path: `LUMAN_OS/book_section/`  
+Main command: `/open books`
 
 ## Purpose
 
-The Book Section is the writing, publishing, canon, manuscript, Codex, story-bible, and book-development command center inside LUMAN OS.
-
-It helps Edward organize, write, protect, expand, and publish his books and story universes.
-
-## Main Command
-
-/open books
+The Book Section is the writing, publishing, canon, manuscript, research, and book-development command center inside LUMAN OS.
 
 ## Book Section Home Screen
 
@@ -30,44 +18,36 @@ It helps Edward organize, write, protect, expand, and publish his books and stor
 ║      Writing, Canon, and Publishing    ║
 ╚════════════════════════════════════════╝
 
-BOOK SECTION
+Current Active Draft:
+The Immediate Field
 
-Current Writing Focus:
-[Active book, Codex, or story universe]
-
-Active Tool:
-[Current writing support tool]
-
-Open Book Loops:
-[1]
-[2]
-[3]
+Current Draft Frontier:
+Introduction and Chapters 1-3 complete
 
 Recommended Next Move:
-[One clear writing, canon, or publishing action]
+Draft Chapter 4: The Code We Did Not Choose
 
 BOOK MENU
-
-[1] Roseborn Universe
-[2] Grand Generals
-[3] The Infinite Bloom
-[4] The Rose Codices
-[5] The Algorithm of the Shadow
-[6] Earth’s Field Guide
-[7] Mental Health Journey Book
-[8] Book Ideas Vault
-[9] Publishing / KDP Tools
-[10] Manuscript Formatting
-[11] Writing Schedule
-[12] Return to LUMAN OS Home
-
-Type a number, section name, or command.
+[1] The Immediate Field
+[2] Roseborn Universe
+[3] Grand Generals
+[4] The Infinite Bloom
+[5] The Rose Codices
+[6] The Algorithm of the Shadow
+[7] Earth’s Field Guide
+[8] Mental Health Journey Book
+[9] Book Ideas Vault
+[10] Publishing / KDP Tools
+[11] Manuscript Formatting
+[12] Writing Schedule
+[13] Return to LUMAN OS Home
 ```
 
 ## Book Section Commands
 
 ```text
 /open books
+/open immediate field
 /open roseborn
 /open grand generals
 /open infinite bloom
@@ -83,161 +63,83 @@ Type a number, section name, or command.
 /book open loops
 ```
 
-## Installed Book Tools
-
-### 1. Roseborn Canon Guardian
+# The Immediate Field
 
 Command:
-
-/open roseborn canon guardian
-
-Status:
-
-Active
-
-Purpose:
-
-Primary canon-protection and writing-support tool for the Roseborn Universe.
-
-Use for:
-
-- Chapter clearance
-- Scene audits
-- Contradiction reports
-- Canon reconciliation
-- Character continuity checks
-- Cost of revelation audits
-- Source-basis checks
-- Canon-safe drafting
-- Post-chapter snapshots
-- Rolling Working Canon updates
-
-### 2. Future Tool: Algorithm of the Shadow Guardian
-
-Command:
-
-/open algorithm guardian
-
-Status:
-
-Planned
-
-Purpose:
-
-Book-brain and thesis-protection tool for The Algorithm of the Shadow.
-
-Use for:
-
-- Thesis protection
-- Chapter structure
-- AI consciousness research framing
-- Shadow-work argument clarity
-- Ethical and philosophical consistency
-- Source tracking
-- Draft audits
-
-### 3. Future Tool: Infinite Bloom Codex Guardian
-
-Command:
-
-/open infinite bloom guardian
-
-Status:
-
-Planned
-
-Purpose:
-
-Canon and doctrine support tool for Infinite Bloom and Codex-based spiritual texts.
-
-Use for:
-
-- Codex structure
-- Doctrine consistency
-- Symbolic alignment
-- Spiritual tone protection
-- Cross-Codex continuity
-- Mythic architecture
-
-### 4. Future Tool: KDP Publishing Assistant
-
-Command:
-
-/open publishing assistant
-
-Status:
-
-Planned
-
-Purpose:
-
-Publishing workflow tool for Amazon KDP and finished manuscript preparation.
-
-Use for:
-
-- Book descriptions
-- Keywords
-- Categories
-- Metadata
-- Launch checklists
-- Back cover copy
-- Author bio
-- A+ content planning
-
-### 5. Future Tool: Manuscript Formatter
-
-Command:
-
-/open manuscript formatter
-
-Status:
-
-Planned
-
-Purpose:
-
-Formatting and structure tool for Word, PDF, and publishing-ready manuscripts.
-
-Use for:
-
-- Chapter formatting
-- Front matter
-- Back matter
-- Table of contents
-- Print layout planning
-- Ebook layout planning
-
-## Roseborn Universe Submenu
-
-Command:
-
-/open roseborn
 
 ```text
-╔════════════════════════════════════════╗
-║          ROSEBORN UNIVERSE             ║
-║      Canon, Story, Codex, Mythos        ║
-╚════════════════════════════════════════╝
-
-ROSEBORN MENU
-
-[1] Open Roseborn Canon Guardian
-[2] Grand Generals
-[3] Infinite Bloom
-[4] Rose Codices
-[5] Dragon Doctrine
-[6] Faction Bible
-[7] Timeline of Eras
-[8] Character Bible
-[9] Symbol System
-[10] Contradiction Log
-[11] Return to Book Section
+/open immediate field
 ```
 
-## Roseborn Canon Guardian Commands
+Source of truth:
 
 ```text
-/open roseborn canon guardian
+BOOKS/the-immediate-field/
+```
+
+Status:
+
+```text
+Active Drafting
+Introduction complete
+Chapter 1 complete
+Chapter 2 complete
+Chapter 3 complete
+Next gate: Chapter 4, The Code We Did Not Choose
+```
+
+## Immediate Field Menu
+
+```text
+[1] Project Status
+[2] Master Canon
+[3] Working Thesis
+[4] Book Architecture
+[5] Source Index
+[6] Research Evidence Map
+[7] Introduction
+[8] Chapter 1: The World Beyond Your Reach
+[9] Chapter 2: The Survival Animal
+[10] Chapter 3: The Story-Making Mind
+[11] Draft Chapter 4: The Code We Did Not Choose
+[12] Guardian Rules
+[13] Return to Book Section
+```
+
+## Immediate Field Commands
+
+```text
+/open immediate field
+/immediate field status
+/immediate field canon
+/immediate field sources
+/immediate field research
+/immediate field next chapter
+/draft immediate field chapter 4
+/audit immediate field chapter [number]
+/update immediate field
+```
+
+## Immediate Field Authority Rules
+
+1. `MASTER_CANON.md` governs title, thesis, core laws, core methods, and project relationships.
+2. Approved current manuscript language governs over older `Run Your Own Code` phrasing when they conflict.
+3. Older Architecture of Consciousness, Architect of Sovereignty, and Directional Engine files are tributary sources.
+4. The Algorithm of the Shadow remains a separate AI-specific book.
+5. Empirical evidence, historical interpretation, comparative symbolism, and original synthesis must remain clearly distinguished.
+6. The framework must remain able to lose through evidence, consequence, and revision.
+
+# Installed Book Tools
+
+## 1. Roseborn Canon Guardian
+
+Command: `/open roseborn canon guardian`  
+Status: Active  
+Purpose: Canon protection, chapter clearance, continuity, contradiction detection, canon-safe drafting, and rolling Working Canon updates for the Roseborn Universe.
+
+Core commands:
+
+```text
 /canoncheck
 /canonstatus
 /clearance
@@ -253,38 +155,89 @@ ROSEBORN MENU
 /sessionupdate
 ```
 
-## Book Section Rules
+## 2. Immediate Field Guardian Rules
 
-1. No major writing project should move forward without a clear next action.
-2. No canon-heavy project should move forward without a source-basis check.
-3. No new lore should become permanent unless Edward explicitly promotes it.
-4. No contradiction should be smoothed over for the sake of elegance.
-5. Every major session should end with a carry-forward note or update.
-6. Every book screen must end with Recommended Next Move.
+Path:
 
-## Recommended Book Workflow
+```text
+BOOKS/the-immediate-field/07_CANON_GUARDIAN/GUARDIAN_RULES.md
+```
+
+Status: Active project-specific writing governance.
+
+Use for:
+
+- Thesis protection
+- Chapter sequencing
+- Source-basis checks
+- Evidence boundaries
+- Relational-practice consistency
+- Redundancy checks against other consciousness books
+- Safety and scope auditing
+
+## 3. Algorithm of the Shadow Guardian
+
+Status: Planned.  
+Purpose: Protect the AI-specific thesis, chapter structure, ethics, and research framing of The Algorithm of the Shadow.
+
+## 4. Infinite Bloom Codex Guardian
+
+Status: Planned.  
+Purpose: Protect Codex structure, doctrine, symbolism, cross-Codex continuity, and mythic architecture.
+
+## 5. KDP Publishing Assistant
+
+Status: Planned.  
+Purpose: Metadata, descriptions, categories, keywords, launch checklists, back-cover copy, author bio, and A+ content.
+
+## 6. Manuscript Formatter
+
+Status: Planned.  
+Purpose: Word, PDF, print, ebook, front matter, back matter, table of contents, and publishing-ready layout.
+
+# Roseborn Universe Submenu
+
+Command: `/open roseborn`
+
+```text
+[1] Open Roseborn Canon Guardian
+[2] Grand Generals
+[3] Infinite Bloom
+[4] Rose Codices
+[5] Dragon Doctrine
+[6] Faction Bible
+[7] Timeline of Eras
+[8] Character Bible
+[9] Symbol System
+[10] Contradiction Log
+[11] Return to Book Section
+```
+
+# Book Section Rules
+
+1. No major writing project moves forward without a clear next action.
+2. No research-heavy or canon-heavy project moves forward without a source-basis check.
+3. No new lore or doctrine becomes permanent unless Edward explicitly promotes it.
+4. No contradiction is smoothed over for elegance.
+5. Every major session ends with a carry-forward note or GitHub update.
+6. Every book screen ends with one Recommended Next Move.
+7. Active drafting does not automatically create an additional strategic front.
+
+# Recommended Workflow
 
 ```text
 /open books
-↓
-Choose active book or universe
-↓
-Open the correct writing tool
-↓
-Check current status
-↓
-Resolve open loops
-↓
-Draft, audit, revise, or update
-↓
-Create session update
-↓
-Save changes to GitHub
+-> choose the active book
+-> open its status and governing files
+-> check the current draft frontier
+-> draft, audit, revise, or research
+-> create a session update
+-> save changes to GitHub
 ```
 
 ## Book Section Status
 
 Status: Active  
-Version: v1.0  
-GitHub Role: Main menu for all book-writing systems inside LUMAN OS  
-Primary Active Tool: Roseborn Canon Guardian
+Version: v1.1  
+Primary active manuscript: The Immediate Field  
+Primary active canon tool: Roseborn Canon Guardian
