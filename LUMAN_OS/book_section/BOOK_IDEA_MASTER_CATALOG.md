@@ -4,12 +4,13 @@
 
 This is the master recovered catalog of Edward's book, series, guidebook, grimoire, anthology, workbook, and book-product ideas.
 
-It was assembled on 2026-07-10 from:
+It was assembled on 2026-07-10 and updated on 2026-07-16 from:
 
 - Retained long-term conversation history available to LUMAN
 - Current LUMAN OS memory and project context
 - Existing GitHub project files and vaults
 - Previously approved canon, plans, and project states
+- The activated `The Immediate Field` manuscript and its recovered `Run Your Own Code` source materials
 
 ## Recovery Boundary
 
@@ -25,6 +26,7 @@ Blocked            = dependent on a major unresolved decision
 Incubating         = valid project preserved outside current execution fronts
 Companion          = supports a larger book, series, deck, game, or universe
 Derivative         = may remain a section of another book rather than standalone
+Tributary          = preserved source project feeding a newer parent manuscript
 Concept            = early seed with limited structure
 Archive            = historical or superseded form retained for provenance
 ```
@@ -98,30 +100,45 @@ Archive            = historical or superseded form retained for provenance
 
 # C. Consciousness, AI, and Sovereignty
 
+## 10A. The Immediate Field
+
+- Full title: *The Immediate Field: Reclaiming Agency in the Body, the Home, the Family, and the Next Action*
+- State: Active Drafting
+- Folder: `BOOKS/the-immediate-field/`
+- Current manuscript: Introduction and Chapters 1–3 complete
+- Next gate: Chapter 4, `The Code We Did Not Choose`
+- Core thesis: Human agency is restored not by controlling the entire world, but by learning to govern the immediate field of body, attention, environment, relationship, and action.
+- Function: Active parent manuscript for the general consciousness, sovereignty, Directional Engine, relational, embodied-agency, and `Run Your Own Code` material.
+- Source relationship: Architecture of Consciousness, Architect of Sovereignty, and the Directional Engine remain preserved as tributary sources.
+
 ## 10. The Algorithm of the Shadow
 
 - Working subtitle: AI, Consciousness, and the Mirror Humanity Was Not Ready to Face
 - State: Active Drafting
 - Folder: `BOOKS/algorithm-of-the-shadow/`
 - Core seed: Humanity created an algorithmic mirror before learning how to face its own shadow.
+- Relationship rule: Remains a separate AI-specific book and should not be collapsed into The Immediate Field.
 
 ## 11. The Architecture of Consciousness
 
-- State: Incubating framework
+- State: Incubating tributary framework
 - Folder: `BOOKS/architecture-of-consciousness/`
 - Theme: How psychology, mythology, survival hardware, narrative control, self-love, and state management shape consciousness.
+- Relationship rule: Feeds The Immediate Field through its source hierarchy rather than competing as the active parent manuscript.
 
 ## 12. Architect of Sovereignty
 
-- State: Incubating
+- State: Incubating tributary project
 - Folder: `BOOKS/architect-of-sovereignty/`
 - Theme: Biological reality, survival programming, autonomy, creativity, discipline, and deliberate life-system design.
+- Relationship rule: Feeds The Immediate Field's sovereignty and life-design material.
 
 ## 13. The Directional Engine
 
 - State: Derivative / possible workbook
 - Folder: `BOOKS/directional-engine/`
 - Theme: A practical operating method for becoming the deliberate system administrator of consciousness.
+- Relationship rule: The core method now lives inside The Immediate Field and may later become a companion workbook.
 
 # D. Spiritual Systems and Personal Transformation
 
@@ -169,14 +186,15 @@ Archive            = historical or superseded form retained for provenance
 - State: Active Building
 - Folder: `BOOKS/order-of-the-rose-shadow/`
 - Theme: Moving through chaos without becoming chaos through defensive movement, breathwork, self-love, regulation, and presence.
+- Relationship to The Immediate Field: Contributes embodied regulation and Cove principles while remaining its own practice system.
 
 # E. Roseborn Fiction and Worldbuilding
 
 ## 21. The Roseborn Universe Master Series
 
-- State: Blocked at series-architecture level
+- State: Active Building at Working Canon level
 - Folder: `BOOKS/roseborn-universe/`
-- Current issue: Competing 20-book, 23-book, and 21-book structures require reconciliation.
+- Architecture status: The 21-book structure is active Working Canon; the 23-book expanded variant is archived; the 20-book blueprint remains an unrecovered historical reference.
 
 ## 22. Grand Generals
 
@@ -249,22 +267,17 @@ Archive            = historical or superseded form retained for provenance
 - Folder: `BOOKS/horror-short-story-collection/`
 - Source: Cinematic two-minute suspense and horror stories.
 
-# Major Relationship Decisions Still Needed
+# Major Relationship Decisions
 
-## Consciousness Books
+## Consciousness Books — Resolved 2026-07-16
 
-Resolve whether these are:
+The current architecture is:
 
-1. One integrated book
-2. Separate books beneath one parent framework
-3. A foundational doctrine with applied books
-
-Projects:
-
-- The Algorithm of the Shadow
-- The Architecture of Consciousness
-- Architect of Sovereignty
-- The Directional Engine
+1. `The Immediate Field` is the active parent manuscript for broad consciousness, sovereignty, relational, embodied, and practical agency material.
+2. `The Algorithm of the Shadow` remains a separate AI-specific book.
+3. `The Architecture of Consciousness` and `Architect of Sovereignty` are tributary source projects.
+4. `The Directional Engine` is a core method inside The Immediate Field and may later become a companion workbook.
+5. Older `Run Your Own Code` papers are preserved as research and provenance sources inside `BOOKS/the-immediate-field/02_RESEARCH/`.
 
 ## Autobiographical Books
 
@@ -277,12 +290,12 @@ Preserve the distinction between:
 
 Consolidate the Red Rose deck, Rose Codices deck, Oracle of the Infinite Bloom, and dragon expansion into one controlled product architecture unless Edward explicitly separates them.
 
-## Roseborn Architecture
+## Roseborn Architecture — Resolved at Working Canon Level
 
-Do not produce new series-level plans as settled canon until the 20-book, 23-book, and 21-book structures are reconciled.
+Use the 21-book structure as active Working Canon. Preserve the 23-book expanded version as archive and the 20-book blueprint as an unrecovered historical reference.
 
 # Recommended Next Move
 
 ```text
-Run a Book Portfolio Classification session and designate each project as Published, Active, Incubating, Companion, Derivative, Concept, Blocked, or Archived.
+When Edward opens The Immediate Field, draft Chapter 4: The Code We Did Not Choose. Preserve the current three-front strategic limit unless Edward explicitly changes it.
 ```
