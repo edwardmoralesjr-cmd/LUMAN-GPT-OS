@@ -15,7 +15,9 @@
 - Preserve the earlier 20-book blueprint as an unrecovered, non-governing historical reference.
 - Run Grand Generals Chapter 5 clearance against the active architecture and current rolling continuity.
 - Keep The Academy of Petals and The Last Bloom Before Silence as Reserved Expansion Material unless Edward explicitly reactivates them.
-- Define the formal relationship among The Algorithm of the Shadow, Architect of Sovereignty, and Architecture of Consciousness before duplicating thesis material.
+- Treat `The Immediate Field` as the active parent manuscript for general consciousness, sovereignty, Directional Engine, relational, and embodied-agency material.
+- Keep `The Algorithm of the Shadow` separate as the AI-specific mirror and shadow-work book.
+- Preserve Architecture of Consciousness and Architect of Sovereignty as tributary source projects rather than competing active manuscripts.
 - Preserve the public-repository privacy firewall for financial, medical, family, employer, credential, vehicle, and home information.
 
 ## Current Strategic Fronts
@@ -26,6 +28,8 @@
 [3] Deep-Building Front: Grand Generals Chapter 5 clearance and Roseborn continuity
 ```
 
+`The Immediate Field` remains Active Drafting and can advance when Edward explicitly opens it, but it does not automatically create a fourth strategic front.
+
 ## Current Top 3
 
 ```text
@@ -34,14 +38,22 @@
 [3] Run Grand Generals Chapter 5 clearance
 ```
 
-## Completed Strategic Gate
+## Completed Strategic Gates
 
 ```text
-Roseborn 20 vs 23 vs 21 architecture reconciliation
+[✓] Roseborn 20 vs 23 vs 21 architecture reconciliation
+[✓] Consciousness-project relationship resolution through The Immediate Field
+[✓] The Immediate Field project activation and Chapters 1-3 GitHub sync
+```
+
+## Immediate Field Next Gate
+
+```text
+Draft Chapter 4: The Code We Did Not Choose
 ```
 
 ## Recommended Next Move
 
 ```text
-Run Grand Generals Chapter 5 clearance while building the Visionary release-assembly inventory.
+Preserve the current three-front limit. When Edward chooses The Immediate Field, resume directly at Chapter 4.
 ```
