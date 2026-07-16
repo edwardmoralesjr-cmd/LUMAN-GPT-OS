@@ -1,5 +1,109 @@
 # LUMAN OS System Settings Changelog
 
+## 2026-07-16 — The Immediate Field Activation and Full GitHub Sync
+
+### Status
+
+Completed
+
+### Update Type
+
+- Active book-project activation
+- Manuscript synchronization
+- Research-source recovery
+- Book-portfolio reconciliation
+- Command and menu routing
+- Source-of-truth governance
+
+### Summary
+
+Activated *The Immediate Field: Reclaiming Agency in the Body, the Home, the Family, and the Next Action* as an Active Drafting project inside LUMAN OS.
+
+The project now has a complete GitHub-backed command center, governing canon, thesis, architecture, research map, recovered source layer, introduction, and Chapters 1–3. The synchronization also resolves the prior relationship question among Architecture of Consciousness, Architect of Sovereignty, the Directional Engine, and The Algorithm of the Shadow.
+
+### Relationship Decision
+
+```text
+The Immediate Field = active parent manuscript for broad consciousness, sovereignty, relational, embodied, and practical-agency material
+The Algorithm of the Shadow = separate AI-specific book
+Architecture of Consciousness = tributary source
+Architect of Sovereignty = tributary source
+The Directional Engine = core method inside The Immediate Field and possible future workbook
+Run Your Own Code = preserved precursor framework and method name
+```
+
+### Core Project Files Added
+
+```text
+BOOKS/the-immediate-field/README.md
+BOOKS/the-immediate-field/SOURCE_INDEX.md
+BOOKS/the-immediate-field/PROJECT_SEED_AND_RECOVERED_HISTORY.md
+BOOKS/the-immediate-field/00_PROJECT_COMMAND_CENTER/MASTER_CANON.md
+BOOKS/the-immediate-field/00_PROJECT_COMMAND_CENTER/WORKING_THESIS.md
+BOOKS/the-immediate-field/00_PROJECT_COMMAND_CENTER/PROJECT_STATUS.md
+BOOKS/the-immediate-field/01_BOOK_ARCHITECTURE/BOOK_FOUNDATION_AND_MASTER_ARCHITECTURE.md
+BOOKS/the-immediate-field/02_RESEARCH/RESEARCH_EVIDENCE_MAP.md
+BOOKS/the-immediate-field/07_CANON_GUARDIAN/GUARDIAN_RULES.md
+```
+
+### Manuscript Files Added
+
+```text
+BOOKS/the-immediate-field/04_DRAFTS/INTRODUCTION_THIS_IS_WHERE_WE_BEGIN.md
+BOOKS/the-immediate-field/04_DRAFTS/CHAPTER_01_THE_WORLD_BEYOND_YOUR_REACH.md
+BOOKS/the-immediate-field/04_DRAFTS/CHAPTER_02_THE_SURVIVAL_ANIMAL.md
+BOOKS/the-immediate-field/04_DRAFTS/CHAPTER_03_THE_STORY_MAKING_MIND.md
+BOOKS/the-immediate-field/04_DRAFTS/chapter_03_sections/01_EVENT_STORY_ATTENTION.md
+BOOKS/the-immediate-field/04_DRAFTS/chapter_03_sections/02_MEMORY_COHERENCE_IDENTITY.md
+BOOKS/the-immediate-field/04_DRAFTS/chapter_03_sections/03_SELF_RELATIONSHIP_MYTH_CAGE.md
+BOOKS/the-immediate-field/04_DRAFTS/chapter_03_sections/04_HUMILITY_AUDIT_AUTHORSHIP.md
+```
+
+### Recovered Research Sources Added
+
+```text
+BOOKS/the-immediate-field/02_RESEARCH/RUN_YOUR_OWN_CODE_EXPANDED_FRAMEWORK.md
+BOOKS/the-immediate-field/02_RESEARCH/RUN_YOUR_OWN_CODE_RESEARCH_INFORMED_FRAMEWORK.md
+BOOKS/the-immediate-field/02_RESEARCH/RELATIONAL_PERSPECTIVE.md
+BOOKS/the-immediate-field/02_RESEARCH/RELATIONAL_RESEARCH_SUPPORT.md
+```
+
+### System Files Updated
+
+```text
+LUMAN_OS/book_section/BOOK_PROJECT_REGISTRY.md
+LUMAN_OS/book_section/BOOK_IDEA_MASTER_CATALOG.md
+LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+LUMAN_OS/system_settings/PROJECT_REGISTRY.md
+LUMAN_OS/system_settings/CHANGELOG.md
+BOOKS/README.md
+00_CORE/OPEN_LOOPS.md
+00_CORE/ACTIVE_PRIORITIES.md
+```
+
+### Current Draft Frontier
+
+```text
+Introduction: Complete
+Chapter 1: Complete
+Chapter 2: Complete
+Chapter 3: Complete
+Next gate: Chapter 4 — The Code We Did Not Choose
+```
+
+### Strategic-Front Rule
+
+The Immediate Field is preserved as Active Drafting and resumes when Edward explicitly opens it. It does not silently create a fourth strategic front or displace Life OS, Visionary shipping, or Roseborn continuity work.
+
+### Recommended Next Move
+
+```text
+/open immediate field
+Draft Chapter 4: The Code We Did Not Choose
+```
+
+---
+
 ## 2026-07-10 — Master Command Center Installation
 
 ### Status
