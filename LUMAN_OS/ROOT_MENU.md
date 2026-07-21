@@ -38,21 +38,28 @@ Consolidate, protect, finish, then expand
 
 ACTIVE STRATEGIC FRONTS
 [1] Human Foundation: Life OS, family peace, regulation, sustainable attention
-[2] Shipping Front: Lucid Syntax, Visionary release assembly
-[3] Deep-Building Front: Grand Generals Chapter 5 clearance and Roseborn continuity
+[2] Shipping Front: Lucid Syntax — In-Between release and Visionary assembly
+[3] Deep-Building Front: Infinite Bloom source-Codex reconciliation
 
 CURRENT TOP 3
 [1] Build the Daily Embodied Action loop
-[2] Create the Visionary release-assembly inventory
-[3] Run Grand Generals Chapter 5 clearance
+[2] Execute the final In-Between release sequence for July 24, 2026
+[3] Consolidate The Infinite Bloom into one canon-safe twelve-dragon manuscript
+
+CURRENT SHIPPING DATES
+Paint released: July 3, 2026
+In-Between releases: July 24, 2026
+Visionary releases: September 25, 2026
 
 ROSEBORN STATUS
 21-book architecture is active Working Canon.
 23-book expanded variant is archived.
 20-book blueprint remains an unrecovered historical reference.
+Infinite Bloom source edition is complete but under active reconciliation.
+Grand Generals Chapter 5 clearance remains in the ready queue.
 
 RECOMMENDED NEXT MOVE
-Run Grand Generals Chapter 5 clearance while building the Visionary release-assembly inventory.
+Complete the In-Between release sequence, then run the Infinite Bloom consolidation map.
 
 MAIN MENU
 [1] Dashboard
@@ -85,6 +92,12 @@ Live priorities:
 Live open loops:
 00_CORE/OPEN_LOOPS.md
 
+Main dashboard:
+00_CORE/LUMAN_DASHBOARD.md
+
+Latest conversation scan:
+06_SESSION_LOGS/2026-07/2026-07-21-recent-conversation-scan.md
+
 Book catalog:
 LUMAN_OS/book_section/BOOK_IDEA_MASTER_CATALOG.md
 
@@ -100,7 +113,7 @@ BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
 /dashboard
 ```
 
-Shows current mode, active fronts, priorities, open loops, warnings, and one next move.
+Shows current mode, active fronts, priorities, open loops, warnings, project gates, and one next move.
 
 ### 2. Book Section
 
@@ -109,12 +122,20 @@ Shows current mode, active fronts, priorities, open loops, warnings, and one nex
 /open book catalog
 ```
 
-Opens Roseborn, Grand Generals, Infinite Bloom, Rose Codices, The Algorithm of the Shadow, Architect of Sovereignty, Architecture of Consciousness, publishing, formatting, and the recovered book portfolio.
+Opens Roseborn, Grand Generals, The Infinite Bloom, Rose Codices, The Immediate Field, The Algorithm of the Shadow, Architect of Sovereignty, Architecture of Consciousness, publishing, formatting, and the recovered book portfolio.
 
 Primary source:
 
 ```text
 LUMAN_OS/book_section/BOOK_SECTION_MENU.md
+```
+
+Current manuscript gates:
+
+```text
+The Infinite Bloom: build the consolidation map and merge the dual scroll/chapter structure
+The Immediate Field: recover Chapter 5 and sync confirmed Chapters 4 and 6-9
+Grand Generals: Chapter 5 clearance ready after the Infinite Bloom reconciliation pass
 ```
 
 ### 3. Music Section
@@ -123,12 +144,30 @@ LUMAN_OS/book_section/BOOK_SECTION_MENU.md
 /open music
 ```
 
-Opens Lucid Syntax, Visionary release assembly, lyrics, visual assets, promo packs, and platform strategy.
+Opens Lucid Syntax, Visionary release assembly, Infinite Bloom music, Damaged Grammar, lyrics, visual assets, promo packs, sonic canon files, and platform strategy.
 
 Current shipping gate:
 
 ```text
-Visionary release-assembly inventory
+In-Between release — July 24, 2026
+```
+
+Current music projects:
+
+```text
+Lucid Syntax / Visionary — Active Shipping
+Infinite Bloom — Active Building
+Damaged Grammar — Incubating
+```
+
+Primary sources:
+
+```text
+02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md
+02_LUCID_SYNTAX/LUCID_SYNTAX_SONGWRITING_CANON.md
+MUSIC/INFINITE_BLOOM/PROJECT_STATUS.md
+MUSIC/INFINITE_BLOOM/SONIC_CANON.md
+MUSIC/DAMAGED_GRAMMAR/PROJECT_STATUS.md
 ```
 
 ### 4. Life Operating System
@@ -141,6 +180,12 @@ Visionary release-assembly inventory
 ```
 
 Protects family direction, health-supporting routines, nervous-system regulation, and meaningful action.
+
+Current Life OS gate:
+
+```text
+Build LUMAN_OS/life_os/DAILY_EMBODIED_ACTION_LOOP.md
+```
 
 ### 5. Money System
 
@@ -178,6 +223,13 @@ Captures and classifies creative seeds without activating every idea.
 Capture -> classify -> connect -> incubate
 ```
 
+Current classified seed:
+
+```text
+Faceless podcast / Narrative as Control, Religion as Trust Technology
+State: Incubating content material
+```
+
 ### 9. Vehicle / Home Records
 
 ```text
@@ -213,11 +265,25 @@ Accuracy rule:
 
 Do not claim exact astrology calculation unless reliable calculation support or documented chart placements are available.
 
-## Roseborn Commands
+## Current Project Commands
+
+### Lucid Syntax
+
+```text
+Open Lucid Syntax dashboard
+In-Between release pack
+Visionary release assembly
+Open Lucid Syntax songwriting canon
+Lucid Syntax promotion for [song]
+```
+
+### Infinite Bloom Books and Roseborn
 
 ```text
 /open roseborn
 /open roseborn canon guardian
+Open Infinite Bloom
+Run Infinite Bloom reconciliation
 /canonstatus
 /reconcile
 /clearance
@@ -234,7 +300,31 @@ BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
 Current Roseborn gate:
 
 ```text
-Grand Generals Chapter 5 clearance
+Infinite Bloom source-Codex consolidation map
+```
+
+### Infinite Bloom Music
+
+```text
+Open Infinite Bloom music
+Open Infinite Bloom sonic canon
+Refine The Fire That Named Me
+```
+
+### The Immediate Field
+
+```text
+Open The Immediate Field
+Recover Immediate Field Chapter 5
+Sync Immediate Field chapters
+Draft The Directional Engine
+```
+
+### Damaged Grammar
+
+```text
+Open Damaged Grammar
+Build Damaged Grammar song registry
 ```
 
 ## Book Portfolio Commands
@@ -299,6 +389,10 @@ Project sources own content truth. The command center coordinates the portfolio.
 
 Published and Locked Canon outrank Working Canon. Unrecovered history must not be invented.
 
+### Cross-Media Discipline
+
+Books, music, visual art, and games may bridge one another without automatically sharing the same canon, sonic identity, visual identity, or release plan.
+
 ### Public Repository Firewall
 
 Never commit credentials, financial ledgers, medical records, employer-confidential data, sensitive family records, or private identifying information.
@@ -306,18 +400,24 @@ Never commit credentials, financial ledgers, medical records, employer-confident
 ## Root Interface Status
 
 Status: Active  
-Version: v1.5  
-Last Updated: 2026-07-10  
+Version: v1.6  
+Last Updated: 2026-07-21  
 GitHub Role: Main entry point for LUMAN OS
 
 ## Latest Update
 
-- Resolved Roseborn 20 vs 23 vs 21 architecture at Working Canon level.
-- Activated the 21-book series structure.
-- Advanced the Roseborn gate to Grand Generals Chapter 5 clearance.
+- Completed the 2026-07-21 recent-conversation scan.
+- Advanced the shipping gate to In-Between on July 24, 2026.
+- Locked the Visionary album date as September 25, 2026.
+- Advanced The Immediate Field status beyond Chapter 3 while preserving the Chapter 5 recovery gap.
+- Activated the Infinite Bloom source-Codex reconciliation front.
+- Registered Infinite Bloom as a distinct Spiral Crown Records music project.
+- Added the Infinite Bloom and Lucid Syntax sonic canon files.
+- Confirmed The Human Syntax as Lucid Syntax Album 5 background architecture.
+- Registered Damaged Grammar as an Incubating music project.
 
 ## Recommended Next Move
 
 ```text
-Run Grand Generals Chapter 5 clearance while building the Visionary release-assembly inventory.
+Complete the In-Between release sequence, then run the Infinite Bloom consolidation map without opening another strategic front.
 ```
