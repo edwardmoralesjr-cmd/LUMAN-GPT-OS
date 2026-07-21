@@ -2,45 +2,36 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. The Roseborn series architecture conflict is resolved at Working Canon level. The general consciousness-and-sovereignty book relationship is also resolved: `The Immediate Field` is the active parent manuscript, while `The Algorithm of the Shadow` remains a separate AI-specific book.
+LUMAN OS is active and GitHub-backed. A recent-conversation scan was completed on 2026-07-21. The system now reflects the In-Between release gate, the advanced but partially unsynchronized state of The Immediate Field, the Infinite Bloom source-Codex reconciliation, the separate Infinite Bloom music project, The Human Syntax as Lucid Syntax Album 5, and Damaged Grammar as an incubating project.
 
-## Completed on 2026-07-16
+## Completed on 2026-07-21
 
-### The Immediate Field Activation and Sync
+### Recent Conversation Scan
 
-- Activated `BOOKS/the-immediate-field/` as an Active Drafting project.
-- Locked the working title and subtitle.
-- Added Master Canon, Working Thesis, Project Status, Source Index, Book Architecture, Evidence Map, and Guardian Rules.
-- Synced the introduction and Chapters 1–3.
-- Preserved Chapter 3 as a canonical chapter index plus four ordered editable manuscript sections.
-- Added four recovered `Run Your Own Code` research and relational source snapshots.
-- Registered the project in the Book Project Registry, System Project Registry, and Book Section menu.
-- Resolved the prior open loop concerning the relationship among Architecture of Consciousness, Architect of Sovereignty, and the Directional Engine.
+- Scanned durable changes from conversations dated 2026-07-16 through 2026-07-21.
+- Classified project changes through LUMAN Autopilot.
+- Preserved the three-front operating limit.
+- Shifted the current deep-building front from Grand Generals clearance to Infinite Bloom source-Codex reconciliation.
+- Kept Grand Generals Active Building and ready to resume at Chapter 5 clearance.
+- Confirmed `In-Between` as the immediate shipping gate for 2026-07-24.
+- Confirmed the `Visionary` album date as 2026-09-25.
+- Confirmed `The Human Syntax` as Lucid Syntax Album 5 background architecture.
+- Registered Infinite Bloom as a distinct music project under Spiral Crown Records.
+- Resolved the official project name `Damaged Grammar`; `Broken Grammar` is incorrect.
 
-## Completed on 2026-07-10
+### The Immediate Field Progress Discovery
 
-### LUMAN Command Center
+- Confirmed evidence for Chapters 4, 6, 7, 8, and 9 beyond the prior GitHub frontier.
+- Preserved Chapter 9 as `Run Your Own Code` with the operational method FILTER -> REGULATE -> SEPARATE -> TEST -> CHOOSE -> ITERATE.
+- Marked Chapter 5, `Civilization Runs on Story`, as a recovery/verification gap because a separate manuscript artifact was not located during the scan.
+- Preserved Chapter 10, `The Directional Engine`, as the next planned drafting frontier after the gap is resolved.
 
-- Installed System Settings and Master Command Center.
-- Installed Project Registry, Source-of-Truth Matrix, Autopilot Law, and Ninety-Day Path.
-- Synchronized root routing, priorities, open loops, and command routing.
+### Infinite Bloom Manuscript Audit
 
-### Book Portfolio Recovery
-
-- Recovered 32 book ideas.
-- Created 25 top-level project folders and seven Codex subfolders.
-- Created missing-source recovery queue.
-- Preserved mature vaults without overwriting them.
-
-### Roseborn Architecture Reconciliation
-
-- Recovered the directly documented 23-book expanded variant.
-- Confirmed the 23-book source labels a twelve-book movement as a Decalogy.
-- Adopted the structurally consistent 21-book architecture as active Working Canon.
-- Archived the 23-book version intact.
-- Preserved the 20-book blueprint as an unrecovered historical reference.
-- Moved The Academy of Petals and The Last Bloom Before Silence into Reserved Expansion Material.
-- Resolved CONTRADICTION-001 at Working Canon level.
+- Confirmed a complete edition containing Scroll 0 through Scroll XII, a Final Scroll, Chapter I through Chapter XII, and an epilogue.
+- Identified duplicate short-scroll and expanded-chapter presentations of the same twelvefold path.
+- Preserved the current reconciliation direction: merge corresponding scrolls and chapters, strengthen the foundation, move the Final Scroll to the true ending, and reconcile numbering and fracture contradictions.
+- Preserved Ishkala as the first twelve remembered as one and the reader/initiate as the thirteenth petal.
 
 ## Current Open Loops
 
@@ -51,37 +42,69 @@ LUMAN OS is active and GitHub-backed. The Roseborn series architecture conflict 
 3. Add a concise safety and ethics protocol for Order of the Rose Shadow practice.
 4. Keep family peace, regulation, and sustainable attention above portfolio expansion.
 
+### Visionary and In-Between Shipping
+
+1. Complete the final In-Between release sequence before 2026-07-24.
+2. Verify release links, metadata, artwork, platform availability, and credits.
+3. Prepare release-day platform posts, YouTube description, pinned comment, and call to action.
+4. Prepare the first post-release follow-up without prematurely activating another single.
+5. Update the Visionary release-assembly inventory after the In-Between release.
+6. Continue toward the locked Visionary album date of 2026-09-25.
+
+### Infinite Bloom Source Codex
+
+1. Create one authoritative manuscript map connecting Scroll 0-XII, the Final Scroll, Chapters I-XII, and the epilogue.
+2. Merge each short Law Scroll with its corresponding expanded dragon chapter.
+3. Replace or expand Scroll 0 into the Foundation Chapter.
+4. Move the Final Scroll to the true end of the consolidated book.
+5. Reconcile petal numbering, Elarion/Myrrak contradictions, fracture placement, and duplicate dragon-cycle material.
+6. Preserve the twelve-dragon sequence and the Ishkala/thirteenth-petal distinction.
+7. Synchronize the refined manuscript into the Roseborn canon hierarchy only after reconciliation.
+
+### Infinite Bloom Music
+
+1. Build the first definitive body of music without merging the project into Lucid Syntax.
+2. Preserve the current cinematic metalcore / alternative metal sonic canon.
+3. Register and evaluate `The Fire That Named Me` as the Elarion / First Flame opening song.
+4. Build a twelve-dragon song architecture only as Working Canon until the music sequence is explicitly locked.
+5. Preserve the earlier trap-metal/classical direction as an archived experiment rather than the governing primary sound.
+
 ### The Immediate Field
 
-1. Draft Chapter 4: `The Code We Did Not Choose`.
-2. Build a chapter-level evidence map as Chapters 4–6 introduce inherited family, cultural, institutional, and civilizational claims.
-3. Audit Chapters 1–3 for repeated concepts after Part One is complete.
-4. Preserve the distinction between research-supported claims and Edward's original philosophical synthesis.
-5. Keep the manuscript active without silently creating a fourth strategic front.
+1. Recover or verify Chapter 5: `Civilization Runs on Story`.
+2. Synchronize confirmed Chapters 4 and 6-9 into the repository.
+3. Verify Chapter 9 title and manuscript against the canonical architecture as `Run Your Own Code`.
+4. Draft Chapter 10: `The Directional Engine` after the Chapter 5 gap is resolved.
+5. Build the chapter-level evidence map for inherited family, cultural, institutional, and civilizational claims.
+6. Preserve the distinction between research-supported claims and Edward's original philosophical synthesis.
+7. Keep the manuscript active without silently creating a fourth strategic front.
 
-### Visionary Shipping
+### Lucid Syntax Songwriting System
 
-1. Create a verified Visionary release-assembly inventory.
-2. Classify every asset as Ready, Missing, Needs Review, or Not Applicable.
-3. Verify masters, metadata, artwork, lyrics, credits, distribution fields, visual assets, promo packs, and release dependencies.
-4. Build one sustainable release calendar.
+1. Add the locked current sonic and lyric architecture to a dedicated songwriting canon file.
+2. Preserve unique intros and unique composition structures across songs.
+3. Keep style prompts at or below 1,000 characters and lyrics below 5,000 characters unless explicitly revised.
+4. Keep Visionary shipping ahead of The Human Syntax development.
 
-### Roseborn Universe
+### Damaged Grammar
 
-1. Sync 21-book numbering into the active master story bible and rolling continuity.
-2. Run Grand Generals Chapter 5 clearance.
+1. Create a minimal project status and song registry.
+2. Preserve the official name `Damaged Grammar` and the phrase `Precision rap for damaged architecture`.
+3. Keep the project Incubating until release intent, visual identity, and first official body of work are explicitly locked.
+
+### Grand Generals and Roseborn Continuity
+
+1. Keep Grand Generals Chapter 5 clearance ready as the next deep-building gate after the Infinite Bloom reconciliation pass.
+2. Sync 21-book numbering into the active master story bible and rolling continuity.
 3. Create `CHAPTER_5_CLEARANCE.md` after approval.
-4. Continue Grand Generals only from the active architecture and continuity.
-5. Recover the original 20-book blueprint if its source later appears.
-6. Decide whether Reserved Expansion Material becomes novellas, companions, interludes, or remains archived.
+4. Recover the original 20-book blueprint if its source later appears.
+5. Decide whether Reserved Expansion Material becomes novellas, companions, interludes, or remains archived.
 
-### Book Portfolio
+### Creative Vault
 
-1. Recover Rose Codex manuscripts.
-2. Recover the complete 250-entry Wildbound Codex.
-3. Recover Veilborn chapters and horror scripts.
-4. Recover the Oracle deck master list.
-5. Preserve the completed consciousness-project reconciliation in all future book-planning decisions.
+1. Preserve the faceless podcast concept and `Narrative as Control, Religion as Trust Technology` as reusable content material.
+2. Do not create a separate active project until Edward establishes a channel identity or recurring production commitment.
+3. Route recursive-geometry and consciousness-observing-itself concepts into existing Voidborn, Infinite Bloom, and Immediate Field structures.
 
 ### Harmonic Time System
 
@@ -94,9 +117,10 @@ LUMAN OS is active and GitHub-backed. The Roseborn series architecture conflict 
 1. Mirror high-value System Settings commands into root `COMMANDS.md`.
 2. Add the command-center update to older top-level changelogs.
 3. Review `DEPLOYMENT_INDEX.md`.
+4. Refresh the root dashboard and menu after the project-specific synchronization is complete.
 
 ## Recommended Next Move
 
 ```text
-When Edward chooses The Immediate Field, draft Chapter 4: The Code We Did Not Choose. Otherwise preserve the existing Life OS, Visionary, and Roseborn strategic fronts.
+Complete the In-Between release sequence, then perform the Infinite Bloom manuscript consolidation pass. Do not activate a fourth strategic front.
 ```
