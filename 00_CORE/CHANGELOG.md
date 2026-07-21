@@ -1,5 +1,50 @@
 # LUMAN OS Core Changelog
 
+## 2026-07-21 - Recent conversation scan and project-state synchronization
+
+Updated:
+- Scanned durable changes from conversations dated 2026-07-16 through 2026-07-21.
+- Added the July 21 recent-conversation scan session log.
+- Shifted the immediate shipping gate to `In-Between`, releasing 2026-07-24.
+- Locked the `Visionary` album date in the active dashboards as 2026-09-25.
+- Added the Lucid Syntax songwriting canon and unique-architecture rules.
+- Preserved `The Human Syntax` as confirmed Lucid Syntax Album 5 background architecture.
+- Advanced The Immediate Field status beyond Chapter 3 while preserving Chapter 5 as a recovery/verification gap.
+- Recorded the complete Infinite Bloom source edition and its dual scroll/chapter reconciliation requirements.
+- Shifted the current deep-building front to Infinite Bloom source-Codex reconciliation.
+- Registered Infinite Bloom as a distinct Spiral Crown Records music project with its own sonic canon.
+- Registered Damaged Grammar as an Incubating music project and resolved `Broken Grammar` as incorrect.
+- Refreshed the root menu, main dashboard, active priorities, open loops, project registry, Lucid Syntax dashboard, Roseborn dashboard, and project status files.
+
+Files changed or created:
+- `06_SESSION_LOGS/2026-07/2026-07-21-recent-conversation-scan.md`
+- `00_CORE/ACTIVE_PRIORITIES.md`
+- `00_CORE/OPEN_LOOPS.md`
+- `00_CORE/LUMAN_DASHBOARD.md`
+- `00_CORE/CHANGELOG.md`
+- `LUMAN_OS/ROOT_MENU.md`
+- `LUMAN_OS/system_settings/PROJECT_REGISTRY.md`
+- `02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md`
+- `02_LUCID_SYNTAX/LUCID_SYNTAX_SONGWRITING_CANON.md`
+- `BOOKS/the-immediate-field/00_PROJECT_COMMAND_CENTER/PROJECT_STATUS.md`
+- `BOOKS/rose-codices/infinite-bloom-source-codex/RECOVERED_CONVERSATION_HISTORY.md`
+- `03_ROSEBORN_UNIVERSE/ROSEBORN_DASHBOARD.md`
+- `MUSIC/INFINITE_BLOOM/PROJECT_STATUS.md`
+- `MUSIC/INFINITE_BLOOM/SONIC_CANON.md`
+- `MUSIC/DAMAGED_GRAMMAR/PROJECT_STATUS.md`
+
+Current strategic fronts:
+```text
+[1] Human Foundation
+[2] Lucid Syntax — In-Between release and Visionary assembly
+[3] Infinite Bloom source-Codex reconciliation and twelve-dragon continuity
+```
+
+Current recommended next move:
+```text
+Complete the In-Between release sequence, then run the Infinite Bloom consolidation map without opening another strategic front.
+```
+
 ## 2026-06-28 - Life OS lifespan action doctrine and Order of the Rose Shadow added
 
 Updated:
