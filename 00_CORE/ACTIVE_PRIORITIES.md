@@ -9,33 +9,42 @@
 - Use the Source-of-Truth Matrix when memory, chat, modern modules, legacy vaults, canon, and archives disagree.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Keep Life OS and family peace beneath all creative expansion.
-- Treat Visionary as Active Shipping. Build the verified release-assembly packet before creating more album concepts.
+- Treat `In-Between` as the immediate Lucid Syntax shipping priority for its 2026-07-24 release.
+- Treat `Visionary` as Active Shipping with a locked album release date of 2026-09-25.
+- Build and verify the release-assembly packet while executing the In-Between release sequence.
+- Treat the Infinite Bloom source-Codex reconciliation as the current deep-building front.
+- Preserve the twelve-dragon sequence and consolidate the short Law Scrolls and expanded dragon chapters into one canon-safe manuscript.
+- Preserve Ishkala as the first twelve remembered as one and the reader/initiate as the thirteenth petal.
+- Keep Grand Generals Active Building and ready to resume at Chapter 5 clearance after the current Infinite Bloom reconciliation pass.
 - Treat the 21-book Roseborn architecture as active Working Canon, not Locked Canon.
 - Preserve the 23-book structure as an archived expanded variant.
 - Preserve the earlier 20-book blueprint as an unrecovered, non-governing historical reference.
-- Run Grand Generals Chapter 5 clearance against the active architecture and current rolling continuity.
-- Keep The Academy of Petals and The Last Bloom Before Silence as Reserved Expansion Material unless Edward explicitly reactivates them.
-- Treat `The Immediate Field` as the active parent manuscript for general consciousness, sovereignty, Directional Engine, relational, and embodied-agency material.
-- Keep `The Algorithm of the Shadow` separate as the AI-specific mirror and shadow-work book.
+- Treat `The Immediate Field` as Active Drafting beyond the prior Chapter 3 frontier, while marking Chapter 5 as a recovery/verification gap before claiming a complete Chapter 1–9 repository sequence.
+- Preserve `The Algorithm of the Shadow` as the separate AI-specific mirror and shadow-work book.
 - Preserve Architecture of Consciousness and Architect of Sovereignty as tributary source projects rather than competing active manuscripts.
+- Preserve `The Human Syntax` as confirmed Lucid Syntax Album 5 background architecture without displacing Visionary.
+- Preserve Infinite Bloom music as a distinct Spiral Crown Records project separate from Lucid Syntax.
+- Preserve Damaged Grammar as an Incubating project with no locked release status.
 - Preserve the public-repository privacy firewall for financial, medical, family, employer, credential, vehicle, and home information.
 
 ## Current Strategic Fronts
 
 ```text
 [1] Human Foundation: Life OS, family peace, regulation, and sustainable attention
-[2] Shipping Front: Lucid Syntax, Visionary release assembly
-[3] Deep-Building Front: Grand Generals Chapter 5 clearance and Roseborn continuity
+[2] Shipping Front: Lucid Syntax — In-Between release and Visionary assembly
+[3] Deep-Building Front: Infinite Bloom source-Codex reconciliation and twelve-dragon continuity
 ```
 
 `The Immediate Field` remains Active Drafting and can advance when Edward explicitly opens it, but it does not automatically create a fourth strategic front.
+
+Grand Generals remains Active Building and returns to the deep-building front at Chapter 5 clearance after the Infinite Bloom reconciliation pass.
 
 ## Current Top 3
 
 ```text
 [1] Build the Daily Embodied Action loop for the human foundation
-[2] Create the Visionary release-assembly inventory and classify every asset
-[3] Run Grand Generals Chapter 5 clearance
+[2] Execute the final In-Between release sequence for 2026-07-24
+[3] Consolidate The Infinite Bloom into one canon-safe twelve-dragon manuscript
 ```
 
 ## Completed Strategic Gates
@@ -44,16 +53,21 @@
 [✓] Roseborn 20 vs 23 vs 21 architecture reconciliation
 [✓] Consciousness-project relationship resolution through The Immediate Field
 [✓] The Immediate Field project activation and Chapters 1-3 GitHub sync
+[✓] Recent-conversation scan and durable-change classification on 2026-07-21
+[✓] The Human Syntax confirmed as Lucid Syntax Album 5 background architecture
+[✓] Infinite Bloom recognized as a distinct music project under Spiral Crown Records
+[✓] Damaged Grammar official name resolved
 ```
 
-## Immediate Field Next Gate
+## Immediate Field Recovery Gate
 
 ```text
-Draft Chapter 4: The Code We Did Not Choose
+Recover or verify Chapter 5: Civilization Runs on Story.
+Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Directional Engine.
 ```
 
 ## Recommended Next Move
 
 ```text
-Preserve the current three-front limit. When Edward chooses The Immediate Field, resume directly at Chapter 4.
+Finish the In-Between release sequence first, then continue the Infinite Bloom manuscript consolidation without opening another strategic front.
 ```
