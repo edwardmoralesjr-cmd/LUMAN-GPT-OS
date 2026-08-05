@@ -46,7 +46,7 @@ A writing session is not complete until both conditions are met:
 
 ## Current Application
 
-This protocol applies to the Prologue, `The Sixth Chair`, Chapter 1, `Arrival`, and every future *Three Futures* manuscript artifact.
+This protocol applies to the Prologue, `The Sixth Chair`, Chapters 1–2, and every future *Three Futures* manuscript artifact.
 
 ## Verified Delivery Log
 
@@ -64,4 +64,14 @@ This protocol applies to the Prologue, `The Sixth Chair`, Chapter 1, `Arrival`, 
 - Rendered to sixteen pages, including the title page
 - Every page visually inspected at readable scale
 - No clipping, overlap, broken glyphs, orphaned headings, or margin defects found
+- Approved for delivery on 2026-08-05
+
+### Chapter 2 — `Project Prism`
+
+- Generated from `BOOKS/three-futures/04_DRAFTS/CHAPTER_02_PROJECT_PRISM.md`
+- Canon Guardian audit passed
+- Rendered to fifteen pages, including the title page
+- Every rendered page visually inspected
+- Display text, chapter opener, margins, page breaks, final hook, and pagination passed inspection
+- No clipping, overlap, missing glyphs, orphaned headings, or margin defects found
 - Approved for delivery on 2026-08-05
