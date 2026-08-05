@@ -18,19 +18,17 @@ The Book Section is the writing, publishing, canon, manuscript, research, and bo
 ║      Writing, Canon, and Publishing    ║
 ╚════════════════════════════════════════╝
 
-Current Active Draft:
+Current Active Drafts:
 The Immediate Field
-
-Major Active Build:
 Three Futures
 
 Current Draft Frontier:
 The Immediate Field — Introduction and Chapters 1-3 complete
-Three Futures — Master outline and novel bible complete
+Three Futures — Prologue and Chapter 1 complete
 
 Recommended Next Moves:
 The Immediate Field — Draft Chapter 4: The Code We Did Not Choose
-Three Futures — Build the clue-and-reveal matrix
+Three Futures — Build the Chapter 2 scene card for Project Prism
 
 BOOK MENU
 [1] The Immediate Field
@@ -153,13 +151,13 @@ BOOKS/three-futures/
 Status:
 
 ```text
-Active Building
+Active Drafting
 Psychological suspense thriller
-Prologue + 40-chapter master outline complete
-Core novel bible complete
-Mara Vey, Selene Marr, Prism, and Fork ensemble complete
-Annex Seven, Lucent, Lucid, and Clarus bibles complete
-Next gate: clue-and-reveal matrix
+Prologue: The Sixth Chair complete
+Chapter 1: Arrival complete
+Both artifacts Canon Guardian approved
+Chapter 1 Word delivery rendered and visually verified
+Next gate: Chapter 2 scene card for Project Prism
 ```
 
 ## Three Futures Menu
@@ -178,8 +176,12 @@ Next gate: clue-and-reveal matrix
 [11] Lucid
 [12] Clarus
 [13] Guardian Rules
-[14] Build Clue-and-Reveal Matrix
-[15] Return to Book Section
+[14] Prologue: The Sixth Chair
+[15] Chapter 1: Arrival
+[16] Chapter 1 Canon Guardian Audit
+[17] Build Chapter 2 Scene Card: Project Prism
+[18] Delivery and GitHub Sync Protocol
+[19] Return to Book Section
 ```
 
 ## Three Futures Commands
@@ -191,6 +193,9 @@ Next gate: clue-and-reveal matrix
 /three futures outline
 /three futures characters
 /three futures worlds
+/three futures prologue
+/three futures chapter 1
+/three futures next chapter
 /three futures clue audit
 /three futures character audit [name]
 /three futures reality check [scene]
@@ -211,7 +216,8 @@ Next gate: clue-and-reveal matrix
 6. Ambiguity must remain fair and rule-supported.
 7. Prism is not omnipotent or automatically trustworthy.
 8. Lucent must remain desirable, Lucid must not romanticize suffering, and Clarus must remain genuinely admirable.
-9. Full drafting begins only after the clue-and-reveal matrix and opening scene cards are approved.
+9. The Prologue and Chapter 1 are Working Manuscript Canon.
+10. Every future chapter requires an approved scene card, Canon Guardian audit, GitHub sync, and verified Word delivery.
 
 # Installed Book Tools
 
@@ -317,13 +323,15 @@ Command: `/open roseborn`
 -> draft, audit, revise, or research
 -> create a session update
 -> save changes to GitHub
+-> render and visually inspect the Word delivery
+-> provide the direct download link
 ```
 
 ## Book Section Status
 
 Status: Active  
-Version: v1.2  
+Version: v1.3  
 Primary active manuscript: The Immediate Field  
-Major active build: Three Futures  
+Secondary active manuscript: Three Futures  
 Primary active canon tool: Roseborn Canon Guardian  
-New project-specific guardian: Three Futures Guardian
+Active project-specific guardian: Three Futures Guardian
