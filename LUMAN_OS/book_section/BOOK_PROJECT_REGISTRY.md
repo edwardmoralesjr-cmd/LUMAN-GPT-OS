@@ -22,7 +22,7 @@ BOOKS/three-futures/
 ## Active Drafting or Building
 
 - **The Immediate Field** — Active Drafting; introduction and Chapters 1–3 complete; next gate is Chapter 4, `The Code We Did Not Choose`
-- **Three Futures** — Active Building; psychological suspense-thriller outline and novel bible established; next gate is the chapter-by-chapter clue-and-reveal matrix
+- **Three Futures** — Active Drafting; Prologue `The Sixth Chair` complete and Canon Guardian approved; next gate is Chapter 1, `Arrival`
 - The Algorithm of the Shadow
 - Grand Generals
 - Infinite Bloom / Rose Codices
@@ -34,6 +34,7 @@ BOOKS/three-futures/
 
 - Roseborn Universe Master Series architecture: 21-book structure is active Working Canon; the 23-book variant is archived; the 20-book blueprint remains an unrecovered historical reference.
 - Three Futures architecture: Prologue plus forty chapters across The Evaluation, Memory Contamination, Identity Collapse, and Awakening; Lucent, Lucid, Clarus, Prism, Mara Vey, Selene Marr, the Fork ensemble, Annex Seven, and project Guardian Rules are established as Working Canon.
+- Three Futures drafting gate: full clue-and-reveal matrix complete, prior Evaluation timeline reconciled, Prism anomaly/capability audit complete, opening scene cards approved, and Prologue promoted to Working Manuscript Canon.
 
 ## Incubating
 
@@ -78,5 +79,5 @@ No project becomes an active strategic front merely because it has a folder. Fol
 
 ```text
 When Edward opens The Immediate Field, draft Chapter 4: The Code We Did Not Choose.
-When Edward opens Three Futures, build the clue-and-reveal matrix before manuscript drafting.
+When Edward opens Three Futures, draft Chapter 1: Arrival from the approved scene card.
 ```
