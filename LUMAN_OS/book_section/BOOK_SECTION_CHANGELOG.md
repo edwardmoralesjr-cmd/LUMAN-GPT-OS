@@ -1,5 +1,38 @@
 # LUMAN OS Book Section Changelog
 
+## 2026-08-05: Three Futures Chapter 1 — Arrival
+
+### Status
+
+Promoted to Working Manuscript Canon
+
+### Completed
+
+- Drafted Chapter 1, `Arrival`, from the approved scene card
+- Preserved Mara Vey's close-third viewpoint and verification habits
+- Established the ninety-three-second vehicle-clock discrepancy
+- Established the eleven-second coat scan as a plausible petal-placement window
+- Introduced Caleb Ward as controlled, evidence-preserving Annex security
+- Established the phrase `We preserve sequence here`
+- Preserved the flawed access form containing Mara's imported signature
+- Established the seven-second additional watch loss during descent
+- Established the handwritten `8` and unseen pressure-seal explanation
+- Introduced Selene's recognition and attention to Mara's left hand
+- Ended with the warm black petal and the line `You found it earlier this time.`
+- Completed the Chapter 1 Canon Guardian audit
+- Generated a 6×9 Word delivery
+- Rendered and visually inspected all sixteen pages
+- Advanced the project frontier to Chapter 2, `Project Prism`
+
+### GitHub Paths
+
+```text
+BOOKS/three-futures/04_DRAFTS/CHAPTER_01_ARRIVAL.md
+BOOKS/three-futures/07_CANON_GUARDIAN/AUDITS/CHAPTER_01_ARRIVAL_AUDIT.md
+BOOKS/three-futures/00_PROJECT_COMMAND_CENTER/PROJECT_STATUS.md
+BOOKS/three-futures/00_PROJECT_COMMAND_CENTER/DELIVERY_AND_SYNC_PROTOCOL.md
+```
+
 ## 2026-08-05: Three Futures Psychological-Thriller Vault Build
 
 ### Status
@@ -36,7 +69,8 @@ rewards, owns, permits, fears, and chooses it to become.
 ### Current Frontier
 
 ```text
-Build the chapter-by-chapter clue-and-reveal matrix before manuscript drafting.
+Prologue and Chapter 1 are Working Manuscript Canon.
+Build the Chapter 2 scene card for Project Prism.
 ```
 
 ## 2026-07-10: Roseborn Architecture Reconciliation
@@ -95,6 +129,6 @@ The Third Emergence         1
 ## Recommended Next Moves
 
 ```text
-Three Futures: build the clue-and-reveal matrix.
+Three Futures: build the Chapter 2 scene card for Project Prism.
 The Immediate Field: draft Chapter 4, The Code We Did Not Choose.
 ```
