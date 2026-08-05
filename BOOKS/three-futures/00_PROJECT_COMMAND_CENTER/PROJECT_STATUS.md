@@ -2,7 +2,7 @@
 
 ## Project State
 
-**Status:** Active Building  
+**Status:** Active Drafting  
 **Canon level:** Working Canon  
 **Genre:** Psychological suspense thriller  
 **Primary mode:** Close-third psychological investigation with intercut future-world narratives and first-person Prism interludes
@@ -58,50 +58,65 @@ Create a psychologically intense suspense novel in which the reader gradually lo
 - Part IV: Awakening
 - Forty numbered chapters after the prologue
 
+## Completed Architecture and Governance
+
+- Master outline complete
+- Master novel bible complete
+- Character bibles complete for Mara, Selene, Prism, and the Fork ensemble
+- Lucent, Lucid, and Clarus civilization bibles complete
+- Project Prism and Annex Seven bible complete
+- Canon Guardian rules complete
+- Chapter-by-chapter clue-and-reveal matrix complete
+- Prior Evaluation timeline reconciled
+- Prism anomaly and capability audit complete
+- Prologue and Chapter 1 scene cards approved
+
+## Manuscript Status
+
+### Complete
+
+- Prologue: `The Sixth Chair`
+
+Draft path:
+
+```text
+BOOKS/three-futures/04_DRAFTS/PROLOGUE_THE_SIXTH_CHAIR.md
+```
+
+### Next Draft
+
+- Chapter 1: `Arrival`
+
+Approved scene card path:
+
+```text
+BOOKS/three-futures/01_BOOK_ARCHITECTURE/SCENE_CARDS_PROLOGUE_AND_CHAPTER_01.md
+```
+
 ## Open Design Decisions
 
 - Exact names of the five real-world-adjacent companies may be refined.
 - Exact technological date and public political environment of Reality Zero remain intentionally unspecified.
 - Whether the final warning comes from Prism, another Mara, a prior cycle, or the fourth future remains unresolved.
 - The exact metaphysical status of the three futures remains unresolved.
-- Scene-level word-count targets and total manuscript length remain open.
+- Total manuscript length remains open.
 - Final line is currently: `The black rose nearest the glass turns toward her voice.`
 
-## Required Next Build
+## Drafting Authority
 
-Create a chapter-by-chapter suspense matrix containing:
+The Prologue was drafted from the approved:
 
-- viewpoint
-- surface objective
-- hidden objective
-- revealed clue
-- false interpretation
-- emotional turn
-- reality destabilization
-- end-of-chapter hook
-- clue payoff location
+- Master Outline
+- Master Novel Bible
+- Fork Ensemble Bible
+- Guardian Rules
+- Clue-and-Reveal Matrix
+- Prior Evaluation Timeline
+- Prism Anomaly Capability Audit
+- Opening Scene Cards
 
-## Drafting Gate
-
-Do not begin full manuscript drafting until:
-
-1. The clue-and-reveal matrix is complete.
-2. The exact evidence trail for each major revelation is checked.
-3. Mara's prior evaluation timeline is reconciled.
-4. Prism's capabilities and limits are checked against every anomaly.
-5. The Prologue and Chapter 1 scene cards are approved.
-
-## Definition of Done for Architecture Phase
-
-- Master outline complete
-- Core novel bible complete
-- Character bibles complete
-- Three civilization bibles complete
-- Facility and experiment bible complete
-- Guardian rules complete
-- Clue matrix complete
-- Scene map complete
+Future chapters must receive a scene card and Guardian audit before entering manuscript canon.
 
 ## Recommended Next Move
 
-**Build the clue-and-reveal matrix for Prologue through Chapter 40.**
+**Draft Chapter 1: Arrival, maintaining Mara's close-third viewpoint and the approved corridor, watch, doorway-count, Selene-recognition, and black-petal evidence trail.**
