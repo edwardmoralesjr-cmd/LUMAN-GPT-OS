@@ -142,6 +142,12 @@ Caleb indicated three recessed trays.
 
 Mara removed her phone, tablet, wireless earpieces, and the emergency locator clipped inside her bag. She placed a small digital recorder beside them.
 
+Mara removed her coat and placed it on the adjacent garment belt. The scanner carried it behind a matte privacy shield before returning it on the other side.
+
+For eleven seconds, the coat was out of view.
+
+She recorded the interval in her notebook.
+
 Caleb looked at her watch.
 
 “No transmitter,” she said.
@@ -882,11 +888,11 @@ At the hotel.
 
 In the vehicle.
 
-During intake.
+During the eleven-second garment scan.
 
 By Caleb while carrying her case, though he had not carried the coat.
 
-By a technician during the watch inspection, though the coat had remained on her arm.
+By a technician at intake, though the return tray remained in Mara’s view.
 
 By Mara herself during a lapse she did not remember.
 
