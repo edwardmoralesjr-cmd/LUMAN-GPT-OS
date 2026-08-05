@@ -30,6 +30,21 @@ Next gate: Chapter 4, `The Code We Did Not Choose`
 
 The project folder contains its own Master Canon, Working Thesis, Book Architecture, Source Index, research evidence map, recovered source materials, manuscript drafts, and Guardian Rules.
 
+## Newly Structured Project
+
+### Three Futures
+
+```text
+BOOKS/three-futures/
+```
+
+Status: Active Building  
+Genre: Psychological suspense thriller  
+Current frontier: Major outline and novel bible complete  
+Next gate: Build the chapter-by-chapter clue-and-reveal matrix
+
+The project folder contains the preserved original outline, forty-chapter master architecture, master novel bible, Mara Vey, Selene Marr, Prism, Fork ensemble, Project Prism / Annex Seven system bible, Lucent, Lucid, Clarus, and project-specific Guardian Rules.
+
 ## Recovery Status
 
 ```text
@@ -48,7 +63,8 @@ PROJECT_SEED_AND_RECOVERED_HISTORY.md
 PROJECT_BRIDGE_AND_RECOVERED_HISTORY.md
 00_PROJECT_COMMAND_CENTER/
 01_BOOK_ARCHITECTURE/
-02_RESEARCH/
+02_NOVEL_BIBLE/
+03_WORLD_BIBLES/
 04_DRAFTS/
 07_CANON_GUARDIAN/
 ```
@@ -79,6 +95,7 @@ sacred-alchemy/
 sacred-neurogenesis/
 spiritual-coloring-book-series/
 the-immediate-field/
+three-futures/
 top-comment-terror-anthology/
 veilborn/
 wildbound-codex/
@@ -101,5 +118,7 @@ Activation still requires:
 ## Recommended Next Move
 
 ```text
-Use /open books or /open immediate field. The Immediate Field resumes at Chapter 4: The Code We Did Not Choose.
+Use /open books, /open immediate field, or /open three futures.
+The Immediate Field resumes at Chapter 4: The Code We Did Not Choose.
+Three Futures resumes at the clue-and-reveal matrix.
 ```
