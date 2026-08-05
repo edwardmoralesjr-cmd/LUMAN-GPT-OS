@@ -70,12 +70,13 @@ Create a psychologically intense suspense novel in which the reader gradually lo
 - Prior Evaluation timeline reconciled
 - Prism anomaly and capability audit complete
 - Prologue and Chapter 1 scene cards approved
+- Delivery and GitHub sync protocol locked
 
 ## Manuscript Status
 
 ### Complete
 
-- Prologue: `The Sixth Chair`
+#### Prologue — `The Sixth Chair`
 
 Draft path:
 
@@ -83,15 +84,62 @@ Draft path:
 BOOKS/three-futures/04_DRAFTS/PROLOGUE_THE_SIXTH_CHAIR.md
 ```
 
-### Next Draft
-
-- Chapter 1: `Arrival`
-
-Approved scene card path:
+Audit path:
 
 ```text
-BOOKS/three-futures/01_BOOK_ARCHITECTURE/SCENE_CARDS_PROLOGUE_AND_CHAPTER_01.md
+BOOKS/three-futures/07_CANON_GUARDIAN/AUDITS/PROLOGUE_THE_SIXTH_CHAIR_AUDIT.md
 ```
+
+#### Chapter 1 — `Arrival`
+
+Draft path:
+
+```text
+BOOKS/three-futures/04_DRAFTS/CHAPTER_01_ARRIVAL.md
+```
+
+Audit path:
+
+```text
+BOOKS/three-futures/07_CANON_GUARDIAN/AUDITS/CHAPTER_01_ARRIVAL_AUDIT.md
+```
+
+Word delivery:
+
+```text
+Three_Futures_Chapter_01_Arrival.docx
+Rendered and visually verified across 16 pages on 2026-08-05
+```
+
+### Next Draft
+
+- Chapter 2: `Project Prism`
+
+Required pre-draft gate:
+
+1. Build the Chapter 2 scene card from the Master Outline and current manuscript continuity.
+2. Audit Prism's access and Selene's disclosure limits for every planned clue.
+3. Draft the chapter in Mara's close-third viewpoint.
+4. Run the full Canon Guardian audit.
+5. Save the chapter and audit to GitHub.
+6. Deliver the visually verified Word document.
+
+## Chapter 1 Working Manuscript Canon
+
+Chapter 1 establishes:
+
+- Mara arrives at approximately 7:46 by her analog watch.
+- The Aster Vale transport clock is ninety-three seconds ahead.
+- Mara's coat leaves her direct sight for eleven seconds during security intake.
+- Annex protocol uses the phrase `We preserve sequence here`.
+- Mara's signature appears beneath blank authorization conditions and Caleb preserves the flawed original.
+- Mara's body recognizes the lift movement, warm stone, and narrowing corridor before conscious confirmation.
+- Her watch loses seven additional seconds during the descent while Caleb's mechanical stopwatch does not.
+- Her notebook contains an unexplained handwritten `8`.
+- Caleb counts eight security thresholds, including an unseen pressure seal.
+- Selene looks at Mara's left hand as though expecting a scar or injury.
+- A fresh black petal in Mara's coat is warm and leaves a rootlike branching mark.
+- A calm voice tells Mara: `You found it earlier this time.`
 
 ## Open Design Decisions
 
@@ -104,19 +152,19 @@ BOOKS/three-futures/01_BOOK_ARCHITECTURE/SCENE_CARDS_PROLOGUE_AND_CHAPTER_01.md
 
 ## Drafting Authority
 
-The Prologue was drafted from the approved:
+The Prologue and Chapter 1 were drafted from the approved:
 
 - Master Outline
 - Master Novel Bible
-- Fork Ensemble Bible
+- Character and world bibles
 - Guardian Rules
 - Clue-and-Reveal Matrix
 - Prior Evaluation Timeline
 - Prism Anomaly Capability Audit
-- Opening Scene Cards
+- approved opening scene cards
 
 Future chapters must receive a scene card and Guardian audit before entering manuscript canon.
 
 ## Recommended Next Move
 
-**Draft Chapter 1: Arrival, maintaining Mara's close-third viewpoint and the approved corridor, watch, doorway-count, Selene-recognition, and black-petal evidence trail.**
+**Build the Chapter 2 scene card for `Project Prism`, preserving the Chapter 1 evidence trail and defining the exact information Selene reveals, withholds, and frames during Mara's official briefing.**
