@@ -45,15 +45,22 @@ Prism integrates the three futures and releases the complete record rather than 
 02_NOVEL_BIBLE/
 02_NOVEL_BIBLE/CHARACTERS/
 03_WORLD_BIBLES/
+04_DRAFTS/
 07_CANON_GUARDIAN/
+07_CANON_GUARDIAN/AUDITS/
 ```
 
 ## Core Files
 
 ```text
 00_PROJECT_COMMAND_CENTER/PROJECT_STATUS.md
+00_PROJECT_COMMAND_CENTER/DELIVERY_AND_SYNC_PROTOCOL.md
 01_BOOK_ARCHITECTURE/ORIGINAL_SOURCE_OUTLINE.md
 01_BOOK_ARCHITECTURE/MASTER_OUTLINE.md
+01_BOOK_ARCHITECTURE/CLUE_AND_REVEAL_MATRIX.md
+01_BOOK_ARCHITECTURE/PRIOR_EVALUATION_TIMELINE.md
+01_BOOK_ARCHITECTURE/PRISM_ANOMALY_CAPABILITY_AUDIT.md
+01_BOOK_ARCHITECTURE/SCENE_CARDS_PROLOGUE_AND_CHAPTER_01.md
 02_NOVEL_BIBLE/MASTER_NOVEL_BIBLE.md
 02_NOVEL_BIBLE/CHARACTERS/MARA_VEY.md
 02_NOVEL_BIBLE/CHARACTERS/SELENE_MARR.md
@@ -63,7 +70,11 @@ Prism integrates the three futures and releases the complete record rather than 
 03_WORLD_BIBLES/LUCENT.md
 03_WORLD_BIBLES/LUCID.md
 03_WORLD_BIBLES/CLARUS.md
+04_DRAFTS/PROLOGUE_THE_SIXTH_CHAIR.md
+04_DRAFTS/CHAPTER_01_ARRIVAL.md
 07_CANON_GUARDIAN/GUARDIAN_RULES.md
+07_CANON_GUARDIAN/AUDITS/PROLOGUE_THE_SIXTH_CHAIR_AUDIT.md
+07_CANON_GUARDIAN/AUDITS/CHAPTER_01_ARRIVAL_AUDIT.md
 ```
 
 ## Operating Model
@@ -73,10 +84,11 @@ Prism integrates the three futures and releases the complete record rather than 
 - **Working Canon may be refined. Locked Canon requires Edward's explicit approval.**
 - Psychological ambiguity must remain fair, rule-bound, and clue-supported.
 - Philosophy must advance suspense and character, not replace plot.
+- Every completed manuscript artifact must receive a Guardian audit, GitHub sync, and visually verified Word delivery.
 
 ## Current Status
 
-**Stage:** Major architecture and novel-bible build  
-**Draft status:** No manuscript chapter locked yet  
-**Current frontier:** Convert the bible into a scene-level clue map, then draft the Prologue and Chapter 1  
-**Recommended next move:** Build the clue-and-reveal matrix across all forty chapters.
+**Stage:** Active Drafting  
+**Draft status:** Prologue and Chapter 1 are Working Manuscript Canon  
+**Current frontier:** Build the Chapter 2 scene card for `Project Prism`  
+**Recommended next move:** Define Selene's official briefing, omissions, evidence boundaries, and the exact moment Mara learns Prism requested her by name.
