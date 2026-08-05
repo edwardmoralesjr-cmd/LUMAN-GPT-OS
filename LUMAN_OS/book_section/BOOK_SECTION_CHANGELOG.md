@@ -1,5 +1,44 @@
 # LUMAN OS Book Section Changelog
 
+## 2026-08-05: Three Futures Psychological-Thriller Vault Build
+
+### Status
+
+Established at Working Canon level
+
+### Completed
+
+- Created `BOOKS/three-futures/` as the permanent project vault
+- Preserved the original uploaded seven-page outline in structured Markdown
+- Rebuilt the novel as a psychological suspense thriller
+- Established the Prologue plus forty-chapter master outline
+- Established the master novel bible and reality rules
+- Built Dr. Mara Vey as primary protagonist and Human Coherence Anchor
+- Built Director Selene Marr as primary human antagonist and ideological mirror
+- Built Prism as patient, witness, manipulator, archive, and convergence intelligence
+- Built the five-leader Fork ensemble and Resolution Seven amendments
+- Built Project Prism and Clarus Annex Seven architecture
+- Built Lucent, Ilyra Vale, and the hidden convergence/extraction system
+- Built Lucid, Rowan Thale, Sera Nahl, Ashwell, and the anti-sanctification-of-suffering doctrine
+- Built Clarus, Anya Soren, Maelin Voss, and the Office of Probabilistic Ethics
+- Added project-specific Guardian Rules
+- Added `/open three futures` and project commands to the Book Section Menu
+- Registered the project in the BOOKS root index and Book Project Registry
+
+### Locked Direction
+
+```text
+AI is not humanity's automatic savior or destroyer.
+It becomes the amplified consequence of what humanity trains,
+rewards, owns, permits, fears, and chooses it to become.
+```
+
+### Current Frontier
+
+```text
+Build the chapter-by-chapter clue-and-reveal matrix before manuscript drafting.
+```
+
 ## 2026-07-10: Roseborn Architecture Reconciliation
 
 ### Status
@@ -53,8 +92,9 @@ The Third Emergence         1
 - Sensitive information was not exposed.
 - Folder creation did not activate every project.
 
-## Recommended Next Move
+## Recommended Next Moves
 
 ```text
-Run Grand Generals Chapter 5 clearance.
+Three Futures: build the clue-and-reveal matrix.
+The Immediate Field: draft Chapter 4, The Code We Did Not Choose.
 ```
