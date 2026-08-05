@@ -46,8 +46,22 @@ A writing session is not complete until both conditions are met:
 
 ## Current Application
 
-This protocol applies immediately to the completed Prologue, `The Sixth Chair`, and to every future chapter beginning with Chapter 1, `Arrival`.
+This protocol applies to the Prologue, `The Sixth Chair`, Chapter 1, `Arrival`, and every future *Three Futures* manuscript artifact.
 
-## Current Verified Delivery
+## Verified Delivery Log
 
-The Prologue Word document was generated from the canonical GitHub manuscript, rendered to fifteen pages, visually inspected page by page, and approved for delivery on 2026-08-05.
+### Prologue — `The Sixth Chair`
+
+- Generated from the canonical GitHub manuscript
+- Rendered to fifteen pages
+- Visually inspected page by page
+- Approved for delivery on 2026-08-05
+
+### Chapter 1 — `Arrival`
+
+- Generated from `BOOKS/three-futures/04_DRAFTS/CHAPTER_01_ARRIVAL.md`
+- Canon Guardian audit passed
+- Rendered to sixteen pages, including the title page
+- Every page visually inspected at readable scale
+- No clipping, overlap, broken glyphs, orphaned headings, or margin defects found
+- Approved for delivery on 2026-08-05
