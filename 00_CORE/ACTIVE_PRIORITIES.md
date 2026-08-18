@@ -11,6 +11,7 @@
 - Use LUMAN Boot + Retrieval to reconstruct current state from sources and flag stale dated claims before presenting them as current.
 - Use transaction history so durable state remains explainable after the fact.
 - Distinguish private durability from guaranteed erasability; do not route erasure-sensitive private information into plaintext Git history by default.
+- Use Google Calendar as ephemeral live schedule evidence when relevant; do not automatically copy Calendar contents into Git or treat free time as unused capacity.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Keep Life OS and family peace beneath all creative expansion.
 - Treat `Visionary` as the active Lucid Syntax shipping front with a locked album release date of 2026-09-25.
@@ -34,8 +35,10 @@
 ## Current System Build Gate
 
 ```text
-LUMAN Boot, Retrieval, Transaction History, and Dynamic Root Shell are active.
-Current system task: finalize erasure-aware memory control and correction/deletion commands.
+LUMAN Boot, Retrieval, Transaction History, Dynamic Root Shell, erasure-aware Memory Control,
+the operational skill pack, and read-only Google Calendar integration are active.
+
+Current system task: prove the daily-operations layer under real use, then add Gmail as a bounded live source for important-message context.
 ```
 
 This system-maintenance gate does not create a fourth creative strategic front.
@@ -63,9 +66,9 @@ Grand Generals remains Active Building and returns to the deep-building front at
 ## Active LUMAN Development Gate
 
 ```text
-[1] Merge erasure-aware memory control
-[2] Enforce storage classes for public/private/erasure-sensitive/transient/secret data
-[3] Expand the small-skill library and then connect live external sources
+[1] Run the first live operational Morning Brief / Weekly Sync through the new skill composition
+[2] Add Gmail as an ephemeral read source for important-message context
+[3] Continue toward HUD only after the daily operating layer remains reliable under real use
 ```
 
 ## Completed Strategic Gates
@@ -90,6 +93,9 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] Dynamic Root Shell installed
 [✓] Synthetic correction, supersession, and current-state deletion test completed
 [✓] Git historical-retention limitation identified and addressed in memory law
+[✓] Erasure-aware Memory Control merged
+[✓] Operational skill pack built: Weekly Sync, Family Plan, Project Review, Open Loop Review, Capture Idea, Release Status, Evening Close
+[✓] Google Calendar bounded read integration tested with no Calendar writes and no event-content persistence to Git
 ```
 
 ## Immediate Field Recovery Gate
@@ -102,7 +108,7 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Finalize erasure-aware memory control, then return normal execution focus to Visionary shipping and Infinite Bloom consolidation while the next LUMAN skill layer is built modularly.
+Use the new operational skill layer in a real Morning Brief or Weekly Sync, then add Gmail as the next bounded live-source integration.
 ```
 
 ## Status
