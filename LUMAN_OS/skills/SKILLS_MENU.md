@@ -28,6 +28,16 @@ Source:
 LUMAN_OS/skills/retrieve_context/SKILL.md
 ```
 
+### `/explain memory: [topic]`
+
+Explain why LUMAN knows something, when it was recorded, what source owns it, and whether it was later corrected, superseded, archived, or inferred.
+
+Source:
+
+```text
+LUMAN_OS/skills/explain_memory/SKILL.md
+```
+
 ### `/memory route`
 
 Classify durable information, preserve provenance, and route it to the correct public/private/transient owner.
@@ -92,6 +102,13 @@ LUMAN Boot
 ```
 
 ```text
+Memory Explanation
+-> Retrieve Context
+-> Transaction History
+-> Explain Memory
+```
+
+```text
 Morning Brief
 -> Retrieve Context
 -> Project Status
@@ -102,6 +119,6 @@ Morning Brief
 ## Status
 
 Status: Active  
-Version: v1.1  
+Version: v1.2  
 Created: 2026-08-18  
 Updated: 2026-08-18
