@@ -8,13 +8,14 @@
 
 ## Purpose
 
-Open the file-native LUMAN memory architecture, live memory router, retrieval protocol, freshness rules, privacy boundary, graph rules, and note schema.
+Open the file-native LUMAN memory architecture, live memory router, retrieval protocol, transaction history, freshness rules, privacy boundary, graph rules, and note schema.
 
 ## Core Sources
 
 ```text
 LUMAN_OS/memory/LIVE_MEMORY_ROUTER.md
 LUMAN_OS/memory/RETRIEVAL_PROTOCOL.md
+LUMAN_OS/memory/TRANSACTION_HISTORY_PROTOCOL.md
 LUMAN_OS/memory/FRESHNESS_RULES.md
 LUMAN_OS/memory/MEMORY_ARCHITECTURE.md
 LUMAN_OS/memory/KNOWLEDGE_NOTE_SCHEMA.md
@@ -22,6 +23,7 @@ LUMAN_OS/memory/GRAPH_LINKING_PROTOCOL.md
 LUMAN_OS/memory/PUBLIC_PRIVATE_MEMORY_BOUNDARY.md
 LUMAN_OS/skills/memory_route/SKILL.md
 LUMAN_OS/skills/retrieve_context/SKILL.md
+LUMAN_OS/skills/explain_memory/SKILL.md
 ```
 
 ## Commands
@@ -33,10 +35,13 @@ LUMAN_OS/skills/retrieve_context/SKILL.md
 /remember: [text]
 /record decision: [text]
 /recall: [topic]
+/explain memory: [topic]
+/why do you know: [topic]
 /what is coming up
 /memory status
 /memory architecture
 /retrieval protocol
+/transaction history
 /freshness check
 /graph protocol
 /note schema
@@ -67,7 +72,17 @@ what matters right now...
 recall...
 ```
 
-Persistence remains conservative. Retrieval remains source-grounded. When privacy, ownership, or freshness is materially ambiguous, classify or verify before asserting current truth.
+## Natural-Language Provenance Triggers
+
+```text
+why do you know that?
+when did you learn that?
+where did that memory come from?
+who said that?
+what changed this record?
+```
+
+Persistence remains conservative. Retrieval remains source-grounded. Provenance explanations must distinguish human-stated information, sourced information, inference, and AI-generated structure.
 
 ## Live Transaction Flow
 
@@ -82,6 +97,7 @@ Input
 -> Persist
 -> Graph Link
 -> Open-Loop Check
+-> Transaction History
 -> Transaction Report
 ```
 
@@ -99,12 +115,25 @@ Question
 -> Answer
 ```
 
+## Provenance Explanation Flow
+
+```text
+Claim
+-> Current Owner
+-> Source Provenance
+-> Transaction / Git History
+-> Corrections / Supersessions
+-> Current Status
+-> Explanation
+```
+
 ## Governing Principles
 
 ```text
 If it is stored, preserve provenance.
 If it is not stored, do not pretend it was stored.
 Retrieve before claiming memory.
+Durable state should be explainable after the fact.
 ```
 
 ## Two-Brain Rule
@@ -115,7 +144,7 @@ Memory supports human continuity. It does not define the human permanently.
 
 ## Status
 
-Status: Active live routing and retrieval  
-Version: v1.2  
+Status: Active live routing, retrieval, and transaction history  
+Version: v1.3  
 Created: 2026-08-18  
 Updated: 2026-08-18
