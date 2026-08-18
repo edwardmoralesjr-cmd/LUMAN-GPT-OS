@@ -1,4 +1,5 @@
 const REPO_RAW = 'https://raw.githubusercontent.com/edwardmoralesjr-cmd/LUMAN-GPT-OS/main/';
+const BRIDGE_STORAGE_KEY = 'luman_bridge_url_v1';
 
 const SOURCES = {
   priorities: '00_CORE/ACTIVE_PRIORITIES.md',
@@ -13,6 +14,9 @@ const els = {
   refreshBtn: document.querySelector('#refreshBtn'),
   constitutionStatus: document.querySelector('#constitutionStatus'),
   publicBrainStatus: document.querySelector('#publicBrainStatus'),
+  privateBrainStatus: document.querySelector('#privateBrainStatus'),
+  calendarStatus: document.querySelector('#calendarStatus'),
+  gmailStatus: document.querySelector('#gmailStatus'),
   freshnessBadge: document.querySelector('#freshnessBadge'),
   topThree: document.querySelector('#topThree'),
   fronts: document.querySelector('#fronts'),
@@ -24,6 +28,15 @@ const els = {
   askInput: document.querySelector('#askInput'),
   commandOutput: document.querySelector('#commandOutput'),
   sourceFooter: document.querySelector('#sourceFooter'),
+  bridgeUrl: document.querySelector('#bridgeUrl'),
+  connectBridgeBtn: document.querySelector('#connectBridgeBtn'),
+  bridgeLoginBtn: document.querySelector('#bridgeLoginBtn'),
+  disconnectBridgeBtn: document.querySelector('#disconnectBridgeBtn'),
+  bridgeIdentity: document.querySelector('#bridgeIdentity'),
+  bridgeMessage: document.querySelector('#bridgeMessage'),
+  calendarToday: document.querySelector('#calendarToday'),
+  inboxSignals: document.querySelector('#inboxSignals'),
+  privateCommitments: document.querySelector('#privateCommitments'),
 };
 
 function setClock() {
@@ -71,7 +84,7 @@ function cleanMarkdown(text) {
 }
 
 function statusMarkup(label, state = 'good') {
-  return `<span class="dot ${state}"></span>${label}`;
+  return `<span class="dot ${state}"></span>${escapeHtml(label)}`;
 }
 
 function renderTopThree(md) {
@@ -188,6 +201,196 @@ function renderLoops(md) {
     : '<div class="loop">No public open loops parsed.</div>';
 }
 
+function normalizeBridgeUrl(value) {
+  const raw = String(value || '').trim().replace(/\/+$/, '');
+  if (!raw) return '';
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    throw new Error('Enter a valid bridge URL.');
+  }
+
+  const local = ['localhost', '127.0.0.1'].includes(url.hostname);
+  if (url.protocol !== 'https:' && !(local && url.protocol === 'http:')) {
+    throw new Error('Bridge must use HTTPS except for localhost development.');
+  }
+  if (url.username || url.password || url.search || url.hash) {
+    throw new Error('Bridge URL must not contain credentials, query parameters, or fragments.');
+  }
+  return `${url.origin}${url.pathname === '/' ? '' : url.pathname.replace(/\/$/, '')}`;
+}
+
+function getSavedBridgeUrl() {
+  try {
+    return normalizeBridgeUrl(localStorage.getItem(BRIDGE_STORAGE_KEY) || '');
+  } catch {
+    localStorage.removeItem(BRIDGE_STORAGE_KEY);
+    return '';
+  }
+}
+
+function localDayBounds() {
+  const start = new Date();
+  start.setHours(0, 0, 0, 0);
+  const end = new Date(start);
+  end.setDate(end.getDate() + 1);
+  return { timeMin: start.toISOString(), timeMax: end.toISOString() };
+}
+
+function setBridgeDisconnected(message = 'Bridge not connected.') {
+  els.privateBrainStatus.innerHTML = statusMarkup('BRIDGE REQUIRED', 'bridge');
+  els.calendarStatus.innerHTML = statusMarkup('BRIDGE REQUIRED', 'bridge');
+  els.gmailStatus.innerHTML = statusMarkup('BRIDGE REQUIRED', 'bridge');
+  els.bridgeIdentity.textContent = 'Not connected';
+  els.bridgeMessage.textContent = message;
+  els.calendarToday.className = 'live-list muted-empty';
+  els.calendarToday.textContent = 'Connect bridge to load today\'s bounded calendar view.';
+  els.inboxSignals.className = 'live-list muted-empty';
+  els.inboxSignals.textContent = 'Connect bridge to load bounded inbox metadata.';
+  els.privateCommitments.className = 'live-list muted-empty';
+  els.privateCommitments.textContent = 'Connect bridge to load minimum private open-loop context.';
+}
+
+function sourceStateMarkup(source) {
+  if (source?.status === 'connected') return statusMarkup('CONNECTED', 'good');
+  if (source?.status === 'error') return statusMarkup('SOURCE ERROR', 'bad');
+  return statusMarkup('UNAVAILABLE', 'bad');
+}
+
+function formatCalendarTime(item) {
+  if (!item.start) return 'Time unavailable';
+  if (item.all_day) return 'All day';
+  const start = new Date(item.start);
+  const end = item.end ? new Date(item.end) : null;
+  if (Number.isNaN(start.getTime())) return 'Time unavailable';
+  const startText = start.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  const endText = end && !Number.isNaN(end.getTime())
+    ? end.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+    : '';
+  return endText ? `${startText}–${endText}` : startText;
+}
+
+function formatReceived(value) {
+  const date = new Date(value || '');
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+}
+
+function renderBridgeContext(data) {
+  els.privateBrainStatus.innerHTML = sourceStateMarkup(data.sources?.private_brain);
+  els.calendarStatus.innerHTML = sourceStateMarkup(data.sources?.calendar);
+  els.gmailStatus.innerHTML = sourceStateMarkup(data.sources?.gmail);
+  els.bridgeIdentity.textContent = data.identity?.email ? `Authenticated · ${data.identity.email}` : 'Authenticated';
+  els.bridgeMessage.textContent = `Minimum-data view generated ${new Date(data.generated_at).toLocaleString()}. Nothing from this response is written to public GitHub or browser storage.`;
+
+  const calendar = Array.isArray(data.today?.calendar) ? data.today.calendar : [];
+  if (data.sources?.calendar?.status !== 'connected') {
+    els.calendarToday.className = 'live-list muted-empty';
+    els.calendarToday.textContent = `Calendar source error: ${data.sources?.calendar?.error || 'unavailable'}`;
+  } else if (!calendar.length) {
+    els.calendarToday.className = 'live-list muted-empty';
+    els.calendarToday.textContent = 'No scheduled items returned for today. Free time is not interpreted as unused capacity.';
+  } else {
+    els.calendarToday.className = 'live-list';
+    els.calendarToday.innerHTML = calendar.map(item => `
+      <div class="live-item">
+        <div class="live-kicker">${escapeHtml(formatCalendarTime(item))}</div>
+        <div class="live-title">${escapeHtml(item.title || 'Busy')}</div>
+      </div>`).join('');
+  }
+
+  const inbox = Array.isArray(data.today?.inbox_signals) ? data.today.inbox_signals : [];
+  if (data.sources?.gmail?.status !== 'connected') {
+    els.inboxSignals.className = 'live-list muted-empty';
+    els.inboxSignals.textContent = `Gmail source error: ${data.sources?.gmail?.error || 'unavailable'}`;
+  } else if (!inbox.length) {
+    els.inboxSignals.className = 'live-list muted-empty';
+    els.inboxSignals.textContent = 'No inbox signals returned by the bounded view.';
+  } else {
+    els.inboxSignals.className = 'live-list';
+    els.inboxSignals.innerHTML = inbox.map(item => `
+      <div class="live-item">
+        <div class="live-kicker">${escapeHtml(item.sender || 'Sender')} · ${escapeHtml(formatReceived(item.received_at))}</div>
+        <div class="live-title">${escapeHtml(item.subject || '(no subject)')}</div>
+        <div class="live-meta">${escapeHtml((item.signals || []).join(' · ') || 'metadata signal')} · not human priority authority</div>
+      </div>`).join('');
+  }
+
+  const commitments = Array.isArray(data.private_minimum?.upcoming_commitments)
+    ? data.private_minimum.upcoming_commitments
+    : [];
+  if (data.sources?.private_brain?.status !== 'connected') {
+    els.privateCommitments.className = 'live-list muted-empty';
+    els.privateCommitments.textContent = `Private brain source error: ${data.sources?.private_brain?.error || 'unavailable'}`;
+  } else if (!commitments.length) {
+    els.privateCommitments.className = 'live-list muted-empty';
+    els.privateCommitments.textContent = 'No private open-loop commitments returned.';
+  } else {
+    els.privateCommitments.className = 'live-list';
+    els.privateCommitments.innerHTML = commitments.map(item => `
+      <div class="live-item">
+        <div class="live-kicker">${escapeHtml(item.due_trigger || 'No due trigger')}</div>
+        <div class="live-title">${escapeHtml(item.title || 'Private commitment')}</div>
+        ${item.next_gate ? `<div class="live-meta">Next gate: ${escapeHtml(item.next_gate)}</div>` : ''}
+      </div>`).join('');
+  }
+}
+
+async function fetchBridgeContext(bridgeUrl) {
+  const bounds = localDayBounds();
+  const params = new URLSearchParams({ time_min: bounds.timeMin, time_max: bounds.timeMax });
+  const response = await fetch(`${bridgeUrl}/v1/context?${params}`, {
+    method: 'GET',
+    credentials: 'include',
+    cache: 'no-store',
+    headers: { 'Accept': 'application/json' },
+  });
+
+  const contentType = response.headers.get('content-type') || '';
+  if (!response.ok) {
+    let reason = `bridge_http_${response.status}`;
+    if (contentType.includes('application/json')) {
+      const body = await response.json().catch(() => ({}));
+      if (body?.error) reason = body.error;
+    }
+    throw new Error(reason);
+  }
+  if (!contentType.includes('application/json')) throw new Error('bridge_login_required');
+  return response.json();
+}
+
+async function refreshBridge() {
+  const bridgeUrl = getSavedBridgeUrl();
+  els.bridgeUrl.value = bridgeUrl;
+  if (!bridgeUrl) {
+    setBridgeDisconnected('Bridge not configured. Enter the protected Worker URL to connect private/live context.');
+    return false;
+  }
+
+  els.privateBrainStatus.innerHTML = statusMarkup('CHECKING', 'pending');
+  els.calendarStatus.innerHTML = statusMarkup('CHECKING', 'pending');
+  els.gmailStatus.innerHTML = statusMarkup('CHECKING', 'pending');
+  els.bridgeIdentity.textContent = 'Authenticating…';
+  els.bridgeMessage.textContent = 'Reading minimum-data context through authenticated bridge…';
+
+  try {
+    const data = await fetchBridgeContext(bridgeUrl);
+    renderBridgeContext(data);
+    return true;
+  } catch (error) {
+    const reason = String(error?.message || error || 'bridge_unavailable');
+    els.privateBrainStatus.innerHTML = statusMarkup('UNAVAILABLE', 'bad');
+    els.calendarStatus.innerHTML = statusMarkup('UNAVAILABLE', 'bad');
+    els.gmailStatus.innerHTML = statusMarkup('UNAVAILABLE', 'bad');
+    els.bridgeIdentity.textContent = 'Authentication needed';
+    els.bridgeMessage.textContent = reason === 'bridge_login_required' || reason === 'authentication_required'
+      ? 'Cloudflare Access authentication is required. Use “Open Access Login,” authenticate, then refresh.'
+      : `Bridge unavailable: ${reason}. No private/live data was substituted or guessed.`;
+    return false;
+  }
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -237,10 +440,11 @@ async function refresh() {
     els.constitutionStatus.innerHTML = statusMarkup('UNAVAILABLE', 'bad');
   }
 
+  const bridgeConnected = await refreshBridge();
   const failed = results.filter(result => result.status === 'rejected').length;
   els.sourceFooter.textContent = failed
-    ? `Public source read completed with ${failed} error(s). Private/live sources still require authenticated LUMAN bridge.`
-    : 'Public state source: live GitHub main branch · Private, Calendar, and Gmail sources require authenticated LUMAN bridge.';
+    ? `Public source read completed with ${failed} error(s). Bridge ${bridgeConnected ? 'connected' : 'not connected'}.`
+    : `Public state: live GitHub main · Private/live bridge: ${bridgeConnected ? 'authenticated minimum-data context connected' : 'not connected'}.`;
 
   els.refreshBtn.disabled = false;
   els.refreshBtn.textContent = 'Refresh Sources';
@@ -267,4 +471,34 @@ els.askForm.addEventListener('submit', event => {
 
 els.refreshBtn.addEventListener('click', refresh);
 
+els.connectBridgeBtn.addEventListener('click', async () => {
+  try {
+    const url = normalizeBridgeUrl(els.bridgeUrl.value);
+    if (!url) throw new Error('Enter a bridge URL.');
+    localStorage.setItem(BRIDGE_STORAGE_KEY, url);
+    els.bridgeUrl.value = url;
+    await refreshBridge();
+  } catch (error) {
+    els.bridgeMessage.textContent = String(error?.message || error);
+  }
+});
+
+els.bridgeLoginBtn.addEventListener('click', () => {
+  try {
+    const url = normalizeBridgeUrl(els.bridgeUrl.value || getSavedBridgeUrl());
+    if (!url) throw new Error('Enter a bridge URL first.');
+    window.open(`${url}/health`, '_blank', 'noopener,noreferrer');
+    els.bridgeMessage.textContent = 'Access login opened in a new tab. After authentication succeeds, return here and refresh sources.';
+  } catch (error) {
+    els.bridgeMessage.textContent = String(error?.message || error);
+  }
+});
+
+els.disconnectBridgeBtn.addEventListener('click', () => {
+  localStorage.removeItem(BRIDGE_STORAGE_KEY);
+  els.bridgeUrl.value = '';
+  setBridgeDisconnected('Bridge disconnected. In-page private/live context has been cleared.');
+});
+
+els.bridgeUrl.value = getSavedBridgeUrl();
 refresh();
