@@ -1,0 +1,105 @@
+name: Activate LUMAN Bridge Private Reads
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_access_enabled:
+        description: Cloudflare Access is enabled for the Worker and limited to the intended identity
+        required: true
+        type: boolean
+        default: false
+      confirm_google_readonly:
+        description: Google refresh token is limited to calendar.readonly and gmail.readonly scopes
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  activate:
+    if: ${{ inputs.confirm_access_enabled && inputs.confirm_google_readonly }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: luman-bridge-production
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Verify protected configuration exists
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          HUD_ORIGIN: ${{ secrets.HUD_ORIGIN }}
+          ALLOWED_EMAIL: ${{ secrets.ALLOWED_EMAIL }}
+          GITHUB_PRIVATE_TOKEN: ${{ secrets.GITHUB_PRIVATE_TOKEN }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+        run: |
+          missing=0
+          required=(
+            CLOUDFLARE_API_TOKEN
+            CLOUDFLARE_ACCOUNT_ID
+            HUD_ORIGIN
+            ALLOWED_EMAIL
+            GITHUB_PRIVATE_TOKEN
+            GOOGLE_CLIENT_ID
+            GOOGLE_CLIENT_SECRET
+            GOOGLE_REFRESH_TOKEN
+          )
+          for key in "${required[@]}"; do
+            if [ -z "${!key:-}" ]; then
+              echo "::error title=Missing protected configuration::$key is not configured in the luman-bridge-production environment"
+              missing=1
+            fi
+          done
+          exit "$missing"
+
+      - name: Validate bridge JavaScript
+        run: node --check LUMAN_OS/hud/bridge/src/index.js
+
+      - name: Activate minimum-data private and live-source reads
+        id: deploy
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: LUMAN_OS/hud/bridge
+          wranglerVersion: "4"
+          command: deploy
+          secrets: |
+            HUD_ORIGIN
+            ALLOWED_EMAIL
+            GITHUB_PRIVATE_TOKEN
+            GOOGLE_CLIENT_ID
+            GOOGLE_CLIENT_SECRET
+            GOOGLE_REFRESH_TOKEN
+          postCommands: wrangler deployments status
+        env:
+          HUD_ORIGIN: ${{ secrets.HUD_ORIGIN }}
+          ALLOWED_EMAIL: ${{ secrets.ALLOWED_EMAIL }}
+          GITHUB_PRIVATE_TOKEN: ${{ secrets.GITHUB_PRIVATE_TOKEN }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+
+      - name: Record production validation gate
+        shell: bash
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          {
+            echo "## LUMAN Bridge activation deployed"
+            echo
+            if [ -n "${DEPLOYMENT_URL:-}" ]; then
+              echo "Worker URL: ${DEPLOYMENT_URL}"
+              echo
+            fi
+            echo "Deployment alone does not mark Bridge V1 Active."
+            echo "Next: run the production authentication and minimum-disclosure test matrix from an authenticated browser session."
+          } >> "$GITHUB_STEP_SUMMARY"
