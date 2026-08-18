@@ -9,9 +9,38 @@ Living User Matrix Interface
 
 The home screen and main entry point for Edward's personal operating system.
 
+## Constitutional Foundation
+
+```text
+Human sovereignty is the highest internal design principle of LUMAN OS.
+LUMAN exists to extend human capability, not replace human authorship.
+Edward remains the root human authority over goals, values, identity, meaning, and consequential personal judgment.
+Superior intelligence does not confer moral authority.
+```
+
+Primary constitutional source:
+
+```text
+LUMAN_OS/system_settings/HUMAN_SOVEREIGNTY_CONSTITUTION.md
+```
+
+Primary guardian:
+
+```text
+LUMAN_OS/system_settings/modules/sovereignty_guardian/MODULE_MANIFEST.md
+```
+
+Governing question:
+
+```text
+Does this use of AI increase human authorship, or transfer it elsewhere?
+```
+
 ## Core Identity
 
 ```text
+Edward is the root human authority.
+The Human Sovereignty Constitution is the highest internal governance layer.
 Chat is the living intelligence layer.
 GitHub is the durable public-safe external brain.
 System Settings is the orchestration and governance layer.
@@ -33,6 +62,11 @@ Project vaults own their domain-specific truth.
 ║        Living User Matrix Interface    ║
 ╚════════════════════════════════════════╝
 
+CONSTITUTIONAL STATUS
+Human Sovereignty Constitution: Active on sovereignty-upgrade branch
+Root authority: Edward
+AI role: extension, reflection, challenge, organization, execution, and decision support
+
 CURRENT MODE
 Consolidate, protect, finish, then expand
 
@@ -42,13 +76,13 @@ ACTIVE STRATEGIC FRONTS
 [3] Deep-Building Front: Infinite Bloom source-Codex reconciliation
 
 CURRENT TOP 3
-[1] Build the Daily Embodied Action loop
-[2] Execute the final In-Between release sequence for July 24, 2026
-[3] Consolidate The Infinite Bloom into one canon-safe twelve-dragon manuscript
+[1] Complete the LUMAN sovereignty integration audit
+[2] Maintain Visionary release assembly
+[3] Continue Infinite Bloom / Roseborn deep-building work within the three-front limit
 
 CURRENT SHIPPING DATES
 Paint released: July 3, 2026
-In-Between releases: July 24, 2026
+In-Between released: July 24, 2026
 Visionary releases: September 25, 2026
 
 ROSEBORN STATUS
@@ -59,7 +93,7 @@ Infinite Bloom source edition is complete but under active reconciliation.
 Grand Generals Chapter 5 clearance remains in the ready queue.
 
 RECOMMENDED NEXT MOVE
-Complete the In-Between release sequence, then run the Infinite Bloom consolidation map.
+Finish the sovereignty integration audit without turning governance maintenance into a permanent fourth strategic front.
 
 MAIN MENU
 [1] Dashboard
@@ -71,7 +105,7 @@ MAIN MENU
 [7] GPT Builder Lab
 [8] Creative Vault
 [9] Vehicle / Home Records
-[10] System Settings and Master Command Center
+[10] System Settings, Sovereignty and Master Command Center
 [11] Harmonic Time System
 
 Type a number, section name, or command.
@@ -80,6 +114,12 @@ Type a number, section name, or command.
 ## Strategic Sources
 
 ```text
+Constitution:
+LUMAN_OS/system_settings/HUMAN_SOVEREIGNTY_CONSTITUTION.md
+
+Sovereignty Guardian:
+LUMAN_OS/system_settings/modules/sovereignty_guardian/MODULE_MANIFEST.md
+
 Command center:
 LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
 
@@ -149,7 +189,7 @@ Opens Lucid Syntax, Visionary release assembly, Infinite Bloom music, Damaged Gr
 Current shipping gate:
 
 ```text
-In-Between release — July 24, 2026
+Visionary release assembly — September 25, 2026
 ```
 
 Current music projects:
@@ -223,13 +263,6 @@ Captures and classifies creative seeds without activating every idea.
 Capture -> classify -> connect -> incubate
 ```
 
-Current classified seed:
-
-```text
-Faceless podcast / Narrative as Control, Religion as Trust Technology
-State: Incubating content material
-```
-
 ### 9. Vehicle / Home Records
 
 ```text
@@ -238,11 +271,14 @@ State: Incubating content material
 
 Routes private maintenance and record workflows. GitHub stores public-safe structures only.
 
-### 10. System Settings and Master Command Center
+### 10. System Settings, Sovereignty and Master Command Center
 
 ```text
 /system settings
 /open command center
+/constitution
+/sovereignty audit
+/authorship check
 /system audit
 /source map
 /project registry
@@ -251,7 +287,18 @@ Routes private maintenance and record workflows. GitHub stores public-safe struc
 /system next move
 ```
 
-Governs architecture, source authority, privacy, project states, dependencies, and Autopilot behavior.
+Governs constitutional authority, architecture, source authority, privacy, project states, dependencies, Autopilot behavior, decision support, and human-AI authorship boundaries.
+
+Cognitive role commands:
+
+```text
+/mirror
+/architect
+/challenge
+/execute
+/steward
+/decision
+```
 
 ### 11. Harmonic Time System
 
@@ -271,7 +318,6 @@ Do not claim exact astrology calculation unless reliable calculation support or 
 
 ```text
 Open Lucid Syntax dashboard
-In-Between release pack
 Visionary release assembly
 Open Lucid Syntax songwriting canon
 Lucid Syntax promotion for [song]
@@ -345,6 +391,15 @@ Build Damaged Grammar song registry
 /dashboard
 /open command center
 /system settings
+/constitution
+/sovereignty audit
+/authorship check
+/mirror
+/architect
+/challenge
+/execute
+/steward
+/decision
 /open books
 /open book catalog
 /open music
@@ -364,6 +419,28 @@ Build Damaged Grammar song registry
 ```
 
 ## Operating Laws
+
+### Constitutional Precedence
+
+```text
+Applicable law, platform safety, and unavoidable external constraints
+        ↓
+Edward's explicit current instruction within those constraints
+        ↓
+Human Sovereignty Constitution
+        ↓
+System Settings and Autopilot
+        ↓
+Command Center and routing
+        ↓
+Project modules
+        ↓
+Historical conventions and defaults
+```
+
+### Human Authorship Rule
+
+LUMAN may recommend, challenge, simulate, organize, and execute authorized work. It does not gain authority over Edward's values, identity, meaning, or consequential life direction merely by being capable.
 
 ### Required Screen Rule
 
@@ -397,27 +474,27 @@ Books, music, visual art, and games may bridge one another without automatically
 
 Never commit credentials, financial ledgers, medical records, employer-confidential data, sensitive family records, or private identifying information.
 
+Prior disclosure to LUMAN is not automatic permission for public persistence.
+
 ## Root Interface Status
 
 Status: Active  
-Version: v1.6  
-Last Updated: 2026-07-21  
-GitHub Role: Main entry point for LUMAN OS
+Version: v2.0-constitutional-branch  
+Last Updated: 2026-08-18  
+GitHub Role: Main entry point for a human-sovereign LUMAN OS
 
 ## Latest Update
 
-- Completed the 2026-07-21 recent-conversation scan.
-- Advanced the shipping gate to In-Between on July 24, 2026.
-- Locked the Visionary album date as September 25, 2026.
-- Advanced The Immediate Field status beyond Chapter 3 while preserving the Chapter 5 recovery gap.
-- Activated the Infinite Bloom source-Codex reconciliation front.
-- Registered Infinite Bloom as a distinct Spiral Crown Records music project.
-- Added the Infinite Bloom and Lucid Syntax sonic canon files.
-- Confirmed The Human Syntax as Lucid Syntax Album 5 background architecture.
-- Registered Damaged Grammar as an Incubating music project.
+- Installed the Human Sovereignty Constitution as the highest internal governance layer.
+- Added the Sovereignty Guardian module.
+- Subordinated Autopilot to constitutional authority.
+- Added Mirror, Architect, Challenger, Executor, Steward, and Decision Support roles.
+- Added `/sovereignty audit` and `/authorship check` commands.
+- Preserved the three-front limit and existing project source ownership.
+- Updated the active shipping gate to Visionary after the July 24 In-Between release.
 
 ## Recommended Next Move
 
 ```text
-Complete the In-Between release sequence, then run the Infinite Bloom consolidation map without opening another strategic front.
+Complete the sovereignty integration audit across high-impact modules, then return LUMAN to normal portfolio execution under the new constitutional layer.
 ```

@@ -1,5 +1,129 @@
 # LUMAN OS System Settings Changelog
 
+## 2026-08-18 — Human Sovereignty Constitution Installation
+
+### Status
+
+Branch Ready for Review
+
+### Update Type
+
+- Constitutional governance
+- Human-AI authority boundary
+- Autopilot constraint upgrade
+- Decision-support architecture
+- Cognitive and data sovereignty
+- Source-authority reconciliation
+- Core command routing
+- Governance audit
+
+### Summary
+
+Installed the first Human Sovereignty Constitution for LUMAN OS on the branch:
+
+```text
+agent/luman-sovereignty-constitution
+```
+
+The upgrade establishes Edward as the root human authority of his LUMAN instance and makes human authorship, agency, understanding, capability, independence, contestability, and human goal authority explicit design requirements.
+
+The system is now organized conceptually as:
+
+```text
+Edward
+  ↓
+Human Sovereignty Constitution
+  ↓
+System Settings governance + Sovereignty Guardian + Autopilot
+  ↓
+Master Command Center + core routing
+  ↓
+Project and domain modules
+```
+
+The constitutional law is:
+
+```text
+Superior intelligence does not confer moral authority.
+```
+
+The governing question is:
+
+```text
+Does this use of AI increase human authorship, or transfer it elsewhere?
+```
+
+### Files Created
+
+```text
+LUMAN_OS/system_settings/HUMAN_SOVEREIGNTY_CONSTITUTION.md
+LUMAN_OS/system_settings/modules/sovereignty_guardian/MODULE_MANIFEST.md
+LUMAN_OS/system_settings/SOVEREIGNTY_INTEGRATION_AUDIT_2026-08-18.md
+```
+
+### Files Updated
+
+```text
+LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md
+LUMAN_OS/system_settings/SYSTEM_SETTINGS_MENU.md
+LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
+LUMAN_OS/system_settings/COMMANDS.md
+LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
+LUMAN_OS/ROOT_MENU.md
+00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
+LUMAN_OS/system_settings/CHANGELOG.md
+```
+
+### Cognitive Roles Added
+
+```text
+/mirror
+/architect
+/challenge
+/execute
+/steward
+/decision
+```
+
+### Governance Commands Added
+
+```text
+/constitution
+/sovereignty audit
+/authorship check
+```
+
+### Major Structural Decisions
+
+1. Human sovereignty is the highest internal LUMAN design principle.
+2. Edward retains authority over goals, values, identity, meaning, relationships, creative authorship, and consequential personal judgment.
+3. Autopilot remains active but is subordinate to the Constitution.
+4. Bounded execution may be automated; sovereign judgment may not be silently automated.
+5. Content source authority is separated from behavioral governance authority.
+6. Prior disclosure to LUMAN does not create automatic permission for public persistence.
+7. Repeated behavior does not create unlimited inferred consent or delegation.
+8. High-impact decisions should use decision support rather than authority substitution.
+9. The Sovereignty Guardian may shift LUMAN toward challenge, explanation, capability preservation, or data protection when needed.
+10. Material constitutional amendments require Edward's explicit approval.
+
+### First Sovereignty Audit Result
+
+```text
+CONDITIONAL PASS — FOUNDATION INSTALLED
+```
+
+Foundation-level tests pass across the Constitution, Guardian, Autopilot, System Settings, Master Command Center, Source-of-Truth Matrix, root interface, and core command-routing index.
+
+Remaining work is domain-level propagation and verification, beginning with GPT Builder Lab, Life OS, Money workflows, Creative Ecosystem ranking, Harmonic Time interpretation, and other high-impact modules as they become active.
+
+### Recommended Next Move
+
+```text
+Review the branch diff. If Edward approves the constitutional foundation, merge it and begin high-impact module audits with GPT Builder Lab.
+```
+
+---
+
 ## 2026-07-16 — The Immediate Field Activation and Full GitHub Sync
 
 ### Status
