@@ -36,9 +36,9 @@
 
 ```text
 LUMAN Boot, Retrieval, Transaction History, Dynamic Root Shell, erasure-aware Memory Control,
-the operational skill pack, and read-only Google Calendar integration are active.
+the operational skill pack, read-only Google Calendar integration, and the first live Morning Brief composition are active.
 
-Current system task: prove the daily-operations layer under real use, then add Gmail as a bounded live source for important-message context.
+Current system task: add Gmail as a bounded ephemeral source for important-message context.
 ```
 
 This system-maintenance gate does not create a fourth creative strategic front.
@@ -66,8 +66,8 @@ Grand Generals remains Active Building and returns to the deep-building front at
 ## Active LUMAN Development Gate
 
 ```text
-[1] Run the first live operational Morning Brief / Weekly Sync through the new skill composition
-[2] Add Gmail as an ephemeral read source for important-message context
+[1] Add Gmail as an ephemeral read source for important-message context
+[2] Test Morning Brief / Weekly Sync with Calendar + Gmail + GitHub/private continuity while preserving source separation
 [3] Continue toward HUD only after the daily operating layer remains reliable under real use
 ```
 
@@ -96,6 +96,7 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] Erasure-aware Memory Control merged
 [✓] Operational skill pack built: Weekly Sync, Family Plan, Project Review, Open Loop Review, Capture Idea, Release Status, Evening Close
 [✓] Google Calendar bounded read integration tested with no Calendar writes and no event-content persistence to Git
+[✓] First live Morning Brief composition passed public/private/source-separation checks
 ```
 
 ## Immediate Field Recovery Gate
@@ -108,7 +109,7 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Use the new operational skill layer in a real Morning Brief or Weekly Sync, then add Gmail as the next bounded live-source integration.
+Add Gmail as the next bounded live-source integration, then test a combined Morning Brief / Weekly Sync without letting inbox urgency override human priorities.
 ```
 
 ## Status
