@@ -1,0 +1,52 @@
+name: Check LUMAN HUD Bridge
+
+on:
+  pull_request:
+    paths:
+      - "LUMAN_OS/hud/**"
+      - ".github/workflows/luman-hud-bridge-check.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "LUMAN_OS/hud/**"
+      - ".github/workflows/luman-hud-bridge-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  syntax-and-boundary-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check Worker JavaScript syntax
+        run: node --check LUMAN_OS/hud/bridge/src/index.js
+
+      - name: Check HUD JavaScript syntax
+        run: node --check LUMAN_OS/hud/app/app.js
+
+      - name: Verify bridge is read-only in V1
+        shell: bash
+        run: |
+          if grep -E "request\.method[[:space:]]*===?[[:space:]]*['\"](POST|PUT|PATCH|DELETE)['\"]" LUMAN_OS/hud/bridge/src/index.js; then
+            echo "Unexpected write-method route found in V1 bridge"
+            exit 1
+          fi
+          grep -q "read_only_bridge" LUMAN_OS/hud/bridge/src/index.js
+          grep -q "Cache-Control.*no-store" LUMAN_OS/hud/bridge/src/index.js
+
+      - name: Verify public HUD does not contain committed secrets
+        shell: bash
+        run: |
+          if grep -R -E "(ghp_|github_pat_|AIza[0-9A-Za-z_-]{20,}|-----BEGIN .*PRIVATE KEY-----)" LUMAN_OS/hud --exclude='SECURITY_CONTRACT.md'; then
+            echo "Possible secret material found in HUD tree"
+            exit 1
+          fi
