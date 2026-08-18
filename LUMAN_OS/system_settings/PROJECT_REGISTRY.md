@@ -21,14 +21,15 @@ Archived        = historical source retained for provenance
 
 | ID | Domain | Project / System | State | Primary Source | Next Gate |
 |---|---|---|---|---|---|
-| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Prove combined Calendar + Gmail + memory/project context under real daily use, then evaluate HUD readiness |
+| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Begin HUD architecture as a read-first interface over the validated daily operating layer |
 | SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data outside authorized scope |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
 | SYS-004 | System | Creative Ecosystem Engine | Foundation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Pilot normalized nodes without activating a new strategic front |
 | SYS-005 | System | LUMAN Memory + Retrieval | Foundation | `LUMAN_OS/memory/`, `LUMAN_OS/skills/`, private-vault state | Enforce erasure classes, correction/supersession/deletion controls, and provenance under real use |
 | SYS-006 | System | LUMAN Boot + Dynamic Root | Foundation | `LUMAN_OS/boot/`, `LUMAN_OS/ROOT_MENU.md` | Keep live state source-grounded and prevent static interface drift |
-| SYS-007 | System | LUMAN Operational Skills | Foundation | `LUMAN_OS/skills/` | Run combined Morning Brief / Weekly Sync and tune only from observed friction |
-| SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | Calendar and Gmail bounded read integrations active; verify combined daily-use composition |
+| SYS-007 | System | LUMAN Operational Skills | Foundation | `LUMAN_OS/skills/` | Maintain combined Morning Brief / Weekly Sync behavior and tune only from observed friction |
+| SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | Calendar + Gmail bounded reads validated together; preserve ephemeral/read-first boundaries |
+| SYS-009 | System | LUMAN HUD | Active Building | `LUMAN_OS/interface/` plus Boot/live-source contracts | Design information architecture and read-first prototype without creating a new source of truth |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -62,6 +63,8 @@ Archived        = historical source retained for provenance
 [3] One deep-building creative or system project
 ```
 
+LUMAN infrastructure remains Foundation work and does not count as a fourth creative strategic front.
+
 ## Current Strategic Fronts
 
 ```text
@@ -70,38 +73,28 @@ Archived        = historical source retained for provenance
 [3] Infinite Bloom source-Codex reconciliation and twelve-dragon continuity
 ```
 
-LUMAN infrastructure work remains Foundation maintenance and does not count as a fourth creative strategic front.
-
-The Immediate Field is preserved as Active Drafting and can advance whenever Edward explicitly opens it, but it does not silently create a fourth strategic front.
-
-Grand Generals remains Active Building and is queued to resume at Chapter 5 clearance after the Infinite Bloom reconciliation pass.
-
-The Human Syntax remains background architecture during Visionary shipping. Damaged Grammar and the faceless podcast seed remain Incubating.
+The Immediate Field remains Active Drafting. Grand Generals remains Active Building and is queued to resume at Chapter 5 clearance after the Infinite Bloom reconciliation pass. The Human Syntax remains background architecture during Visionary shipping. Damaged Grammar and the faceless podcast seed remain Incubating.
 
 ## LUMAN Foundation Resolution Note — 2026-08-18
 
-Completed foundation work includes:
+Completed foundation and validation work includes:
 
 - Human Sovereignty Constitution
 - two-brain memory foundation
 - live Memory Router
-- source-grounded Boot + Retrieval
-- freshness and conflict handling
+- Boot + Retrieval with freshness/conflict handling
 - transaction history / provenance
 - Dynamic Root Shell
-- repeatable retrieval stress tests
-- correction / supersession / current-state deletion test
-- erasure policy distinguishing Git durability from guaranteed erasure
-- erasure-aware Memory Control commands
+- retrieval stress tests
+- correction / supersession / current-state deletion controls
+- erasure-aware memory policy
 - operational skill pack
-- Calendar Context skill and Google Calendar live-source protocol
-- Inbox Context skill and Gmail live-source protocol
-- bounded read-only Calendar and Gmail integration tests with no source-content persistence to Git
-- first live Morning Brief composition with public/private/source separation
+- Calendar Context + bounded Google Calendar read integration
+- Inbox Context + bounded Gmail read integration
+- first live Morning Brief composition
+- combined Calendar + Gmail + public GitHub + authorized private continuity validation
 
-Ordinary Git deletion is current-state deletion rather than historical purge.
-Calendar and Gmail reads are ephemeral context by default and do not authorize writes or Git persistence.
-Gmail `IMPORTANT` and unread labels are weak retrieval signals, not human-priority authority.
+Combined daily operations passed source-separation, minimum-disclosure, and recommendation-vs-obligation tests. Calendar and Gmail remain ephemeral live sources by default and do not authorize writes or persistence.
 
 ## Freshness Resolution Note — 2026-08-18
 
@@ -111,20 +104,16 @@ Gmail `IMPORTANT` and unread labels are weak retrieval signals, not human-priori
 
 ## Architecture Resolution Note
 
-The Roseborn count conflict was resolved at Working Canon level on 2026-07-10:
+The Roseborn count conflict remains resolved at Working Canon level:
 
 - 21-book structure is active Working Canon
 - 23-book expanded variant is archived
 - 20-book blueprint remains an unrecovered non-governing historical reference
 
-## Consciousness-Project Resolution Note
-
-On 2026-07-16, `The Immediate Field` became the active parent manuscript for the general consciousness, sovereignty, Directional Engine, relational, and embodied-agency material. `The Algorithm of the Shadow` remains a separate AI-specific book. The older Architecture of Consciousness and Architect of Sovereignty projects remain preserved as tributary sources.
-
 ## Recommended Next Move
 
 ```text
-Run the combined daily-operations composition with Calendar + Gmail + public/private continuity, then evaluate HUD readiness.
+Begin LUMAN HUD architecture as a read-first interface over Boot, Calendar, Inbox, public/private state, projects, and open loops.
 ```
 
 ## Status

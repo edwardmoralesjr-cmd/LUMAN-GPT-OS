@@ -12,12 +12,12 @@
 - Use Google Calendar as ephemeral live schedule evidence; do not automatically copy Calendar contents into Git or treat free time as unused capacity.
 - Use Gmail as bounded ephemeral communication evidence; do not automatically copy message contents into Git or let unread/IMPORTANT labels define human priority.
 - Calendar and Gmail writes remain explicit user-authorized actions.
-- Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Keep Life OS and family peace beneath all creative expansion.
+- Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Treat `Visionary` as the active Lucid Syntax shipping front toward 2026-09-25.
-- Treat the 2026-07-24 `In-Between` release gate as historical.
+- Treat `In-Between` 2026-07-24 as historical.
 - Continue Visionary release assembly, distribution verification, asset checks, and promotion.
-- Treat the Infinite Bloom source-Codex reconciliation as the current deep-building creative front.
+- Treat Infinite Bloom source-Codex reconciliation as the current deep-building creative front.
 - Preserve the twelve-dragon sequence, Ishkala/thirteenth-petal distinction, and canon-safe consolidation goal.
 - Keep Grand Generals Active Building and ready to resume at Chapter 5 clearance after the Infinite Bloom reconciliation pass.
 - Treat the 21-book Roseborn architecture as active Working Canon; preserve the 23-book expanded variant as archived and the earlier 20-book blueprint as unrecovered history.
@@ -32,15 +32,13 @@
 ## Current System Build Gate
 
 ```text
-LUMAN Boot, Retrieval, Transaction History, Dynamic Root Shell, erasure-aware Memory Control,
-the operational skill pack, Google Calendar Context, Gmail Inbox Context,
-and the first live Morning Brief composition are active.
+The daily operating layer has passed combined-source validation across Calendar, Gmail,
+public GitHub state, authorized private continuity, and LUMAN recommendations.
 
-Current system task: prove combined Calendar + Gmail + GitHub/public state + authorized private continuity
-under real Morning Brief / Weekly Sync use, then decide whether the daily operating layer is stable enough for HUD work.
+Current system task: begin LUMAN HUD architecture as a read-first interface over the existing source-grounded system.
 ```
 
-This system-maintenance gate does not create a fourth creative strategic front.
+The HUD must remain an interface, not a new source of truth.
 
 ## Current Strategic Fronts
 
@@ -65,38 +63,29 @@ Grand Generals remains Active Building and returns to the deep-building front at
 ## Active LUMAN Development Gate
 
 ```text
-[1] Run a combined Morning Brief / Weekly Sync with Calendar + Gmail + public/private continuity
-[2] Verify schedule, inbox demands, stored commitments, and LUMAN recommendations remain distinguishable
-[3] If the daily operating layer remains reliable, begin HUD architecture; keep voice after HUD/data stability
+[1] Design HUD information architecture and source contract
+[2] Build a read-first prototype over Boot, Calendar, Inbox, projects, open loops, and private-minimum context
+[3] Add bounded action controls only after read-state rendering is reliable
+[4] Keep voice after HUD/data stability
 ```
 
 ## Completed Strategic Gates
 
 ```text
-[✓] Roseborn 20 vs 23 vs 21 architecture reconciliation
-[✓] Consciousness-project relationship resolution through The Immediate Field
-[✓] The Immediate Field project activation and Chapters 1-3 GitHub sync
-[✓] The Human Syntax confirmed as Lucid Syntax Album 5 background architecture
-[✓] Infinite Bloom recognized as a distinct music project under Spiral Crown Records
-[✓] Damaged Grammar official name resolved
-[✓] In-Between release gate passed on 2026-07-24
 [✓] Human Sovereignty Constitution installed
 [✓] Public/private two-brain memory foundation installed
 [✓] Live memory routing tested
-[✓] LUMAN Boot + source-grounded retrieval installed
-[✓] Public operational state synchronized after freshness audit
-[✓] Second Boot test passed
-[✓] Retrieval stress-test suite passed
+[✓] Boot + Retrieval installed and stress-tested
 [✓] Transaction-history and provenance layer installed
 [✓] Dynamic Root Shell installed
-[✓] Synthetic correction, supersession, and current-state deletion test completed
+[✓] Memory correction/supersession/current-state deletion controls installed
 [✓] Git historical-retention limitation identified and addressed in memory law
-[✓] Erasure-aware Memory Control merged
 [✓] Operational skill pack built
-[✓] Google Calendar bounded read integration tested with no Calendar writes/content persistence
+[✓] Google Calendar bounded read integration tested
+[✓] Gmail bounded Inbox Context integration tested
 [✓] First live Morning Brief composition passed source-separation checks
-[✓] Gmail bounded Inbox Context search/read tested with no Gmail writes/content persistence
-[✓] Gmail importance-ranking rule established: actionability/context outrank Gmail labels
+[✓] Combined Calendar + Gmail + public/private continuity daily-operations test passed
+[✓] Daily operating layer cleared for HUD architecture
 ```
 
 ## Immediate Field Recovery Gate
@@ -109,7 +98,7 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Run the combined daily-operations test using Calendar + Inbox Context + GitHub/public state + authorized private continuity.
+Begin the LUMAN HUD architecture as a read-first view over the source-grounded operating system.
 ```
 
 ## Status

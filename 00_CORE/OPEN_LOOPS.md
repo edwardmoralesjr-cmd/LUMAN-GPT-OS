@@ -2,23 +2,23 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, and the first live Morning Brief composition are active.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, and combined daily-operations validation are active.
 
-The July operational state was audited and synchronized. `In-Between` is historical rather than an upcoming release gate. Visionary is the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
+The combined daily-operations test passed: Calendar, Gmail, public GitHub state, authorized private continuity, and LUMAN recommendations remained correctly separated. Calendar/email contents stayed ephemeral, no Calendar/Gmail writes occurred, and inbox urgency did not become human priority automatically.
 
-Memory Control distinguishes private durability from guaranteed erasability. Calendar and Gmail are bounded live context sources; their contents are ephemeral by default and writes remain explicit user-authorized actions.
+Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
 ## Current Open Loops
 
 ### LUMAN System Build
 
-1. Run a combined real Morning Brief or Weekly Sync using Calendar + Gmail + GitHub/public state + authorized private continuity.
-2. Verify that scheduled obligations, inbox requests, stored commitments, and LUMAN recommendations remain clearly distinguishable.
-3. Keep inbox urgency from automatically becoming human priority; Gmail labels are weak signals only.
-4. Keep Calendar/email contents ephemeral unless a separate authorized Memory Route creates a minimal durable fact.
-5. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
-6. If the daily operating layer remains reliable under real use, begin HUD architecture.
-7. Build voice after the brain, memory, retrieval, control, live-source, and HUD/data layers are stable.
+1. Design the LUMAN HUD information architecture and source contract.
+2. Build a read-first HUD prototype over Boot, Calendar Context, Inbox Context, active projects, open loops, and private-minimum continuity.
+3. Ensure the HUD renders source freshness and source ownership rather than caching live state as its own truth.
+4. Add bounded action controls only after read-state rendering is reliable.
+5. Preserve Calendar/email contents as ephemeral unless a separate authorized Memory Route creates a minimal durable fact.
+6. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
+7. Build voice only after HUD/data stability.
 
 ### Human Foundation
 
@@ -117,7 +117,7 @@ Private family, financial, health, vehicle/home, and sensitive personal loops ar
 ## Recommended Next Move
 
 ```text
-Run the combined daily-operations test using Calendar + Inbox Context + GitHub/public state + authorized private continuity.
+Begin LUMAN HUD architecture as a read-first interface over the source-grounded operating system.
 ```
 
 ## Status
