@@ -32,6 +32,7 @@ Use only currently authorized sources:
 - public and private open loops
 - active project status
 - Calendar when connected and relevant
+- Inbox Context for bounded recent commitments, replies, approvals, deadlines, or project-relevant communications
 - current money/health/family sources only when authorized
 - recent durable decisions or corrections
 
@@ -56,6 +57,11 @@ ACTIVE CREATIVE / WORK FRONTS
 - Shipping
 - Deep build
 - Work/career if active
+
+IMPORTANT COMMUNICATIONS
+- ACTION REQUIRED
+- REVIEW SOON
+- INFORMATIONAL only when materially relevant
 
 AUTOMATION CHECK
 - Working
@@ -88,6 +94,10 @@ Decision authority: Edward
 - Do not create new goals merely to fill a section.
 - Do not turn every creative idea into an active front.
 - Calendar events are evidence of scheduled commitments, not evidence of values or priorities.
+- Email requests are evidence of outside demands, not automatic evidence of Edward's priorities.
+- Gmail `IMPORTANT` and unread labels are weak signals only.
+- Read only the minimum email context needed to interpret actionability.
+- Do not persist email bodies or private correspondence into Git by default.
 - Missing financial/health data must be labeled unavailable rather than guessed.
 - Private information should be minimized to what helps the current review.
 
@@ -98,6 +108,7 @@ Weekly Sync
 -> Boot
 -> Retrieve Context
 -> Calendar Context when available
+-> Inbox Context when available
 -> Project Status
 -> Open Loop Review
 -> Decision Support
@@ -106,5 +117,5 @@ Weekly Sync
 ## Status
 
 Status: Active
-Version: v1.0
-Created: 2026-08-18
+Version: v1.1
+Updated: 2026-08-18

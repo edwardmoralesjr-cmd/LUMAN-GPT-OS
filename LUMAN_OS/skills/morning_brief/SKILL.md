@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Create a concise start-of-day operating brief from current authorized sources, using live schedule context when available while preserving human control over the day.
+Create a concise start-of-day operating brief from current authorized sources, using live schedule and inbox context when available while preserving human control over the day.
 
 ## Trigger
 
@@ -23,7 +23,7 @@ Class B for priority recommendations.
 When available and authorized:
 
 - Calendar Context for today's bounded schedule
-- Important inbox items
+- Inbox Context for a bounded set of messages that may genuinely require attention
 - Active priorities
 - Public and relevant private open loops
 - Weather or travel constraints when materially relevant
@@ -34,13 +34,15 @@ When available and authorized:
 
 1. Resolve the user's current date/time when needed.
 2. Run Calendar Context for the relevant day window when Calendar is available.
-3. Read connected current sources rather than relying on stale memory.
-4. Separate scheduled obligations from LUMAN recommendations.
-5. Surface no more than three recommended priorities by default.
-6. Flag anything urgent, blocked, stale, or uncertain.
-7. Do not create a new strategic front merely because an item is interesting.
-8. Do not treat unscheduled Calendar time as unused capacity.
-9. Do not persist Calendar event details merely because they were read.
+3. Run Inbox Context with a bounded recent Inbox query when Gmail is available.
+4. Read connected current sources rather than relying on stale memory.
+5. Separate scheduled obligations, message-driven requests, and LUMAN recommendations.
+6. Surface no more than three recommended priorities by default.
+7. Flag anything urgent, blocked, stale, or uncertain.
+8. Do not create a new strategic front merely because an item is interesting.
+9. Do not treat unscheduled Calendar time as unused capacity.
+10. Do not treat unread or Gmail `IMPORTANT` labels as proof that a message matters.
+11. Do not persist Calendar event details or email contents merely because they were read.
 
 ## Output Contract
 
@@ -54,7 +56,7 @@ CALENDAR / OBLIGATIONS
 - ...
 
 IMPORTANT MESSAGES
-- ...
+- [ACTION REQUIRED / REVIEW SOON / INFORMATIONAL] ...
 
 CURRENT PROJECT GATES
 - ...
@@ -81,6 +83,7 @@ Decision authority: Edward
 ```text
 Morning Brief
 -> Calendar Context
+-> Inbox Context
 -> Retrieve Context
 -> Open Loop Review
 -> Project Status
@@ -91,14 +94,15 @@ Morning Brief
 
 The brief is an orientation layer, not an authority over how the user must spend the day.
 
-Calendar source protocol:
+Live-source protocols:
 
 ```text
 LUMAN_OS/integrations/google_calendar/CALENDAR_SOURCE_PROTOCOL.md
+LUMAN_OS/integrations/gmail/GMAIL_SOURCE_PROTOCOL.md
 ```
 
 ## Status
 
 Status: Active
-Version: v1.1
+Version: v1.2
 Updated: 2026-08-18
