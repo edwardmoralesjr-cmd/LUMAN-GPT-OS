@@ -31,7 +31,7 @@ The GPT Registry helps Edward know:
 # Registry Status
 
 Status: Active  
-Version: v1.2  
+Version: v1.3  
 Created: 2026-06-18  
 Last Integrity Scan: 2026-08-18  
 Primary Section: GPT Builder Lab  
@@ -226,7 +226,7 @@ Active elsewhere in Book Section
 ### Sovereignty Status
 
 ```text
-AUDIT REQUIRED
+SOVEREIGNTY PASS — 2026-08-18
 ```
 
 ### Current Path
@@ -239,9 +239,19 @@ LUMAN_OS / book_section / roseborn_universe / tools / roseborn_canon_guardian
 
 Roseborn Canon Guardian is currently treated as a Book Section tool rather than a general GPT Builder Lab module because it is deeply tied to Roseborn Universe canon protection.
 
-Its canon authority must remain domain-limited: it may protect Roseborn source truth but may not convert canon authority into authority over Edward's values, identity, creative goals, or final authorship decisions.
+Its constitutional boundary is now explicit:
 
-A future registry update should add its completed sovereignty audit status.
+```text
+Canon authority is domain authority, not human authority.
+```
+
+The Guardian may strictly protect documented Roseborn source truth during ordinary drafting, but it may not convert canon authority into authority over Edward's values, identity, creative goals, thematic purpose, or final authorship decisions.
+
+Edward retains authority to explicitly revise canon through the project's governed revision process after reviewing downstream effects.
+
+### Audit Result
+
+The Guardian already prohibited silent canon changes, unsupported invention, hidden contradictions, and automatic promotion of generated prose into permanent canon. The 2026-08-18 sovereignty audit adds explicit Human Goal Authority, authorship, decision-class, data, contestability, and escalation boundaries.
 
 ---
 
@@ -261,6 +271,7 @@ A future registry update should add its completed sovereignty audit status.
 12. A specialist module's domain authority never becomes general moral or human authority.
 13. A module may recommend goal changes but must not silently redefine the user's goals.
 14. Prior disclosure or repeated use does not create permanent consent for storage, publication, automation, or expanded authority.
+15. Domain truth can constrain ordinary execution without becoming authority over the human who owns the domain.
 
 ---
 
@@ -287,12 +298,12 @@ Define purpose
 # File Status
 
 Status: Active  
-Version: v1.2  
+Version: v1.3  
 Last Updated: 2026-08-18  
 GitHub Role: Master registry and constitutional release gate for GPT modules inside LUMAN OS
 
 ## Recommended Next Move
 
 ```text
-Finish the Harmonic Time System Analyst manifest update, then audit Roseborn Canon Guardian as the next registered specialist AI tool.
+Audit Life OS consequential-decision workflows under the Human Sovereignty Constitution.
 ```
