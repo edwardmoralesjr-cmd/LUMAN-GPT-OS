@@ -15,12 +15,12 @@ LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
 LUMAN_OS/system_settings/COMMANDS.md
 LUMAN_OS/system_settings/SOURCE_OF_TRUTH_MATRIX.md
 LUMAN_OS/ROOT_MENU.md
+00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
 ```
 
 Not yet fully audited in this pass:
 
 ```text
-00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md
 00_CORE live dashboards and loop protocols
 Life OS high-impact decision workflows
 Money decision workflows
@@ -34,61 +34,45 @@ Lucid Syntax promotion and creative-generation workflows
 ## Overall Status
 
 ```text
-CONDITIONAL PASS
+CONDITIONAL PASS — FOUNDATION INSTALLED
 ```
 
-The constitutional foundation is installed and internally coherent across the principal System Settings and root-interface sources. The primary remaining work is propagation: older command-routing and high-impact domain modules have not all been explicitly audited or updated to reference the Constitution.
+The constitutional foundation is installed and coherent across the principal System Settings, root-interface, source-authority, Autopilot, and core command-routing sources.
 
-No evidence in the audited files requires rollback of the installed constitutional layer.
+The remaining work is module propagation and behavior auditing. Those remaining audits do not block review of the constitutional foundation itself, but they should be completed before claiming that every LUMAN module is constitutionally verified.
 
 ## Constitutional Tests
 
 ### 1. Meaningful Agency — PASS
-
-Evidence:
 
 - Edward is explicitly established as root human authority.
 - Consequential choices are separated from bounded execution.
 - Decision Support Mode preserves meaningful alternatives and final human judgment.
 - Autopilot cannot convert repeated behavior into unlimited authority.
 
-Primary protection:
-
-```text
-Decision authority remains human for Supported Judgment and Sovereign Judgment.
-```
-
 ### 2. Informed Understanding — PASS
 
-Evidence:
-
-- The Constitution requires distinction among Known, Inferred, Remembered, Estimated, Recommended, Uncertain, and Unknown.
+- The Constitution distinguishes Known, Inferred, Remembered, Estimated, Recommended, Uncertain, and Unknown.
 - Decision support surfaces assumptions, uncertainty, tradeoffs, and counterarguments when material.
 - Governance precedence is explicit.
 
 ### 3. Real Consent and Refusal — PASS
 
-Evidence:
-
-- Existing Autopilot override commands are preserved and expanded.
+- Autopilot override commands are preserved and expanded.
 - Prior use and prior disclosure are explicitly rejected as permanent consent.
 - Public persistence does not follow automatically from disclosure to LUMAN.
 
 ### 4. Contestability and Remedy — PASS
 
-Evidence:
-
 - `/challenge`, `/sovereignty audit`, and `/authorship check` create direct contest mechanisms.
-- The Constitution requires correction, re-evaluation, and reversible actions where materially equivalent.
+- Re-evaluation and reversibility are preferred where materially appropriate.
 - Lower-level behavior can be challenged against a visible constitutional source.
 
 ### 5. Capability and Independence — PASS
 
-Evidence:
-
 - The Sovereignty Guardian includes Capability Preservation Mode.
 - Dependency signals are explicitly defined.
-- The design instructs LUMAN to explain reasoning or provide reusable frameworks when dependence becomes material.
+- LUMAN is directed toward explanation, reusable frameworks, and skill preservation when dependence becomes material.
 
 Risk to monitor:
 
@@ -98,55 +82,36 @@ The Guardian itself must not become paternalistic or unnecessarily obstructive.
 
 ### 6. Cognitive and Data Sovereignty — PASS
 
-Evidence:
-
 - Existing Public Repository Firewall is preserved.
-- Data minimization is added.
-- Memory and inference are treated as reviewable rather than absolute source truth.
+- Data minimization is explicit.
+- Memory and inference are reviewable rather than absolute source truth.
 - Public persistence requires more than prior disclosure.
 
 ### 7. Relational Integrity — PASS
 
-Evidence:
-
-- The Constitution explicitly rejects unnecessary replacement of important human relationships by AI.
-- LUMAN may support communication without claiming the role of intimate, family, professional, or community authority.
+- LUMAN is prohibited from unnecessarily displacing important human relationships.
+- AI may support communication without claiming human relational authority.
 
 ### 8. Pluralism and Equal Dignity — PASS
 
-Evidence:
-
-- Edward's worldview is explicitly prevented from becoming a universal rule merely because it governs his personal LUMAN instance.
+- Edward's personal worldview is not treated as universal merely because it governs his personal LUMAN instance.
 - Different people, values, cultures, and life paths retain equal dignity consistent with safety.
 
-### 9. Distributed Power and Accountability — CONDITIONAL
-
-Evidence of compliance:
+### 9. Distributed Power and Accountability — PASS AT FOUNDATION LEVEL
 
 - Governance hierarchy is visible.
-- Important changes are committed through Git history.
+- Important changes are preserved through Git history.
 - Recommendation and decision authority are separated.
 - Source provenance remains a core LUMAN principle.
+- The central command-routing index now recognizes the Constitution and Sovereignty Guardian.
 
-Remaining gap:
-
-```text
-Older 00_CORE routing and operational files have not yet been fully reconciled with the new constitutional command surface.
-```
-
-Remediation:
-
-```text
-Audit and update the central command-routing index and any operational protocols that imply authority inconsistent with the Constitution.
-```
+Remaining module-level verification is still required.
 
 ### 10. Human Goal Authority — PASS
 
-Evidence:
-
 - Human Goal Authority is constitutionally explicit.
 - Autopilot may not redefine goals because another objective is easier to optimize.
-- The Command Center may recommend goal revision but cannot silently enact it as the user's goal.
+- The Command Center may recommend goal revision but cannot silently enact it as Edward's goal.
 
 ## Authorship Check
 
@@ -156,21 +121,22 @@ Edward.
 
 ### Who supplied the governing meaning?
 
-Edward's Human-AI Integration Covenant, Human Sovereignty Standard, stated desire for cognitive sovereignty, and the explicit decision to redesign LUMAN as a demonstration of human-sovereign AI.
+Edward's Human-AI Integration Covenant, Human Sovereignty Standard, cognitive-sovereignty principle, and explicit decision to redesign LUMAN as a demonstration of human-sovereign AI.
 
 ### What did LUMAN contribute?
 
 - Constitutional architecture
-- Operational translation of the sovereignty principles
+- Operational translation of sovereignty principles
 - Governance hierarchy
 - Guardian intervention model
 - Command design
 - Source-authority separation
+- Routing integration
 - Audit structure
 
 ### Could Edward reject or substantially change the result?
 
-Yes. The Constitution explicitly requires Edward's approval for material constitutional amendments, and the current work is isolated on a feature branch rather than merged into `main`.
+Yes. The Constitution requires Edward's approval for material constitutional amendments, and the current installation is isolated on a feature branch rather than merged into `main`.
 
 ### Who retains final authority?
 
@@ -178,31 +144,50 @@ Yes. The Constitution explicitly requires Edward's approval for material constit
 Edward
 ```
 
-## Detected Authority Transfers
+## Corrected Structural Risks
 
-No prohibited authority transfer was detected in the newly installed constitutional files.
+### Risk 1 — Autopilot Authority
 
-One historical structural risk was corrected:
+Previous condition:
 
 ```text
-The previous Source-of-Truth Matrix mixed project content authority with behavioral governance authority.
+Autopilot was active by default without an explicit constitutional layer above it.
 ```
 
-This could allow a lower-level source rule to appear to outrank current human authority. The matrix now separates:
+Correction:
 
 ```text
-Governance Authority
-from
-Content Source Authority
+Autopilot is now explicitly subordinate to the Human Sovereignty Constitution and routes consequential judgment through the Sovereignty Guardian.
 ```
 
-## Detected Constitutional Drift
+### Risk 2 — Mixed Authority in Source-of-Truth Rules
 
-### Conditional Gap A — Core Command Routing
-
-New commands exist in the root and System Settings command surfaces:
+Previous condition:
 
 ```text
+Content-source authority and behavioral governance authority were expressed in one apparent hierarchy.
+```
+
+Correction:
+
+```text
+Governance Authority and Content Source Authority are now separate.
+```
+
+This allows a source to own project truth without acquiring authority over Edward's values, goals, identity, or life decisions.
+
+### Risk 3 — Interface-Only Sovereignty Commands
+
+Previous condition during this audit:
+
+```text
+New sovereignty commands existed in root and System Settings surfaces but were not yet represented in the core routing source of truth.
+```
+
+Correction completed:
+
+```text
+00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md now routes:
 /constitution
 /sovereignty audit
 /authorship check
@@ -214,17 +199,15 @@ New commands exist in the root and System Settings command surfaces:
 /decision
 ```
 
-The older `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` has not yet been fully audited in this pass.
-
 Status:
 
 ```text
-CONDITIONAL
+RESOLVED
 ```
 
-### Conditional Gap B — High-Impact Domain Modules
+## Remaining Conditional Area — High-Impact Domain Modules
 
-The constitutional layer is cross-system, but individual modules have not all been audited for:
+Individual modules have not all been explicitly audited for:
 
 - Decision substitution
 - Goal redefinition
@@ -232,44 +215,39 @@ The constitutional layer is cross-system, but individual modules have not all be
 - Capability dependence
 - Data minimization
 - Human/AI authorship boundary
+- Symbolic interpretation presented as objective authority
+- Generated-agent inheritance of constitutional safeguards
 
 Status:
 
 ```text
-CONDITIONAL
+CONDITIONAL — PROPAGATION REQUIRED
 ```
 
 ## Remediation Order
 
-1. Reconcile `00_CORE/LUMAN_COMMAND_ROUTING_INDEX.md` with the constitutional command surface.
-2. Audit GPT Builder Lab because it can create new AI behavior that may inherit or omit constitutional safeguards.
-3. Audit Life OS and Money workflows because they can affect consequential personal judgment.
-4. Audit Creative Ecosystem Engine ranking logic for goal-authority and recommendation/decision separation.
-5. Audit Harmonic Time System so symbolic interpretation never silently becomes objective authority.
-6. Audit creative modules for authorship provenance while preserving low-friction collaboration.
-7. Audit remaining modules as they become active rather than creating a permanent governance project that violates the three-front limit.
+1. Audit GPT Builder Lab because it can create new AI behavior that may inherit or omit constitutional safeguards.
+2. Audit Life OS and Money workflows because they can affect consequential personal judgment.
+3. Audit Creative Ecosystem Engine ranking logic for goal-authority and recommendation/decision separation.
+4. Audit Harmonic Time System so symbolic interpretation never silently becomes objective authority.
+5. Audit Roseborn and creative modules for authorship provenance without disrupting useful low-friction collaboration.
+6. Audit remaining modules as they become active rather than creating a permanent governance project that violates the three-front limit.
 
 ## Release Gate
 
-The constitutional foundation is ready for review as a coherent feature branch.
+The constitutional foundation is ready for branch-level review.
 
 Recommended merge condition:
 
 ```text
-Merge after reviewing the branch diff and either:
-A. reconciling the core command-routing index first, or
-B. accepting command-routing reconciliation as the first post-merge remediation.
+Review the full branch diff for accidental scope changes and confirm that Edward accepts the Constitution as LUMAN's highest internal governance layer.
 ```
 
-Preferred option:
-
-```text
-A — reconcile routing before merge.
-```
+The remaining domain-module audits may continue after merge if Edward chooses, because the Constitution and Guardian already apply cross-system at the governance level.
 
 ## Status
 
-Audit Status: Conditional Pass  
+Audit Status: Conditional Pass — Foundation Installed  
 Audit Date: 2026-08-18  
 Auditor: LUMAN under Edward's authority  
 Branch: `agent/luman-sovereignty-constitution`
@@ -277,5 +255,5 @@ Branch: `agent/luman-sovereignty-constitution`
 ## Recommended Next Move
 
 ```text
-Reconcile the 00_CORE command-routing index, review the complete branch diff, then merge the constitutional upgrade only after Edward approves it.
+Review the complete branch diff. If accepted, merge the constitutional foundation, then audit high-impact modules beginning with GPT Builder Lab.
 ```
