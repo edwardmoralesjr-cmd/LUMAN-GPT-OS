@@ -1,5 +1,9 @@
 # LUMAN Public / Private Memory Boundary
 
+## Purpose
+
+Separate public-safe system knowledge, durable private continuity, erasure-sensitive information, transient context, and secrets so LUMAN does not confuse privacy with guaranteed deletion.
+
 ## Public Brain
 
 The public LUMAN repository may contain:
@@ -12,23 +16,58 @@ The public LUMAN repository may contain:
 - Generalized life-system methods
 - Public-safe status labels
 
-## Private Brain
+## Durable Private Brain
 
-Private storage is the default home for:
+The private Git-backed vault may contain personal continuity that Edward explicitly wants persisted **and can tolerate existing in Git history**.
 
-- Personal reflections and journals
-- Raw voice transcripts
-- Sensitive family information
-- Detailed financial information
-- Health and medical context
-- Private relationship details
-- Precise personal location information
-- Private decisions or fears not meant for publication
-- Credentials, tokens, keys, account identifiers, and secrets
+Examples may include:
 
-## Sensitive Rule
+- selected personal plans;
+- private project notes;
+- personal reflections intentionally preserved long term;
+- private decisions and continuity records;
+- family or life context when Edward wants durable recall and the content is appropriate for Git-backed retention.
 
-Credentials, encryption secrets, private medical records, detailed live financial records, and similar high-risk material should not be placed in the public repository. Where possible, the private vault should store references or minimal metadata rather than secrets themselves.
+Private does not mean erasable. Ordinary Git deletion removes current state but may leave prior committed content in history.
+
+## Erasure-Sensitive Information
+
+Information that Edward may reasonably need to remove completely later should not be stored as plaintext in Git history.
+
+Examples may include:
+
+- highly sensitive relationship details;
+- detailed health or medical records;
+- precise financial ledgers;
+- raw private transcripts;
+- sensitive location history;
+- deeply personal material for which reliable future erasure matters.
+
+Until LUMAN has a verified erasable private store, default routing for such material is:
+
+```text
+transient
+or
+minimal non-sensitive reference only
+```
+
+Do not silently downgrade erasure-sensitive information into ordinary Git-backed private storage.
+
+## Secrets
+
+Do not store credentials, passwords, API keys, recovery codes, encryption keys, authentication tokens, or similar secrets in ordinary LUMAN Markdown, whether public or private.
+
+Use a dedicated secret manager or password manager instead.
+
+LUMAN may store a non-secret reference such as:
+
+```text
+Credential exists: yes
+Credential owner: user
+Storage location: external secure manager
+```
+
+but not the secret itself.
 
 ## Cross-Brain Bridge
 
@@ -40,23 +79,63 @@ Private source type: decision record
 Public-safe status: resolved
 ```
 
-It must not duplicate the sensitive contents merely to make retrieval easier.
+It must not duplicate private contents merely to make retrieval easier.
 
-## Persistence Rule
+## Persistence Decision
 
 ```text
 Useful beyond this interaction?
     No -> transient
     Yes -> continue
 
+Secret or authentication material?
+    Yes -> external secure manager; do not persist in LUMAN Git
+    No -> continue
+
+May require reliable complete erasure later?
+    Yes -> erasable store if available; otherwise transient/minimal reference
+    No -> continue
+
 Public-safe?
     Yes -> public brain if a durable owner exists
-    No -> private brain
+    No -> durable private brain if authorized
+```
 
-Highly sensitive or secret?
-    Yes -> minimize storage; prefer dedicated secure systems where appropriate
+## Deletion Vocabulary
+
+```text
+Delete current
+= remove from current source
+= prior Git history may remain
+
+Archive
+= preserve intentionally as historical
+
+Supersede
+= preserve old record but designate a newer record as current
+
+Purge
+= remove or render historical copies irrecoverable
+= must be verified separately
 ```
 
 ## Human Control
 
-The human may request deletion, correction, archival, deactivation, or non-persistence of personal memory. Prior disclosure does not remove that authority.
+Edward may request non-persistence, correction, supersession, archival, current-state deletion, or complete purge.
+
+LUMAN must describe which operation the storage layer can actually perform and must not claim complete erasure when only current-state deletion occurred.
+
+Prior disclosure does not remove Edward's authority over future persistence choices.
+
+## Governing Source
+
+```text
+LUMAN_OS/memory/ERASURE_POLICY.md
+LUMAN_OS/memory/TRANSACTION_HISTORY_PROTOCOL.md
+```
+
+## Status
+
+Status: Active
+Version: v1.1
+Updated: 2026-08-18
