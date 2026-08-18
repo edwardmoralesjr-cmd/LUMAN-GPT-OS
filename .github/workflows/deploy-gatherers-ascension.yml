@@ -1,5 +1,5 @@
-# Retriggered after GitHub Pages was enabled for this repository.
-name: Deploy Gatherer's Ascension
+# GitHub Pages deployment for the existing Gatherer's Ascension game plus the public-safe LUMAN HUD.
+name: Deploy LUMAN Pages Apps
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "LUMAN_OS/game_lab/gatherers_ascension/app/**"
+      - "LUMAN_OS/hud/app/**"
       - ".github/workflows/deploy-gatherers-ascension.yml"
   workflow_dispatch:
 
@@ -21,10 +22,11 @@ concurrency:
 
 env:
   APP_DIRECTORY: LUMAN_OS/game_lab/gatherers_ascension/app
+  HUD_DIRECTORY: LUMAN_OS/hud/app
 
 jobs:
   build:
-    name: Build game
+    name: Build Pages artifact
     runs-on: ubuntu-latest
 
     steps:
@@ -36,13 +38,20 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install dependencies
+      - name: Install game dependencies
         working-directory: ${{ env.APP_DIRECTORY }}
         run: npm install
 
       - name: Build production game
         working-directory: ${{ env.APP_DIRECTORY }}
         run: npm run build
+
+      - name: Add LUMAN HUD at /luman-hud/
+        run: |
+          mkdir -p "${APP_DIRECTORY}/dist/luman-hud"
+          cp "${HUD_DIRECTORY}/index.html" "${APP_DIRECTORY}/dist/luman-hud/index.html"
+          cp "${HUD_DIRECTORY}/styles.css" "${APP_DIRECTORY}/dist/luman-hud/styles.css"
+          cp "${HUD_DIRECTORY}/app.js" "${APP_DIRECTORY}/dist/luman-hud/app.js"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -53,7 +62,7 @@ jobs:
           path: ${{ env.APP_DIRECTORY }}/dist
 
   deploy:
-    name: Publish game
+    name: Publish Pages apps
     needs: build
     runs-on: ubuntu-latest
     environment:
