@@ -3,23 +3,25 @@
 ## Current Active Priorities
 
 - Treat GitHub as the durable public-safe source of truth for workflows, commands, dashboards, vaults, GPT systems, and LUMAN OS module files.
-- Use chat as the living intelligence and update room for reasoning, creation, tool operation, and GitHub synchronization.
+- Use chat as the living intelligence and update room for reasoning, creation, tool operation, retrieval, and GitHub synchronization.
 - Preserve LUMAN Autopilot classification and routing unless Edward overrides it.
+- Use the Human Sovereignty Constitution as the highest internal governance layer.
 - Use the Master Command Center for cross-project state, dependencies, and next gates.
 - Use the Source-of-Truth Matrix when memory, chat, modern modules, legacy vaults, canon, and archives disagree.
+- Use LUMAN Boot + Retrieval to reconstruct current state from sources and flag stale dated claims before presenting them as current.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Keep Life OS and family peace beneath all creative expansion.
-- Treat `In-Between` as the immediate Lucid Syntax shipping priority for its 2026-07-24 release.
-- Treat `Visionary` as Active Shipping with a locked album release date of 2026-09-25.
-- Build and verify the release-assembly packet while executing the In-Between release sequence.
-- Treat the Infinite Bloom source-Codex reconciliation as the current deep-building front.
+- Treat `Visionary` as the active Lucid Syntax shipping front with a locked album release date of 2026-09-25.
+- Treat the 2026-07-24 `In-Between` release gate as historical rather than an upcoming task.
+- Continue Visionary release assembly, distribution verification, asset checks, and promotion toward the album release.
+- Treat the Infinite Bloom source-Codex reconciliation as the current deep-building creative front.
 - Preserve the twelve-dragon sequence and consolidate the short Law Scrolls and expanded dragon chapters into one canon-safe manuscript.
 - Preserve Ishkala as the first twelve remembered as one and the reader/initiate as the thirteenth petal.
 - Keep Grand Generals Active Building and ready to resume at Chapter 5 clearance after the current Infinite Bloom reconciliation pass.
 - Treat the 21-book Roseborn architecture as active Working Canon, not Locked Canon.
 - Preserve the 23-book structure as an archived expanded variant.
 - Preserve the earlier 20-book blueprint as an unrecovered, non-governing historical reference.
-- Treat `The Immediate Field` as Active Drafting beyond the prior Chapter 3 frontier, while marking Chapter 5 as a recovery/verification gap before claiming a complete Chapter 1–9 repository sequence.
+- Treat `The Immediate Field` as Active Drafting while preserving the Chapter 5 recovery/verification gap.
 - Preserve `The Algorithm of the Shadow` as the separate AI-specific mirror and shadow-work book.
 - Preserve Architecture of Consciousness and Architect of Sovereignty as tributary source projects rather than competing active manuscripts.
 - Preserve `The Human Syntax` as confirmed Lucid Syntax Album 5 background architecture without displacing Visionary.
@@ -27,11 +29,20 @@
 - Preserve Damaged Grammar as an Incubating project with no locked release status.
 - Preserve the public-repository privacy firewall for financial, medical, family, employer, credential, vehicle, and home information.
 
+## Current System Build Gate
+
+```text
+LUMAN Boot + Retrieval is active.
+Current system task: synchronize stale operational state, run a second boot, then stress-test retrieval.
+```
+
+This system-maintenance gate does not create a fourth creative strategic front.
+
 ## Current Strategic Fronts
 
 ```text
 [1] Human Foundation: Life OS, family peace, regulation, and sustainable attention
-[2] Shipping Front: Lucid Syntax — In-Between release and Visionary assembly
+[2] Shipping Front: Lucid Syntax — Visionary release assembly for 2026-09-25
 [3] Deep-Building Front: Infinite Bloom source-Codex reconciliation and twelve-dragon continuity
 ```
 
@@ -42,9 +53,17 @@ Grand Generals remains Active Building and returns to the deep-building front at
 ## Current Top 3
 
 ```text
-[1] Build the Daily Embodied Action loop for the human foundation
-[2] Execute the final In-Between release sequence for 2026-07-24
+[1] Protect the human foundation and keep Life OS/family peace above expansion
+[2] Continue Visionary release assembly toward 2026-09-25
 [3] Consolidate The Infinite Bloom into one canon-safe twelve-dragon manuscript
+```
+
+## Active LUMAN Development Gate
+
+```text
+[1] Synchronize stale public operational state
+[2] Run second source-grounded boot
+[3] Stress-test retrieval across public/private/current/stale/not-found cases
 ```
 
 ## Completed Strategic Gates
@@ -57,6 +76,11 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] The Human Syntax confirmed as Lucid Syntax Album 5 background architecture
 [✓] Infinite Bloom recognized as a distinct music project under Spiral Crown Records
 [✓] Damaged Grammar official name resolved
+[✓] In-Between release gate passed on 2026-07-24
+[✓] Human Sovereignty Constitution installed
+[✓] Public/private two-brain memory foundation installed
+[✓] Live memory routing tested
+[✓] LUMAN Boot + source-grounded retrieval foundation installed
 ```
 
 ## Immediate Field Recovery Gate
@@ -69,5 +93,10 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Finish the In-Between release sequence first, then continue the Infinite Bloom manuscript consolidation without opening another strategic front.
+Complete the LUMAN state-sync pass and second boot, then return normal execution focus to Visionary shipping and Infinite Bloom consolidation.
 ```
+
+## Status
+
+Last synchronized: 2026-08-18
+Freshness basis: LUMAN Boot + Retrieval v1.0
