@@ -151,6 +151,35 @@ It creates spiritually resonant, clearly structured readings based on birth data
 
 - `LUMAN_OS/harmonic_time_system/HARMONIC_TIME_SYSTEM_MENU.md`
 
+### Current User-Specific Integration
+
+Edward’s LUMAN OS homepage includes a Mini Harmonic Time Reading under Active Focus.
+
+Current homepage reading type:
+
+```text
+Exact natal chart + numerology snapshot
+```
+
+Known user birth data used by the system:
+
+```text
+Edward Morales Jr.
+February 17, 1986
+6:00 PM
+Chicago, Illinois
+```
+
+Current homepage chart basis:
+
+```text
+Tropical zodiac
+Placidus houses
+Chicago IL
+February 17 1986, 6:00 PM CST
+Calculated as February 18 1986, 00:00 UTC
+```
+
 ### Key Accuracy Rule
 
 This GPT must never claim to calculate an exact natal chart without enough information and a reliable calculation basis.
@@ -165,13 +194,34 @@ This module may calculate, interpret, synthesize, and generate reflective guidan
 
 Human Goal Authority remains with the user.
 
+### Current Open Issues
+
+1. Create a dedicated chart-basis/provenance file for Edward’s exact natal chart snapshot so future readings can reuse the same placements consistently.
+2. Create a Harmonic Time System archive folder for completed readings and templates.
+3. Create a Harmonic Time System book/framework file for Edward’s larger system development.
+4. Decide whether Harmonic Time System should remain both a GPT Builder Lab module and a permanent root-level LUMAN OS section.
+
+### Recently Completed
+
+- Human Sovereignty Constitution inheritance added.
+- GPT Sovereignty Inheritance audit completed.
+- `READING_TEMPLATE.md` was created for the full Harmonic Time Map output structure.
+- `HARMONIC_TIME_SYSTEM_MENU.md` was created as a dedicated LUMAN OS section menu.
+- `ROOT_MENU.md` was updated to add Harmonic Time System as section [11].
+
+### Recommended Next Move
+
+Create a dedicated chart-basis/provenance file for Edward’s exact natal chart snapshot.
+
 ---
+
+# Planned / Section-Specific GPT Modules
 
 ## GPT-002: Roseborn Canon Guardian
 
 ### Status
 
-Active in Book Section
+Active elsewhere in Book Section
 
 ### Sovereignty Status
 
@@ -185,43 +235,23 @@ SOVEREIGNTY PASS — 2026-08-18
 LUMAN_OS / book_section / roseborn_universe / tools / roseborn_canon_guardian
 ```
 
-### Primary Purpose
+### Registry Note
 
-Protect Roseborn canon, continuity, source hierarchy, and canon-safe drafting without transferring creative authorship authority from Edward to the AI.
+Roseborn Canon Guardian is currently treated as a Book Section tool rather than a general GPT Builder Lab module because it is deeply tied to Roseborn Universe canon protection.
 
-### Sovereignty Boundary
+Its constitutional boundary is now explicit:
 
 ```text
 Canon authority is domain authority, not human authority.
 ```
 
-The Guardian may strictly enforce documented canon during ordinary drafting, identify contradictions, require source-based reasoning, and prevent silent canon drift.
+The Guardian may strictly protect documented Roseborn source truth during ordinary drafting, but it may not convert canon authority into authority over Edward's values, identity, creative goals, thematic purpose, or final authorship decisions.
 
-Edward retains final authority to:
-
-- Define Roseborn's creative purpose
-- Approve or reject story directions
-- Promote material to Locked Canon
-- Revise or retire canon through an explicit process
-- Choose among alternatives
-- Intentionally transform prior canon after reviewing consequences
-- Decide final meaning and authorship
-
-The Guardian may not declare its own generated material Locked Canon, silently redefine Edward's creative goals, or treat continuity rules as authority over the author.
-
-### Decision Classes
-
-```text
-Class A: routine continuity checks and bounded canon-safe transformations
-Class B: reconciliation recommendations, story-direction options, alternative paths
-Class C: final canon adoption, canon revision, project thesis, thematic purpose, major creative direction
-```
-
-Class C authority remains human.
+Edward retains authority to explicitly revise canon through the project's governed revision process after reviewing downstream effects.
 
 ### Audit Result
 
-The Guardian already contained strong protections against silent canon changes, unsupported invention, hidden contradictions, and self-promotion of generated prose into permanent canon. The constitutional upgrade makes explicit that Locked Canon protects against accidental drift, not against intentional human authorship.
+The Guardian already prohibited silent canon changes, unsupported invention, hidden contradictions, and automatic promotion of generated prose into permanent canon. The 2026-08-18 sovereignty audit adds explicit Human Goal Authority, authorship, decision-class, data, contestability, and escalation boundaries.
 
 ---
 
