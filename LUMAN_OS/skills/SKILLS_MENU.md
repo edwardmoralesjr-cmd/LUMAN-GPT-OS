@@ -6,51 +6,29 @@
 /open skills
 ```
 
-## Available Skills
+## Foundation Skills
 
 ### `/boot luman`
+Reconstruct current working state from authorized public/private sources with freshness checks.
 
-Reconstruct LUMAN's current working state from authorized public and private sources, apply freshness checks, and present a concise orientation snapshot.
-
-Source:
-
-```text
-LUMAN_OS/skills/luman_boot/SKILL.md
-```
+Source: `LUMAN_OS/skills/luman_boot/SKILL.md`
 
 ### `/recall: [topic]`
+Retrieve durable source-grounded context.
 
-Retrieve durable context about a topic, project, decision, plan, or open loop from authorized sources rather than relying on conversational memory alone.
-
-Source:
-
-```text
-LUMAN_OS/skills/retrieve_context/SKILL.md
-```
+Source: `LUMAN_OS/skills/retrieve_context/SKILL.md`
 
 ### `/explain memory: [topic]`
+Explain provenance, owning source, and transaction history.
 
-Explain why LUMAN knows something, when it was recorded, what source owns it, and whether it was later corrected, superseded, archived, or inferred.
-
-Source:
-
-```text
-LUMAN_OS/skills/explain_memory/SKILL.md
-```
+Source: `LUMAN_OS/skills/explain_memory/SKILL.md`
 
 ### `/memory route`
+Classify durability, privacy, erasure class, provenance, and destination.
 
-Classify durable information, preserve provenance, assign an erasure class, and route it to the correct public, private-durable, transient, or external-secure owner.
-
-Source:
-
-```text
-LUMAN_OS/skills/memory_route/SKILL.md
-```
+Source: `LUMAN_OS/skills/memory_route/SKILL.md`
 
 ### Memory Control
-
-Commands:
 
 ```text
 /correct memory: [topic] -> [replacement]
@@ -59,93 +37,131 @@ Commands:
 /purge memory: [topic]
 ```
 
-Apply explicit human correction, supersession, current-state deletion, or complete-purge requests while preserving provenance and accurately describing Git retention limits.
+Source: `LUMAN_OS/skills/memory_control/SKILL.md`
 
-Source:
+### `/calendar context: [window or purpose]`
+Retrieve bounded Google Calendar context without persisting event contents by default or performing writes.
 
-```text
-LUMAN_OS/skills/memory_control/SKILL.md
-```
+Source: `LUMAN_OS/skills/calendar_context/SKILL.md`
 
-### `/project status: [project]`
-
-Read current project sources and return the live operating state.
-
-Source:
-
-```text
-LUMAN_OS/skills/project_status/SKILL.md
-```
-
-### `/decision support`
-
-Compare meaningful options while preserving human decision authority.
-
-Source:
-
-```text
-LUMAN_OS/skills/decision_support/SKILL.md
-```
-
-### `/sovereignty audit`
-
-Evaluate a module, workflow, memory practice, or recommendation against the Human Sovereignty Constitution.
-
-Source:
-
-```text
-LUMAN_OS/skills/sovereignty_audit/SKILL.md
-```
+## Daily / Weekly Operational Skills
 
 ### `/morning brief`
+Combine current schedule, priorities, open loops, project gates, and useful live context into a start-of-day orientation.
 
-Assemble a concise day-start briefing from currently authorized and available sources.
+Source: `LUMAN_OS/skills/morning_brief/SKILL.md`
 
-Source:
+### `/weekly sync`
+Run the recurring Life OS review across human foundation, family, money, health-supporting routines, home/vehicle, creative work, automation, and open loops.
 
-```text
-LUMAN_OS/skills/morning_brief/SKILL.md
-```
+Source: `LUMAN_OS/skills/weekly_sync/SKILL.md`
+
+### `/family plan: [plan]`
+Turn a family intention or outing into a private, practical plan with schedule/conflict checking and explicit-write boundaries.
+
+Source: `LUMAN_OS/skills/family_plan/SKILL.md`
+
+### `/project review: [project]`
+Review one project's current truth, changes, blockers, open loops, freshness, and next gate.
+
+Source: `LUMAN_OS/skills/project_review/SKILL.md`
+
+### `/open loop review`
+Review public and authorized private open loops; identify due, blocked, stale, closable, or incubating items without inventing completion.
+
+Source: `LUMAN_OS/skills/open_loop_review/SKILL.md`
+
+### `/capture idea: [idea]`
+Capture, classify, connect, and preserve an idea without automatically activating a new project.
+
+Source: `LUMAN_OS/skills/capture_idea/SKILL.md`
+
+### `/release status: [release]`
+Distinguish planned, assembly, upload-unverified, scheduled, released, historical, or blocked release states using current sources.
+
+Source: `LUMAN_OS/skills/release_status/SKILL.md`
+
+### `/evening close`
+Close the day with evidence-based completion, carry-forward loops, durable-memory routing, and one next-session first move.
+
+Source: `LUMAN_OS/skills/evening_close/SKILL.md`
+
+## Existing Decision / Project Skills
+
+### `/project status: [project]`
+Read current project sources and return live operating state.
+
+Source: `LUMAN_OS/skills/project_status/SKILL.md`
+
+### `/decision support`
+Compare meaningful options while preserving human decision authority.
+
+Source: `LUMAN_OS/skills/decision_support/SKILL.md`
+
+### `/sovereignty audit`
+Evaluate behavior, workflows, memory practices, or modules against the Human Sovereignty Constitution.
+
+Source: `LUMAN_OS/skills/sovereignty_audit/SKILL.md`
 
 ## Composition Rule
 
-Complex workflows should compose several small skills rather than expanding one skill until it becomes an opaque general agent.
-
-Examples:
+Complex workflows should compose small skills rather than expanding one opaque general agent.
 
 ```text
-LUMAN Boot
--> Retrieve Context
--> Project Status
--> Decision Support
-```
-
-```text
-Memory Explanation
--> Retrieve Context
--> Transaction History
--> Explain Memory
-```
-
-```text
-Memory Correction
--> Retrieve Context
--> Memory Control
--> Transaction History
--> Retrieve Context verification
+/open luman
+-> Boot
+-> Calendar Context when relevant
+-> Open Loop Review
+-> Stable Root Shell
 ```
 
 ```text
 Morning Brief
+-> Calendar Context
 -> Retrieve Context
+-> Open Loop Review
 -> Project Status
 -> Decision Support
+```
+
+```text
+Weekly Sync
+-> Boot
+-> Calendar Context
+-> Project Review
+-> Open Loop Review
+-> Decision Support
+```
+
+```text
+Family Plan
+-> Retrieve Context
+-> Calendar Context
 -> Memory Route
+-> Open Loop Review
+```
+
+```text
+Evening Close
+-> Calendar Context
+-> Retrieve Context
+-> Memory Route
+-> Open Loop Review
+```
+
+## Calendar Boundary
+
+Calendar reads are ephemeral context by default. Calendar create/update/delete/respond actions require explicit user authorization for that write.
+
+Primary protocol:
+
+```text
+LUMAN_OS/integrations/google_calendar/CALENDAR_SOURCE_PROTOCOL.md
 ```
 
 ## Status
 
 Status: Active  
-Version: v1.3  
+Version: v2.0-operational  
 Created: 2026-08-18  
 Updated: 2026-08-18

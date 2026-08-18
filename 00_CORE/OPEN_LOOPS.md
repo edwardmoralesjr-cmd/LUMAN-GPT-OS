@@ -2,23 +2,24 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, and Dynamic Root Shell are active.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, and read-only Google Calendar integration are active.
 
 The July operational state was audited and synchronized. `In-Between` is historical rather than an upcoming release gate. Visionary is the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
-The memory-control test verified correction, supersession, and current-state deletion. It also confirmed that ordinary Git deletion does not erase prior committed history, so LUMAN now distinguishes durable-private memory from erasure-sensitive memory.
+The memory-control test verified correction, supersession, and current-state deletion. It also confirmed that ordinary Git deletion does not erase prior committed history, so LUMAN distinguishes durable-private memory from erasure-sensitive memory.
+
+The first operational skill pack now includes Weekly Sync, Family Plan, Project Review, Open Loop Review, Capture Idea, Release Status, and Evening Close. Google Calendar is available as bounded ephemeral schedule context; Calendar writes remain explicit user-authorized actions.
 
 ## Current Open Loops
 
 ### LUMAN System Build
 
-1. Merge and stabilize erasure-aware memory control.
-2. Enforce the new storage classes across Memory Route and future skills.
-3. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
-4. Expand the small-skill library with weekly sync, family plan, project review, open-loop review, capture idea, release status, and evening close.
-5. Connect live external sources such as Calendar and Gmail where they materially help.
-6. Build the HUD only after the underlying state/retrieval layer remains reliable under real use.
-7. Build voice after the brain, memory, retrieval, and control layers are stable.
+1. Run the first real Morning Brief or Weekly Sync through the new operational skill composition.
+2. Observe whether Calendar context, GitHub continuity, private open loops, and recommendations remain correctly separated in real use.
+3. Add Gmail as the next bounded live-source integration for important-message context.
+4. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
+5. Build the HUD only after the daily operating layer remains reliable under real use.
+6. Build voice after the brain, memory, retrieval, control, and daily operating layers are stable.
 
 ### Human Foundation
 
@@ -106,18 +107,18 @@ Current loops:
 
 ### Remaining Legacy-Surface Cleanup
 
-1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, and erasure commands into older root surfaces where still useful.
+1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, operational skills, and erasure commands into older root surfaces where still useful.
 2. Review `DEPLOYMENT_INDEX.md`.
 3. Refresh older dashboards after source-of-truth synchronization is complete.
 
 ## Private Open Loops
 
-Private family, financial, health, vehicle/home, and sensitive personal loops are intentionally not duplicated here. LUMAN Boot may read the authorized private-state index and surface only what is relevant.
+Private family, financial, health, vehicle/home, and sensitive personal loops are intentionally not duplicated here. LUMAN Boot and operational skills may read the authorized private-state index and surface only what is relevant.
 
 ## Recommended Next Move
 
 ```text
-Merge erasure-aware memory control, then expand the small-skill library while normal creative execution remains focused on Visionary and Infinite Bloom.
+Run the first real Morning Brief or Weekly Sync using GitHub + authorized private state + Calendar Context, then add Gmail as the next bounded live source.
 ```
 
 ## Status
