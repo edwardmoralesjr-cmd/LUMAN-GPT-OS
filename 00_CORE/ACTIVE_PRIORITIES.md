@@ -12,6 +12,7 @@
 - Use Google Calendar as ephemeral live schedule evidence; do not automatically copy Calendar contents into Git or treat free time as unused capacity.
 - Use Gmail as bounded ephemeral communication evidence; do not automatically copy message contents into Git or let unread/IMPORTANT labels define human priority.
 - Calendar and Gmail writes remain explicit user-authorized actions.
+- Keep the public HUD public-safe: it may read public GitHub state directly but must not expose private-vault, Calendar, Gmail, or other sensitive contents without an authenticated minimum-data bridge.
 - Keep Life OS and family peace beneath all creative expansion.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Treat `Visionary` as the active Lucid Syntax shipping front toward 2026-09-25.
@@ -32,13 +33,14 @@
 ## Current System Build Gate
 
 ```text
-The daily operating layer has passed combined-source validation across Calendar, Gmail,
-public GitHub state, authorized private continuity, and LUMAN recommendations.
+LUMAN HUD V1 source, architecture, public-source renderer, bounded command deck,
+and coexistence deployment workflow are merged into main.
 
-Current system task: begin LUMAN HUD architecture as a read-first interface over the existing source-grounded system.
+Current system task: verify the production GitHub Pages deployment and live public-source rendering,
+then build the authenticated minimum-data bridge for private brain + Calendar + Gmail.
 ```
 
-The HUD must remain an interface, not a new source of truth.
+The HUD remains an interface, not a source of truth.
 
 ## Current Strategic Fronts
 
@@ -63,10 +65,11 @@ Grand Generals remains Active Building and returns to the deep-building front at
 ## Active LUMAN Development Gate
 
 ```text
-[1] Design HUD information architecture and source contract
-[2] Build a read-first prototype over Boot, Calendar, Inbox, projects, open loops, and private-minimum context
-[3] Add bounded action controls only after read-state rendering is reliable
-[4] Keep voice after HUD/data stability
+[1] Verify the merged HUD deploys at the public /luman-hud/ route without disturbing Gatherer's Ascension
+[2] Verify live public GitHub reads render current Top 3, strategic fronts, projects, open loops, and build gate
+[3] Build an authenticated minimum-data bridge for private brain, Calendar Context, and Inbox Context
+[4] Add bounded authenticated action dispatch only after bridge read boundaries remain reliable
+[5] Keep voice after HUD/data/action stability
 ```
 
 ## Completed Strategic Gates
@@ -86,6 +89,12 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] First live Morning Brief composition passed source-separation checks
 [✓] Combined Calendar + Gmail + public/private continuity daily-operations test passed
 [✓] Daily operating layer cleared for HUD architecture
+[✓] HUD V1 information architecture and source contract created
+[✓] HUD V1 public-safe web interface created
+[✓] HUD V1 live public GitHub renderer and source-status boundaries created
+[✓] HUD V1 bounded command deck created without silent execution
+[✓] Pages workflow updated to package HUD at /luman-hud/ beside Gatherer's Ascension
+[✓] HUD V1 merged into main
 ```
 
 ## Immediate Field Recovery Gate
@@ -98,7 +107,7 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Begin the LUMAN HUD architecture as a read-first view over the source-grounded operating system.
+Verify the production HUD route and public-source rendering, then build the authenticated minimum-data bridge.
 ```
 
 ## Status
