@@ -51,6 +51,7 @@ jobs:
           mkdir -p "${APP_DIRECTORY}/dist/luman-hud"
           cp "${HUD_DIRECTORY}/index.html" "${APP_DIRECTORY}/dist/luman-hud/index.html"
           cp "${HUD_DIRECTORY}/styles.css" "${APP_DIRECTORY}/dist/luman-hud/styles.css"
+          cp "${HUD_DIRECTORY}/bridge.css" "${APP_DIRECTORY}/dist/luman-hud/bridge.css"
           cp "${HUD_DIRECTORY}/app.js" "${APP_DIRECTORY}/dist/luman-hud/app.js"
 
       - name: Configure GitHub Pages
