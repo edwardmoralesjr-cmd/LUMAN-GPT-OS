@@ -7,6 +7,7 @@
   <meta name="description" content="LUMAN OS read-first human-sovereign command HUD" />
   <title>LUMAN OS — Human-Sovereign HUD</title>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./bridge.css" />
 </head>
 <body>
   <div class="ambient ambient-a"></div>
@@ -46,18 +47,71 @@
       </article>
       <article class="status-card panel locked-card">
         <div class="status-label">Private Brain</div>
-        <div class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
-        <div class="status-note">Never exposed directly from this public browser surface.</div>
+        <div id="privateBrainStatus" class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
+        <div class="status-note">Only minimum open-loop context may cross the authenticated bridge.</div>
       </article>
       <article class="status-card panel locked-card">
         <div class="status-label">Calendar</div>
-        <div class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
-        <div class="status-note">Ephemeral live context is available through connected LUMAN, not public Pages.</div>
+        <div id="calendarStatus" class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
+        <div class="status-note">Read-only event summary; no descriptions, attendees, or writes.</div>
       </article>
       <article class="status-card panel locked-card">
         <div class="status-label">Gmail</div>
-        <div class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
-        <div class="status-note">Inbox contents remain private and ephemeral unless separately routed.</div>
+        <div id="gmailStatus" class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
+        <div class="status-note">Read-only metadata signals; no bodies, snippets, attachments, or writes.</div>
+      </article>
+    </section>
+
+    <section class="panel bridge-panel" aria-label="Authenticated bridge">
+      <div class="section-head bridge-head">
+        <div>
+          <div class="eyebrow">AUTHENTICATED MINIMUM-DATA BRIDGE</div>
+          <h2>Private + Live Context</h2>
+        </div>
+        <div id="bridgeIdentity" class="badge badge-muted">Not connected</div>
+      </div>
+      <div class="bridge-connect-row">
+        <label class="sr-only" for="bridgeUrl">Bridge URL</label>
+        <input id="bridgeUrl" class="bridge-url" autocomplete="off" spellcheck="false" placeholder="https://your-luman-bridge.workers.dev" />
+        <button id="connectBridgeBtn" class="button" type="button">Connect</button>
+        <button id="bridgeLoginBtn" class="button" type="button">Open Access Login</button>
+        <button id="disconnectBridgeBtn" class="text-button" type="button">Disconnect</button>
+      </div>
+      <div id="bridgeMessage" class="bridge-message">Bridge URL may be stored locally as a preference. Private source content is never stored by this HUD.</div>
+    </section>
+
+    <section class="live-context-grid">
+      <article class="panel live-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">SCHEDULE EVIDENCE</div>
+            <h2>Today</h2>
+          </div>
+          <div class="badge badge-muted">Calendar ≠ capacity</div>
+        </div>
+        <div id="calendarToday" class="live-list muted-empty">Connect bridge to load today's bounded calendar view.</div>
+      </article>
+
+      <article class="panel live-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">COMMUNICATION SIGNALS</div>
+            <h2>Inbox Signals</h2>
+          </div>
+          <div class="badge badge-muted">Signals ≠ priority</div>
+        </div>
+        <div id="inboxSignals" class="live-list muted-empty">Connect bridge to load bounded inbox metadata.</div>
+      </article>
+
+      <article class="panel live-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">PRIVATE MINIMUM</div>
+            <h2>Upcoming Commitments</h2>
+          </div>
+          <div class="badge badge-muted">Open loops only</div>
+        </div>
+        <div id="privateCommitments" class="live-list muted-empty">Connect bridge to load minimum private open-loop context.</div>
       </article>
     </section>
 
@@ -106,7 +160,7 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">ATTENTION</div>
-            <h2>Open Loops</h2>
+            <h2>Public Open Loops</h2>
           </div>
           <button class="text-button command" data-command="/open loop review" type="button">Review</button>
         </div>
@@ -133,7 +187,7 @@
           <div class="eyebrow">BOUNDED ACTIONS</div>
           <h2>Command Deck</h2>
         </div>
-        <div class="badge badge-muted">V1 prepares commands; it does not silently execute them</div>
+        <div class="badge badge-muted">Commands are prepared, not silently executed</div>
       </div>
       <div class="command-grid">
         <button class="command-chip command" data-command="/morning brief" type="button">Morning Brief</button>
