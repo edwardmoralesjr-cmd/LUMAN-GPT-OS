@@ -14,6 +14,7 @@
 - Calendar and Gmail writes remain explicit user-authorized actions.
 - Keep the public HUD public-safe: public GitHub may be read directly, while private-vault, Calendar, and Gmail context must cross only the authenticated minimum-data bridge.
 - Treat Bridge V1 as read-only: no action endpoints, no durable bridge cache, no raw email bodies, no Calendar descriptions/attendees, and no full private-note delivery.
+- Use the two-stage bridge deployment law: bootstrap the Worker without private-source credentials, enable Cloudflare Access, then activate least-privilege private/live reads.
 - Keep Life OS and family peace beneath all creative expansion.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Treat `Visionary` as the active Lucid Syntax shipping front toward 2026-09-25.
@@ -34,12 +35,12 @@
 ## Current System Build Gate
 
 ```text
-LUMAN HUD V1 and the authenticated minimum-data Bridge V1 implementation are merged into main.
-Bridge CI passed Worker syntax, HUD syntax, read-only boundary, no-store policy,
-and common committed-secret checks.
+LUMAN HUD V1, Bridge V1, and the secure two-stage Cloudflare deployment workflows are merged into main.
+Bridge CI now validates Worker/HUD syntax, the read-only/no-store boundary,
+bootstrap credential separation, activation safety gates, and manual-only deployment behavior.
 
-Current system task: configure Cloudflare Access and protected secrets, deploy Bridge V1,
-and run the production authentication + minimum-disclosure test matrix.
+Current system task: configure the protected GitHub Actions environment and run Stage 1 bootstrap
+without private-source credentials; then enable Cloudflare Access before Stage 2 activation.
 ```
 
 Bridge V1 is built and code-validated, but it is not considered Active until production authentication and source-minimization checks pass.
@@ -69,11 +70,14 @@ Grand Generals remains Active Building and returns to the deep-building front at
 
 ```text
 [1] Verify the merged HUD deploys at the public /luman-hud/ route without disturbing Gatherer's Ascension
-[2] Configure Cloudflare Access, allowed identity, exact HUD origin, and least-privilege protected secrets for Bridge V1
-[3] Deploy Bridge V1 and verify Private Brain + Calendar + Gmail minimum-data reads in the production HUD
-[4] Verify no raw private notes, email bodies/snippets/attachments, Calendar descriptions/attendees, or credentials reach the browser
-[5] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
-[6] Keep voice after HUD/data/action stability
+[2] Create/configure the GitHub Actions environment `luman-bridge-production`
+[3] Add protected bootstrap configuration: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, HUD_ORIGIN, ALLOWED_EMAIL
+[4] Run `Bootstrap LUMAN Bridge` to establish the Worker hostname without private-source credentials
+[5] Enable Cloudflare Access for the Worker and restrict it to the intended identity
+[6] Add least-privilege GITHUB_PRIVATE_TOKEN and read-only Google OAuth credentials, then run `Activate LUMAN Bridge Private Reads`
+[7] Run the production authentication + minimum-disclosure matrix before marking Bridge V1 Active
+[8] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
+[9] Keep voice after HUD/data/action stability
 ```
 
 ## Completed Strategic Gates
@@ -103,6 +107,10 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] HUD private/live bridge client and source-status panels created and merged
 [✓] Bridge V1 security contract, deployment checklist, and test matrix created
 [✓] Bridge CI passed JavaScript syntax, read-only, no-store, and committed-secret boundary checks
+[✓] Two-stage secure Cloudflare deployment workflows created and merged
+[✓] Bootstrap workflow structurally prevented from receiving private GitHub/Google source credentials
+[✓] Activation workflow requires explicit Cloudflare Access and Google read-only confirmations
+[✓] Bridge CI hardened to enforce deployment safety gates and prevent automatic push deployment
 ```
 
 ## Immediate Field Recovery Gate
@@ -115,7 +123,8 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Configure and deploy Bridge V1 through Cloudflare Access, then run the production minimum-disclosure validation.
+Configure the `luman-bridge-production` GitHub Actions environment with the four bootstrap values,
+then run `Bootstrap LUMAN Bridge` before adding any private-source credentials.
 ```
 
 ## Status
