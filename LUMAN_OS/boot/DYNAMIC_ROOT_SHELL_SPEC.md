@@ -61,8 +61,23 @@ LUMAN should:
 
 Do not place a specific release date, upcoming event, current project gate, current Top 3, or current open loop into `ROOT_MENU.md` unless it is being shown only as a clearly labeled example.
 
+## Validation
+
+Primary validation:
+
+```text
+LUMAN_OS/boot/DYNAMIC_ROOT_SHELL_TEST.md
+```
+
+Current result:
+
+```text
+PASS
+```
+
 ## Status
 
-Status: Active design
-Version: v1.0
-Created: 2026-08-18
+Status: Implemented and validated on `agent/dynamic-root-shell`  
+Version: v1.1  
+Created: 2026-08-18  
+Validated: 2026-08-18

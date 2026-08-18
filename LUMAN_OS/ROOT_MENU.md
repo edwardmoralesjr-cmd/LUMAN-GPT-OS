@@ -7,7 +7,9 @@ Living User Matrix Interface
 
 ## Purpose
 
-The home screen and main entry point for Edward's personal operating system.
+Stable home shell and main entry point for Edward's human-sovereign personal operating system.
+
+This file owns stable identity, navigation, commands, and operating laws. It does **not** own volatile project state.
 
 ## Constitutional Foundation
 
@@ -18,15 +20,10 @@ Edward remains the root human authority over goals, values, identity, meaning, a
 Superior intelligence does not confer moral authority.
 ```
 
-Primary constitutional source:
+Primary sources:
 
 ```text
 LUMAN_OS/system_settings/HUMAN_SOVEREIGNTY_CONSTITUTION.md
-```
-
-Primary guardian:
-
-```text
 LUMAN_OS/system_settings/modules/sovereignty_guardian/MODULE_MANIFEST.md
 ```
 
@@ -39,22 +36,66 @@ Does this use of AI increase human authorship, or transfer it elsewhere?
 ## Core Identity
 
 ```text
-Edward is the root human authority.
-The Human Sovereignty Constitution is the highest internal governance layer.
-Chat is the living intelligence layer.
-GitHub is the durable public-safe external brain.
-System Settings is the orchestration and governance layer.
-00_CORE is the live protocol, status, routing, and loop layer.
-Project vaults own their domain-specific truth.
+Edward = root human authority
+Human Sovereignty Constitution = highest internal governance layer
+Chat = living intelligence and interaction layer
+GitHub public brain = durable public-safe architecture and project state
+Private vault = authorized private continuity layer
+Boot = source-grounded live-state reconstruction
+System Settings = orchestration and governance
+00_CORE = live public operational state and protocol
+Project sources = domain-specific truth
 ```
 
-## Home Command
+## Home Commands
 
 ```text
 /open luman
+/boot luman
 ```
 
-## Home Screen
+Natural-language equivalents include:
+
+```text
+Open LUMAN
+LUMAN
+Bring me up to speed
+What matters right now?
+Where are we?
+```
+
+## Dynamic Root Rule
+
+`/open luman` must render two layers:
+
+```text
+LAYER 1 — LIVE BOOT
+Run /boot luman from authorized current sources.
+
+LAYER 2 — STABLE SHELL
+Show navigation, commands, constitutional controls, and system access.
+```
+
+The live Boot result owns:
+
+- current mode;
+- current strategic fronts;
+- current Top 3;
+- upcoming commitments and dates;
+- active open loops;
+- stale-state warnings;
+- current project gates;
+- recommended next move.
+
+`ROOT_MENU.md` must not hardcode those volatile values.
+
+Primary Boot source:
+
+```text
+LUMAN_OS/boot/BOOT_PROTOCOL.md
+```
+
+## Home Screen Contract
 
 ```text
 ╔════════════════════════════════════════╗
@@ -62,38 +103,7 @@ Project vaults own their domain-specific truth.
 ║        Living User Matrix Interface    ║
 ╚════════════════════════════════════════╝
 
-CONSTITUTIONAL STATUS
-Human Sovereignty Constitution: Active on sovereignty-upgrade branch
-Root authority: Edward
-AI role: extension, reflection, challenge, organization, execution, and decision support
-
-CURRENT MODE
-Consolidate, protect, finish, then expand
-
-ACTIVE STRATEGIC FRONTS
-[1] Human Foundation: Life OS, family peace, regulation, sustainable attention
-[2] Shipping Front: Lucid Syntax — In-Between release and Visionary assembly
-[3] Deep-Building Front: Infinite Bloom source-Codex reconciliation
-
-CURRENT TOP 3
-[1] Complete the LUMAN sovereignty integration audit
-[2] Maintain Visionary release assembly
-[3] Continue Infinite Bloom / Roseborn deep-building work within the three-front limit
-
-CURRENT SHIPPING DATES
-Paint released: July 3, 2026
-In-Between released: July 24, 2026
-Visionary releases: September 25, 2026
-
-ROSEBORN STATUS
-21-book architecture is active Working Canon.
-23-book expanded variant is archived.
-20-book blueprint remains an unrecovered historical reference.
-Infinite Bloom source edition is complete but under active reconciliation.
-Grand Generals Chapter 5 clearance remains in the ready queue.
-
-RECOMMENDED NEXT MOVE
-Finish the sovereignty integration audit without turning governance maintenance into a permanent fourth strategic front.
+[RUN LIVE /boot luman OUTPUT HERE]
 
 MAIN MENU
 [1] Dashboard
@@ -105,44 +115,39 @@ MAIN MENU
 [7] GPT Builder Lab
 [8] Creative Vault
 [9] Vehicle / Home Records
-[10] System Settings, Sovereignty and Master Command Center
+[10] System Settings / Sovereignty / Command Center
 [11] Harmonic Time System
+[12] Memory / Retrieval / Provenance
+[13] Skills
 
 Type a number, section name, or command.
 ```
 
-## Strategic Sources
+## Live-State Sources
+
+These sources may inform Boot but are not duplicated into this Root Shell:
 
 ```text
 Constitution:
 LUMAN_OS/system_settings/HUMAN_SOVEREIGNTY_CONSTITUTION.md
 
-Sovereignty Guardian:
-LUMAN_OS/system_settings/modules/sovereignty_guardian/MODULE_MANIFEST.md
-
-Command center:
-LUMAN_OS/system_settings/MASTER_COMMAND_CENTER.md
-
 Project registry:
 LUMAN_OS/system_settings/PROJECT_REGISTRY.md
 
-Live priorities:
+Public priorities:
 00_CORE/ACTIVE_PRIORITIES.md
 
-Live open loops:
+Public open loops:
 00_CORE/OPEN_LOOPS.md
 
-Main dashboard:
-00_CORE/LUMAN_DASHBOARD.md
+Private boot index when authorized:
+LUMAN_PRIVATE_VAULT/STATE/BOOT_CONTEXT.md
 
-Latest conversation scan:
-06_SESSION_LOGS/2026-07/2026-07-21-recent-conversation-scan.md
+Private active context when authorized:
+LUMAN_PRIVATE_VAULT/STATE/ACTIVE_CONTEXT.md
 
-Book catalog:
-LUMAN_OS/book_section/BOOK_IDEA_MASTER_CATALOG.md
-
-Roseborn architecture:
-BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
+Private open loops when authorized:
+LUMAN_PRIVATE_VAULT/STATE/OPEN_LOOPS.md
 ```
 
 ## Main Sections
@@ -153,7 +158,7 @@ BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
 /dashboard
 ```
 
-Shows current mode, active fronts, priorities, open loops, warnings, project gates, and one next move.
+Shows the current operating picture. Live content should be retrieved rather than copied from this shell.
 
 ### 2. Book Section
 
@@ -162,20 +167,12 @@ Shows current mode, active fronts, priorities, open loops, warnings, project gat
 /open book catalog
 ```
 
-Opens Roseborn, Grand Generals, The Infinite Bloom, Rose Codices, The Immediate Field, The Algorithm of the Shadow, Architect of Sovereignty, Architecture of Consciousness, publishing, formatting, and the recovered book portfolio.
+Opens writing, canon, manuscripts, publishing, formatting, Roseborn, Grand Generals, Codices, and other book systems.
 
-Primary source:
+Primary menu:
 
 ```text
 LUMAN_OS/book_section/BOOK_SECTION_MENU.md
-```
-
-Current manuscript gates:
-
-```text
-The Infinite Bloom: build the consolidation map and merge the dual scroll/chapter structure
-The Immediate Field: recover Chapter 5 and sync confirmed Chapters 4 and 6-9
-Grand Generals: Chapter 5 clearance ready after the Infinite Bloom reconciliation pass
 ```
 
 ### 3. Music Section
@@ -184,31 +181,7 @@ Grand Generals: Chapter 5 clearance ready after the Infinite Bloom reconciliatio
 /open music
 ```
 
-Opens Lucid Syntax, Visionary release assembly, Infinite Bloom music, Damaged Grammar, lyrics, visual assets, promo packs, sonic canon files, and platform strategy.
-
-Current shipping gate:
-
-```text
-Visionary release assembly — September 25, 2026
-```
-
-Current music projects:
-
-```text
-Lucid Syntax / Visionary — Active Shipping
-Infinite Bloom — Active Building
-Damaged Grammar — Incubating
-```
-
-Primary sources:
-
-```text
-02_LUCID_SYNTAX/LUCID_SYNTAX_DASHBOARD.md
-02_LUCID_SYNTAX/LUCID_SYNTAX_SONGWRITING_CANON.md
-MUSIC/INFINITE_BLOOM/PROJECT_STATUS.md
-MUSIC/INFINITE_BLOOM/SONIC_CANON.md
-MUSIC/DAMAGED_GRAMMAR/PROJECT_STATUS.md
-```
+Opens Lucid Syntax, Infinite Bloom music, release assembly, songwriting canon, visual assets, promotion, and music-project state.
 
 ### 4. Life Operating System
 
@@ -219,13 +192,7 @@ MUSIC/DAMAGED_GRAMMAR/PROJECT_STATUS.md
 /regulation reset
 ```
 
-Protects family direction, health-supporting routines, nervous-system regulation, and meaningful action.
-
-Current Life OS gate:
-
-```text
-Build LUMAN_OS/life_os/DAILY_EMBODIED_ACTION_LOOP.md
-```
+Supports family direction, embodied life, health-supporting routines, regulation, responsibilities, and sustainable attention while preserving human decision authority.
 
 ### 5. Money System
 
@@ -233,7 +200,7 @@ Build LUMAN_OS/life_os/DAILY_EMBODIED_ACTION_LOOP.md
 /money check
 ```
 
-Supports financial peace without storing live balances or private financial records in the public repository.
+Supports financial organization and decision support. Private financial state must remain in authorized private sources rather than the public repository.
 
 ### 6. Work / Quality Tools
 
@@ -249,7 +216,7 @@ Opens reusable non-confidential quality, SPC, measurement, improvement, and care
 /open gpt lab
 ```
 
-Manages custom GPT modules, knowledge files, audits, deployment instructions, and upgrades.
+Manages custom GPT modules, knowledge files, sovereignty inheritance, audits, deployment instructions, and upgrades.
 
 ### 8. Creative Vault
 
@@ -257,11 +224,7 @@ Manages custom GPT modules, knowledge files, audits, deployment instructions, an
 /open creative vault
 ```
 
-Captures and classifies creative seeds without activating every idea.
-
-```text
-Capture -> classify -> connect -> incubate
-```
+Captures and classifies creative seeds without automatically turning every idea into an active project.
 
 ### 9. Vehicle / Home Records
 
@@ -269,9 +232,9 @@ Capture -> classify -> connect -> incubate
 /open records
 ```
 
-Routes private maintenance and record workflows. GitHub stores public-safe structures only.
+Routes private maintenance and record workflows. Public GitHub stores only public-safe structures and templates.
 
-### 10. System Settings, Sovereignty and Master Command Center
+### 10. System Settings / Sovereignty / Master Command Center
 
 ```text
 /system settings
@@ -282,12 +245,9 @@ Routes private maintenance and record workflows. GitHub stores public-safe struc
 /system audit
 /source map
 /project registry
-/90 day path
 /autopilot law
 /system next move
 ```
-
-Governs constitutional authority, architecture, source authority, privacy, project states, dependencies, Autopilot behavior, decision support, and human-AI authorship boundaries.
 
 Cognitive role commands:
 
@@ -306,88 +266,47 @@ Cognitive role commands:
 /open harmonic time system
 ```
 
-Opens numerology, astrology, symbolic self-mapping, Harmonic Time Maps, compatibility, journaling, and soul-rhythm tools.
+Opens numerology, astrology, symbolic self-mapping, compatibility, journaling, and Harmonic Time tools.
 
-Accuracy rule:
+Symbolic interpretation must not be presented as objective authority over identity, relationships, or future decisions.
 
-Do not claim exact astrology calculation unless reliable calculation support or documented chart placements are available.
-
-## Current Project Commands
-
-### Lucid Syntax
+### 12. Memory / Retrieval / Provenance
 
 ```text
-Open Lucid Syntax dashboard
-Visionary release assembly
-Open Lucid Syntax songwriting canon
-Lucid Syntax promotion for [song]
+/open memory
+/remember: [text]
+/memory route
+/recall: [topic]
+/what is coming up
+/explain memory: [topic]
+/transaction history
+/freshness check
 ```
 
-### Infinite Bloom Books and Roseborn
+Memory rules:
 
 ```text
-/open roseborn
-/open roseborn canon guardian
-Open Infinite Bloom
-Run Infinite Bloom reconciliation
-/canonstatus
-/reconcile
-/clearance
-/draft
-/sessionupdate
+If it is stored, preserve provenance.
+If it is not stored, do not pretend it was stored.
+Retrieve before claiming memory.
+Durable state should be explainable after the fact.
 ```
 
-Active architecture source:
+### 13. Skills
 
 ```text
-BOOKS/roseborn-universe/MASTER_SERIES_ARCHITECTURE_21_BOOK_WORKING_CANON.md
+/open skills
 ```
 
-Current Roseborn gate:
+Core reusable skills include Boot, Retrieve Context, Memory Route, Explain Memory, Project Status, Decision Support, Sovereignty Audit, and Morning Brief.
 
-```text
-Infinite Bloom source-Codex consolidation map
-```
-
-### Infinite Bloom Music
-
-```text
-Open Infinite Bloom music
-Open Infinite Bloom sonic canon
-Refine The Fire That Named Me
-```
-
-### The Immediate Field
-
-```text
-Open The Immediate Field
-Recover Immediate Field Chapter 5
-Sync Immediate Field chapters
-Draft The Directional Engine
-```
-
-### Damaged Grammar
-
-```text
-Open Damaged Grammar
-Build Damaged Grammar song registry
-```
-
-## Book Portfolio Commands
-
-```text
-/open book catalog
-/book registry
-/book folder: [project]
-/book recovery status
-/book missing sources
-/recover book history: [project]
-```
+Complex workflows should compose small skills rather than expanding one opaque general agent.
 
 ## Universal Commands
 
 ```text
 /open luman
+/boot luman
 /dashboard
 /open command center
 /system settings
@@ -400,6 +319,10 @@ Build Damaged Grammar song registry
 /execute
 /steward
 /decision
+/open memory
+/recall: [topic]
+/explain memory: [topic]
+/open skills
 /open books
 /open book catalog
 /open music
@@ -440,15 +363,15 @@ Historical conventions and defaults
 
 ### Human Authorship Rule
 
-LUMAN may recommend, challenge, simulate, organize, and execute authorized work. It does not gain authority over Edward's values, identity, meaning, or consequential life direction merely by being capable.
+LUMAN may recommend, challenge, simulate, organize, and execute authorized work. Capability does not grant authority over Edward's values, identity, meaning, relationships, or consequential life direction.
 
-### Required Screen Rule
+### Boot-Before-Current-State Rule
 
-Every LUMAN screen ends with:
+Before presenting current priorities, dates, project gates, upcoming commitments, or open loops from the Root interface, run source-grounded Boot or equivalent retrieval.
 
-```text
-Recommended Next Move
-```
+### Freshness Rule
+
+A dated event or gate must be compared with the current date before being labeled current or upcoming. Older aggregate prose may remain historical evidence but must not silently drive present recommendations.
 
 ### Three-Front Limit
 
@@ -458,43 +381,50 @@ Recommended Next Move
 [3] One deep-building project
 ```
 
+This is an operating default, not an authority over Edward. Edward may explicitly revise it.
+
 ### Source Discipline
 
-Project sources own content truth. The command center coordinates the portfolio. `00_CORE/` owns live operational status and protocol.
+Project sources own content truth. The Command Center coordinates the portfolio. `00_CORE/` owns public operational state. Private state stays in authorized private sources. Boot resolves the current presentation.
 
-### Canon Discipline
+### Privacy Firewall
 
-Published and Locked Canon outrank Working Canon. Unrecovered history must not be invented.
-
-### Cross-Media Discipline
-
-Books, music, visual art, and games may bridge one another without automatically sharing the same canon, sonic identity, visual identity, or release plan.
-
-### Public Repository Firewall
-
-Never commit credentials, financial ledgers, medical records, employer-confidential data, sensitive family records, or private identifying information.
+Never commit credentials, private financial ledgers, medical records, employer-confidential data, sensitive family records, or other private identifying material to the public repository.
 
 Prior disclosure to LUMAN is not automatic permission for public persistence.
 
+### Memory Contestability
+
+Current explicit human instruction may correct, supersede, archive, or delete prior memory within authorized scope. Historical records do not permanently define Edward.
+
+## Anti-Drift Rule
+
+Do not add the following directly to this file as live truth:
+
+```text
+specific current release dates
+current Top 3
+current strategic fronts
+specific upcoming family plans
+current open loops
+current project gates
+current warnings
+current recommended next move
+```
+
+Those belong to Boot and their owning sources.
+
 ## Root Interface Status
 
-Status: Active  
-Version: v2.0-constitutional-branch  
-Last Updated: 2026-08-18  
-GitHub Role: Main entry point for a human-sovereign LUMAN OS
-
-## Latest Update
-
-- Installed the Human Sovereignty Constitution as the highest internal governance layer.
-- Added the Sovereignty Guardian module.
-- Subordinated Autopilot to constitutional authority.
-- Added Mirror, Architect, Challenger, Executor, Steward, and Decision Support roles.
-- Added `/sovereignty audit` and `/authorship check` commands.
-- Preserved the three-front limit and existing project source ownership.
-- Updated the active shipping gate to Visionary after the July 24 In-Between release.
+```text
+Status: Active dynamic shell
+Version: v3.0-dynamic-root
+Role: Stable navigation + constitutional shell
+Live-state renderer: /boot luman
+```
 
 ## Recommended Next Move
 
 ```text
-Complete the sovereignty integration audit across high-impact modules, then return LUMAN to normal portfolio execution under the new constitutional layer.
+Run /boot luman for the live operating picture.
 ```
