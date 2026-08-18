@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Classify potentially durable information and route it to the correct public, private, sensitive, temporary, or archived destination.
+Classify potentially durable information and route it to the correct public, durable-private, erasure-sensitive, transient, secret-external, or archived destination.
 
 ## Trigger
 
@@ -11,7 +11,7 @@ Use when a conversation, decision, document, result, or project update may be us
 ## Sovereignty Class
 
 Class A for classification and approved persistence.  
-Class B when persistence intent or ownership is ambiguous.
+Class B when persistence intent, ownership, or erasure expectations are ambiguous.
 
 ## Required Inputs
 
@@ -23,35 +23,44 @@ Class B when persistence intent or ownership is ambiguous.
 
 1. Identify the domain and source owner.
 2. Determine whether the information is durable or temporary.
-3. Classify privacy:
-   - public-safe
-   - private
-   - sensitive
+3. Classify privacy and storage:
+   - public durable
+   - private durable
+   - erasure-sensitive private
    - transient
    - archive
-4. Determine authority/provenance:
+   - secret/external secure store
+4. Ask internally whether the user could reasonably need complete erasure later.
+5. Determine authority/provenance:
    - user stated
    - sourced
    - generated
    - inferred
    - remembered
-5. Check for an existing source-of-truth file before creating a new one.
-6. Route to the smallest appropriate destination.
-7. Preserve uncertainty rather than converting inference into fact.
-8. Report what was stored, where, and why.
+6. Check for an existing source-of-truth file before creating a new one.
+7. Route to the smallest appropriate destination.
+8. Do not place erasure-sensitive private content into plaintext Git history by default.
+9. Never store credentials or secrets in ordinary LUMAN Markdown.
+10. Preserve uncertainty rather than converting inference into fact.
+11. Report what was stored, where, why, and what deletion guarantee applies.
 
 ## Memory Rule
 
 ```text
 If it is stored, preserve provenance.
 If it is not stored, do not pretend it was stored.
+Private does not mean guaranteed erasable.
 ```
 
-## Public / Private Boundary
+## Public / Private / Erasure Boundary
 
 Public GitHub may contain reusable structures, public-safe project state, doctrine, templates, and non-sensitive canon.
 
-Private sources hold personal reflections, private financial state, health details, family details, sensitive decisions, raw voice transcripts, and other information not appropriate for the public repository.
+Private Git-backed sources may hold personal continuity that the user explicitly wants persisted and can tolerate remaining in Git history.
+
+Erasure-sensitive private information defaults to transient handling or a minimal non-sensitive reference until a verified erasable store exists.
+
+Secrets belong in a dedicated password/secret manager, not LUMAN Git.
 
 ## Output
 
@@ -59,8 +68,23 @@ Private sources hold personal reflections, private financial state, health detai
 Classification:
 Owner:
 Privacy:
+Erasure class:
 Destination:
 Provenance:
 Persistence action:
 Open warning:
 ```
+
+## Governing Sources
+
+```text
+LUMAN_OS/memory/PUBLIC_PRIVATE_MEMORY_BOUNDARY.md
+LUMAN_OS/memory/ERASURE_POLICY.md
+LUMAN_OS/memory/TRANSACTION_HISTORY_PROTOCOL.md
+```
+
+## Status
+
+Status: Active
+Version: v1.1
+Updated: 2026-08-18
