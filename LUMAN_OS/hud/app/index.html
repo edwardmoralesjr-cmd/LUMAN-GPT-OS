@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070b0f" />
+  <meta name="description" content="LUMAN OS read-first human-sovereign command HUD" />
+  <title>LUMAN OS — Human-Sovereign HUD</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <main class="shell">
+    <header class="masthead panel">
+      <div>
+        <div class="eyebrow">LIVING USER MATRIX INTERFACE</div>
+        <h1>LUMAN <span>OS</span></h1>
+        <p class="subtitle">Human-Sovereign Intelligence · Read-First Command HUD</p>
+      </div>
+      <div class="mast-actions">
+        <div class="clock-wrap">
+          <div id="clock" class="clock">--:--</div>
+          <div id="date" class="date">Loading date…</div>
+        </div>
+        <button id="refreshBtn" class="button button-primary" type="button">Refresh Sources</button>
+      </div>
+    </header>
+
+    <section class="status-grid" aria-label="Source status">
+      <article class="status-card panel">
+        <div class="status-label">Human Authority</div>
+        <div class="status-value"><span class="dot good"></span>ACTIVE</div>
+        <div class="status-note">Final goals, values, identity, meaning, and consequential judgment remain human-owned.</div>
+      </article>
+      <article class="status-card panel">
+        <div class="status-label">Constitution</div>
+        <div id="constitutionStatus" class="status-value"><span class="dot pending"></span>CHECKING</div>
+        <div class="status-note">Human Sovereignty Constitution is the highest internal LUMAN governance layer.</div>
+      </article>
+      <article class="status-card panel">
+        <div class="status-label">Public Brain</div>
+        <div id="publicBrainStatus" class="status-value"><span class="dot pending"></span>CHECKING</div>
+        <div class="status-note">Live public-safe GitHub operating state.</div>
+      </article>
+      <article class="status-card panel locked-card">
+        <div class="status-label">Private Brain</div>
+        <div class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
+        <div class="status-note">Never exposed directly from this public browser surface.</div>
+      </article>
+      <article class="status-card panel locked-card">
+        <div class="status-label">Calendar</div>
+        <div class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
+        <div class="status-note">Ephemeral live context is available through connected LUMAN, not public Pages.</div>
+      </article>
+      <article class="status-card panel locked-card">
+        <div class="status-label">Gmail</div>
+        <div class="status-value"><span class="dot bridge"></span>BRIDGE REQUIRED</div>
+        <div class="status-note">Inbox contents remain private and ephemeral unless separately routed.</div>
+      </article>
+    </section>
+
+    <section class="hero-grid">
+      <article class="panel focus-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">CURRENT OPERATING PICTURE</div>
+            <h2>Top 3</h2>
+          </div>
+          <div id="freshnessBadge" class="badge">Source-grounded</div>
+        </div>
+        <ol id="topThree" class="priority-list skeleton-list">
+          <li>Loading current priorities…</li>
+        </ol>
+      </article>
+
+      <article class="panel fronts-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">STRATEGIC LIMIT</div>
+            <h2>Three Fronts</h2>
+          </div>
+        </div>
+        <div id="fronts" class="front-list">
+          <div class="front skeleton">Loading strategic fronts…</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel projects-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">PORTFOLIO</div>
+            <h2>Active Projects</h2>
+          </div>
+          <button class="text-button command" data-command="/project registry" type="button">Project Registry</button>
+        </div>
+        <div id="projects" class="project-grid">
+          <div class="project-card skeleton">Loading projects…</div>
+        </div>
+      </article>
+
+      <article class="panel loops-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">ATTENTION</div>
+            <h2>Open Loops</h2>
+          </div>
+          <button class="text-button command" data-command="/open loop review" type="button">Review</button>
+        </div>
+        <div id="loops" class="loop-list">
+          <div class="loop skeleton">Loading open loops…</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel system-panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">SYSTEM DEVELOPMENT</div>
+          <h2>LUMAN Build Gate</h2>
+        </div>
+        <div id="lastSync" class="source-time">Awaiting source timestamp</div>
+      </div>
+      <div id="buildGate" class="build-gate skeleton">Loading current system gate…</div>
+    </section>
+
+    <section class="panel action-panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">BOUNDED ACTIONS</div>
+          <h2>Command Deck</h2>
+        </div>
+        <div class="badge badge-muted">V1 prepares commands; it does not silently execute them</div>
+      </div>
+      <div class="command-grid">
+        <button class="command-chip command" data-command="/morning brief" type="button">Morning Brief</button>
+        <button class="command-chip command" data-command="/weekly sync" type="button">Weekly Sync</button>
+        <button class="command-chip command" data-command="/capture idea: " type="button">Capture Idea</button>
+        <button class="command-chip command" data-command="/remember: " type="button">Remember This</button>
+        <button class="command-chip command" data-command="/project review: " type="button">Review Project</button>
+        <button class="command-chip command" data-command="/family plan: " type="button">Family Plan</button>
+        <button class="command-chip command" data-command="/release status: " type="button">Release Status</button>
+        <button class="command-chip command" data-command="/decision support" type="button">Decision Support</button>
+      </div>
+      <form id="askForm" class="ask-bar">
+        <label class="sr-only" for="askInput">Ask LUMAN</label>
+        <span class="prompt">&gt;</span>
+        <input id="askInput" autocomplete="off" placeholder="Prepare a command for LUMAN…" />
+        <button class="button" type="submit">Prepare</button>
+      </form>
+      <div id="commandOutput" class="command-output" aria-live="polite">Select an action or prepare a command.</div>
+    </section>
+
+    <footer class="footer">
+      <div>HUD role: interface, never source of truth.</div>
+      <div id="sourceFooter">Public state source: GitHub · Private/live sources require authenticated LUMAN bridge.</div>
+    </footer>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
