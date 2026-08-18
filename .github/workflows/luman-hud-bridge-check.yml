@@ -5,12 +5,16 @@ on:
     paths:
       - "LUMAN_OS/hud/**"
       - ".github/workflows/luman-hud-bridge-check.yml"
+      - ".github/workflows/luman-bridge-bootstrap.yml"
+      - ".github/workflows/luman-bridge-activate.yml"
   push:
     branches:
       - main
     paths:
       - "LUMAN_OS/hud/**"
       - ".github/workflows/luman-hud-bridge-check.yml"
+      - ".github/workflows/luman-bridge-bootstrap.yml"
+      - ".github/workflows/luman-bridge-activate.yml"
 
 permissions:
   contents: read
@@ -50,3 +54,35 @@ jobs:
             echo "Possible secret material found in HUD tree"
             exit 1
           fi
+
+      - name: Verify bootstrap cannot receive private-source credentials
+        shell: bash
+        run: |
+          file=.github/workflows/luman-bridge-bootstrap.yml
+          if grep -E "GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN" "$file"; then
+            echo "Bootstrap workflow must not reference private-source credentials"
+            exit 1
+          fi
+          grep -q "workflow_dispatch" "$file"
+          grep -q "confirm_bootstrap" "$file"
+
+      - name: Verify activation has explicit safety gates
+        shell: bash
+        run: |
+          file=.github/workflows/luman-bridge-activate.yml
+          grep -q "workflow_dispatch" "$file"
+          grep -q "confirm_access_enabled" "$file"
+          grep -q "confirm_google_readonly" "$file"
+          grep -q "GITHUB_PRIVATE_TOKEN" "$file"
+          grep -q "GOOGLE_REFRESH_TOKEN" "$file"
+          grep -q "luman-bridge-production" "$file"
+
+      - name: Verify deployment workflows do not auto-run on push
+        shell: bash
+        run: |
+          for file in .github/workflows/luman-bridge-bootstrap.yml .github/workflows/luman-bridge-activate.yml; do
+            if grep -Eq "^[[:space:]]*push:" "$file"; then
+              echo "$file must remain manual-only"
+              exit 1
+            fi
+          done
