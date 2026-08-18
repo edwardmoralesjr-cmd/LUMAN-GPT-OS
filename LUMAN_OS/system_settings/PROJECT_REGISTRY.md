@@ -21,16 +21,16 @@ Archived        = historical source retained for provenance
 
 | ID | Domain | Project / System | State | Primary Source | Next Gate |
 |---|---|---|---|---|---|
-| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Deploy Bridge V1 through authenticated Cloudflare infrastructure and production-validate minimum disclosure |
+| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Configure protected bridge deployment environment and run credential-free Stage 1 bootstrap |
 | SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data outside authorized scope |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
 | SYS-004 | System | Creative Ecosystem Engine | Foundation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Pilot normalized nodes without activating a new strategic front |
 | SYS-005 | System | LUMAN Memory + Retrieval | Foundation | `LUMAN_OS/memory/`, `LUMAN_OS/skills/`, private-vault state | Enforce erasure classes, correction/supersession/deletion controls, and provenance under real use |
 | SYS-006 | System | LUMAN Boot + Dynamic Root | Foundation | `LUMAN_OS/boot/`, `LUMAN_OS/ROOT_MENU.md` | Keep live state source-grounded and prevent static interface drift |
 | SYS-007 | System | LUMAN Operational Skills | Foundation | `LUMAN_OS/skills/` | Maintain combined Morning Brief / Weekly Sync behavior and tune only from observed friction |
-| SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | Bridge V1 implementation exists; production-validate authenticated minimum-data Calendar/Gmail/private continuity exposure |
-| SYS-009 | System | LUMAN HUD | Active Building | `LUMAN_OS/hud/` plus Pages workflow and Boot/live-source contracts | Verify `/luman-hud/` production rendering and connect the deployed authenticated Bridge V1 |
-| SYS-010 | System | LUMAN Authenticated Bridge | Active Building | `LUMAN_OS/hud/bridge/` | Configure Cloudflare Access + protected secrets, deploy V1, and pass authentication/minimum-disclosure test matrix |
+| SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | After Access + Stage 2 activation, production-validate minimum-data Calendar/Gmail/private continuity exposure |
+| SYS-009 | System | LUMAN HUD | Active Building | `LUMAN_OS/hud/` plus Pages workflow and Boot/live-source contracts | Verify `/luman-hud/` production rendering and connect Bridge V1 after authenticated activation |
+| SYS-010 | System | LUMAN Authenticated Bridge | Active Building | `LUMAN_OS/hud/bridge/` plus manual GitHub Actions deployment workflows | Configure `luman-bridge-production`, add four bootstrap values, and run `Bootstrap LUMAN Bridge` without private-source credentials |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -105,12 +105,16 @@ Completed foundation and validation work includes:
 - HUD Bridge V1 connection/client panels for Today, Inbox Signals, and minimum private commitments
 - Bridge V1 security contract, deployment checklist, and runtime/static test matrix
 - Bridge CI passed Worker/HUD syntax, read-only/no-store boundary, and common committed-secret checks
+- two-stage manual Cloudflare bridge deployment workflows
+- bootstrap workflow excludes all private GitHub / Google source credentials
+- activation workflow requires explicit Access-enabled and read-only-OAuth confirmations
+- bridge CI enforces bootstrap separation, activation guards, and manual-only deployment behavior
 
 Combined daily operations passed source-separation, minimum-disclosure, and recommendation-vs-obligation tests. Calendar and Gmail remain ephemeral live sources by default and do not authorize writes or persistence.
 
 HUD/Bridge V1 preserve the same rule at the interface layer: public GitHub may be read directly; private-vault, Calendar, Gmail, and other sensitive material may reach the browser only through an authenticated server-side minimization boundary.
 
-Bridge V1 is built and code-validated but remains `Active Building` until production Access authentication, source separation, and minimum-disclosure checks pass.
+Bridge V1 is built and code-validated but remains `Active Building` until Stage 1 bootstrap, Cloudflare Access, Stage 2 activation, and production authentication/minimum-disclosure checks pass.
 
 ## Freshness Resolution Note — 2026-08-18
 
@@ -129,7 +133,8 @@ The Roseborn count conflict remains resolved at Working Canon level:
 ## Recommended Next Move
 
 ```text
-Configure Cloudflare Access and protected secrets, deploy Bridge V1, then run the production authentication and minimum-disclosure validation.
+Configure the protected `luman-bridge-production` GitHub Actions environment with the four Stage 1 values,
+then run the credential-free `Bootstrap LUMAN Bridge` workflow.
 ```
 
 ## Status
