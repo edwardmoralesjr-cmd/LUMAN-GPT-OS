@@ -8,6 +8,26 @@
 
 ## Available Skills
 
+### `/boot luman`
+
+Reconstruct LUMAN's current working state from authorized public and private sources, apply freshness checks, and present a concise orientation snapshot.
+
+Source:
+
+```text
+LUMAN_OS/skills/luman_boot/SKILL.md
+```
+
+### `/recall: [topic]`
+
+Retrieve durable context about a topic, project, decision, plan, or open loop from authorized sources rather than relying on conversational memory alone.
+
+Source:
+
+```text
+LUMAN_OS/skills/retrieve_context/SKILL.md
+```
+
 ### `/memory route`
 
 Classify durable information, preserve provenance, and route it to the correct public/private/transient owner.
@@ -62,10 +82,18 @@ LUMAN_OS/skills/morning_brief/SKILL.md
 
 Complex workflows should compose several small skills rather than expanding one skill until it becomes an opaque general agent.
 
-Example:
+Examples:
+
+```text
+LUMAN Boot
+-> Retrieve Context
+-> Project Status
+-> Decision Support
+```
 
 ```text
 Morning Brief
+-> Retrieve Context
 -> Project Status
 -> Decision Support
 -> Memory Route
@@ -74,5 +102,6 @@ Morning Brief
 ## Status
 
 Status: Active  
-Version: v1.0  
-Created: 2026-08-18
+Version: v1.1  
+Created: 2026-08-18  
+Updated: 2026-08-18
