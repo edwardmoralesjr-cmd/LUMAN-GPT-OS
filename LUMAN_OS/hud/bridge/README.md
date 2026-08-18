@@ -84,7 +84,37 @@ PRIVATE_REPO=edwardmoralesjr-cmd/LUMAN-GPT-Command-Center
 PRIVATE_OPEN_LOOPS_PATH=LUMAN_PRIVATE_VAULT/STATE/OPEN_LOOPS.md
 ```
 
-Never commit secret values to GitHub. Add them through Cloudflare encrypted secrets / protected configuration.
+Never commit secret values to GitHub. Add them through protected GitHub Actions / Cloudflare secret configuration.
+
+## Secure GitHub Actions Deployment
+
+Production deployment is intentionally two-stage:
+
+```text
+Bootstrap LUMAN Bridge
+  -> deploy Worker hostname without private-source credentials
+  -> enable Cloudflare Access
+
+Activate LUMAN Bridge Private Reads
+  -> explicit Access + read-only OAuth confirmation
+  -> inject least-privilege private-source credentials
+  -> deploy same Worker
+  -> run production minimum-disclosure validation
+```
+
+Full setup and rollback instructions:
+
+```text
+LUMAN_OS/hud/bridge/SECURE_DEPLOYMENT.md
+```
+
+The GitHub Actions environment is named:
+
+```text
+luman-bridge-production
+```
+
+Deployment workflows are manual (`workflow_dispatch`); a normal push does not silently redeploy the private bridge.
 
 ## Google OAuth Scope Boundary
 
@@ -111,7 +141,7 @@ There are no POST/PUT/PATCH/DELETE action routes in V1.
 
 Production requests must arrive through Cloudflare Access. If the authenticated identity header is missing, or does not match the configured allowed identity, the Worker returns `401` or `403`.
 
-The Worker should not be deployed publicly without Access protection configured.
+The private/live credentials must not be activated until Access protection is configured.
 
 ## Data Ownership
 
@@ -126,5 +156,5 @@ Edward        = final authority
 
 ## Status
 
-Status: V1 implementation
+Status: V1 implementation + secure deployment workflow
 Created: 2026-08-18
