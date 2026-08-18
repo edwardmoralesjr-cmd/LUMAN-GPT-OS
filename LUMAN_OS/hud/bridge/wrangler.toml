@@ -1,0 +1,19 @@
+name = "luman-minimum-data-bridge"
+main = "src/index.js"
+compatibility_date = "2026-08-18"
+workers_dev = true
+
+[vars]
+REQUIRE_CF_ACCESS = "true"
+PRIVATE_REPO = "edwardmoralesjr-cmd/LUMAN-GPT-Command-Center"
+PRIVATE_OPEN_LOOPS_PATH = "LUMAN_PRIVATE_VAULT/STATE/OPEN_LOOPS.md"
+
+# Configure these outside source control:
+# HUD_ORIGIN
+# ALLOWED_EMAIL
+# GITHUB_PRIVATE_TOKEN          (secret)
+# GOOGLE_CLIENT_ID             (secret)
+# GOOGLE_CLIENT_SECRET         (secret)
+# GOOGLE_REFRESH_TOKEN         (secret)
+#
+# Do not put secret values in this file.
