@@ -2,22 +2,23 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, and Retrieval/Freshness layer are active.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, and Dynamic Root Shell are active.
 
-The previous July operational state was audited. `In-Between` is no longer treated as an upcoming release gate. Visionary is the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
+The July operational state was audited and synchronized. `In-Between` is historical rather than an upcoming release gate. Visionary is the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
+
+The memory-control test verified correction, supersession, and current-state deletion. It also confirmed that ordinary Git deletion does not erase prior committed history, so LUMAN now distinguishes durable-private memory from erasure-sensitive memory.
 
 ## Current Open Loops
 
 ### LUMAN System Build
 
-1. Complete the 2026-08-18 public state synchronization pass.
-2. Run a second source-grounded `/boot luman` after synchronization.
-3. Stress-test retrieval across public, private, current, stale, corrected, archived, and not-found cases.
-4. Build a lightweight transaction/history log so LUMAN can answer why a durable state changed.
-5. Expand the small-skill library only after Boot + Retrieval are stable.
-6. Later connect external live-state sources such as Calendar and Gmail where they materially help.
-7. Build the HUD only after the underlying state/retrieval layer is reliable.
-8. Build voice after the brain, memory, and retrieval layers are stable.
+1. Merge and stabilize erasure-aware memory control.
+2. Enforce the new storage classes across Memory Route and future skills.
+3. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
+4. Expand the small-skill library with weekly sync, family plan, project review, open-loop review, capture idea, release status, and evening close.
+5. Connect live external sources such as Calendar and Gmail where they materially help.
+6. Build the HUD only after the underlying state/retrieval layer remains reliable under real use.
+7. Build voice after the brain, memory, retrieval, and control layers are stable.
 
 ### Human Foundation
 
@@ -105,7 +106,7 @@ Current loops:
 
 ### Remaining Legacy-Surface Cleanup
 
-1. Mirror high-value System Settings, Boot, Retrieval, and Memory commands into older root surfaces where still useful.
+1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, and erasure commands into older root surfaces where still useful.
 2. Review `DEPLOYMENT_INDEX.md`.
 3. Refresh older dashboards after source-of-truth synchronization is complete.
 
@@ -116,7 +117,7 @@ Private family, financial, health, vehicle/home, and sensitive personal loops ar
 ## Recommended Next Move
 
 ```text
-Finish this state-sync pass, run the second Boot test, and verify that no expired July release task is presented as current.
+Merge erasure-aware memory control, then expand the small-skill library while normal creative execution remains focused on Visionary and Infinite Bloom.
 ```
 
 ## Status
