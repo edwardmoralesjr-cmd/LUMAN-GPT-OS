@@ -2,26 +2,27 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, combined daily-operations validation, and LUMAN HUD V1 are active in the repository.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, combined daily-operations validation, LUMAN HUD V1, and the Bridge V1 implementation are present in the repository.
 
-HUD V1 is merged into `main` as a public-safe, read-first web interface. It reads public GitHub operating state directly, displays private brain / Calendar / Gmail as bridge-required rather than exposing them publicly, and prepares bounded LUMAN commands without silently executing them. The existing GitHub Pages workflow was updated to package the HUD at `/luman-hud/` alongside Gatherer's Ascension.
+HUD V1 is merged into `main` as a public-safe, read-first web interface. The authenticated minimum-data Bridge V1 is also merged: it is a read-only Cloudflare Worker boundary for private open-loop context, bounded Calendar event summaries, and bounded Gmail metadata signals. Its dedicated CI passed JavaScript syntax, read-only/no-store boundary, and committed-secret checks.
 
-Production Pages verification remains an open deployment check. Private/live-source HUD data remains intentionally unavailable in the public browser until an authenticated minimum-data bridge exists.
+Bridge V1 is **built / awaiting authenticated deployment**, not yet Active. Cloudflare Access, approved identity/origin, protected secrets, least-privilege private GitHub access, and read-only Google OAuth must be configured and the production minimum-disclosure matrix must pass before the bridge is treated as live.
 
-Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
+Production Pages verification remains an open deployment check. Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
 ## Current Open Loops
 
 ### LUMAN System Build
 
 1. Verify the merged HUD publishes successfully through the GitHub Pages workflow at the `/luman-hud/` route without disturbing Gatherer's Ascension at the existing root.
-2. Verify the production HUD can re-read current public GitHub sources and render Top 3, strategic fronts, active projects, open loops, constitution status, and the current build gate.
-3. Build an authenticated minimum-data LUMAN bridge for private-vault continuity, Calendar Context, and Inbox Context.
-4. Ensure the bridge returns summaries / minimum necessary display data rather than raw private notes, raw email bodies, or unnecessary Calendar detail.
-5. Add bounded authenticated action dispatch only after the bridge read path remains reliable and existing write-authorization rules are preserved.
-6. Keep HUD cache/state disposable; authoritative truth remains with owning sources.
-7. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
-8. Build voice only after HUD/data/action stability.
+2. Configure Cloudflare Access for Bridge V1 with Edward's approved identity and the exact approved HUD origin.
+3. Configure protected Bridge V1 secrets: least-privilege private GitHub read token plus Google read-only OAuth credentials/refresh token; never place those values in GitHub or browser code.
+4. Deploy Bridge V1 and verify authenticated Private Brain, Calendar, and Gmail minimum-data reads from the production HUD.
+5. Run the production bridge test matrix and verify no raw private notes, private source paths, Gmail bodies/snippets/attachments, recipient lists, Calendar descriptions/attendees, credentials, or unrelated private data reach the browser.
+6. Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable and existing write-authorization rules are preserved.
+7. Keep HUD cache/state disposable; authoritative truth remains with owning sources.
+8. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
+9. Build voice only after HUD/data/action stability.
 
 ### Human Foundation
 
@@ -109,7 +110,7 @@ Current loops:
 
 ### Remaining Legacy-Surface Cleanup
 
-1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, operational skills, Calendar/Gmail context, HUD commands, and erasure commands into older root surfaces where still useful.
+1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, operational skills, Calendar/Gmail context, HUD/bridge commands, and erasure commands into older root surfaces where still useful.
 2. Review `DEPLOYMENT_INDEX.md`.
 3. Refresh older dashboards after source-of-truth synchronization is complete.
 
@@ -120,7 +121,7 @@ Private family, financial, health, vehicle/home, and sensitive personal loops ar
 ## Recommended Next Move
 
 ```text
-Verify the production HUD deployment and live public-source rendering, then build the authenticated minimum-data bridge.
+Configure Cloudflare Access and protected Bridge V1 secrets, deploy the bridge, then run the production minimum-disclosure validation.
 ```
 
 ## Status

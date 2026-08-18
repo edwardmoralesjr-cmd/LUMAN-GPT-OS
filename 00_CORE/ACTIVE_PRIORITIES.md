@@ -12,7 +12,8 @@
 - Use Google Calendar as ephemeral live schedule evidence; do not automatically copy Calendar contents into Git or treat free time as unused capacity.
 - Use Gmail as bounded ephemeral communication evidence; do not automatically copy message contents into Git or let unread/IMPORTANT labels define human priority.
 - Calendar and Gmail writes remain explicit user-authorized actions.
-- Keep the public HUD public-safe: it may read public GitHub state directly but must not expose private-vault, Calendar, Gmail, or other sensitive contents without an authenticated minimum-data bridge.
+- Keep the public HUD public-safe: public GitHub may be read directly, while private-vault, Calendar, and Gmail context must cross only the authenticated minimum-data bridge.
+- Treat Bridge V1 as read-only: no action endpoints, no durable bridge cache, no raw email bodies, no Calendar descriptions/attendees, and no full private-note delivery.
 - Keep Life OS and family peace beneath all creative expansion.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Treat `Visionary` as the active Lucid Syntax shipping front toward 2026-09-25.
@@ -33,13 +34,15 @@
 ## Current System Build Gate
 
 ```text
-LUMAN HUD V1 source, architecture, public-source renderer, bounded command deck,
-and coexistence deployment workflow are merged into main.
+LUMAN HUD V1 and the authenticated minimum-data Bridge V1 implementation are merged into main.
+Bridge CI passed Worker syntax, HUD syntax, read-only boundary, no-store policy,
+and common committed-secret checks.
 
-Current system task: verify the production GitHub Pages deployment and live public-source rendering,
-then build the authenticated minimum-data bridge for private brain + Calendar + Gmail.
+Current system task: configure Cloudflare Access and protected secrets, deploy Bridge V1,
+and run the production authentication + minimum-disclosure test matrix.
 ```
 
+Bridge V1 is built and code-validated, but it is not considered Active until production authentication and source-minimization checks pass.
 The HUD remains an interface, not a source of truth.
 
 ## Current Strategic Fronts
@@ -66,10 +69,11 @@ Grand Generals remains Active Building and returns to the deep-building front at
 
 ```text
 [1] Verify the merged HUD deploys at the public /luman-hud/ route without disturbing Gatherer's Ascension
-[2] Verify live public GitHub reads render current Top 3, strategic fronts, projects, open loops, and build gate
-[3] Build an authenticated minimum-data bridge for private brain, Calendar Context, and Inbox Context
-[4] Add bounded authenticated action dispatch only after bridge read boundaries remain reliable
-[5] Keep voice after HUD/data/action stability
+[2] Configure Cloudflare Access, allowed identity, exact HUD origin, and least-privilege protected secrets for Bridge V1
+[3] Deploy Bridge V1 and verify Private Brain + Calendar + Gmail minimum-data reads in the production HUD
+[4] Verify no raw private notes, email bodies/snippets/attachments, Calendar descriptions/attendees, or credentials reach the browser
+[5] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
+[6] Keep voice after HUD/data/action stability
 ```
 
 ## Completed Strategic Gates
@@ -95,6 +99,10 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] HUD V1 bounded command deck created without silent execution
 [✓] Pages workflow updated to package HUD at /luman-hud/ beside Gatherer's Ascension
 [✓] HUD V1 merged into main
+[✓] Authenticated minimum-data Bridge V1 Worker implementation created and merged
+[✓] HUD private/live bridge client and source-status panels created and merged
+[✓] Bridge V1 security contract, deployment checklist, and test matrix created
+[✓] Bridge CI passed JavaScript syntax, read-only, no-store, and committed-secret boundary checks
 ```
 
 ## Immediate Field Recovery Gate
@@ -107,7 +115,7 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Verify the production HUD route and public-source rendering, then build the authenticated minimum-data bridge.
+Configure and deploy Bridge V1 through Cloudflare Access, then run the production minimum-disclosure validation.
 ```
 
 ## Status
