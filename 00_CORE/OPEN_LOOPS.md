@@ -2,54 +2,45 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. A recent-conversation scan was completed on 2026-07-21. The system now reflects the In-Between release gate, the advanced but partially unsynchronized state of The Immediate Field, the Infinite Bloom source-Codex reconciliation, the separate Infinite Bloom music project, The Human Syntax as Lucid Syntax Album 5, and Damaged Grammar as an incubating project.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, and Retrieval/Freshness layer are active.
 
-## Completed on 2026-07-21
-
-### Recent Conversation Scan
-
-- Scanned durable changes from conversations dated 2026-07-16 through 2026-07-21.
-- Classified project changes through LUMAN Autopilot.
-- Preserved the three-front operating limit.
-- Shifted the current deep-building front from Grand Generals clearance to Infinite Bloom source-Codex reconciliation.
-- Kept Grand Generals Active Building and ready to resume at Chapter 5 clearance.
-- Confirmed `In-Between` as the immediate shipping gate for 2026-07-24.
-- Confirmed the `Visionary` album date as 2026-09-25.
-- Confirmed `The Human Syntax` as Lucid Syntax Album 5 background architecture.
-- Registered Infinite Bloom as a distinct music project under Spiral Crown Records.
-- Resolved the official project name `Damaged Grammar`; `Broken Grammar` is incorrect.
-
-### The Immediate Field Progress Discovery
-
-- Confirmed evidence for Chapters 4, 6, 7, 8, and 9 beyond the prior GitHub frontier.
-- Preserved Chapter 9 as `Run Your Own Code` with the operational method FILTER -> REGULATE -> SEPARATE -> TEST -> CHOOSE -> ITERATE.
-- Marked Chapter 5, `Civilization Runs on Story`, as a recovery/verification gap because a separate manuscript artifact was not located during the scan.
-- Preserved Chapter 10, `The Directional Engine`, as the next planned drafting frontier after the gap is resolved.
-
-### Infinite Bloom Manuscript Audit
-
-- Confirmed a complete edition containing Scroll 0 through Scroll XII, a Final Scroll, Chapter I through Chapter XII, and an epilogue.
-- Identified duplicate short-scroll and expanded-chapter presentations of the same twelvefold path.
-- Preserved the current reconciliation direction: merge corresponding scrolls and chapters, strengthen the foundation, move the Final Scroll to the true ending, and reconcile numbering and fracture contradictions.
-- Preserved Ishkala as the first twelve remembered as one and the reader/initiate as the thirteenth petal.
+The previous July operational state was audited. `In-Between` is no longer treated as an upcoming release gate. Visionary is the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
 ## Current Open Loops
+
+### LUMAN System Build
+
+1. Complete the 2026-08-18 public state synchronization pass.
+2. Run a second source-grounded `/boot luman` after synchronization.
+3. Stress-test retrieval across public, private, current, stale, corrected, archived, and not-found cases.
+4. Build a lightweight transaction/history log so LUMAN can answer why a durable state changed.
+5. Expand the small-skill library only after Boot + Retrieval are stable.
+6. Later connect external live-state sources such as Calendar and Gmail where they materially help.
+7. Build the HUD only after the underlying state/retrieval layer is reliable.
+8. Build voice after the brain, memory, and retrieval layers are stable.
 
 ### Human Foundation
 
 1. Build `LUMAN_OS/life_os/DAILY_EMBODIED_ACTION_LOOP.md`.
-2. Establish one weekly LUMAN sync rhythm.
+2. Maintain one sustainable weekly LUMAN review rhythm.
 3. Add a concise safety and ethics protocol for Order of the Rose Shadow practice.
 4. Keep family peace, regulation, and sustainable attention above portfolio expansion.
 
-### Visionary and In-Between Shipping
+### Visionary Shipping
 
-1. Complete the final In-Between release sequence before 2026-07-24.
-2. Verify release links, metadata, artwork, platform availability, and credits.
-3. Prepare release-day platform posts, YouTube description, pinned comment, and call to action.
-4. Prepare the first post-release follow-up without prematurely activating another single.
-5. Update the Visionary release-assembly inventory after the In-Between release.
-6. Continue toward the locked Visionary album date of 2026-09-25.
+Historical gate:
+
+```text
+In-Between release: 2026-07-24 — no longer an upcoming task.
+```
+
+Current loops:
+
+1. Keep Visionary as Active Shipping toward 2026-09-25.
+2. Verify current album distribution/upload status and release assembly.
+3. Verify final metadata, credits, artwork, and explicit-status handling where still open.
+4. Continue lyric-video, short-form, and promotional assembly without displacing the album release gate.
+5. Keep later Lucid Syntax projects in background architecture until Visionary ships.
 
 ### Infinite Bloom Source Codex
 
@@ -81,7 +72,7 @@ LUMAN OS is active and GitHub-backed. A recent-conversation scan was completed o
 
 ### Lucid Syntax Songwriting System
 
-1. Add the locked current sonic and lyric architecture to a dedicated songwriting canon file.
+1. Preserve the locked sonic and lyric architecture.
 2. Preserve unique intros and unique composition structures across songs.
 3. Keep style prompts at or below 1,000 characters and lyrics below 5,000 characters unless explicitly revised.
 4. Keep Visionary shipping ahead of The Human Syntax development.
@@ -114,13 +105,20 @@ LUMAN OS is active and GitHub-backed. A recent-conversation scan was completed o
 
 ### Remaining Legacy-Surface Cleanup
 
-1. Mirror high-value System Settings commands into root `COMMANDS.md`.
-2. Add the command-center update to older top-level changelogs.
-3. Review `DEPLOYMENT_INDEX.md`.
-4. Refresh the root dashboard and menu after the project-specific synchronization is complete.
+1. Mirror high-value System Settings, Boot, Retrieval, and Memory commands into older root surfaces where still useful.
+2. Review `DEPLOYMENT_INDEX.md`.
+3. Refresh older dashboards after source-of-truth synchronization is complete.
+
+## Private Open Loops
+
+Private family, financial, health, vehicle/home, and sensitive personal loops are intentionally not duplicated here. LUMAN Boot may read the authorized private-state index and surface only what is relevant.
 
 ## Recommended Next Move
 
 ```text
-Complete the In-Between release sequence, then perform the Infinite Bloom manuscript consolidation pass. Do not activate a fourth strategic front.
+Finish this state-sync pass, run the second Boot test, and verify that no expired July release task is presented as current.
 ```
+
+## Status
+
+Last synchronized: 2026-08-18
