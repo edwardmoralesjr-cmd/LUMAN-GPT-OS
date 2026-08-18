@@ -21,10 +21,11 @@ Archived        = historical source retained for provenance
 
 | ID | Domain | Project / System | State | Primary Source | Next Gate |
 |---|---|---|---|---|---|
-| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Maintain synchronized status, routing, and source discipline |
+| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Stabilize Boot + Retrieval, synchronize current state, then continue modular build |
 | SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
 | SYS-004 | System | Creative Ecosystem Engine | Foundation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Pilot normalized nodes without activating a new strategic front |
+| SYS-005 | System | LUMAN Memory + Retrieval | Foundation | `LUMAN_OS/memory/`, `LUMAN_OS/skills/`, private-vault state | Complete second Boot test and retrieval stress tests |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -38,8 +39,8 @@ Archived        = historical source retained for provenance
 | BOOK-007 | Books | Seventh Codex Biography | Incubating | `BOOKS/rose-codices/seventh-codex-biography/` | Maintain life-thread archive until active drafting begins |
 | BOOK-008 | Books | Master Book Portfolio | Maintenance | `LUMAN_OS/book_section/BOOK_IDEA_MASTER_CATALOG.md` | Recover missing original manuscripts and source files |
 | BOOK-009 | Books | The Immediate Field | Active Drafting | `BOOKS/the-immediate-field/` plus current manuscript assets | Recover Chapter 5, sync confirmed Chapters 4 and 6-9, then draft Chapter 10 |
-| MUSIC-001 | Music | Lucid Syntax | Active Shipping | `02_LUCID_SYNTAX/`, `lucid-syntax-promo-pro/` | Execute In-Between release and maintain artist identity |
-| MUSIC-002 | Music | Visionary | Active Shipping | Lucid Syntax vault and completed release assets | Release In-Between on 2026-07-24 and continue toward the album on 2026-09-25 |
+| MUSIC-001 | Music | Lucid Syntax | Active Shipping | `02_LUCID_SYNTAX/`, `lucid-syntax-promo-pro/` | Execute Visionary release assembly while maintaining artist identity |
+| MUSIC-002 | Music | Visionary | Active Shipping | Lucid Syntax vault and completed release assets | Complete release assembly and continue toward album release on 2026-09-25 |
 | MUSIC-003 | Music | Seven-Album Roadmap | Active Building | Lucid Syntax planning sources | Preserve sequence while avoiding premature expansion |
 | MUSIC-004 | Music | Infinite Bloom | Active Building | `MUSIC/INFINITE_BLOOM/` and Roseborn source-Codex files | Build the first definitive music body as a separate Spiral Crown Records project |
 | MUSIC-005 | Music | Damaged Grammar | Incubating | `MUSIC/DAMAGED_GRAMMAR/` | Preserve name and song registry until release intent and project identity are locked |
@@ -62,9 +63,11 @@ Archived        = historical source retained for provenance
 
 ```text
 [1] Life OS / family stability
-[2] Lucid Syntax — In-Between release and Visionary assembly
+[2] Lucid Syntax — Visionary release assembly for 2026-09-25
 [3] Infinite Bloom source-Codex reconciliation and twelve-dragon continuity
 ```
+
+The LUMAN Boot + Retrieval build is Foundation infrastructure and does not count as a fourth creative strategic front.
 
 The Immediate Field is preserved as Active Drafting and can advance whenever Edward explicitly opens it, but it does not silently create a fourth strategic front.
 
@@ -75,6 +78,17 @@ The Creative Ecosystem Engine is installed as Foundation infrastructure and does
 The Human Syntax is confirmed as Lucid Syntax Album 5 but remains background architecture during Visionary shipping.
 
 Damaged Grammar and the faceless podcast seed remain Incubating.
+
+## Freshness Resolution Note — 2026-08-18
+
+The first LUMAN Boot freshness audit detected that July release-state language was still presented as upcoming in aggregate status files.
+
+Resolution:
+
+- `In-Between` 2026-07-24 release gate is historical, not upcoming.
+- `Visionary` remains Active Shipping toward 2026-09-25.
+- LUMAN Boot + Retrieval is now an active Foundation system.
+- Aggregate operational files should be synchronized whenever a dated gate passes.
 
 ## Architecture Resolution Note
 
@@ -88,12 +102,12 @@ The Roseborn count conflict was resolved at Working Canon level on 2026-07-10:
 
 On 2026-07-16, `The Immediate Field` became the active parent manuscript for the general consciousness, sovereignty, Directional Engine, relational, and embodied-agency material. `The Algorithm of the Shadow` remains a separate AI-specific book. The older Architecture of Consciousness and Architect of Sovereignty projects remain preserved as tributary sources.
 
-## Recent Conversation Scan Note
-
-On 2026-07-21, LUMAN OS classified durable changes from conversations after the prior full sync. The scan identified advanced Immediate Field drafting, the In-Between release gate, the Infinite Bloom manuscript reconciliation, the separate Infinite Bloom music project, The Human Syntax Album 5 confirmation, and the official Damaged Grammar project name.
-
 ## Recommended Next Move
 
 ```text
-Complete the In-Between release sequence, then continue the Infinite Bloom manuscript consolidation without opening a fourth strategic front.
+Complete the second LUMAN Boot test and retrieval stress tests, then continue Visionary release assembly and Infinite Bloom consolidation without opening a fourth strategic front.
 ```
+
+## Status
+
+Last synchronized: 2026-08-18
