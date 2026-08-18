@@ -2,9 +2,11 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, and combined daily-operations validation are active.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, combined daily-operations validation, and LUMAN HUD V1 are active in the repository.
 
-The combined daily-operations test passed: Calendar, Gmail, public GitHub state, authorized private continuity, and LUMAN recommendations remained correctly separated. Calendar/email contents stayed ephemeral, no Calendar/Gmail writes occurred, and inbox urgency did not become human priority automatically.
+HUD V1 is merged into `main` as a public-safe, read-first web interface. It reads public GitHub operating state directly, displays private brain / Calendar / Gmail as bridge-required rather than exposing them publicly, and prepares bounded LUMAN commands without silently executing them. The existing GitHub Pages workflow was updated to package the HUD at `/luman-hud/` alongside Gatherer's Ascension.
+
+Production Pages verification remains an open deployment check. Private/live-source HUD data remains intentionally unavailable in the public browser until an authenticated minimum-data bridge exists.
 
 Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
@@ -12,13 +14,14 @@ Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. In
 
 ### LUMAN System Build
 
-1. Design the LUMAN HUD information architecture and source contract.
-2. Build a read-first HUD prototype over Boot, Calendar Context, Inbox Context, active projects, open loops, and private-minimum continuity.
-3. Ensure the HUD renders source freshness and source ownership rather than caching live state as its own truth.
-4. Add bounded action controls only after read-state rendering is reliable.
-5. Preserve Calendar/email contents as ephemeral unless a separate authorized Memory Route creates a minimal durable fact.
-6. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
-7. Build voice only after HUD/data stability.
+1. Verify the merged HUD publishes successfully through the GitHub Pages workflow at the `/luman-hud/` route without disturbing Gatherer's Ascension at the existing root.
+2. Verify the production HUD can re-read current public GitHub sources and render Top 3, strategic fronts, active projects, open loops, constitution status, and the current build gate.
+3. Build an authenticated minimum-data LUMAN bridge for private-vault continuity, Calendar Context, and Inbox Context.
+4. Ensure the bridge returns summaries / minimum necessary display data rather than raw private notes, raw email bodies, or unnecessary Calendar detail.
+5. Add bounded authenticated action dispatch only after the bridge read path remains reliable and existing write-authorization rules are preserved.
+6. Keep HUD cache/state disposable; authoritative truth remains with owning sources.
+7. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
+8. Build voice only after HUD/data/action stability.
 
 ### Human Foundation
 
@@ -106,7 +109,7 @@ Current loops:
 
 ### Remaining Legacy-Surface Cleanup
 
-1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, operational skills, Calendar/Gmail context, and erasure commands into older root surfaces where still useful.
+1. Mirror high-value System Settings, Boot, Retrieval, Memory Control, operational skills, Calendar/Gmail context, HUD commands, and erasure commands into older root surfaces where still useful.
 2. Review `DEPLOYMENT_INDEX.md`.
 3. Refresh older dashboards after source-of-truth synchronization is complete.
 
@@ -117,7 +120,7 @@ Private family, financial, health, vehicle/home, and sensitive personal loops ar
 ## Recommended Next Move
 
 ```text
-Begin LUMAN HUD architecture as a read-first interface over the source-grounded operating system.
+Verify the production HUD deployment and live public-source rendering, then build the authenticated minimum-data bridge.
 ```
 
 ## Status

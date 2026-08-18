@@ -21,15 +21,15 @@ Archived        = historical source retained for provenance
 
 | ID | Domain | Project / System | State | Primary Source | Next Gate |
 |---|---|---|---|---|---|
-| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Begin HUD architecture as a read-first interface over the validated daily operating layer |
+| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Verify HUD V1 production deployment, then build the authenticated minimum-data private/live-source bridge |
 | SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data outside authorized scope |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
 | SYS-004 | System | Creative Ecosystem Engine | Foundation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Pilot normalized nodes without activating a new strategic front |
 | SYS-005 | System | LUMAN Memory + Retrieval | Foundation | `LUMAN_OS/memory/`, `LUMAN_OS/skills/`, private-vault state | Enforce erasure classes, correction/supersession/deletion controls, and provenance under real use |
 | SYS-006 | System | LUMAN Boot + Dynamic Root | Foundation | `LUMAN_OS/boot/`, `LUMAN_OS/ROOT_MENU.md` | Keep live state source-grounded and prevent static interface drift |
 | SYS-007 | System | LUMAN Operational Skills | Foundation | `LUMAN_OS/skills/` | Maintain combined Morning Brief / Weekly Sync behavior and tune only from observed friction |
-| SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | Calendar + Gmail bounded reads validated together; preserve ephemeral/read-first boundaries |
-| SYS-009 | System | LUMAN HUD | Active Building | `LUMAN_OS/interface/` plus Boot/live-source contracts | Design information architecture and read-first prototype without creating a new source of truth |
+| SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | Calendar + Gmail bounded reads validated together; next interface gate is authenticated minimum-data bridge exposure |
+| SYS-009 | System | LUMAN HUD | Active Building | `LUMAN_OS/hud/` plus Pages workflow and Boot/live-source contracts | Verify `/luman-hud/` production rendering, then connect authenticated private/live summaries without exposing raw source contents |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -53,7 +53,7 @@ Archived        = historical source retained for provenance
 | WORK-001 | Work | Work / Quality Systems | Maintenance | `05_WORK_QUALITY_SYSTEMS/` | Create modern bridge around reusable non-confidential tools |
 | CREATE-001 | Creative | Creative Vault | Maintenance | `07_KNOWLEDGE_PACKS/` and project folders | Classify new seeds without turning every idea into an active project |
 | GAME-001 | Games | LUMAN Game Lab | Maintenance | `LUMAN_OS/game_lab/` | Maintain project homes, shared systems, and public-safe game-development structure |
-| GAME-002 | Games | Gatherer's Ascension | Incubating | `LUMAN_OS/game_lab/gatherers_ascension/PROJECT_HOME.md` and `app/` | Publish the validated playable prototype through a repository-level GitHub Pages workflow |
+| GAME-002 | Games | Gatherer's Ascension | Incubating | `LUMAN_OS/game_lab/gatherers_ascension/PROJECT_HOME.md` and `app/` | Preserve existing GitHub Pages root deployment while sharing the Pages artifact with LUMAN HUD under `/luman-hud/` |
 
 ## Active Strategic Front Limit
 
@@ -93,8 +93,16 @@ Completed foundation and validation work includes:
 - Inbox Context + bounded Gmail read integration
 - first live Morning Brief composition
 - combined Calendar + Gmail + public GitHub + authorized private continuity validation
+- LUMAN HUD V1 information architecture and source contract
+- public-safe responsive HUD web interface
+- live public GitHub source renderer for priorities, fronts, projects, open loops, system gate, and constitution status
+- bounded command deck that prepares commands without silent execution
+- Pages workflow packaging HUD under `/luman-hud/` while preserving Gatherer's Ascension at the existing root
+- HUD V1 merged into `main`
 
 Combined daily operations passed source-separation, minimum-disclosure, and recommendation-vs-obligation tests. Calendar and Gmail remain ephemeral live sources by default and do not authorize writes or persistence.
+
+HUD V1 preserves the same rule at the interface layer: public GitHub may be read directly, while private-vault, Calendar, Gmail, and other sensitive material require an authenticated minimum-data bridge before browser display.
 
 ## Freshness Resolution Note — 2026-08-18
 
@@ -113,7 +121,7 @@ The Roseborn count conflict remains resolved at Working Canon level:
 ## Recommended Next Move
 
 ```text
-Begin LUMAN HUD architecture as a read-first interface over Boot, Calendar, Inbox, public/private state, projects, and open loops.
+Verify LUMAN HUD V1 at the production `/luman-hud/` route and validate live public-source rendering, then build the authenticated minimum-data bridge for private/live sources.
 ```
 
 ## Status
