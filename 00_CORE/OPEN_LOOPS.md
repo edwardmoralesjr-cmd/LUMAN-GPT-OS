@@ -2,21 +2,21 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, and read-only Google Calendar integration are active.
+LUMAN OS is active and GitHub-backed. On 2026-08-18 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, read-only Google Calendar integration, and the first live Morning Brief composition are active.
 
 The July operational state was audited and synchronized. `In-Between` is historical rather than an upcoming release gate. Visionary is the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
 The memory-control test verified correction, supersession, and current-state deletion. It also confirmed that ordinary Git deletion does not erase prior committed history, so LUMAN distinguishes durable-private memory from erasure-sensitive memory.
 
-The first operational skill pack now includes Weekly Sync, Family Plan, Project Review, Open Loop Review, Capture Idea, Release Status, and Evening Close. Google Calendar is available as bounded ephemeral schedule context; Calendar writes remain explicit user-authorized actions.
+The first operational skill pack includes Weekly Sync, Family Plan, Project Review, Open Loop Review, Capture Idea, Release Status, and Evening Close. Google Calendar is available as bounded ephemeral schedule context; Calendar writes remain explicit user-authorized actions. The first live Morning Brief test passed source separation and private-minimum checks.
 
 ## Current Open Loops
 
 ### LUMAN System Build
 
-1. Run the first real Morning Brief or Weekly Sync through the new operational skill composition.
-2. Observe whether Calendar context, GitHub continuity, private open loops, and recommendations remain correctly separated in real use.
-3. Add Gmail as the next bounded live-source integration for important-message context.
+1. Add Gmail as the next bounded ephemeral live-source integration for important-message context.
+2. Test Morning Brief / Weekly Sync with Calendar + Gmail + GitHub/private continuity while keeping schedule, inbox, memory, and recommendations distinguishable.
+3. Keep inbox urgency from automatically becoming human priority.
 4. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
 5. Build the HUD only after the daily operating layer remains reliable under real use.
 6. Build voice after the brain, memory, retrieval, control, and daily operating layers are stable.
@@ -118,7 +118,7 @@ Private family, financial, health, vehicle/home, and sensitive personal loops ar
 ## Recommended Next Move
 
 ```text
-Run the first real Morning Brief or Weekly Sync using GitHub + authorized private state + Calendar Context, then add Gmail as the next bounded live source.
+Add Gmail as the next bounded live source, then test a combined Morning Brief / Weekly Sync without allowing inbox urgency to override human priorities.
 ```
 
 ## Status
