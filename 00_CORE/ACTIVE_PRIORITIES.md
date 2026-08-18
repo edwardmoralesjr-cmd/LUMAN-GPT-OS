@@ -9,6 +9,8 @@
 - Use the Master Command Center for cross-project state, dependencies, and next gates.
 - Use the Source-of-Truth Matrix when memory, chat, modern modules, legacy vaults, canon, and archives disagree.
 - Use LUMAN Boot + Retrieval to reconstruct current state from sources and flag stale dated claims before presenting them as current.
+- Use transaction history so durable state remains explainable after the fact.
+- Distinguish private durability from guaranteed erasability; do not route erasure-sensitive private information into plaintext Git history by default.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Keep Life OS and family peace beneath all creative expansion.
 - Treat `Visionary` as the active Lucid Syntax shipping front with a locked album release date of 2026-09-25.
@@ -32,8 +34,8 @@
 ## Current System Build Gate
 
 ```text
-LUMAN Boot + Retrieval is active.
-Current system task: synchronize stale operational state, run a second boot, then stress-test retrieval.
+LUMAN Boot, Retrieval, Transaction History, and Dynamic Root Shell are active.
+Current system task: finalize erasure-aware memory control and correction/deletion commands.
 ```
 
 This system-maintenance gate does not create a fourth creative strategic front.
@@ -61,9 +63,9 @@ Grand Generals remains Active Building and returns to the deep-building front at
 ## Active LUMAN Development Gate
 
 ```text
-[1] Synchronize stale public operational state
-[2] Run second source-grounded boot
-[3] Stress-test retrieval across public/private/current/stale/not-found cases
+[1] Merge erasure-aware memory control
+[2] Enforce storage classes for public/private/erasure-sensitive/transient/secret data
+[3] Expand the small-skill library and then connect live external sources
 ```
 
 ## Completed Strategic Gates
@@ -80,7 +82,14 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] Human Sovereignty Constitution installed
 [✓] Public/private two-brain memory foundation installed
 [✓] Live memory routing tested
-[✓] LUMAN Boot + source-grounded retrieval foundation installed
+[✓] LUMAN Boot + source-grounded retrieval installed
+[✓] Public operational state synchronized after freshness audit
+[✓] Second Boot test passed
+[✓] Retrieval stress-test suite passed
+[✓] Transaction-history and provenance layer installed
+[✓] Dynamic Root Shell installed
+[✓] Synthetic correction, supersession, and current-state deletion test completed
+[✓] Git historical-retention limitation identified and addressed in memory law
 ```
 
 ## Immediate Field Recovery Gate
@@ -93,7 +102,7 @@ Then synchronize confirmed Chapters 4 and 6-9 before drafting Chapter 10: The Di
 ## Recommended Next Move
 
 ```text
-Complete the LUMAN state-sync pass and second boot, then return normal execution focus to Visionary shipping and Infinite Bloom consolidation.
+Finalize erasure-aware memory control, then return normal execution focus to Visionary shipping and Infinite Bloom consolidation while the next LUMAN skill layer is built modularly.
 ```
 
 ## Status

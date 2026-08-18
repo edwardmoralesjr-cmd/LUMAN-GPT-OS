@@ -21,11 +21,12 @@ Archived        = historical source retained for provenance
 
 | ID | Domain | Project / System | State | Primary Source | Next Gate |
 |---|---|---|---|---|---|
-| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Stabilize Boot + Retrieval, synchronize current state, then continue modular build |
-| SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data |
+| SYS-001 | System | LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Stabilize erasure-aware memory control, then expand small skills and live-source integrations |
+| SYS-002 | System | LUMAN Autopilot | Foundation | `LUMAN_OS/system_settings/AUTOPILOT_OPERATING_LAW.md` | Apply classification and routing without storing sensitive data outside authorized scope |
 | SYS-003 | System | GPT Builder Lab | Maintenance | `LUMAN_OS/gpt_builder_lab/`, `04_GPT_BUILDER_LAB/` | Reconcile module registry with active GPT projects |
 | SYS-004 | System | Creative Ecosystem Engine | Foundation | `LUMAN_OS/system_settings/modules/creative_ecosystem_engine/` | Pilot normalized nodes without activating a new strategic front |
-| SYS-005 | System | LUMAN Memory + Retrieval | Foundation | `LUMAN_OS/memory/`, `LUMAN_OS/skills/`, private-vault state | Complete second Boot test and retrieval stress tests |
+| SYS-005 | System | LUMAN Memory + Retrieval | Foundation | `LUMAN_OS/memory/`, `LUMAN_OS/skills/`, private-vault state | Enforce erasure classes, correction/supersession/deletion controls, and provenance under real use |
+| SYS-006 | System | LUMAN Boot + Dynamic Root | Foundation | `LUMAN_OS/boot/`, `LUMAN_OS/ROOT_MENU.md` | Keep live state source-grounded and prevent static interface drift |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -67,27 +68,35 @@ Archived        = historical source retained for provenance
 [3] Infinite Bloom source-Codex reconciliation and twelve-dragon continuity
 ```
 
-The LUMAN Boot + Retrieval build is Foundation infrastructure and does not count as a fourth creative strategic front.
+LUMAN infrastructure work remains Foundation maintenance and does not count as a fourth creative strategic front.
 
 The Immediate Field is preserved as Active Drafting and can advance whenever Edward explicitly opens it, but it does not silently create a fourth strategic front.
 
 Grand Generals remains Active Building and is queued to resume at Chapter 5 clearance after the Infinite Bloom reconciliation pass.
 
-The Creative Ecosystem Engine is installed as Foundation infrastructure and does not create a fourth strategic front.
+The Human Syntax remains background architecture during Visionary shipping. Damaged Grammar and the faceless podcast seed remain Incubating.
 
-The Human Syntax is confirmed as Lucid Syntax Album 5 but remains background architecture during Visionary shipping.
+## LUMAN Foundation Resolution Note — 2026-08-18
 
-Damaged Grammar and the faceless podcast seed remain Incubating.
+Completed foundation work includes:
+
+- Human Sovereignty Constitution
+- two-brain memory foundation
+- live Memory Router
+- source-grounded Boot + Retrieval
+- freshness and conflict handling
+- transaction history / provenance
+- Dynamic Root Shell
+- repeatable retrieval stress tests
+- correction / supersession / current-state deletion test
+- erasure policy distinguishing Git durability from guaranteed erasure
+
+Ordinary Git deletion is now explicitly classified as current-state deletion rather than historical purge.
 
 ## Freshness Resolution Note — 2026-08-18
 
-The first LUMAN Boot freshness audit detected that July release-state language was still presented as upcoming in aggregate status files.
-
-Resolution:
-
 - `In-Between` 2026-07-24 release gate is historical, not upcoming.
 - `Visionary` remains Active Shipping toward 2026-09-25.
-- LUMAN Boot + Retrieval is now an active Foundation system.
 - Aggregate operational files should be synchronized whenever a dated gate passes.
 
 ## Architecture Resolution Note
@@ -105,7 +114,7 @@ On 2026-07-16, `The Immediate Field` became the active parent manuscript for the
 ## Recommended Next Move
 
 ```text
-Complete the second LUMAN Boot test and retrieval stress tests, then continue Visionary release assembly and Infinite Bloom consolidation without opening a fourth strategic front.
+Finalize erasure-aware memory control, then expand small operational skills while continuing Visionary shipping and Infinite Bloom consolidation without opening a fourth strategic front.
 ```
 
 ## Status

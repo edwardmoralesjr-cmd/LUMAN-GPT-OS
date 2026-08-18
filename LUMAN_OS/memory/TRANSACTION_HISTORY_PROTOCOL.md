@@ -26,10 +26,12 @@ What file owns the current truth?
 ```text
 CREATE
 UPDATE
+CORRECT
 SUPERSEDE
 ARCHIVE
-DELETE
-CORRECT
+DELETE_CURRENT
+PURGE_REQUESTED
+PURGE_VERIFIED
 LINK
 UNLINK
 ```
@@ -53,6 +55,7 @@ reason
 related_transaction
 related_commit
 open_loop_effect
+erasure_class
 ```
 
 ## Public Brain Rule
@@ -88,35 +91,83 @@ When Edward asks why LUMAN knows something:
 2. Read its provenance.
 3. Check the transaction history or Git commit history.
 4. Identify the original source type and human authorization.
-5. Identify later corrections, supersessions, or archive events.
+5. Identify later corrections, supersessions, archives, or deletions.
 6. Explain current truth versus historical truth.
+7. If deletion occurred, state whether it was current-state deletion or verified historical purge.
 
 ## Correction Rule
 
-A correction should not silently erase provenance unless Edward explicitly requests deletion.
+A correction should not silently erase provenance.
 
 Preferred pattern:
 
 ```text
-Old record -> superseded or corrected
-New record -> current
+Old record -> corrected or superseded
+New/current record -> authoritative for the domain
 Transaction log -> links the change
 ```
 
+Retrieval must prefer the current record while preserving the ability to explain the correction chain.
+
+## Supersession Rule
+
+Supersession means an older record remains historical but no longer governs current truth.
+
+A superseded record must be clearly marked so retrieval does not blend historical and current values.
+
+## Git Deletion Reality
+
+Ordinary deletion from a Git-backed repository removes the file from the current tree but does **not** erase earlier committed versions from Git history.
+
+Therefore LUMAN must distinguish:
+
+```text
+DELETE_CURRENT
+= remove from current working state
+= earlier Git history may still contain prior content
+
+PURGE_VERIFIED
+= historical copies have been removed or rendered irrecoverable through a separately verified purge mechanism
+```
+
+LUMAN must never report `PURGE_VERIFIED` merely because the current file returns Not Found.
+
 ## Deletion Rule
 
-When Edward explicitly requests deletion:
+When Edward explicitly requests deletion of a Git-backed memory:
 
-- delete the content within authorized scope;
-- retain only the minimum audit metadata necessary if appropriate and not contrary to the deletion request;
-- do not keep a hidden duplicate of deleted private content.
+1. Remove the current content within authorized scope.
+2. Do not create a new hidden duplicate.
+3. Retain only minimal audit metadata when appropriate and when not contrary to the request.
+4. Disclose that ordinary Git history may retain earlier committed content.
+5. Record the event as `DELETE_CURRENT`, not full erasure.
+
+If Edward explicitly requests complete purge or irreversible erasure:
+
+- treat it as a separate high-impact operation;
+- identify every storage surface that may contain the content;
+- do not claim completion until historical retention has been independently verified as removed or rendered irrecoverable;
+- if the available tools cannot provide that guarantee, state the limitation clearly.
+
+## Erasure-Sensitive Storage Rule
+
+Information that may require reliable future erasure should not be persisted as plaintext in Git history.
+
+Route it according to:
+
+```text
+LUMAN_OS/memory/ERASURE_POLICY.md
+```
 
 ## Sovereignty Rule
 
 Audit history exists to increase contestability and transparency. It does not make historical records authoritative over Edward's current identity, goals, beliefs, or decisions.
 
+A system is not sovereign-friendly if it claims a stronger deletion guarantee than its storage architecture can actually provide.
+
 ## Status
 
 Status: Active protocol
-Version: v1.0
+Version: v1.1
 Created: 2026-08-18
+Updated: 2026-08-18

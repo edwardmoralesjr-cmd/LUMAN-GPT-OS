@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Open the file-native LUMAN memory architecture, live memory router, retrieval protocol, transaction history, freshness rules, privacy boundary, graph rules, and note schema.
+Open the LUMAN memory architecture, live router, retrieval protocol, transaction history, erasure policy, freshness rules, privacy boundary, graph rules, and memory-control tools.
 
 ## Core Sources
 
@@ -16,12 +16,14 @@ Open the file-native LUMAN memory architecture, live memory router, retrieval pr
 LUMAN_OS/memory/LIVE_MEMORY_ROUTER.md
 LUMAN_OS/memory/RETRIEVAL_PROTOCOL.md
 LUMAN_OS/memory/TRANSACTION_HISTORY_PROTOCOL.md
+LUMAN_OS/memory/ERASURE_POLICY.md
 LUMAN_OS/memory/FRESHNESS_RULES.md
 LUMAN_OS/memory/MEMORY_ARCHITECTURE.md
 LUMAN_OS/memory/KNOWLEDGE_NOTE_SCHEMA.md
 LUMAN_OS/memory/GRAPH_LINKING_PROTOCOL.md
 LUMAN_OS/memory/PUBLIC_PRIVATE_MEMORY_BOUNDARY.md
 LUMAN_OS/skills/memory_route/SKILL.md
+LUMAN_OS/skills/memory_control/SKILL.md
 LUMAN_OS/skills/retrieve_context/SKILL.md
 LUMAN_OS/skills/explain_memory/SKILL.md
 ```
@@ -37,11 +39,16 @@ LUMAN_OS/skills/explain_memory/SKILL.md
 /recall: [topic]
 /explain memory: [topic]
 /why do you know: [topic]
+/correct memory: [topic] -> [replacement]
+/supersede memory: [topic] -> [replacement]
+/delete memory: [topic]
+/purge memory: [topic]
 /what is coming up
 /memory status
 /memory architecture
 /retrieval protocol
 /transaction history
+/erasure policy
 /freshness check
 /graph protocol
 /note schema
@@ -82,7 +89,31 @@ who said that?
 what changed this record?
 ```
 
-Persistence remains conservative. Retrieval remains source-grounded. Provenance explanations must distinguish human-stated information, sourced information, inference, and AI-generated structure.
+## Natural-Language Memory-Control Triggers
+
+```text
+that memory is wrong
+correct what you remember about...
+replace that memory
+that is no longer true
+forget that from LUMAN
+delete that memory
+purge that completely
+erase that everywhere you control
+```
+
+## Storage Classes
+
+```text
+Public Durable
+Private Durable
+Erasure-Sensitive Private
+Transient
+Archive
+Secret / External Secure Store
+```
+
+Private Git-backed memory is durable but not guaranteed erasable. Erasure-sensitive private information must not be routed into plaintext Git history by default.
 
 ## Live Transaction Flow
 
@@ -91,9 +122,10 @@ Input
 -> Memory Intent
 -> Domain / Owner
 -> Privacy
+-> Erasure Class
 -> Provenance
 -> Existing Source Check
--> Public / Private / Transient Route
+-> Public / Private-Durable / Transient / External-Secure Route
 -> Persist
 -> Graph Link
 -> Open-Loop Check
@@ -115,6 +147,19 @@ Question
 -> Answer
 ```
 
+## Memory-Control Flow
+
+```text
+Correction / deletion intent
+-> Retrieve current owner
+-> Determine CORRECT / SUPERSEDE / DELETE_CURRENT / PURGE_REQUESTED
+-> Apply authorized change
+-> Remove active references when appropriate
+-> Record minimum transaction metadata
+-> Verify current state
+-> Disclose historical-retention status
+```
+
 ## Provenance Explanation Flow
 
 ```text
@@ -122,7 +167,7 @@ Claim
 -> Current Owner
 -> Source Provenance
 -> Transaction / Git History
--> Corrections / Supersessions
+-> Corrections / Supersessions / Deletions
 -> Current Status
 -> Explanation
 ```
@@ -134,17 +179,21 @@ If it is stored, preserve provenance.
 If it is not stored, do not pretend it was stored.
 Retrieve before claiming memory.
 Durable state should be explainable after the fact.
+Private does not mean guaranteed erasable.
+A 404 current path does not prove historical purge.
 ```
 
 ## Two-Brain Rule
 
-Public-safe system structure belongs in the public LUMAN brain. Personal or sensitive continuity belongs in an authorized private source.
+Public-safe system structure belongs in the public LUMAN brain. Durable personal continuity may belong in the authorized private Git-backed brain when historical retention is acceptable.
+
+Information that may require reliable complete erasure later should remain transient or use a future verified erasable store.
 
 Memory supports human continuity. It does not define the human permanently.
 
 ## Status
 
-Status: Active live routing, retrieval, and transaction history  
-Version: v1.3  
+Status: Active routing, retrieval, provenance, and memory control  
+Version: v1.4  
 Created: 2026-08-18  
 Updated: 2026-08-18

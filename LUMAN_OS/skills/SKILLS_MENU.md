@@ -40,12 +40,31 @@ LUMAN_OS/skills/explain_memory/SKILL.md
 
 ### `/memory route`
 
-Classify durable information, preserve provenance, and route it to the correct public/private/transient owner.
+Classify durable information, preserve provenance, assign an erasure class, and route it to the correct public, private-durable, transient, or external-secure owner.
 
 Source:
 
 ```text
 LUMAN_OS/skills/memory_route/SKILL.md
+```
+
+### Memory Control
+
+Commands:
+
+```text
+/correct memory: [topic] -> [replacement]
+/supersede memory: [topic] -> [replacement]
+/delete memory: [topic]
+/purge memory: [topic]
+```
+
+Apply explicit human correction, supersession, current-state deletion, or complete-purge requests while preserving provenance and accurately describing Git retention limits.
+
+Source:
+
+```text
+LUMAN_OS/skills/memory_control/SKILL.md
 ```
 
 ### `/project status: [project]`
@@ -109,6 +128,14 @@ Memory Explanation
 ```
 
 ```text
+Memory Correction
+-> Retrieve Context
+-> Memory Control
+-> Transaction History
+-> Retrieve Context verification
+```
+
+```text
 Morning Brief
 -> Retrieve Context
 -> Project Status
@@ -119,6 +146,6 @@ Morning Brief
 ## Status
 
 Status: Active  
-Version: v1.2  
+Version: v1.3  
 Created: 2026-08-18  
 Updated: 2026-08-18

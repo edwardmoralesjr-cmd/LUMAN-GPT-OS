@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Turn natural-language memory intent into a controlled, provenance-preserving memory transaction across LUMAN's public and private brains.
+Turn natural-language memory intent into a controlled, provenance-preserving memory transaction across LUMAN's public, durable-private, transient, and future erasable-memory surfaces.
 
 ## Governing Sources
 
@@ -11,6 +11,7 @@ LUMAN_OS/system_settings/HUMAN_SOVEREIGNTY_CONSTITUTION.md
 LUMAN_OS/skills/memory_route/SKILL.md
 LUMAN_OS/memory/MEMORY_ARCHITECTURE.md
 LUMAN_OS/memory/PUBLIC_PRIVATE_MEMORY_BOUNDARY.md
+LUMAN_OS/memory/ERASURE_POLICY.md
 LUMAN_OS/memory/KNOWLEDGE_NOTE_SCHEMA.md
 ```
 
@@ -22,13 +23,14 @@ Natural-language input
 -> identify domain and owner
 -> classify durability
 -> classify privacy
+-> classify erasure requirement
 -> identify provenance
 -> search for existing source of truth
 -> choose smallest valid destination
 -> persist only within authorized scope
 -> link related nodes when useful
 -> update live state only if the item creates an active commitment or open loop
--> report exactly what changed
+-> report exactly what changed and what deletion guarantees apply
 ```
 
 ## Memory Intent Triggers
@@ -46,42 +48,47 @@ record this decision
 keep this for later
 ```
 
-Implicit memory intent may be recognized when information is clearly durable and project-relevant, but persistence must remain conservative. If privacy, ownership, or persistence intent is materially ambiguous, classify first and ask before writing.
+Implicit memory intent may be recognized when information is clearly durable and project-relevant, but persistence must remain conservative.
 
-## Transaction Classes
+## Storage Classes
 
-### PUBLIC-SAFE
+### PUBLIC DURABLE
 
-Use for reusable architecture, public project doctrine, non-sensitive canon, templates, commands, and explicitly public project state.
+Reusable architecture, public project doctrine, non-sensitive canon, templates, commands, and explicitly public project state.
 
-Default repository:
+### PRIVATE DURABLE
 
-```text
-edwardmoralesjr-cmd/LUMAN-GPT-OS
-```
+Private continuity Edward explicitly wants persisted and can tolerate remaining in private Git history.
 
-### PRIVATE
+This class is private, not guaranteed erasable.
 
-Use for personal reflections, private life context, family information, private financial state, health context, sensitive decisions, raw transcripts, and other personal continuity.
+### ERASURE-SENSITIVE PRIVATE
 
-Default repository:
+Information for which reliable future complete removal may matter.
 
-```text
-edwardmoralesjr-cmd/LUMAN-GPT-Command-Center
-LUMAN_PRIVATE_VAULT/
-```
+Do not persist this as plaintext Git history by default. Until a verified erasable store exists, use transient handling or a minimal non-sensitive reference.
 
-### SENSITIVE / SECRET
+### SECRET
 
-Credentials, passwords, API keys, seed phrases, encryption keys, access tokens, and similar secrets must not be stored in ordinary markdown memory.
+Credentials, passwords, API keys, seed phrases, encryption keys, recovery codes, access tokens, and similar secrets must not be stored in ordinary LUMAN Markdown.
 
 ### TRANSIENT
 
-Do not persist when the information is useful only for the current interaction or the user declines persistence.
+Do not persist when the information is useful only for the current interaction, persistence is declined, or the information is erasure-sensitive and no verified erasable store is available.
 
 ### ARCHIVE
 
 Use when preserving superseded material is useful but it should no longer drive current state.
+
+## Erasure Classification
+
+Before durable private persistence, evaluate:
+
+```text
+Could Edward reasonably want this completely erased later?
+```
+
+If yes, classify it as erasure-sensitive unless Edward explicitly chooses durable Git-backed retention with the limitation understood.
 
 ## Provenance Labels
 
@@ -108,26 +115,29 @@ Before creating a new note:
 3. Create a new note only when the information has independent durable value or no appropriate source exists.
 4. Preserve links to related nodes rather than duplicating large amounts of content.
 
-## Decision Record Rule
+## Correction Rule
 
-For consequential decisions, prefer a private decision record containing:
+Current explicit human correction outranks prior stored memory.
+
+Use `CORRECT` when the same record remains the current owner and `SUPERSEDE` when a newer record replaces an older one.
+
+Do not silently blend old and new values.
+
+## Deletion Rule
+
+For Git-backed memory:
 
 ```text
-Decision
-Date
-Goal / objective
-Known facts
-Uncertainties
-Options considered
-Tradeoffs
-Edward's decision
-AI recommendation, if any
-Provenance
-Related nodes
-Review trigger, if any
+DELETE_CURRENT
+= remove from current state
+= earlier Git history may remain
 ```
 
-LUMAN's recommendation must remain distinguishable from Edward's decision.
+Do not report complete erasure unless a separate purge has been verified.
+
+## Decision Record Rule
+
+For consequential decisions, prefer a private decision record that distinguishes Edward's decision from any LUMAN recommendation.
 
 ## Open-Loop Rule
 
@@ -141,10 +151,11 @@ After a successful transaction, report:
 
 ```text
 Memory Transaction: STORED
-Classification: [public-safe/private/archive/etc.]
+Storage class: [public durable/private durable/etc.]
 Domain: [domain]
 Destination: [repository/path]
 Provenance: [label]
+Erasure class: [historical retention expected / erasable / transient]
 Graph links: [links or none]
 Open-loop update: [yes/no]
 Reason: [short explanation]
@@ -154,15 +165,18 @@ If nothing was written:
 
 ```text
 Memory Transaction: NOT STORED
-Reason: [transient / ambiguous / sensitive-secret / declined / duplicate]
+Reason: [transient / erasure-sensitive / secret / ambiguous / declined / duplicate]
 ```
 
 ## Sovereignty Rule
 
-The existence of a memory record does not grant that record authority over Edward's current identity, goals, beliefs, or decisions. Current explicit instruction may correct, supersede, archive, or delete prior memory.
+The existence of a memory record does not grant that record authority over Edward's current identity, goals, beliefs, or decisions. Current explicit instruction may correct, supersede, archive, or delete current memory.
+
+LUMAN must not confuse private storage with guaranteed erasure.
 
 ## Status
 
 Status: Active
-Version: v1.0
+Version: v1.1
 Created: 2026-08-18
+Updated: 2026-08-18
