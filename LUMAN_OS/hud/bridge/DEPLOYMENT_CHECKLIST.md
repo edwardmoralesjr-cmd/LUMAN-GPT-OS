@@ -79,11 +79,13 @@ optional injected email header agrees with JWT identity
 
 Create a least-privilege token able to read only the private command-center repository needed by the bridge.
 
-Store it as the encrypted environment secret:
+Store it as the encrypted GitHub Actions environment secret:
 
 ```text
-GITHUB_PRIVATE_TOKEN
+LUMAN_PRIVATE_REPO_TOKEN
 ```
+
+Do not create a GitHub Actions secret named `GITHUB_PRIVATE_TOKEN`; GitHub reserves the `GITHUB_` prefix. The activation workflow maps `LUMAN_PRIVATE_REPO_TOKEN` to the Worker's internal `GITHUB_PRIVATE_TOKEN` binding at deployment time.
 
 Do not store the token in repository files or HUD browser code.
 
@@ -121,7 +123,7 @@ Cloudflare Access is enabled
 Google OAuth is read-only
 ```
 
-The workflow must refuse activation if `TEAM_DOMAIN`, `POLICY_AUD`, or any required private/live-source credential is missing.
+The workflow must refuse activation if `TEAM_DOMAIN`, `POLICY_AUD`, `LUMAN_PRIVATE_REPO_TOKEN`, or any required private/live-source credential is missing.
 
 ## 8. Verify Fail-Closed Authentication
 
