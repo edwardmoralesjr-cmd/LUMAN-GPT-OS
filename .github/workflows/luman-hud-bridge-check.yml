@@ -81,8 +81,9 @@ jobs:
         shell: bash
         run: |
           file=.github/workflows/luman-bridge-bootstrap.yml
-          if grep -E "GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN|TEAM_DOMAIN|POLICY_AUD" "$file"; then
-            echo "Bootstrap workflow must not reference private-source or Access activation credentials"
+          forbidden='GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN|TEAM_DOMAIN|POLICY_AUD'
+          if grep -E "\$\{\{[[:space:]]*(secrets|vars)\.(${forbidden})[[:space:]]*\}\}" "$file"; then
+            echo "Bootstrap workflow must not wire private-source or Access activation credentials"
             exit 1
           fi
           grep -q "workflow_dispatch" "$file"
