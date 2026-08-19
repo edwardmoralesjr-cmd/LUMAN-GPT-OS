@@ -14,7 +14,8 @@
 - Calendar and Gmail writes remain explicit user-authorized actions.
 - Keep the public HUD public-safe: public GitHub may be read directly, while private-vault, Calendar, and Gmail context must cross only the authenticated minimum-data bridge.
 - Treat Bridge V1 as read-only: no action endpoints, no durable bridge cache, no raw email bodies, no Calendar descriptions/attendees, and no full private-note delivery.
-- Use the two-stage bridge deployment law: bootstrap the Worker without private-source credentials, enable Cloudflare Access, then activate least-privilege private/live reads.
+- Use the two-stage bridge deployment law: bootstrap the Worker without private-source credentials, enable Cloudflare Access, configure JWT issuer/audience validation, then activate least-privilege private/live reads.
+- Require Bridge V1 to validate `Cf-Access-Jwt-Assertion` cryptographically at the Worker boundary before trusting authenticated identity.
 - Keep Life OS and family peace beneath all creative expansion.
 - Limit the default strategic portfolio to human foundation, one shipping project, and one deep-building project.
 - Treat `Visionary` as the active Lucid Syntax shipping front toward 2026-09-25.
@@ -35,15 +36,17 @@
 ## Current System Build Gate
 
 ```text
-LUMAN HUD V1, Bridge V1, and the secure two-stage Cloudflare deployment workflows are merged into main.
-Bridge CI now validates Worker/HUD syntax, the read-only/no-store boundary,
-bootstrap credential separation, activation safety gates, and manual-only deployment behavior.
+LUMAN HUD V1, Bridge V1, the secure two-stage Cloudflare deployment workflows,
+and the Cloudflare Access JWT validation guard are merged into main.
+Bridge CI validates Worker/HUD syntax, Wrangler bundling, the read-only/no-store boundary,
+tracked-file secret patterns, bootstrap credential separation, JWT validation presence,
+activation safety gates, and manual-only deployment behavior.
 
 Current system task: configure the protected GitHub Actions environment and run Stage 1 bootstrap
 without private-source credentials; then enable Cloudflare Access before Stage 2 activation.
 ```
 
-Bridge V1 is built and code-validated, but it is not considered Active until production authentication and source-minimization checks pass.
+Bridge V1 is built and code-validated, but it is not considered Active until production authentication, JWT validation, and source-minimization checks pass.
 The HUD remains an interface, not a source of truth.
 
 ## Current Strategic Fronts
@@ -74,10 +77,11 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [3] Add protected bootstrap configuration: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, HUD_ORIGIN, ALLOWED_EMAIL
 [4] Run `Bootstrap LUMAN Bridge` to establish the Worker hostname without private-source credentials
 [5] Enable Cloudflare Access for the Worker and restrict it to the intended identity
-[6] Add least-privilege GITHUB_PRIVATE_TOKEN and read-only Google OAuth credentials, then run `Activate LUMAN Bridge Private Reads`
-[7] Run the production authentication + minimum-disclosure matrix before marking Bridge V1 Active
-[8] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
-[9] Keep voice after HUD/data/action stability
+[6] Add protected Access validation variables: TEAM_DOMAIN and POLICY_AUD
+[7] Add least-privilege GITHUB_PRIVATE_TOKEN and read-only Google OAuth credentials, then run `Activate LUMAN Bridge Private Reads`
+[8] Run the production authentication + JWT + minimum-disclosure matrix before marking Bridge V1 Active
+[9] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
+[10] Keep voice after HUD/data/action stability
 ```
 
 ## Completed Strategic Gates
@@ -110,6 +114,9 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] Two-stage secure Cloudflare deployment workflows created and merged
 [✓] Bootstrap workflow structurally prevented from receiving private GitHub/Google source credentials
 [✓] Activation workflow requires explicit Cloudflare Access and Google read-only confirmations
+[✓] Cloudflare Access JWT signature/issuer/audience validation added at the Worker boundary
+[✓] Stage 2 activation requires protected TEAM_DOMAIN and POLICY_AUD configuration
+[✓] Bridge CI validates Wrangler dry-run bundling and JWT-validation boundary
 [✓] Bridge CI hardened to enforce deployment safety gates and prevent automatic push deployment
 ```
 
@@ -129,5 +136,5 @@ then run `Bootstrap LUMAN Bridge` before adding any private-source credentials.
 
 ## Status
 
-Last synchronized: 2026-08-18
+Last synchronized: 2026-08-19
 Freshness basis: LUMAN Boot + Retrieval v1.0
