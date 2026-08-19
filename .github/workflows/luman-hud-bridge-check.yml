@@ -81,7 +81,7 @@ jobs:
         shell: bash
         run: |
           file=.github/workflows/luman-bridge-bootstrap.yml
-          forbidden='GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN|TEAM_DOMAIN|POLICY_AUD'
+          forbidden='LUMAN_PRIVATE_REPO_TOKEN|GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN|TEAM_DOMAIN|POLICY_AUD'
           if grep -E "\$\{\{[[:space:]]*(secrets|vars)\.(${forbidden})[[:space:]]*\}\}" "$file"; then
             echo "Bootstrap workflow must not wire private-source or Access activation credentials"
             exit 1
@@ -98,7 +98,8 @@ jobs:
           grep -q "confirm_google_readonly" "$file"
           grep -q "TEAM_DOMAIN" "$file"
           grep -q "POLICY_AUD" "$file"
-          grep -q "GITHUB_PRIVATE_TOKEN" "$file"
+          grep -q 'secrets.LUMAN_PRIVATE_REPO_TOKEN' "$file"
+          grep -q 'GITHUB_PRIVATE_TOKEN:.*secrets.LUMAN_PRIVATE_REPO_TOKEN' "$file"
           grep -q "GOOGLE_REFRESH_TOKEN" "$file"
           grep -q "luman-bridge-production" "$file"
 
