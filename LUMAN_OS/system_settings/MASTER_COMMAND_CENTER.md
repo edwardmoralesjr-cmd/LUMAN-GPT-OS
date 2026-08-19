@@ -1,4 +1,4 @@
-# LUMAN OS Master Command Center v2.0
+# LUMAN OS Master Command Center v2.1
 
 ## System Role
 
@@ -38,7 +38,7 @@ Build a peaceful, financially stable, creatively alive family life while convert
 Consolidate, protect, finish, then expand
 ```
 
-Snapshot Date: 2026-07-10  
+Snapshot Date: 2026-08-19  
 Constitutional Upgrade: 2026-08-18  
 Status: Active execution phase
 
@@ -50,26 +50,41 @@ Life OS, family peace, emotional and physical regulation, financial stability, a
 
 ### 2. Shipping Front
 
-Lucid Syntax, Visionary release assembly.
+Lucid Syntax, Visionary release assembly toward 2026-09-25.
 
 ### 3. Deep-Building Front
 
-Grand Generals Chapter 5 clearance and Roseborn continuity.
+Infinite Bloom source-Codex reconciliation and twelve-dragon continuity.
+
+Grand Generals remains Active Building and is queued to return to the deep-building front at Chapter 5 clearance after the Infinite Bloom reconciliation pass.
 
 ## Major Program Status
 
 | Program | Current State | Primary Source | Immediate Gate |
 |---|---|---|---|
-| LUMAN OS | Foundation | `LUMAN_OS/`, `00_CORE/` | Complete sovereignty integration audit |
+| LUMAN OS | Foundation / Deployment | `LUMAN_OS/`, `00_CORE/` | Bootstrap Bridge V1, enable Cloudflare Access, then production-validate private reads |
 | Visionary | Active Shipping | Lucid Syntax sources | Build verified release-assembly packet |
+| Infinite Bloom Source Codex | Active Building | Infinite Bloom manuscript sources | Reconcile one canon-safe twelve-dragon manuscript |
 | Roseborn Universe | Active Building | Active 21-book architecture plus Canon Guardian | Sync numbering into story bible and continuity |
-| Grand Generals | Active Building | Manuscript and rolling continuity | Run Chapter 5 clearance |
+| Grand Generals | Active Building / Queued | Manuscript and rolling continuity | Run Chapter 5 clearance after Infinite Bloom reconciliation |
 | Rose Codices | Active Building | `BOOKS/rose-codices/` | Recover manuscripts and build program index |
 | The Algorithm of the Shadow | Active Building | `BOOKS/algorithm-of-the-shadow/` | Confirm thesis architecture and chapter sequence |
 | Architect of Sovereignty | Incubating | `BOOKS/architect-of-sovereignty/` | Define relationship to connected consciousness books |
 | Architecture of Consciousness | Incubating | `BOOKS/architecture-of-consciousness/` | Build evidence-aware master outline |
 | Harmonic Time System | Active Building | HTS module and book folder | Build canonical book/framework source |
 | Life OS | Foundation | `LUMAN_OS/life_os/` | Build Daily Embodied Action loop |
+
+## LUMAN Deployment State
+
+```text
+HUD V1 ........................ MERGED / AWAITING PRODUCTION ROUTE VERIFICATION
+Bridge V1 ..................... BUILT / CODE-VALIDATED / AWAITING AUTHENTICATED DEPLOYMENT
+Two-stage deployment .......... MERGED
+Cloudflare Access JWT guard ... MERGED / CI-VALIDATED
+Private-source activation ..... NOT YET ACTIVE
+```
+
+Bridge V1 now validates the Cloudflare Access JWT at the Worker boundary before trusting identity. Stage 1 remains intentionally free of private-source credentials. Stage 2 requires Cloudflare Access plus protected `TEAM_DOMAIN` and `POLICY_AUD` configuration before least-privilege private GitHub and read-only Google credentials are activated.
 
 ## Roseborn Architecture Status
 
@@ -108,13 +123,13 @@ Working Canon, not Locked Canon.
 ```text
 Human sovereignty + family stability + usable attention
         ↓
-Visionary release assembly + Grand Generals clearance
+Visionary release assembly + Infinite Bloom reconciliation
         ↓
 Focused release and manuscript execution
         ↓
-Book portfolio recovery and sovereignty-book architecture
+Grand Generals Chapter 5 clearance + book portfolio recovery
         ↓
-Infinite Bloom and larger legacy convergence
+Infinite Bloom / Roseborn legacy convergence
 ```
 
 ## Portfolio Rules
@@ -156,12 +171,12 @@ This does not need to be mechanically repeated for ordinary low-impact tasks.
 
 ## Current Top 3
 
-### 1. Complete the LUMAN Sovereignty Integration Audit
+### 1. Protect the Human Foundation
 
 Definition of done:
 
 ```text
-Autopilot, the Master Command Center, root routing, and high-impact modules are checked against the Human Sovereignty Constitution, with only material gaps remediated.
+Life OS, family peace, regulation, financial stability, and sustainable attention remain above expansion pressure and are not displaced by LUMAN development or creative work.
 ```
 
 ### 2. Build the Visionary Release-Assembly Packet
@@ -169,22 +184,24 @@ Autopilot, the Master Command Center, root routing, and high-impact modules are 
 Definition of done:
 
 ```text
-Every release asset is classified Ready, Missing, Needs Review, or Not Applicable, with one launch sequence.
+Every release asset is classified Ready, Missing, Needs Review, or Not Applicable, with one launch sequence for the 2026-09-25 album release.
 ```
 
-### 3. Run Grand Generals Chapter 5 Clearance
+### 3. Consolidate The Infinite Bloom Source Codex
 
 Definition of done:
 
 ```text
-A source-based CHAPTER_5_CLEARANCE.md identifies required continuity, forbidden moves, revelation cost, character state, and canon-safe drafting boundaries.
+One canon-safe manuscript reconciles the Foundation Chapter, twelve-dragon sequence, dragon Law Scrolls, expanded chapters, fracture placement, petal numbering, Ishkala distinction, and final epilogue structure.
 ```
 
 ## Integrity Note
 
-The Roseborn architecture no longer blocks series-level planning. The missing original 20-book list remains a non-blocking historical source gap.
+The sovereignty integration gate is no longer the portfolio blocker. The Human Sovereignty Constitution, Guardian, command routing, and core governance surfaces are installed; governance maintenance should not become a permanent fourth strategic front.
 
-The sovereignty upgrade does not replace existing project governance that already complies. It adds constitutional precedence, explicit human authority, decision-support discipline, and a cross-system Guardian.
+The current LUMAN blocker is deployment configuration outside Git history: protected GitHub Actions environment values, Cloudflare Access activation, Access JWT application configuration, least-privilege private/live-source credentials, and production validation.
+
+The Roseborn architecture no longer blocks series-level planning. The missing original 20-book list remains a non-blocking historical source gap.
 
 ## Default Command-Center Response
 
@@ -215,12 +232,12 @@ The sovereignty upgrade does not replace existing project governance that alread
 ## Status
 
 Status: Active  
-Version: v2.0  
-Updated: 2026-08-18  
+Version: v2.1  
+Updated: 2026-08-19  
 Owner: LUMAN OS System Settings
 
 ## Recommended Next Move
 
 ```text
-Finish the sovereignty integration audit, then return the portfolio to normal three-front execution without creating a permanent fourth front for governance maintenance.
+Configure the protected GitHub Actions environment `luman-bridge-production` with the four Stage 1 values, then run `Bootstrap LUMAN Bridge` without any private-source credentials. After the Worker hostname exists, enable Cloudflare Access before Stage 2 activation.
 ```
