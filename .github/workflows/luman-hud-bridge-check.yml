@@ -31,8 +31,17 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install bridge dependencies
+        working-directory: LUMAN_OS/hud/bridge
+        run: npm install --no-audit --no-fund
+
       - name: Check Worker JavaScript syntax
-        run: node --check LUMAN_OS/hud/bridge/src/index.js
+        working-directory: LUMAN_OS/hud/bridge
+        run: npm run check
+
+      - name: Verify Worker bundles for deployment
+        working-directory: LUMAN_OS/hud/bridge
+        run: npx wrangler deploy --dry-run
 
       - name: Check HUD JavaScript syntax
         run: node --check LUMAN_OS/hud/app/app.js
@@ -47,20 +56,34 @@ jobs:
           grep -q "read_only_bridge" LUMAN_OS/hud/bridge/src/index.js
           grep -q "Cache-Control.*no-store" LUMAN_OS/hud/bridge/src/index.js
 
+      - name: Verify Cloudflare Access JWT validation is mandatory
+        shell: bash
+        run: |
+          entry=LUMAN_OS/hud/bridge/src/secure-entry.js
+          grep -q "Cf-Access-Jwt-Assertion" "$entry"
+          grep -q "jwtVerify" "$entry"
+          grep -q "createRemoteJWKSet" "$entry"
+          grep -q "TEAM_DOMAIN" "$entry"
+          grep -q "POLICY_AUD" "$entry"
+          grep -q 'main = "src/secure-entry.js"' LUMAN_OS/hud/bridge/wrangler.toml
+
       - name: Verify public HUD does not contain committed secrets
         shell: bash
         run: |
-          if grep -R -E "(ghp_|github_pat_|AIza[0-9A-Za-z_-]{20,}|-----BEGIN .*PRIVATE KEY-----)" LUMAN_OS/hud --exclude='SECURITY_CONTRACT.md'; then
-            echo "Possible secret material found in HUD tree"
+          if git grep -n -E "(ghp_|github_pat_|AIza[0-9A-Za-z_-]{20,}|-----BEGIN .*PRIVATE KEY-----)" -- \
+            'LUMAN_OS/hud' \
+            ':(exclude)LUMAN_OS/hud/bridge/SECURITY_CONTRACT.md'; then
+            echo "Possible secret material found in tracked HUD files"
             exit 1
           fi
 
-      - name: Verify bootstrap cannot receive private-source credentials
+      - name: Verify bootstrap cannot receive private-source or activation credentials
         shell: bash
         run: |
           file=.github/workflows/luman-bridge-bootstrap.yml
-          if grep -E "GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN" "$file"; then
-            echo "Bootstrap workflow must not reference private-source credentials"
+          forbidden='GITHUB_PRIVATE_TOKEN|GOOGLE_CLIENT_ID|GOOGLE_CLIENT_SECRET|GOOGLE_REFRESH_TOKEN|TEAM_DOMAIN|POLICY_AUD'
+          if grep -E "\$\{\{[[:space:]]*(secrets|vars)\.(${forbidden})[[:space:]]*\}\}" "$file"; then
+            echo "Bootstrap workflow must not wire private-source or Access activation credentials"
             exit 1
           fi
           grep -q "workflow_dispatch" "$file"
@@ -73,6 +96,8 @@ jobs:
           grep -q "workflow_dispatch" "$file"
           grep -q "confirm_access_enabled" "$file"
           grep -q "confirm_google_readonly" "$file"
+          grep -q "TEAM_DOMAIN" "$file"
+          grep -q "POLICY_AUD" "$file"
           grep -q "GITHUB_PRIVATE_TOKEN" "$file"
           grep -q "GOOGLE_REFRESH_TOKEN" "$file"
           grep -q "luman-bridge-production" "$file"

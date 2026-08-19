@@ -1,10 +1,49 @@
 # LUMAN Bridge Deployment Checklist
 
-## 1. Protect the Worker First
+## 1. Configure the Stage 1 GitHub Environment
 
-Before exposing `/v1/context`, place the Worker behind Cloudflare Access and restrict access to Edward's approved identity.
+Create or open the GitHub Actions environment:
 
-Required bridge behavior in production:
+```text
+luman-bridge-production
+```
+
+For bootstrap, configure only:
+
+```text
+CLOUDFLARE_API_TOKEN
+CLOUDFLARE_ACCOUNT_ID
+HUD_ORIGIN
+ALLOWED_EMAIL
+```
+
+Do not add private GitHub or Google source credentials to the bootstrap workflow.
+
+## 2. Run Stage 1 Bootstrap
+
+Run:
+
+```text
+Bootstrap LUMAN Bridge
+```
+
+Confirm `confirm_bootstrap`.
+
+Expected result:
+
+```text
+Worker hostname created
+private-source credentials absent
+REQUIRE_CF_ACCESS=true
+TEAM_DOMAIN/POLICY_AUD not yet active
+bridge reads fail closed until Stage 2
+```
+
+## 3. Enable Cloudflare Access
+
+Protect the deployed Worker with Cloudflare Access and restrict the policy to the approved identity.
+
+Required production behavior:
 
 ```text
 REQUIRE_CF_ACCESS=true
@@ -13,27 +52,42 @@ ALLOWED_EMAIL=<approved identity>
 
 Do not disable Access enforcement in production.
 
-## 2. Set Browser Origin
+## 4. Configure Access JWT Validation
 
-Set `HUD_ORIGIN` to the exact HTTPS origin that hosts the LUMAN HUD.
+After Access is enabled, record these protected GitHub environment variables:
 
-If more than one approved HUD origin is needed, use a comma-separated list.
+```text
+TEAM_DOMAIN
+POLICY_AUD
+```
 
-The Worker rejects unknown browser origins.
+`TEAM_DOMAIN` is the HTTPS Cloudflare Access team domain used as the JWT issuer and JWK source.
 
-## 3. Private GitHub Token
+`POLICY_AUD` is the audience value for the Access application protecting this Worker.
+
+The secure Worker entrypoint must validate:
+
+```text
+JWT signature
+issuer == TEAM_DOMAIN
+audience == POLICY_AUD
+verified JWT email identity
+optional injected email header agrees with JWT identity
+```
+
+## 5. Add the Private GitHub Read Token
 
 Create a least-privilege token able to read only the private command-center repository needed by the bridge.
 
-Store it as the encrypted Worker secret:
+Store it as the encrypted environment secret:
 
 ```text
 GITHUB_PRIVATE_TOKEN
 ```
 
-Do not store the token in GitHub repository files or HUD browser code.
+Do not store the token in repository files or HUD browser code.
 
-## 4. Google Read-Only OAuth
+## 6. Add Google Read-Only OAuth
 
 Issue the bridge refresh token with only:
 
@@ -42,7 +96,7 @@ calendar.readonly
 gmail.readonly
 ```
 
-Store these as protected Worker secrets:
+Store these as protected environment secrets:
 
 ```text
 GOOGLE_CLIENT_ID
@@ -52,36 +106,42 @@ GOOGLE_REFRESH_TOKEN
 
 No Calendar or Gmail write scopes are required by V1.
 
-## 5. Deploy Worker
+## 7. Run Stage 2 Activation
 
-From `LUMAN_OS/hud/bridge/`:
+Run:
 
-```bash
-npm install
-npm run check
-npx wrangler secret put GITHUB_PRIVATE_TOKEN
-npx wrangler secret put GOOGLE_CLIENT_ID
-npx wrangler secret put GOOGLE_CLIENT_SECRET
-npx wrangler secret put GOOGLE_REFRESH_TOKEN
-npx wrangler deploy
+```text
+Activate LUMAN Bridge Private Reads
 ```
 
-Set non-secret protected configuration such as `HUD_ORIGIN` and `ALLOWED_EMAIL` through the Cloudflare deployment environment rather than committing personal values to the public repository.
+Explicitly confirm:
 
-## 6. Verify Fail-Closed Behavior
+```text
+Cloudflare Access is enabled
+Google OAuth is read-only
+```
+
+The workflow must refuse activation if `TEAM_DOMAIN`, `POLICY_AUD`, or any required private/live-source credential is missing.
+
+## 8. Verify Fail-Closed Authentication
 
 Verify:
 
 ```text
 Unauthenticated /health -> denied by Access / bridge
-Wrong identity -> 403
+Missing Access JWT -> 401
+Invalid/expired JWT -> 403
+Wrong issuer -> 403
+Wrong audience -> 403
+JWT/header identity mismatch -> 403
+Wrong allowed identity -> 403
 Unknown Origin -> 403
 POST /v1/context -> 405 read_only_bridge
-Authenticated GET /health -> read-only health response
-Authenticated GET /v1/context -> minimum-data response
+Authenticated validated GET /health -> read-only health response
+Authenticated validated GET /v1/context -> minimum-data response
 ```
 
-## 7. Verify Data Minimization
+## 9. Verify Data Minimization
 
 Inspect the browser network response and confirm it contains no:
 
@@ -95,7 +155,7 @@ credentials/tokens
 financial/health/vehicle/home details
 ```
 
-## 8. Connect HUD
+## 10. Connect HUD
 
 Enter the protected Worker URL into the HUD bridge field.
 
@@ -103,7 +163,7 @@ Use `Open Access Login`, authenticate, return to the HUD, and refresh sources.
 
 The HUD stores only the bridge URL preference. It does not persist the returned private/live context.
 
-## 9. Sovereignty Check
+## 11. Sovereignty Check
 
 Confirm the UI still distinguishes:
 
@@ -117,4 +177,4 @@ Edward = final authority
 
 ## Deployment Gate
 
-Bridge V1 is considered deployed only after authentication, source separation, minimum disclosure, and read-only behavior are verified in the production HUD.
+Bridge V1 is considered Active only after authentication, JWT validation, source separation, minimum disclosure, and read-only behavior are verified in the production HUD.
