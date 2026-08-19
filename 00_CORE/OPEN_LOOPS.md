@@ -20,7 +20,7 @@ Production Pages verification remains an open deployment check. Visionary remain
 4. Run `Bootstrap LUMAN Bridge`; this must establish the Worker hostname without private GitHub or Google source credentials.
 5. Enable Cloudflare Access on the deployed Worker and restrict the Access policy to the intended identity.
 6. Add protected Access validation variables `TEAM_DOMAIN` and `POLICY_AUD` for the Access application protecting the Worker.
-7. Add least-privilege `GITHUB_PRIVATE_TOKEN` plus Google OAuth credentials issued only for Calendar/Gmail read scopes.
+7. Add least-privilege `LUMAN_PRIVATE_REPO_TOKEN` plus Google OAuth credentials issued only for Calendar/Gmail read scopes. The activation workflow maps that GitHub environment secret to the Worker's internal `GITHUB_PRIVATE_TOKEN` binding.
 8. Run `Activate LUMAN Bridge Private Reads` only after confirming Access is enabled, the Access validation variables are present, and Google scopes are read-only.
 9. Run the production bridge test matrix: unauthenticated, missing JWT, invalid/expired JWT, wrong issuer, wrong audience, identity mismatch, unauthorized identity, allowed identity, CORS, read-only methods, and minimum disclosure.
 10. Verify no raw private notes, private source paths, Gmail bodies/snippets/attachments, recipient lists, Calendar descriptions/attendees, credentials, or unrelated private data reach the browser.

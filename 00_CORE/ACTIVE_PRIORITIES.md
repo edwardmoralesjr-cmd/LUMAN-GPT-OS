@@ -78,10 +78,11 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [4] Run `Bootstrap LUMAN Bridge` to establish the Worker hostname without private-source credentials
 [5] Enable Cloudflare Access for the Worker and restrict it to the intended identity
 [6] Add protected Access validation variables: TEAM_DOMAIN and POLICY_AUD
-[7] Add least-privilege GITHUB_PRIVATE_TOKEN and read-only Google OAuth credentials, then run `Activate LUMAN Bridge Private Reads`
-[8] Run the production authentication + JWT + minimum-disclosure matrix before marking Bridge V1 Active
-[9] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
-[10] Keep voice after HUD/data/action stability
+[7] Add least-privilege LUMAN_PRIVATE_REPO_TOKEN and read-only Google OAuth credentials; activation maps it to the Worker's internal GITHUB_PRIVATE_TOKEN binding
+[8] Run `Activate LUMAN Bridge Private Reads`
+[9] Run the production authentication + JWT + minimum-disclosure matrix before marking Bridge V1 Active
+[10] Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable
+[11] Keep voice after HUD/data/action stability
 ```
 
 ## Completed Strategic Gates
@@ -117,6 +118,7 @@ Grand Generals remains Active Building and returns to the deep-building front at
 [✓] Cloudflare Access JWT signature/issuer/audience validation added at the Worker boundary
 [✓] Stage 2 activation requires protected TEAM_DOMAIN and POLICY_AUD configuration
 [✓] Bridge CI validates Wrangler dry-run bundling and JWT-validation boundary
+[✓] GitHub private-read credential uses valid LUMAN_PRIVATE_REPO_TOKEN environment-secret name and maps only at deployment time to the Worker binding
 [✓] Bridge CI hardened to enforce deployment safety gates and prevent automatic push deployment
 ```
 

@@ -64,7 +64,7 @@ CLOUDFLARE_API_TOKEN
 CLOUDFLARE_ACCOUNT_ID
 HUD_ORIGIN
 ALLOWED_EMAIL
-GITHUB_PRIVATE_TOKEN
+LUMAN_PRIVATE_REPO_TOKEN
 GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
@@ -107,9 +107,23 @@ The secure bridge entrypoint uses this domain to obtain Access JWKs from `/cdn-c
 
 Set this to the audience (`aud`) value for the Access application protecting the Worker. The secure entrypoint rejects JWTs that are validly signed but were issued for another Access application.
 
-### GITHUB_PRIVATE_TOKEN
+### LUMAN_PRIVATE_REPO_TOKEN
 
 Use a fine-grained GitHub token limited to the private LUMAN command-center repository and read-only Contents access. Do not grant write access.
+
+Store that credential in the GitHub Actions environment as:
+
+```text
+LUMAN_PRIVATE_REPO_TOKEN
+```
+
+The activation workflow maps it at deployment time to the Worker's internal secret binding:
+
+```text
+GITHUB_PRIVATE_TOKEN
+```
+
+The GitHub-side secret intentionally does not use a `GITHUB_` prefix because GitHub reserves that prefix for its own secret/configuration namespace.
 
 ### Google OAuth
 
@@ -144,7 +158,7 @@ It deliberately does **not** provide:
 ```text
 TEAM_DOMAIN
 POLICY_AUD
-GITHUB_PRIVATE_TOKEN
+LUMAN_PRIVATE_REPO_TOKEN
 GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
@@ -202,13 +216,16 @@ Protected variables:
 TEAM_DOMAIN
 POLICY_AUD
 
-Runtime secrets:
+GitHub environment secrets:
 HUD_ORIGIN
 ALLOWED_EMAIL
-GITHUB_PRIVATE_TOKEN
+LUMAN_PRIVATE_REPO_TOKEN
 GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
+
+Worker runtime secret binding:
+GITHUB_PRIVATE_TOKEN <- LUMAN_PRIVATE_REPO_TOKEN
 ```
 
 The production request path is then:

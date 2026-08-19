@@ -84,10 +84,19 @@ Gmail labels and bridge ranking are weak context signals only. They are not huma
 
 Production mode requires Cloudflare Access in front of the Worker.
 
-The Worker additionally requires an authenticated identity header and may restrict it to `ALLOWED_EMAIL`.
+The secure entrypoint requires `Cf-Access-Jwt-Assertion` and validates its signature against the Access JWK set, its issuer against `TEAM_DOMAIN`, and its audience against `POLICY_AUD`. The authenticated email is taken from the verified JWT. If Cloudflare also supplies `Cf-Access-Authenticated-User-Email`, a disagreement between that header and the verified JWT identity is rejected.
 
-If Access identity is missing, the bridge returns `401`.
-If identity is present but not allowed, it returns `403`.
+The verified email is then restricted by `ALLOWED_EMAIL` as a second identity boundary.
+
+Expected failures:
+
+```text
+missing Access JWT -> 401
+invalid/expired/wrong-issuer/wrong-audience JWT -> 403
+JWT/header identity mismatch -> 403
+verified identity not allowed -> 403
+missing production JWT configuration -> fail closed
+```
 
 Local development bypass is permitted only when:
 
@@ -120,19 +129,27 @@ The HUD should treat bridge data as disposable session context and should not co
 
 ## Secrets
 
-The following must exist only in protected secret/config stores:
+The following credentials must exist only in protected secret/config stores:
 
 ```text
+GitHub Actions environment secret:
+LUMAN_PRIVATE_REPO_TOKEN
+
+Worker runtime secret binding created from it:
 GITHUB_PRIVATE_TOKEN
+
+Additional protected secrets:
 GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
 ```
 
-They must never be placed in:
+`LUMAN_PRIVATE_REPO_TOKEN` is the GitHub-side name because GitHub Actions reserves the `GITHUB_` prefix for secrets/configuration. The activation workflow maps it to the existing Worker binding only at deployment time.
+
+Credentials must never be placed in:
 
 ```text
-GitHub Markdown
+GitHub Markdown values
 HUD JavaScript
 browser localStorage/sessionStorage
 query strings
@@ -160,4 +177,4 @@ A connected source proves availability, not permission to persist or act.
 ## Status
 
 Status: Active V1 security contract
-Created: 2026-08-18
+Updated: 2026-08-19

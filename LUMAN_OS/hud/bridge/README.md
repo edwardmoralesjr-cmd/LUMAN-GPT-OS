@@ -31,7 +31,8 @@ It has:
 - `Cache-Control: no-store` on authenticated responses;
 - explicit per-source failure states;
 - strict HUD-origin CORS;
-- Cloudflare Access enforcement in production.
+- Cloudflare Access enforcement in production;
+- Worker-side validation of the Cloudflare Access JWT signature, issuer, audience, and authenticated email before private/live reads.
 
 ## Returned View Model
 
@@ -66,18 +67,26 @@ The browser does not receive raw source dumps.
 
 The bridge is designed for a Cloudflare Worker protected by Cloudflare Access.
 
-Required Worker secrets / variables:
+Required protected configuration includes:
 
 ```text
+GitHub Actions environment secrets:
 HUD_ORIGIN
 ALLOWED_EMAIL
-GITHUB_PRIVATE_TOKEN
+LUMAN_PRIVATE_REPO_TOKEN
 GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
+
+GitHub Actions environment variables after Access is enabled:
+TEAM_DOMAIN
+POLICY_AUD
+
+Worker runtime secret binding:
+GITHUB_PRIVATE_TOKEN <- LUMAN_PRIVATE_REPO_TOKEN
 ```
 
-Optional:
+Optional Worker configuration:
 
 ```text
 PRIVATE_REPO=edwardmoralesjr-cmd/LUMAN-GPT-Command-Center
@@ -97,6 +106,7 @@ Bootstrap LUMAN Bridge
 
 Activate LUMAN Bridge Private Reads
   -> explicit Access + read-only OAuth confirmation
+  -> validate Access JWT configuration
   -> inject least-privilege private-source credentials
   -> deploy same Worker
   -> run production minimum-disclosure validation
@@ -139,9 +149,9 @@ There are no POST/PUT/PATCH/DELETE action routes in V1.
 
 ## Fail-Closed Rule
 
-Production requests must arrive through Cloudflare Access. If the authenticated identity header is missing, or does not match the configured allowed identity, the Worker returns `401` or `403`.
+Production requests must arrive through Cloudflare Access. The secure entrypoint requires and validates `Cf-Access-Jwt-Assertion`; missing, invalid, wrong-issuer, or wrong-audience assertions are denied before the source-reading bridge executes. The verified JWT email is then subject to the `ALLOWED_EMAIL` defense-in-depth check.
 
-The private/live credentials must not be activated until Access protection is configured.
+The private/live credentials must not be activated until Access protection and JWT validation configuration are present.
 
 ## Data Ownership
 
@@ -157,4 +167,4 @@ Edward        = final authority
 ## Status
 
 Status: V1 implementation + secure deployment workflow
-Created: 2026-08-18
+Updated: 2026-08-19
