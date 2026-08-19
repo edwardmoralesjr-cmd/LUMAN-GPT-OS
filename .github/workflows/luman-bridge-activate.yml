@@ -36,6 +36,8 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           HUD_ORIGIN: ${{ secrets.HUD_ORIGIN }}
           ALLOWED_EMAIL: ${{ secrets.ALLOWED_EMAIL }}
+          TEAM_DOMAIN: ${{ vars.TEAM_DOMAIN }}
+          POLICY_AUD: ${{ vars.POLICY_AUD }}
           GITHUB_PRIVATE_TOKEN: ${{ secrets.GITHUB_PRIVATE_TOKEN }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
@@ -47,6 +49,8 @@ jobs:
             CLOUDFLARE_ACCOUNT_ID
             HUD_ORIGIN
             ALLOWED_EMAIL
+            TEAM_DOMAIN
+            POLICY_AUD
             GITHUB_PRIVATE_TOKEN
             GOOGLE_CLIENT_ID
             GOOGLE_CLIENT_SECRET
@@ -60,8 +64,13 @@ jobs:
           done
           exit "$missing"
 
+      - name: Install bridge dependencies
+        working-directory: LUMAN_OS/hud/bridge
+        run: npm install --no-audit --no-fund
+
       - name: Validate bridge JavaScript
-        run: node --check LUMAN_OS/hud/bridge/src/index.js
+        working-directory: LUMAN_OS/hud/bridge
+        run: npm run check
 
       - name: Activate minimum-data private and live-source reads
         id: deploy
@@ -72,6 +81,9 @@ jobs:
           workingDirectory: LUMAN_OS/hud/bridge
           wranglerVersion: "4"
           command: deploy
+          vars: |
+            TEAM_DOMAIN
+            POLICY_AUD
           secrets: |
             HUD_ORIGIN
             ALLOWED_EMAIL
@@ -81,6 +93,8 @@ jobs:
             GOOGLE_REFRESH_TOKEN
           postCommands: wrangler deployments status
         env:
+          TEAM_DOMAIN: ${{ vars.TEAM_DOMAIN }}
+          POLICY_AUD: ${{ vars.POLICY_AUD }}
           HUD_ORIGIN: ${{ secrets.HUD_ORIGIN }}
           ALLOWED_EMAIL: ${{ secrets.ALLOWED_EMAIL }}
           GITHUB_PRIVATE_TOKEN: ${{ secrets.GITHUB_PRIVATE_TOKEN }}
@@ -100,6 +114,7 @@ jobs:
               echo "Worker URL: ${DEPLOYMENT_URL}"
               echo
             fi
+            echo "Cloudflare Access JWT validation is configured for this deployment."
             echo "Deployment alone does not mark Bridge V1 Active."
             echo "Next: run the production authentication and minimum-disclosure test matrix from an authenticated browser session."
           } >> "$GITHUB_STEP_SUMMARY"
