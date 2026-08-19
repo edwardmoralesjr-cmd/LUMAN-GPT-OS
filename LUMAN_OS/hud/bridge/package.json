@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "check": "node --check src/index.js"
+    "check": "node --check src/index.js && node --check src/secure-entry.js"
+  },
+  "dependencies": {
+    "jose": "6.2.5"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
