@@ -13,6 +13,7 @@ Stage 1: Bootstrap
   + allowed identity
   - no private GitHub token
   - no Google OAuth credentials
+  - no Access audience/team-domain activation config
 
         ↓
 
@@ -21,7 +22,14 @@ and restrict it to the intended identity
 
         ↓
 
+Capture Access validation config
+  TEAM_DOMAIN
+  POLICY_AUD
+
+        ↓
+
 Stage 2: Activate
+  validate Cf-Access-Jwt-Assertion cryptographically
   add least-privilege private GitHub read token
   add read-only Google OAuth credentials
   deploy the same Worker
@@ -30,6 +38,8 @@ Stage 2: Activate
 
 Run production authentication + minimum-disclosure tests
 ```
+
+Stage 1 is intentionally fail-closed for authenticated bridge reads. Until Stage 2 supplies the Access team domain and application audience, the secure entrypoint returns `access_validation_not_configured` rather than trusting an identity header by itself.
 
 ## GitHub Environment
 
@@ -43,11 +53,11 @@ Recommended:
 
 - enable required reviewers if available;
 - restrict deployment branches to `main` if desired;
-- place all bridge deployment secrets in this environment rather than repository files.
+- place deployment secrets and protected activation variables in this environment rather than repository files.
 
 ## Protected Configuration
 
-Add these GitHub Actions environment secrets:
+### Environment secrets
 
 ```text
 CLOUDFLARE_API_TOKEN
@@ -60,7 +70,14 @@ GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
 ```
 
-No value from this list belongs in Git history.
+### Environment variables used only after Access is enabled
+
+```text
+TEAM_DOMAIN
+POLICY_AUD
+```
+
+No identity-specific value or credential belongs in Git history.
 
 ### Cloudflare API token
 
@@ -78,7 +95,17 @@ The Worker performs strict origin matching.
 
 ### ALLOWED_EMAIL
 
-Set this to the identity Cloudflare Access should authenticate. The Worker performs a second identity allowlist check after Access.
+Set this to the identity Cloudflare Access should authenticate. The bridge performs a second identity allowlist check after the Access JWT is cryptographically validated.
+
+### TEAM_DOMAIN
+
+Set this to the Cloudflare Access team domain used as the JWT issuer, for example the account's HTTPS `cloudflareaccess.com` team domain.
+
+The secure bridge entrypoint uses this domain to obtain Access JWKs from `/cdn-cgi/access/certs` and to validate the JWT issuer.
+
+### POLICY_AUD
+
+Set this to the audience (`aud`) value for the Access application protecting the Worker. The secure entrypoint rejects JWTs that are validly signed but were issued for another Access application.
 
 ### GITHUB_PRIVATE_TOKEN
 
@@ -115,19 +142,21 @@ ALLOWED_EMAIL
 It deliberately does **not** provide:
 
 ```text
+TEAM_DOMAIN
+POLICY_AUD
 GITHUB_PRIVATE_TOKEN
 GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
 ```
 
-Therefore the Worker can establish its hostname without having access to private source data.
+Therefore the Worker can establish its hostname without having access to private source data. Because `REQUIRE_CF_ACCESS=true` and the secure entrypoint lacks Stage 2 JWT validation config, authenticated bridge reads remain fail-closed during bootstrap.
 
 ## Enable Cloudflare Access
 
 After bootstrap, use the deployed Worker hostname to enable Cloudflare Access.
 
-For a `workers.dev` deployment, Cloudflare currently supports enabling Access from:
+For a `workers.dev` deployment, Cloudflare supports enabling Access from:
 
 ```text
 Workers & Pages
@@ -140,7 +169,14 @@ Workers & Pages
 
 Restrict the Access policy to the intended identity. Keep the Worker's own `ALLOWED_EMAIL` check as defense in depth.
 
-Do not proceed to activation until Access is actually protecting the Worker.
+Then record the Access team domain and the application's audience value in the protected GitHub environment as:
+
+```text
+TEAM_DOMAIN
+POLICY_AUD
+```
+
+Do not proceed to activation until Access is actually protecting the Worker and both validation values are present.
 
 ## Stage 2 — Activate
 
@@ -159,9 +195,14 @@ Google token uses read-only scopes
 
 The activation workflow refuses to run unless those confirmations are true and all protected configuration exists.
 
-It then deploys the same Worker and supplies only the six runtime secrets required by Bridge V1:
+It deploys the same Worker with:
 
 ```text
+Protected variables:
+TEAM_DOMAIN
+POLICY_AUD
+
+Runtime secrets:
 HUD_ORIGIN
 ALLOWED_EMAIL
 GITHUB_PRIVATE_TOKEN
@@ -170,24 +211,41 @@ GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
 ```
 
+The production request path is then:
+
+```text
+Cloudflare Access policy
+        ↓
+Cf-Access-Jwt-Assertion
+        ↓
+secure-entry.js validates signature + issuer + audience
+        ↓
+verified JWT email becomes the bridge identity
+        ↓
+index.js enforces ALLOWED_EMAIL + read-only/minimum-data rules
+```
+
 ## Production Validation
 
 Deployment does not by itself mark Bridge V1 `Active`.
 
 Run the production test matrix after activation:
 
-1. Unauthenticated browser request is intercepted by Cloudflare Access.
-2. Unauthorized identity is denied.
-3. Authorized identity can reach `GET /health`.
-4. Health reports `mode: read-only` and only a masked identity.
-5. `GET /v1/context` returns source status plus minimized view-model data.
-6. Private brain returns only active open-loop title / next gate / due trigger.
-7. Calendar returns only title, start, end, and all-day status.
-8. Gmail returns only minimized sender, subject, received time, and derived signals.
-9. No Gmail body, snippet, attachment, Calendar description, attendee list, full private note, credentials, or unrelated private category reaches the browser.
-10. POST, PUT, PATCH, and DELETE remain unavailable.
-11. Responses retain `Cache-Control: no-store`.
-12. Disconnect/reload clears private/live context from HUD memory.
+1. Unauthenticated browser request is intercepted by Cloudflare Access or denied by the bridge.
+2. Missing `Cf-Access-Jwt-Assertion` cannot reach bridge data.
+3. Invalid, expired, wrong-issuer, or wrong-audience Access JWT is rejected.
+4. A disagreement between the verified JWT email and the injected Access email header is rejected.
+5. Unauthorized identity is denied by `ALLOWED_EMAIL`.
+6. Authorized identity can reach `GET /health`.
+7. Health reports `mode: read-only` and only a masked identity.
+8. `GET /v1/context` returns source status plus minimized view-model data.
+9. Private brain returns only active open-loop title / next gate / due trigger.
+10. Calendar returns only title, start, end, and all-day status.
+11. Gmail returns only minimized sender, subject, received time, and derived signals.
+12. No Gmail body, snippet, attachment, Calendar description, attendee list, full private note, credentials, or unrelated private category reaches the browser.
+13. POST, PUT, PATCH, and DELETE remain unavailable.
+14. Responses retain `Cache-Control: no-store`.
+15. Disconnect/reload clears private/live context from HUD memory.
 
 Only after all checks pass should LUMAN state change from:
 
@@ -209,6 +267,7 @@ If anything is wrong:
 - revoke/rotate the private GitHub token;
 - revoke the Google refresh token;
 - rotate the Cloudflare API token if deployment authority may be compromised;
+- rotate/recreate the Access application if its audience or policy boundary is suspect;
 - do not persist any returned private/live data into public GitHub as part of incident handling.
 
 ## Sovereignty Rule
