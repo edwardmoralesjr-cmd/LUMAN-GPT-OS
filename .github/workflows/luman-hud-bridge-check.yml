@@ -70,8 +70,10 @@ jobs:
       - name: Verify public HUD does not contain committed secrets
         shell: bash
         run: |
-          if grep -R -E "(ghp_|github_pat_|AIza[0-9A-Za-z_-]{20,}|-----BEGIN .*PRIVATE KEY-----)" LUMAN_OS/hud --exclude='SECURITY_CONTRACT.md'; then
-            echo "Possible secret material found in HUD tree"
+          if git grep -n -E "(ghp_|github_pat_|AIza[0-9A-Za-z_-]{20,}|-----BEGIN .*PRIVATE KEY-----)" -- \
+            'LUMAN_OS/hud' \
+            ':(exclude)LUMAN_OS/hud/bridge/SECURITY_CONTRACT.md'; then
+            echo "Possible secret material found in tracked HUD files"
             exit 1
           fi
 
