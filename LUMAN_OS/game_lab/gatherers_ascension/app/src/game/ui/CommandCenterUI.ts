@@ -431,7 +431,7 @@ export class CommandCenterUI {
     const known = this.state.discovered.includes(resource.id);
     const variantKnown = variant ? this.state.discovered.includes(variant.id) : false;
     const qualities = this.state.discoveredQualities[resource.id] ?? [];
-    return `<article class="codex-card ${known ? '' : 'unknown'}"><div class="codex-art" style="--resource-color:${this.hex(resource.color)};--resource-glow:${this.hex(resource.glow)}"><span>${known ? resource.name.slice(0, 1) : '?'}</span></div><div class="codex-copy"><span>${known ? `${resource.rarity} · ${resource.nativeBiome}` : 'UNKNOWN ENTRY'}</span><h3>${known ? resource.name : 'Undiscovered Material'}</h3><p>${known ? resource.description : 'Harvest this material in its native biome to reveal the Codex entry.'}</p></div><div class="quality-dots">${(Object.keys(qualityDefinitions) as HarvestQuality[]).map((quality) => `<i class="${qualities.includes(quality) ? 'known' : ''}" style="--quality:${qualityDefinitions[quality].color}" title="${quality}"></i>`).join('')}</div><div class="variant-slot ${variantKnown ? 'known' : ''}"><span>MYTHIC MUTATION</span><strong>${variantKnown ? variant?.name : 'Unknown'}</strong></div></article>`;
+    return `<article class="codex-card ${known ? '' : 'unknown'}"><div class="codex-art" style="--resource-color:${this.hex(resource.color)};--resource-glow:${this.hex(resource.glow)}"><span>${known ? resource.name.slice(0, 1) : '?'}</span></div><div class="codex-copy"><span>${known ? `${resource.rarity} · ${resource.nativeBiome}` : 'UNKNOWN ENTRY'}</span><h3>${known ? resource.name : 'Undiscovered Material'}</h3><p>${known ? resource.lore : 'Harvest this material in its native biome to reveal the Codex entry.'}</p></div><div class="quality-dots">${(Object.keys(qualityDefinitions) as HarvestQuality[]).map((quality) => `<i class="${qualities.includes(quality) ? 'known' : ''}" style="--quality:${qualityDefinitions[quality].color}" title="${quality}"></i>`).join('')}</div><div class="variant-slot ${variantKnown ? 'known' : ''}"><span>MYTHIC MUTATION</span><strong>${variantKnown ? variant?.name : 'Unknown'}</strong></div></article>`;
   }
 
   private qualityArchive(): string {
@@ -465,10 +465,10 @@ export class CommandCenterUI {
     return Object.values(gathererTemplates).map((template) => `<div class="metric-row"><span class="metric-label">${template.role}</span><span class="metric-value ${this.state.network.gatherers.some((gatherer) => gatherer.role === template.role) ? 'green' : ''}">${this.state.network.gatherers.some((gatherer) => gatherer.role === template.role) ? 'ONLINE' : 'MISSING'}</span></div>`).join('');
   }
 
-  private rareDiscoveryRate(): string {
+  private rareDiscoveryRate(): number {
     const activeFortune = this.activeGatherers().reduce((total, gatherer) => total + gatherer.fortune, 0);
     const estimate = Math.min(12, .6 + this.state.stats.fortune * .09 + activeFortune * .025 + this.state.rareMomentum * .0025);
-    return estimate.toFixed(2);
+    return Math.round(estimate * 100) / 100;
   }
 
   private activityDeckCard(): string {
@@ -492,7 +492,7 @@ export class CommandCenterUI {
   private showDiscovery(definition: ResourceDefinition, quality: HarvestQuality): void {
     const knownQualities = this.state.discoveredQualities[definition.id] ?? [];
     const message = definition.isVariant ? 'MYTHIC MUTATION DISCOVERED' : knownQualities.length === 1 ? 'CODEX ENTRY UNLOCKED' : `${quality.toUpperCase()} SPECIMEN`;
-    this.discoveryLayer.innerHTML = `<div class="discovery-modal ${definition.isVariant ? 'mythic' : ''}"><div class="discovery-radiance"></div><span>${message}</span><div class="discovery-resource-art" style="--resource-color:${this.hex(definition.color)};--resource-glow:${this.hex(definition.glow)}"><strong>${definition.name.slice(0, 1)}</strong></div><h2>${definition.name}</h2><p>${definition.description}</p><div class="discovery-tags"><span>${definition.rarity}</span><span>${quality}</span><span>${definition.nativeBiome}</span></div></div>`;
+    this.discoveryLayer.innerHTML = `<div class="discovery-modal ${definition.isVariant ? 'mythic' : ''}"><div class="discovery-radiance"></div><span>${message}</span><div class="discovery-resource-art" style="--resource-color:${this.hex(definition.color)};--resource-glow:${this.hex(definition.glow)}"><strong>${definition.name.slice(0, 1)}</strong></div><h2>${definition.name}</h2><p>${definition.lore}</p><div class="discovery-tags"><span>${definition.rarity}</span><span>${quality}</span><span>${definition.nativeBiome}</span></div></div>`;
     this.discoveryLayer.classList.add('visible');
     window.setTimeout(() => this.discoveryLayer.classList.remove('visible'), definition.isVariant ? 4800 : 2800);
   }
