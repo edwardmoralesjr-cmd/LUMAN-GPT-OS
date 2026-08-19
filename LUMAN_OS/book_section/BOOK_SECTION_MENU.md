@@ -18,29 +18,33 @@ The Book Section is the writing, publishing, canon, manuscript, research, and bo
 ║      Writing, Canon, and Publishing    ║
 ╚════════════════════════════════════════╝
 
-Current Active Draft:
+Current Active Drafts:
 The Immediate Field
+Three Futures
 
 Current Draft Frontier:
-Introduction and Chapters 1-3 complete
+The Immediate Field — Introduction and Chapters 1-3 complete
+Three Futures — Prologue and Chapter 1 complete
 
-Recommended Next Move:
-Draft Chapter 4: The Code We Did Not Choose
+Recommended Next Moves:
+The Immediate Field — Draft Chapter 4: The Code We Did Not Choose
+Three Futures — Build the Chapter 2 scene card for Project Prism
 
 BOOK MENU
 [1] The Immediate Field
-[2] Roseborn Universe
-[3] Grand Generals
-[4] The Infinite Bloom
-[5] The Rose Codices
-[6] The Algorithm of the Shadow
-[7] Earth’s Field Guide
-[8] Mental Health Journey Book
-[9] Book Ideas Vault
-[10] Publishing / KDP Tools
-[11] Manuscript Formatting
-[12] Writing Schedule
-[13] Return to LUMAN OS Home
+[2] Three Futures
+[3] Roseborn Universe
+[4] Grand Generals
+[5] The Infinite Bloom
+[6] The Rose Codices
+[7] The Algorithm of the Shadow
+[8] Earth’s Field Guide
+[9] Mental Health Journey Book
+[10] Book Ideas Vault
+[11] Publishing / KDP Tools
+[12] Manuscript Formatting
+[13] Writing Schedule
+[14] Return to LUMAN OS Home
 ```
 
 ## Book Section Commands
@@ -48,6 +52,7 @@ BOOK MENU
 ```text
 /open books
 /open immediate field
+/open three futures
 /open roseborn
 /open grand generals
 /open infinite bloom
@@ -129,6 +134,91 @@ Next gate: Chapter 4, The Code We Did Not Choose
 5. Empirical evidence, historical interpretation, comparative symbolism, and original synthesis must remain clearly distinguished.
 6. The framework must remain able to lose through evidence, consequence, and revision.
 
+# Three Futures
+
+Command:
+
+```text
+/open three futures
+```
+
+Source of truth:
+
+```text
+BOOKS/three-futures/
+```
+
+Status:
+
+```text
+Active Drafting
+Psychological suspense thriller
+Prologue: The Sixth Chair complete
+Chapter 1: Arrival complete
+Both artifacts Canon Guardian approved
+Chapter 1 Word delivery rendered and visually verified
+Next gate: Chapter 2 scene card for Project Prism
+```
+
+## Three Futures Menu
+
+```text
+[1] Project Status
+[2] Original Source Outline
+[3] Master Outline
+[4] Master Novel Bible
+[5] Mara Vey
+[6] Selene Marr
+[7] Prism
+[8] Fork Ensemble
+[9] Project Prism / Annex Seven
+[10] Lucent
+[11] Lucid
+[12] Clarus
+[13] Guardian Rules
+[14] Prologue: The Sixth Chair
+[15] Chapter 1: Arrival
+[16] Chapter 1 Canon Guardian Audit
+[17] Build Chapter 2 Scene Card: Project Prism
+[18] Delivery and GitHub Sync Protocol
+[19] Return to Book Section
+```
+
+## Three Futures Commands
+
+```text
+/open three futures
+/three futures status
+/three futures canon
+/three futures outline
+/three futures characters
+/three futures worlds
+/three futures prologue
+/three futures chapter 1
+/three futures next chapter
+/three futures clue audit
+/three futures character audit [name]
+/three futures reality check [scene]
+/three futures prism limits
+/three futures suspense audit [chapter]
+/three futures contradiction [topic]
+/three futures promote canon [decision]
+/three futures session update
+```
+
+## Three Futures Authority Rules
+
+1. Edward's explicit locked decisions govern.
+2. `MASTER_NOVEL_BIBLE.md` governs core genre, premise, reality rules, and ending.
+3. `MASTER_OUTLINE.md` governs current plot architecture.
+4. Character and world bibles govern their respective domains.
+5. The original source outline is preserved for provenance and applies where not superseded.
+6. Ambiguity must remain fair and rule-supported.
+7. Prism is not omnipotent or automatically trustworthy.
+8. Lucent must remain desirable, Lucid must not romanticize suffering, and Clarus must remain genuinely admirable.
+9. The Prologue and Chapter 1 are Working Manuscript Canon.
+10. Every future chapter requires an approved scene card, Canon Guardian audit, GitHub sync, and verified Word delivery.
+
 # Installed Book Tools
 
 ## 1. Roseborn Canon Guardian
@@ -165,32 +255,32 @@ BOOKS/the-immediate-field/07_CANON_GUARDIAN/GUARDIAN_RULES.md
 
 Status: Active project-specific writing governance.
 
-Use for:
+## 3. Three Futures Guardian Rules
 
-- Thesis protection
-- Chapter sequencing
-- Source-basis checks
-- Evidence boundaries
-- Relational-practice consistency
-- Redundancy checks against other consciousness books
-- Safety and scope auditing
+Path:
 
-## 3. Algorithm of the Shadow Guardian
+```text
+BOOKS/three-futures/07_CANON_GUARDIAN/GUARDIAN_RULES.md
+```
+
+Status: Active project-specific psychological-thriller and continuity governance.
+
+## 4. Algorithm of the Shadow Guardian
 
 Status: Planned.  
 Purpose: Protect the AI-specific thesis, chapter structure, ethics, and research framing of The Algorithm of the Shadow.
 
-## 4. Infinite Bloom Codex Guardian
+## 5. Infinite Bloom Codex Guardian
 
 Status: Planned.  
 Purpose: Protect Codex structure, doctrine, symbolism, cross-Codex continuity, and mythic architecture.
 
-## 5. KDP Publishing Assistant
+## 6. KDP Publishing Assistant
 
 Status: Planned.  
 Purpose: Metadata, descriptions, categories, keywords, launch checklists, back-cover copy, author bio, and A+ content.
 
-## 6. Manuscript Formatter
+## 7. Manuscript Formatter
 
 Status: Planned.  
 Purpose: Word, PDF, print, ebook, front matter, back matter, table of contents, and publishing-ready layout.
@@ -233,11 +323,15 @@ Command: `/open roseborn`
 -> draft, audit, revise, or research
 -> create a session update
 -> save changes to GitHub
+-> render and visually inspect the Word delivery
+-> provide the direct download link
 ```
 
 ## Book Section Status
 
 Status: Active  
-Version: v1.1  
+Version: v1.3  
 Primary active manuscript: The Immediate Field  
-Primary active canon tool: Roseborn Canon Guardian
+Secondary active manuscript: Three Futures  
+Primary active canon tool: Roseborn Canon Guardian  
+Active project-specific guardian: Three Futures Guardian
