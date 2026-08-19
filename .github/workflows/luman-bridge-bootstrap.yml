@@ -47,8 +47,13 @@ jobs:
           done
           exit "$missing"
 
+      - name: Install bridge dependencies
+        working-directory: LUMAN_OS/hud/bridge
+        run: npm install --no-audit --no-fund
+
       - name: Validate bridge JavaScript
-        run: node --check LUMAN_OS/hud/bridge/src/index.js
+        working-directory: LUMAN_OS/hud/bridge
+        run: npm run check
 
       - name: Deploy bridge shell without private-source credentials
         id: deploy
@@ -76,6 +81,7 @@ jobs:
             echo "## LUMAN Bridge bootstrap complete"
             echo
             echo "The Worker shell was deployed without private GitHub or Google source credentials."
+            echo "JWT validation remains fail-closed until Cloudflare Access is enabled and Stage 2 supplies TEAM_DOMAIN and POLICY_AUD."
             echo
             if [ -n "${DEPLOYMENT_URL:-}" ]; then
               echo "Worker URL: ${DEPLOYMENT_URL}"
