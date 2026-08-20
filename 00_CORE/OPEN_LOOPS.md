@@ -2,32 +2,27 @@
 
 ## Current System State
 
-LUMAN OS is active and GitHub-backed. As of 2026-08-19 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, combined daily-operations validation, LUMAN HUD V1, Bridge V1, the two-stage secure Cloudflare deployment workflows, and the Cloudflare Access JWT validation boundary are present in the repository.
+LUMAN OS is active and GitHub-backed. As of 2026-08-20 the Human Sovereignty Constitution, two-brain memory architecture, live memory router, source-grounded Boot, Retrieval/Freshness, transaction history, Dynamic Root Shell, erasure-aware Memory Control, operational skill pack, Google Calendar Context, Gmail Inbox Context, combined daily-operations validation, and LUMAN HUD V1 are present in the repository and live.
 
-HUD V1 is merged into `main` as a public-safe, read-first web interface. The authenticated minimum-data Bridge V1 is also merged: it is a read-only Cloudflare Worker boundary for private open-loop context, bounded Calendar event summaries, and bounded Gmail metadata signals. Its dedicated CI passes JavaScript syntax, Wrangler dry-run bundling, read-only/no-store boundary, tracked-file secret checks, bootstrap credential separation, Access JWT-validation checks, activation safety-gate checks, and manual-only deployment checks.
+HUD V1 is merged into `main` as a public-safe, read-first web interface at `/luman-hud/`. The Cloudflare bridge (Worker, Cloudflare Access, JWT validation, two-stage deployment workflows) is built and code-validated but was never bootstrapped — `luman-bridge-bootstrap.yml` and `luman-bridge-activate.yml` have zero runs, and no Cloudflare or Google credentials were ever configured. That path is now deprioritized rather than abandoned: the code stays in the repository for a possible future always-on public HUD.
 
-Bridge V1 is **built / code-validated / awaiting authenticated deployment**, not yet Active. The next step is Stage 1 bootstrap through a protected GitHub Actions environment with no private-source credentials. Cloudflare Access must then be enabled. Stage 2 additionally requires protected `TEAM_DOMAIN` and `POLICY_AUD` values so the Worker can validate Access JWT signature, issuer, audience, and identity before private/live-source reads are activated.
+The active path for live private context is a private, Claude-native LUMAN HUD: an Artifact generated directly from Edward's already-connected Gmail, Calendar, and GitHub access, available on demand and refreshed automatically each morning by a scheduled Routine. This keeps private data off any public page and avoids standing Cloudflare/Google infrastructure entirely.
 
-Production Pages verification remains an open deployment check. Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
+Visionary remains the active Lucid Syntax shipping project toward 2026-09-25. Infinite Bloom source-Codex reconciliation remains the deep-building creative front.
 
 ## Current Open Loops
 
 ### LUMAN System Build
 
-1. Verify the merged HUD publishes successfully through the GitHub Pages workflow at the `/luman-hud/` route without disturbing Gatherer's Ascension at the existing root.
-2. Create/configure the GitHub Actions environment `luman-bridge-production`.
-3. Add only the four Stage 1 protected values: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `HUD_ORIGIN`, and `ALLOWED_EMAIL`.
-4. Run `Bootstrap LUMAN Bridge`; this must establish the Worker hostname without private GitHub or Google source credentials.
-5. Enable Cloudflare Access on the deployed Worker and restrict the Access policy to the intended identity.
-6. Add protected Access validation variables `TEAM_DOMAIN` and `POLICY_AUD` for the Access application protecting the Worker.
-7. Add least-privilege `LUMAN_PRIVATE_REPO_TOKEN` plus Google OAuth credentials issued only for Calendar/Gmail read scopes. The activation workflow maps that GitHub environment secret to the Worker's internal `GITHUB_PRIVATE_TOKEN` binding.
-8. Run `Activate LUMAN Bridge Private Reads` only after confirming Access is enabled, the Access validation variables are present, and Google scopes are read-only.
-9. Run the production bridge test matrix: unauthenticated, missing JWT, invalid/expired JWT, wrong issuer, wrong audience, identity mismatch, unauthorized identity, allowed identity, CORS, read-only methods, and minimum disclosure.
-10. Verify no raw private notes, private source paths, Gmail bodies/snippets/attachments, recipient lists, Calendar descriptions/attendees, credentials, or unrelated private data reach the browser.
-11. Add bounded authenticated action dispatch only after Bridge V1 read boundaries remain reliable and existing write-authorization rules are preserved.
-12. Keep HUD cache/state disposable; authoritative truth remains with owning sources.
-13. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
-14. Build voice only after HUD/data/action stability.
+1. Public LUMAN HUD V1 verified live at the `/luman-hud/` route alongside Gatherer's Ascension.
+2. Private, Claude-native LUMAN HUD built as an Artifact populated from connected Gmail, Calendar, and GitHub sources.
+3. Command Deck actions route into real Claude sessions (`claude.ai/new` deep links with seeded context) rather than preparing text for an unspecified external tool.
+4. Daily scheduled Routine regenerates the private HUD each morning and notifies Edward.
+5. Cloudflare bridge (Worker, Cloudflare Access, JWT validation, two-stage deployment) remains in the repository, dormant and unbootstrapped, as a future option rather than the active path.
+6. Add bounded authenticated action dispatch only after private-HUD read boundaries remain reliable and existing write-authorization rules are preserved.
+7. Keep HUD/artifact state disposable; authoritative truth remains with owning sources (GitHub, Gmail, Calendar).
+8. Keep erasure-sensitive private information transient or minimally referenced until a verified erasable store exists.
+9. Build voice only after HUD/data/action stability.
 
 ### Human Foundation
 
@@ -126,10 +121,11 @@ Private family, financial, health, vehicle/home, and sensitive personal loops ar
 ## Recommended Next Move
 
 ```text
-Configure the protected `luman-bridge-production` GitHub Actions environment with the four Stage 1 values,
-then run the credential-free `Bootstrap LUMAN Bridge` workflow.
+Use the private LUMAN HUD artifact daily — request it on demand or let the scheduled
+morning Routine regenerate it. Revisit the Cloudflare bridge only if an always-on,
+browser-authenticated public HUD becomes genuinely necessary.
 ```
 
 ## Status
 
-Last synchronized: 2026-08-19
+Last synchronized: 2026-08-20

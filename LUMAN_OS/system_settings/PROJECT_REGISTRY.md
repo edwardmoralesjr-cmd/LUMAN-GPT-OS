@@ -29,8 +29,9 @@ Archived        = historical source retained for provenance
 | SYS-006 | System | LUMAN Boot + Dynamic Root | Foundation | `LUMAN_OS/boot/`, `LUMAN_OS/ROOT_MENU.md` | Keep live state source-grounded and prevent static interface drift |
 | SYS-007 | System | LUMAN Operational Skills | Foundation | `LUMAN_OS/skills/` | Maintain combined Morning Brief / Weekly Sync behavior and tune only from observed friction |
 | SYS-008 | System | Live Source Integrations | Foundation | `LUMAN_OS/integrations/` plus authorized connectors | After Access + Stage 2 activation, production-validate minimum-data Calendar/Gmail/private continuity exposure |
-| SYS-009 | System | LUMAN HUD | Active Building | `LUMAN_OS/hud/` plus Pages workflow and Boot/live-source contracts | Verify `/luman-hud/` production rendering and connect Bridge V1 after authenticated activation |
-| SYS-010 | System | LUMAN Authenticated Bridge | Active Building | `LUMAN_OS/hud/bridge/` plus manual GitHub Actions deployment workflows | Configure `luman-bridge-production`, add four bootstrap values, and run `Bootstrap LUMAN Bridge` without private-source credentials |
+| SYS-009 | System | LUMAN HUD (public) | Active Building | `LUMAN_OS/hud/` plus Pages workflow and Boot/live-source contracts | Keep the public, read-only HUD live at `/luman-hud/`; live private context now lives in the private Claude-native HUD (SYS-011), not this page |
+| SYS-010 | System | LUMAN Cloudflare Bridge | Incubating | `LUMAN_OS/hud/bridge/` plus manual GitHub Actions deployment workflows | Deprioritized in favor of the private Claude-native HUD (SYS-011); code stays dormant, unbootstrapped, and revisit only if an always-on public HUD becomes necessary |
+| SYS-011 | System | Private LUMAN HUD (Claude-native) | Active Building | Generated Claude Artifact from connected Gmail/Calendar/GitHub access, private by default | Wire Command Deck actions to real `claude.ai/new` sessions and confirm the daily auto-refresh Routine |
 | LIFE-001 | Life | Life Operating System | Foundation | `LUMAN_OS/life_os/`, `01_LIFE_OS/` | Build Daily Embodied Action loop |
 | LIFE-002 | Life | Order of the Rose Shadow | Active Building | `LUMAN_OS/life_os/ORDER_OF_THE_ROSE_SHADOW_COVE.md` | Add safety doctrine and Rank 1 lesson structure |
 | LIFE-003 | Life | Money System | Maintenance | Private financial tools plus public-safe Life OS structures | Create modern index without balances or account details |
@@ -133,10 +134,10 @@ The Roseborn count conflict remains resolved at Working Canon level:
 ## Recommended Next Move
 
 ```text
-Configure the protected `luman-bridge-production` GitHub Actions environment with the four Stage 1 values,
-then run the credential-free `Bootstrap LUMAN Bridge` workflow.
+Use the private LUMAN HUD artifact (SYS-011) as the daily interface; the Cloudflare
+bridge (SYS-010) stays dormant unless an always-on public HUD becomes necessary.
 ```
 
 ## Status
 
-Last synchronized: 2026-08-18
+Last synchronized: 2026-08-20
