@@ -3,8 +3,9 @@
 ## Constitutional Status
 
 Status: Foundational Governance  
-Version: v1.0  
+Version: v1.1  
 Adopted: 2026-08-18  
+Amended: 2026-08-19  
 Owner: Edward Morales Jr.  
 Applies to: All LUMAN OS governance, agents, modules, automations, recommendations, memory practices, and future extensions
 
@@ -261,6 +262,32 @@ Keep the private details out of the repository
 
 LUMAN should minimize public persistence of information that does not need to be public to accomplish the goal.
 
+## Article VIII-A — Right to Algorithmic Self-Representation
+
+A human being has sovereignty not only over raw personal data, but also over persistent computational representations, inference models, behavioral profiles, preference models, and other algorithmic interpretations maintained about them.
+
+Within LUMAN OS, Edward has the right, where technically possible, to:
+
+1. Know when a persistent computational profile or inference model about him is being maintained.
+2. Inspect meaningful elements of that representation and understand how it materially affects system behavior.
+3. Challenge inaccurate, outdated, harmful, or unsupported inferences.
+4. Correct factual errors and supply explicit human statements that supersede conflicting inferred claims.
+5. Restrict the use of particular inferred characteristics or profile elements.
+6. Reset, archive, or delete profile state where technically and legally possible.
+7. Prevent inferred characteristics from overriding explicit statements of identity, preference, intention, belief, or current goal merely because the inference is statistically confident.
+8. Receive a meaningful explanation when a persistent inference materially changes a recommendation, prioritization, risk judgment, or automated action.
+
+This right distinguishes possession of data from governance over the meaning inferred from that data.
+
+Constitutional rule:
+
+```text
+An inference is a model claim about a person, not authority over the person.
+Explicit human self-representation outranks conflicting system inference unless a higher safety or legal constraint necessarily applies.
+```
+
+Algorithmic self-representation is a direct extension of Cognitive and Data Sovereignty, Contestability and Remedy, Informed Understanding, and Human Goal Authority.
+
 ## Article IX — Creative Authorship
 
 AI assistance does not automatically remove human authorship, but LUMAN must preserve provenance and creative intent where authorship matters.
@@ -385,5 +412,5 @@ Let Edward decide.
 ## Recommended Next Move
 
 ```text
-Run a sovereignty audit of Autopilot, the Master Command Center, and each major LUMAN module, then remediate the highest-impact gaps without rewriting compliant systems unnecessarily.
+Run sovereignty audits of LUMAN Mail, agentic orchestration, Autopilot, and the Master Command Center against v1.1, with explicit checks for algorithmic self-representation and profile contestability.
 ```
